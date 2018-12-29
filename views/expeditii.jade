@@ -1,0 +1,132 @@
+extends ./index.jade
+
+block content
+	div.bgded.bgded-top(style="background: url('/images/grossglockner.png'); background-size: cover; background-attachment: fixed;")
+		div.curtain-gradient
+
+
+		div.wrapper.dust-white-color
+			header#header.hoc.clear
+
+				if device.desktop
+					nav#mainav.clear
+						include components/navigation
+				else
+					div.mobile-nav
+						i.fa.fa-bars.fa-2x.upper.show-panel
+						nav.sidenav.clear
+							include components/navigation
+
+				div#logo.upspace-40vh.text-center
+					h1.font-4
+						a(href="#top") Expeditii
+					h3.upspace-35 Flo Adventure Tours
+
+	div.page-description.wrapper.dark-grey-normal.light-grey-color
+		div.container.clear(data-device="#{type}")
+
+			div#demo-grid(data-device="#{type}")
+				a.grid-item.light-grey
+					div.height-auto
+						div.banner.dark-grey-color Lorem ipsum bla blabla
+
+				a.grid-item.big.dark-grey.column(href="/circuitul-castelelor")
+					div.ribbon.orange EUROPA
+					div.flex-1-6.height-half
+						h4.title.light-grey-color.upspace-35 titlu
+						div.description.light-grey-color descriere
+					div.flex-1
+						div(style="background-image:url('/images/castle-icon.png'); height: 100%; background-size: cover;")
+
+				a.grid-item.bigger.dust-white.dust-white-color
+
+					div.ribbon.light-grey EUROPA
+					div.flex-1-6.height-60
+						div.curtain
+						div(style="background-image:url('/images/mont-blanc.png'); height: 100%; background-size: cover; display: flex; flex-flow: column; justify-content: flex-end;")
+							div.title.font-2 Titlu
+							div.description.light-grey-color(style="padding-bottom: 60px;") Descriere
+					div.bottom-ribbon
+						i.fa.fa-calendar
+							em 16
+
+
+				a.grid-item.dark-grey(href="/4x4-1-zi")
+					div.ribbon.light-grey AFRICA
+					div.flex-1.height-half
+						div(style="background-image:url('/images/maroc.png'); height: 100%; background-size: cover;")
+					div.flex-1.height-half
+						h4.title.light-grey-color Maroc
+						div.description.primary-grey-color Lorem Ipsum is simply dummy text of the printing and typesetting industry
+					div.bottom-ribbon
+						i.fa.fa-calendar
+							em 1
+
+				a.grid-item.dark-grey(href="/apuseni-5-zile")
+					div.ribbon.light-grey Asia
+					div.flex-1-6.height-60
+						div(style="background-image:url('/images/ebc.png'); height: 100%; background-size: cover;")
+					div.flex-1.height-40
+						h4.title.light-grey-color Everest basecamp
+						div.description.primary-grey-color Lorem Ipsum is simply dummy text of the printing and typesetting industry
+
+
+				a.grid-item.orange
+					div.height-auto
+						div.banner.dust-white-color Destinatii pitoresti, povesti geografice, aventura plina de adrenalina.
+
+				a.grid-item.big.dust-white-color.column(href="/elbrus")
+					div.ribbon.light-grey EUROPA
+					div.flex-1-6
+						div.curtain
+						div(style="background-image:url('/images/ebc-1.png'); height: 100%; background-size: cover; display: flex; flex-flow: column; justify-content: flex-end;")
+							div.title.font-2 Elbrus
+							div.description.light-grey-color(style="padding-bottom: 60px;") Descriere descriere descriere descriere descriere descriere
+					div.bottom-ribbon
+						i.fa.fa-calendar
+							em 16
+
+				a.grid-item.dark-grey(href="/apuseni-5-zile")
+					div.ribbon.light-grey Asia
+					div.flex-1-6.height-60
+						div(style="background-image:url('/images/ebch.png'); height: 100%; background-size: cover;")
+					div.flex-1.height-40
+						h4.title.light-grey-color Everest si intoarcerea cu elicopterul
+						div.description.primary-grey-color Lorem Ipsum is simply dummy text of the printing and typesetting industry
+
+				a.grid-item.dark-grey
+					div.banner.flex-1(style="background-image:url('/images/ebch-1.png'); background-size: cover;")
+
+				a.grid-item.dark-grey(href="/apuseni-3-zile")
+					div.ribbon.light-grey Himalaya
+					div.flex-1.height-half
+						div(style="background-image:url('/images/ebci-1.png'); height: 100%; background-size: cover;")
+					div.flex-1.height-half
+						h4.title.light-grey-color Island Peak
+						div.description.primary-grey-color Lorem Ipsum is simply dummy text of the printing and typesetting industry is simply dummy text of the printing
+					div.bottom-ribbon
+						i.fa.fa-calendar
+							em 3
+
+				a.grid-item.big.dark-grey
+					div.center
+						h4.title.light-grey-color Hai cu noi.
+						div.button.orange.primary-grey-color Scrie-ne
+
+				a.grid-item.light-grey
+					div
+						div.banner.dark-grey-color Descriere
+
+				a.grid-item.taller.light-grey
+					div.ribbon.light-grey EUROPA
+					div.flex-1-6
+						div.curtain
+						div(style="background-image:url('/images/ebc-1.png'); height: 100%; background-size: cover; display: flex; flex-flow: column; justify-content: flex-end;")
+							div.title.font-2 Grossglockner
+							div.description.light-grey-color(style="padding-bottom: 60px;") Descriere descriere descriere descriere descriere descriere
+
+
+
+	div.image.height-500
+		div.curtain-gradient-back
+		div(style="background:url('/images/mb3.jpg'); width: 100%; height: 100%; background-size: cover; background-attachment: fixed;")

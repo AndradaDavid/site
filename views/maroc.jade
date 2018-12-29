@@ -1,0 +1,296 @@
+extends ./index.jade
+
+block content
+
+	div.bgded.bgded-top(style="background-image:url('/images/maroc.png');")
+		div.wrapper.dust-white-color
+			header#header.clear
+
+				if device.desktop
+					div.main-nav.downspace-40.dark-grey-color.flex-1.clear
+						include components/navigation
+						ul.fl.clear
+							li.fl.language
+								a(href="en") ro
+							// ul.sl
+								li.sl
+									a(href="en") en
+								li.sl
+									a(href="ru") ru
+				else
+					div.mobile-nav.flex-1
+						i.fa.fa-bars.fa-2x.upper.show-panel.dark-grey-color
+						nav.sidenav.clear
+							include components/navigation
+
+				div#logo.text-center.flex-4.upspace-35
+					h3.dark-grey-color.font-2 Flo Adventure Tours
+
+					h1.font-4
+						a.dark-grey-color(href="#top") Jebel Toubkal
+					h3.dark-grey-color.font-2.font-montserrat-bold Desertul Sahara
+					h2.font-montserrat-regular.dark-grey-color Ruta clasica
+
+	div.scroll-down
+		div.chevron
+		div.chevron
+		div.chevron
+
+	div.page-description.wrapper.dark-grey.light-grey-color
+		div.container.clear(data-device="#{type}")
+
+			div.page-box.flex-1(style="height: auto;")
+				h4.orange-color.font-montserrat-bold Tinutul berberilor
+				div.heading-sep.orange
+				div.btmspace-50.font-open-sans(data-aos="fade-right")
+					p.pre-text.font-open-sans Numele arab al țării, al-Magrib al-Aqsa, înseamnă Vestul Extrem și se referă la faptul că Marocul este cea mai vestică țară din lumea arabă.
+					p Localizat in Parcul National Toubkal, in partea sud-vestica a Marocului, Toubkal este varful cel mai inalt din Muntii Atlas si din statele arabe. Prima ascensiune europeana are loc in 1923 realizata de catre Marquis de Segonzac, Vincent Berger si Hubert Dolbeau.
+			div.page-box.flex-1-5(style="height: auto;")
+				div.map(style="background-image:url('/images/harta-maroc.png'); background-position: center;")
+
+
+	div.page-description.wrapper.dark-grey.cloudy-color
+		div.container.clear(data-device="#{type}")
+
+			div.item-list
+				div.number 4167m
+				div.description altitudine varf
+			div.item-list
+				div.number 7 zile
+				div.description durata
+			div.item-list
+				div.number usor
+				div.description dificultate
+			div.item-list
+				div.number 1740m
+				div.description altitudine baza
+
+	//detalii si itinerariu
+	div.page-description.wrapper.dust-grey.subtile-grey-color.font-montserrat-light
+		div.container.clear(data-device="#{type}", style="align-items: flex-start;")
+			div.page-box.flex-1(style="padding-right: 80px;")
+				h4.font-montserrat-bold Detalii
+				div.heading-sep.light-grey
+
+				p Cea mai populara ruta de ascensiune este Voie Des Cristalliers, cunoscuta si sub numele de 'Voie Royale. Incepand de la Saint-Gervais-les-Bains, cu trenuletul se ajunge la Gare du Nid d'Aigle (Cuibul vulturului).
+				p Pregatirea tehnica si aclimatizarea sunt foarte importante in primele zile de ascensiune. In aceasta expeditie vei invata tehnici de ascensiune pe un varf precum si tehnici elementare si esentiale in alpinism.
+				p Avand o fereastra de cateva zile de ascensiune, ne ofera flexibilitatea sa urcam pe varf in functie de vremea pe care o vom intalni la fata locului. Ghizii nostrii au pregatirea necesara pentru stabilirea celei mai bune ferestre de ascensiune pe varf.
+
+			div.page-box.flex-1.subtile-grey-color
+				h4.font-montserrat-bold Itinerariu
+				div.heading-sep.light-grey
+				p Ne tinem de program dar uneori suntem flexibili
+
+				h5.left.upspace-20 Ziua 1
+				p Transfer la Imlil.
+				p Se alege ruta din Cluj sau Bucuresti catre Marrakech si apoi la Imlil, la 60 km sud de Marrakech. Ne vom caza la Riad si avem timp liber si vizitarea unui sat berber de munte.
+
+				h5.left.upspace-20 Ziua 2
+				p Curs si ascensiune
+				p Urcam din Imlil (1740m) pana la Refuge du Toubkal (3207m). Vom avea curs de initiere in supravietuire, orientare pe munte, vom invata sa citim o harta precum si tehnica de ascensiune pe un varf inalt.
+
+				h5.left.upspace-20 Ziua 3
+				p Varful Jebel Toubkal
+					p Plecam la ora 5.30 dimineata si incepem ascensiunea pe varful Jebel Toubkal, cel mai inalt vard din Africa de nord. Apoi coboram la Imlil si ne intoarcem la cazarea din Riad.
+
+				h5.left.upspace-20 Ziua 4
+				p Domeniul filmelor
+				p Plecam la ora 8 dimineata din Imlil, ca sa vizitam Kasbah ait Benhaddou, un loc ce se gaseste in patrimoniul mondial Unesco. Aici s-au filmat numeroase filme precum:
+				span Sodom and Gomorrah
+					em.italic &nbsp(1963)
+				span Oedipus Rex
+					em.italic &nbsp(1963)
+				span The man who would be king
+					em.italic &nbsp(1975)
+				span The message
+					em.italic &nbsp(1976)
+				span Jesus of Nazareth
+					em.italic &nbsp(1977)
+				span Marco Polo
+					em.italic &nbsp(1982)
+				span The Jewel of the Nile
+					em.italic &nbsp(1985)
+				span The Living Daylights
+					em.italic &nbsp(1987)
+				span The last tempation of Christ
+					em.italic &nbsp(1988)
+				span The sheltering sky
+					em.italic &nbsp(1990)
+				span Kundun
+					em.italic &nbsp(1997)
+				span The mummy
+					em.italic &nbsp(1999)
+				span Gladiator
+					em.italic &nbsp(2000)
+				span Alexander
+					em.italic &nbsp(2004)
+				span Kingdom of heaven
+					em.italic &nbsp(2005)
+				span Babel
+					em.italic &nbsp(2006)
+				span One night with the king
+					em.italic &nbsp(2006)
+				span Prince of Persia
+					em.italic &nbsp(2010)
+				span Son of god
+					em.italic &nbsp(2014)
+
+
+				h5.left.upspace-20 Ziua 5
+				p Curs initiere in desert
+				p Plecam la ora 8 dimineata ca sa vizitam canionul Dades si apoi impresonantul canion Toudra. Din canionul Toudra vom ajunge in Merzouga, poarta de intrare in desertul Sahara. Aici vom lasa masinile si ne vom continua drumul pe dromaderi, deplasandu-ne mai departe in desert, pana aproape de frontiera cu Algeria, unde se va desfasura cursul de initiere in supravietuire. Acesta contine in mare parte orientarea in desert, procurarea hanei in aceasta parte a lumii, citirea unei ahrti, cum sa iti faci rost de apa, cum procedezi cand te surprinde o furtuna de nisip, cum faci un foc si din ce materiale.
+
+				h5.left.upspace-20 Ziua 6
+				p Rasaritul desertului
+				p Plecam la ora 6 dimineata pentru a surpinde rasaritul de soare in plin desert. Dupa ce luam micul dejun, pornim spre marrakech, seara vizitam cunoscuta piata Jemma'Él'Fna
+
+				h5.left.upspace-20 Ziua 7
+				p Intoarcerea acasa
+
+
+	hr.cloudy
+	div.image.dark-grey.cloudy-color
+		div.hoc.clear.center.upspace-35.btmspace-30(data-device="#{type}")
+			div.desc-item
+				i.fa.fa-calendar.font-2
+				span.item-header Perioada
+				span.item-text ??? Septembrie, 2019
+			div.desc-item
+				i.fa.fa-male.fa-3x.font-2
+				span.item-header Persoane
+				span.item-text minim 3
+			div.desc-item
+				i.fa.fa-home.fa-3x.font-2
+				span.item-header Cazare
+				span.item-text riad, cort berber
+			div.desc-item
+				i.fa.fa-car.fa-3x.font-2
+				span.item-header Transport
+				span.item-text masina, avion
+
+	//grid de imagini
+	div.page-description.wrapper
+		div.container.width-full.max-width-full.padding-0.clear(data-device="#{type}")
+			div#full-grid.width-full(data-device="#{type}")
+				a.full-grid-item.big
+					div.flex-1(style="background-image:url('/images/maroc-grid-1.png'); background-size: cover; background-position: bottom center;")
+				a.full-grid-item
+					div.flex-1(style="background-image:url('/images/maroc-grid-2.png'); background-size: cover; background-position:top;")
+
+				a.full-grid-item
+					div.flex-1(style="background-image:url('/images/maroc-grid-3.png'); background-size: cover; background-position: center;")
+				a.full-grid-item
+					div.flex-1(style="background-image:url('/images/maroc-grid-4.png'); background-size: cover; background-position: center;")
+				a.full-grid-item.half
+					div.flex-1(style="background-image:url('/images/maroc-grid-5.png'); background-size: cover; background-position: center;")
+				a.full-grid-item.big
+					div.flex-1(style="background-image:url('/images/maroc-grid-6.png'); background-size: cover; background-position: center;")
+				a.full-grid-item
+					div.flex-1(style="background-image:url('/images/maroc-grid-7.png'); background-size: cover; background-position: center;")
+
+	hr.cloudy
+
+
+	//extra informatii
+	div.page-description.wrapper.dust-white.dark-grey-color
+		div.container.clear(data-device="#{type}", style="align-items: flex-start;")
+
+
+			div.page-box.flex-1.font-montserrat-light(style="padding-right: 80px;")
+				h4.font-montserrat-regular Echipament tehnic
+				div.heading-sep.light-grey
+				span Rucsac 40-60 litri.
+				span Ochelari de soare- 100%UV.
+				span Crema de protectie - fata si buze- contra soarelui.
+				span Bidon pentru apa.
+				span Frontala sau lanterna.
+
+				h4.font-montserrat-regular Asigurare
+				div.heading-sep.light-grey
+				span Recomandam asigurari de calatorie si optiuni de interventie, recomandate de firmele de asigurare ce sunt in colaborare cu agentia noastra de turism. Dupa ce optezi pentru o expeditie cu noi, un consultant te va indruma pentru achizitia unei polite potrivita pentru tine.
+
+			div.page-box.flex-1.font-montserrat-light
+
+				h4.font-montserrat-regular Imbracaminte si incaltaminte
+				div.heading-sep.light-grey
+				span 3-4 tricouri.
+				span 2 flanele din bumbac.
+				span Pantaloni scurti.
+				span Pantaloni si suprapantaloni.
+				span O haina din Gore-tex.
+				span Polar sau soft shell.
+				span Manusi
+				span Caciula sau Buff
+				span Masca de fata (cagula) pentru vant.
+				span Sandale sau o pereche de pantofi sport.
+				span Bocanci clasici
+
+
+
+	div.little-about.height-600(style="background-image:url('/images/maroc-grid-8.png');background-size:cover;background-position: right center;")
+
+	//extra informatii
+	div.page-description.wrapper.dark-grey.cloudy-color
+		div.container.clear(data-device="#{type}", style="align-items: flex-start;")
+
+
+			div.page-box.flex-1.font-montserrat-thin(style="padding-right: 80px;")
+				h4.font-montserrat-regular Ce include?
+				div.heading-sep.light-grey
+				span Instructorul
+				span Echipament de curs
+				span Transfer aeroport
+				span Transport pe toata durata cursului
+				span Mic dejun si cina
+				span Cazare pe toata durata cursului
+				span O noapte cazare in desert in corturi berbere
+				span Inchirierea dromaderilor pe toata deplasarea in desert
+
+			div.page-box.flex-1.font-montserrat-thin(style="padding-right: 80px;")
+				h4.font-montserrat-regular Ce nu include?
+				div.heading-sep.light-grey
+				span Biletul de avion pana la Marrakech dus-intors
+				span Pranzul
+				span Bauturile din afara meselor
+				span Biletele de intrare la muzee
+				span Bacsisuri
+				span Asigurarea medicara (obligatorie)
+
+	div.little-about.narrow.cloudy.height-400
+		div.hoc.container.clear
+
+			a.button.orange(href="/download/mont-blanc.doc") Note de expeditie
+			div.button.dark-grey Rezerva-ti locul
+
+	hr.cloudy
+	div.price-about.height-300.wrapper.dark-grey.light-grey-color
+		div.overlay-text.flex-1.font-3
+			i.fa.fa-euro
+			p 620
+			p.down /persoana
+
+
+	div.repeat-ribbon.wrapper.coloured
+		div.repeat(style="background-image: url('/images/repeat.png');height: 50px;background-size: contain;")
+
+	//Logos and sponsors
+
+	div.wrapper.coloured.orange
+		div.hoc.clear
+			figure#logos
+				ul.nospace.group
+					li
+						a(href='#')
+							img(src="/images/logo-lowe.png")
+					li
+						a(href='#')
+							img(src="/images/logo-gopro.png")
+					li
+						a(href='#')
+							img(src="/images/logo-pro.png")
+					li
+						a(href='#')
+							img(src="/images/logo-free.png")
+					li
+						a(href='#')
+							img(src="/images/logo-tete.png")

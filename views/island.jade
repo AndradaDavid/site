@@ -1,0 +1,384 @@
+extends ./index.jade
+
+block content
+	div.bgded.bgded-top(style="background:url('/images/ebci-1.png') fixed center; background-position: top center; background-size: cover; background-attachment: fixed;")
+		div.curtain
+		div.wrapper.dust-white-color
+			header#header.hoc.clear
+
+				if device.desktop
+					nav#mainav.clear
+						include components/navigation
+				else
+					div.mobile-nav
+						i.fa.fa-bars.fa-2x.upper.show-panel
+						nav.sidenav.clear
+							include components/navigation
+
+				div#logo.upspace-40vh.text-center
+					h1.font-4
+						a(href="#top") Everest Basecamp
+					h1.font-3 Varful Island Peak
+					h3.upspace-35 Flo Adventure Tours
+
+
+	div.scroll-down
+		div.chevron
+		div.chevron
+		div.chevron
+
+	div.page-description.wrapper.dark-grey.light-grey-color
+		div.container.clear(data-device="#{type}")
+
+			div.page-box.flex-1(style="height: auto;")
+				h4.orange-color ????
+				div.btmspace-50(data-aos="fade-right")
+					p.pre-text Tabara de baza a Everestului este cea mai populara destinatie de aventura din Nepal Himalaya. Primii care au deschis ruta pe Everest in mai 1953 au fost Sir Edmund Hillary si Tenzing Norgay. „Everest Base Camp Trekking” este tinta finala pentru cei care prefera trekking-ul si pentru alpinistii incepatori. Programul Everest Base Camp si Kala Patthar este genul de aventura „o data in viata”, cu provocari si realizari, cu bucuria de a fi atat de aproape de cel mai inalt munte din lume. Peisajul este superb, cu varfuri inconjurati de ghetari, manastiri antice si bineinteles fascinanta cultura si traditie a serpasilor.
+			div.page-box.flex-1-5(style="height: auto;")
+				div.map(style="background-image:url('/images/???.png')")
+
+	div.page-description.wrapper.dark-grey.orange-color
+		div.container.clear(data-device="#{type}")
+
+			div.item-list
+				div.number 6189m
+				div.description altitudine varf
+			div.item-list
+				div.number 19 zile
+				div.description durata
+			div.item-list
+				div.number greu
+				div.description dificultate
+			div.item-list
+				div.number 1400m
+				div.description altitudine baza
+
+	//itinerariu - echipament - informatii
+	div.page-description.wrapper.dust-white.light-grey-color.height-auto
+		div.container.clear(data-device="#{type}")
+			div.board.upspace-40.btmspace-40
+
+				ul.nav.nav-pills.mb-3#pills-tab(role="tablist")
+					div.linner
+
+					li.nav-item
+						a.nav-link.active#pills-home-tab(data-toggle="pill", href="#pills-itinerariu", role="tab", aria-controls="pills-itinerariu", aria-selected="true", data-device="#{type}")
+							if device.mobile
+								i.fa.fa-calendar
+							else
+								i.fa.fa-calendar.fa-2x
+					li.nav-item
+						a.nav-link#pills-echipament-tab(data-toggle="pill", href="#pills-echipament", role="tab", aria-controls="pills-echipament", aria-selected="false", data-device="#{type}")
+							if device.mobile
+								i.fa.fa-briefcase
+							else
+								i.fa.fa-briefcase.fa-2x
+					li.nav-item
+						a.nav-link#pills-asigurare-tab(data-toggle="pill", href="#pills-asigurare", role="tab", aria-controls="pills-asigurare", aria-selected="false", data-device="#{type}")
+							if device.mobile
+								i.fa.fa-file
+							else
+								i.fa.fa-file.fa-2x
+					li.nav-item
+						a.nav-link#pills-contact-tab(data-toggle="pill", href="#pills-informatii", role="tab", aria-controls="pills-informatii", aria-selected="false", data-device="#{type}")
+							if device.mobile
+								i.fa.fa-info
+							else
+								i.fa.fa-info.fa-2x
+
+
+
+				div.tab-content.upspace-20#pills-tabContent
+					div.tab-pane.show.active#pills-itinerariu(role="tabpanel", aria-labelledby="pills-itinerariu-tab")
+						h3.text.orange-color Itinerariu
+
+						div.container.itinerary(data-device="#{type}")
+							div.page-box-tiny.left-box.flex-1
+								h4.tiny.orange-color Ziua 1
+								div.btmspace-10(data-aos="fade-right")
+									p Transfer de la aeroport la hotel, sedinta tehnica, ceai si biscuiti
+							div.page-box-tiny.flex-1
+
+						div.container.itinerary(data-device="#{type}")
+							div.page-box-tiny.flex-1
+							div.page-box-tiny.right-box.flex-1
+								h4.tiny.orange-color Ziua 2
+								div.btmspace-10(data-aos="fade-left")
+									p Vizitare zona turistica in Kathmandu, Boudhanath (stupa), orasul istoric Patan, templul budist Swayambhu.
+
+						div.container.itinerary(data-device="#{type}")
+							div.page-box-tiny.left-box.flex-1
+								h4.tiny.orange-color Ziua 3
+								div.btmspace-10(data-aos="fade-right")
+									p Zbor Kathmandu –Lukla (45m) si urcare pana la  Phakding sau Mnajo  (3 / 4h) 2640m.
+							div.page-box-tiny.flex-1
+
+						div.container.itinerary(data-device="#{type}")
+							div.page-box-tiny.flex-1
+							div.page-box-tiny.right-box.flex-1
+								h4.tiny.orange-color Ziua 4
+								div.btmspace-10(data-aos="fade-left")
+									p Phakding sau Manjo – Namche Bazar (3 / 4h) 3440m.
+
+						div.container.itinerary(data-device="#{type}")
+							div.page-box-tiny.left-box.flex-1
+								h4.tiny.orange-color Ziua 5
+								div.btmspace-10(data-aos="fade-right")
+									p Aclimatizare la Namche Bazzar
+							div.page-box-tiny.flex-1
+
+						div.container.itinerary(data-device="#{type}")
+							div.page-box-tiny.flex-1
+							div.page-box-tiny.right-box.flex-1
+								h4.tiny.orange-color Ziua 6
+								div.btmspace-10(data-aos="fade-left")
+									p Namache – Tengboche (4 / 5h) 3860m.
+
+						div.container.itinerary(data-device="#{type}")
+							div.page-box-tiny.left-box.flex-1
+								h4.tiny.orange-color Ziua 7
+								div.btmspace-10(data-aos="fade-right")
+									p Tengboche – Dingboche (4 / 5h) 4350m.
+							div.page-box-tiny.flex-1
+
+						div.container.itinerary(data-device="#{type}")
+							div.page-box-tiny.flex-1
+							div.page-box-tiny.right-box.flex-1
+								h4.tiny.orange-color Ziua 8
+								div.btmspace-10(data-aos="fade-left")
+									p Dingboche – Labuche (4 / 5h) 4910m.
+
+						div.container.itinerary(data-device="#{type}")
+							div.page-box-tiny.left-box.flex-1
+								h4.tiny.orange-color Ziua 9
+								div.btmspace-10(data-aos="fade-right")
+									p Labuche – Goraksep (3 / 4h) 5170m.
+							div.page-box-tiny.flex-1
+
+						div.container.itinerary(data-device="#{type}")
+							div.page-box-tiny.flex-1
+							div.page-box-tiny.right-box.flex-1
+								h4.tiny.orange-color Ziua 10
+								div.btmspace-10(data-aos="fade-left")
+									p Goraksep – Acensiune pe Kalapathar 5545m. Se porneste dimineata devreme pentru a vedea rasaritul in zona Mt. Everest si Ghetarul Khumbu (2 / 3h) 5545m. Inapoi la Dingboche (4 / 5h) 4350m.
+
+						div.container.itinerary(data-device="#{type}")
+							div.page-box-tiny.left-box.flex-1
+								h4.tiny.orange-color Ziua 11
+								div.btmspace-10(data-aos="fade-right")
+									p Dingboche – Chhukung (3 / 4h) 4730m.
+							div.page-box-tiny.flex-1
+
+						div.container.itinerary(data-device="#{type}")
+							div.page-box-tiny.flex-1
+							div.page-box-tiny.right-box.flex-1
+								h4.tiny.orange-color Ziua 12
+								div.btmspace-10(data-aos="fade-left")
+									p Chukung –Urcare la punctul de belvedere Chhukung Ri (5546m) si Island Peak – Tabara de baza 4970m.
+
+						div.container.itinerary(data-device="#{type}")
+							div.page-box-tiny.left-box.flex-1
+								h4.tiny.orange-color Ziua 13
+								div.btmspace-10(data-aos="fade-right")
+									p Tabara de baza Island Peak – urcare la tabara de baza avansata 5600m (3 / 4h)
+							div.page-box-tiny.flex-1
+
+						div.container.itinerary(data-device="#{type}")
+							div.page-box-tiny.flex-1
+							div.page-box-tiny.right-box.flex-1
+								h4.tiny.orange-color Ziua 14
+								div.btmspace-10(data-aos="fade-left")
+									p Urcare pe varf - Island Peak 6189m  si retur la Chhukung (5 / 6h) 4730m.
+
+						div.container.itinerary(data-device="#{type}")
+							div.page-box-tiny.left-box.flex-1
+								h4.tiny.orange-color Ziua 15
+								div.btmspace-10(data-aos="fade-right")
+									p Chhukung – Tengboche (5 / 6h) 3860m.
+							div.page-box-tiny.flex-1
+
+						div.container.itinerary(data-device="#{type}")
+							div.page-box-tiny.flex-1
+							div.page-box-tiny.right-box.flex-1
+								h4.tiny.orange-color Ziua 16
+								div.btmspace-10(data-aos="fade-left")
+									p Tengboche – Manjo (5 / 6h) 2710m.
+
+						div.container.itinerary(data-device="#{type}")
+							div.page-box-tiny.left-box.flex-1
+								h4.tiny.orange-color Ziua 17
+								div.btmspace-10(data-aos="fade-right")
+									p Manju – Lukla (2 / 3h) 2840m.
+							div.page-box-tiny.flex-1
+
+						div.container.itinerary(data-device="#{type}")
+							div.page-box-tiny.flex-1
+							div.page-box-tiny.right-box.flex-1
+								h4.tiny.orange-color Ziua 18
+								div.btmspace-10(data-aos="fade-left")
+									p Zbor Lukla – Kathmandu (40 /45m) 1350m si transfer la hotel.
+
+
+
+					div.tab-pane#pills-echipament(role="tabpanel", aria-labelledby="pills-echipament-tab")
+						h3.text.orange-color Echipament
+
+						div.container.itinerary(data-device="#{type}")
+							div.page-box-tiny.flex-1
+								h4.tiny.right.orange-color Campare
+							div.page-box-tiny.right-box.flex-1
+								div.btmspace-10(data-aos="fade-right")
+									span Sac de dormit.
+										em.italic &nbsp (se poate inchiria de la agentie).
+									span Izolir.
+										em.italic &nbsp (se poate inchiria de la agentie).
+
+						div.container.itinerary(data-device="#{type}")
+							div.page-box-tiny.flex-1
+								h4.tiny.right.orange-color Tehnic
+
+							div.page-box-tiny.right-box.flex-1
+								div.btmspace-10(data-aos="fade-right")
+									span Rucsac 60-80 L.
+									span Piolet
+										em.italic &nbsp (se poate inchiria de la agentie).
+									span Coltari
+										em.italic &nbsp (se poate inchiria de la agentie).
+									span Casca
+										em.italic &nbsp (se poate inchiria de la agentie).
+									span Ochelari de soare- 100%UV.
+									span Crema de protectie - fata si buze- contra soarelui.
+									span Bidon pentru apa.
+									span Trusa de prim ajutor.
+									span Frontala sau lanterna.
+
+
+						div.container.itinerary(data-device="#{type}")
+							div.page-box-tiny.flex-1
+								h4.tiny.right.orange-color Imbracaminte si incaltaminte
+							div.page-box-tiny.right-box.flex-1
+
+								div.btmspace-10(data-aos="fade-left")
+									span Bluza termala cu maneca lunga si pantaloni.
+									span Pantaloni usori pentru drumetie.
+									span Suprapantaloni.
+									span Bete de trekking.
+										em.italic &nbsp (optionali).
+									span O haina din Gore-tex.
+									span Polar.
+									span Pufoaica.
+									span Pelerina
+									span 2 perechi de manusi.
+									span Caciula.
+									span Masca de fata (cagula) pentru vant.
+									span 4-5 perechi de sosete.
+									span Bocanci pentru ascensiune si ncaltaminte usoara pentru vizitele scurte
+										em.italic &nbsp (sandale, pantofi sport).
+
+
+					div.tab-pane#pills-asigurare(role="tabpanel", aria-labelledby="pills-asigurare-tab")
+						h3.text.orange-color Asigurare
+						div.container
+							p Recomandam asigurari de calatorie si optiuni de interventie, recomandate de firmele de asigurare ce sunt in colaborare cu agentia noastra de turism. Dupa ce optezi pentru o expeditie cu noi, un consultant te va indruma pentru achizitia unei polite potrivita pentru tine. etc .. etc..
+					div.tab-pane#pills-informatii(role="tabpanel", aria-labelledby="pills-informatii-tab")
+						h3.text.orange-color Informatii
+						div.container.itinerary(data-device="#{type}")
+
+							div.page-box-tiny.flex-1
+								h4.tiny.right.orange-color Include
+							div.page-box-tiny.right-box.flex-1
+								div.btmspace-10(data-aos="fade-right")
+									span Transfer de la aeroport la hotel si inapoi, sedinta tehnica cu ceai si biscuiti in Kathmandu.
+									span Cazare cu mic dejun inclus la hotel de 3 stele in Kathmandu.
+									span Taxele necesare intrarilor in parc si TIM card
+									span Asigurare completa  pentru staff-ul Nepalez in timpul ascensiunii
+									span Mese complete pe durata ascensiunii: mic dejun, pranz si cina
+									span Bauturi calde pe durata ascensiunii: (ceai, cafea etc)
+									span Transport pana la  punctul de start si finish al ascensiunii
+									span Zborul intern KTM – LUKLA – KTM si taxele de aeroport
+									span Trusa de prim ajutor pentru staff
+									span Ghid atestat si porteri
+									span Oxigen
+									span Hartile necesare
+
+
+						div.container.itinerary(data-device="#{type}")
+							div.page-box-tiny.flex-1
+								h4.tiny.right.orange-color Nu include
+							div.page-box-tiny.right-box.flex-1
+								div.btmspace-10(data-aos="fade-right")
+									span Pranz si cina in Kathmandu.
+									span Bauturi ca: bere, whisky, rom , apa minerala etc.
+									span Taxele de intrare din timpul vizitelor in Kathmandu si celelalte zone turistice
+									span Costuri suplimentare aparute datorita conditiilor nefavorabile, ca de exemplu vremea rea.
+									span Cheltuieli personale pentru: apa calda sau incarcarea bateriilor( telefon, laptop etc)
+									span Echipament personal
+									span Evacuare de urgenta, daca este necesar, spitalizare etc..
+									span Taxa de viza 40 dolari.
+
+	//descriere categorii
+	div.image.wrapper.light-grey.dust-white-color.height-auto(style="background:url('/images/ebci-2.png') fixed center")
+		div.curtain
+		div.container.z-index-1.clear(data-device="#{type}")
+
+			div.desc-item
+				i.fa.fa-calendar
+
+				div.item-header.orange-color noiembrie
+				div.item-text.dust-white-color perioada
+			div.desc-item
+				i.fa.fa-male
+				div.item-header.orange-color minim 4
+				div.item-text.dust-white-color persoane
+			div.desc-item
+				div.item-icon(style="background:url('/images/sprite.png')-52px -46px; ")
+				div.item-header.orange-color expeditii
+				div.item-text.dust-white-color categorie
+			div.desc-item
+				i.fa.fa-car
+				div.item-header.orange-color avion
+				div.item-text.dust-white-color transport
+			div.desc-item
+				i.fa.fa-home
+				div.item-header.orange-color ???
+				div.item-text.dust-white-color cazare
+
+
+	div.little-about.narrow
+		div.hoc.container.clear
+			h4.orange-color Note de expeditie
+			p.center.primary-grey-color Ai toate informatiile despre expeditie intr-un singur loc.
+			a.button.orange(href="/download/mont-blanc.doc") Download
+			div.button.dark-grey Trimite-le pe mail
+
+	div.little-about.narrow.white-color(style="background:url('/images/ebci-3.png'); background-size:cover;background-position: center center; ")
+		div.hoc.container.clear
+
+
+	div.page-description.height-auto.light-grey-color
+		h5.upspace-35.primary-grey-color Everest Trekking + Elicopter
+		div.hoc.container.clear.max-width-40.margin-auto.upspace-10
+			p.center Este un program popular, usor de parcurs cu un „view” spectaculos de jos si din aer, care reda satele serpasilor, o mare varietate a culturii si traditiei lor, festivaluri colorate si traditionalele manastiri. Flora si fauna reprezinta un alt ornament cu care se mandreste Parcul National Sagarmatha. Povestea lui Yeti inca este un mister din regiunea Khumbu.
+
+
+	div.little-about.narrow.white-color(style="background:url('/images/ebci-4.png'); background-size:cover;background-position: center center; ")
+		div.hoc.container.clear
+
+	div.page-description.height-auto.light-grey-color
+		div.hoc.container.clear.max-width-40.margin-auto.upspace-10
+			p.center Regiunea Everest, stabilita in 1976 cu arealul de 1248 km², este situata in partea estica a Nepalului, protejata de Parcul National Sagarmatha. Frontiera nordica este comuna cu Tibetul, inclusiv Mt. Everest, cel mai inalt varf din lume. Altitudinea este cuprinsa intre 2845 m si 8848 m( acoperisul lumii -Vf. Everest), incluzand cei mai inalti munti ai lumii: Mt. Everest, Lhotse, Nupse, Choyo, Pomori, Makalu, Ama Dablam , care iti vor rasplati prin frumusetea lor efortul depus.
+
+	div.little-about.narrow.white-color(style="background:url('/images/ebci-5.png'); background-size:cover;background-position: center center; ")
+		div.hoc.container.clear
+
+	div.page-description.height-auto.light-grey-color
+		h5.upspace-35.primary-grey-color ???
+			div.hoc.container.clear.max-width-40.margin-auto.upspace-10
+				p.center ???
+
+	div.image.height-500.wrapper(style="background:url('/images/ebci-6.png'); background-size:cover;background-position: center center;")
+		div.overlay
+			div.overlay-text.flex-1
+				i.fa.fa-euro.fa-4x
+				p 1750
+				p.down /persoana

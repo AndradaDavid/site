@@ -1,0 +1,319 @@
+extends ./index.jade
+
+block content
+
+    div.bgded.bgded-top(style="background-image:url('/images/home.png');")
+        div.wrapper.dust-white-color
+            header#header.clear
+
+                if device.desktop
+                    div.main-nav.downspace-40.dark-grey-color.flex-1.clear
+                        include components/navigation
+                        ul.fl.clear
+                            li.fl.language
+                                a(href="en") ro
+                               // ul.sl
+                                    li.sl
+                                        a(href="en") en
+                                    li.sl
+                                        a(href="ru") ru
+                        
+                else
+                    div.mobile-nav
+                        i.fa.fa-bars.fa-2x.upper.show-panel
+                        nav.sidenav.clear
+                            include components/navigation
+
+                div#logo.text-center.flex-1
+                    h1.font-4
+                        a.dark-grey-color(href="#top") Flo Adventure Tours
+                    h3.dark-grey-color.font-2 Sa ne vedem cat mai sus!
+
+        if device.desktop || device.tablet
+           // div#pageintro.hoc.clear
+                article
+                    div.introtxt
+                        div.quote
+                            i.fa.fa-quote-right.fa-5x
+
+
+                        div#quote-carousel.carousel.slide(data-ride='carousel')
+                            ol.carousel-indicators
+                                li.active(data-target="#quote-carousel" data-slide-to="0")
+                                li(data-target="#quote-carousel" data-slide-to="1")
+                                li(data-target="#quote-carousel" data-slide-to="2")
+
+                            div.carousel-inner
+                                div.carousel-item.active
+                                    div
+                                        p Flo thanks a lot for this amazing weekend!! What you teach will become soon the most important subjects in life... I hope this is only the beginning!
+                                        p.author.center.light-grey-color Dan Fintescu - Galati
+
+                                div.carousel-item
+                                    div
+                                        p Flo Adventure nu este o scoala de supravietuire cu traditie, este mai mult decat atat. Este o scoala unde oamenii isi indeplinesc visele, unde visul devine realitate unde omul invata sa devina om printre oameni.
+                                        p.author.center.light-grey-color Cosmin Durbanca - Galati
+
+                                div.carousel-item
+                                    div
+                                        p Prima data in opt ani, cand am ocazia sa invat de la un om cu asa experienta, care imi poate impartasi cu dragoste experientele traite in domeniul alpinismului. Iti multumesc mult!
+                                        p.author.center.light-grey-color Szemusi Zoltan - Cluj Napoca
+
+
+    div.scroll-down
+        div.chevron
+        div.chevron
+        div.chevron
+
+    div.little-about.dark-grey-normal.height-auto
+        div.hoc.container.clear
+        
+            p bla bla
+
+    div.page-description.wrapper
+        div.container.width-full.max-width-full.padding-0.clear(data-device="#{type}")
+            div#full-grid.width-full(data-device="#{type}")
+                a.full-grid-item.big
+                    div.flex-1(style="background-image:url('/images/kkkjf765ghfyd654.png'); background-size: cover;")
+                    div.ribbon(style="background-image:url('/images/logo-expeditii.png');")
+                    div.subtitle.font-1-3 Expeditii
+                a.full-grid-item
+                    div.flex-1(style="background-image:url('/images/2342asdfa3.png'); background-size: cover; background-position:top;")
+                    div.ribbon(style="background-image:url('/images/logo-drumetii.png');")
+                    div.subtitle.font-1-3 Drumetii
+                        
+                a.full-grid-item
+                    div.flex-1(style="background-image:url('/images/kajhsdf67894.png'); background-size: cover;")
+                    div.ribbon(style="background-image:url('/images/logo-cursuri.png');")
+                    div.subtitle.font-1-3 Cursuri
+                a.full-grid-item
+                    div.flex-1(style="background-image:url('/images/hhghhg.png'); background-size: cover; background-position: center;")
+                    div.ribbon(style="background-image:url('/images/logo-cultura.png');")
+                    div.subtitle.font-1-3 Cultura
+                a.full-grid-item.half
+                    div.flex-1(style="background-image:url('/images/hhghhga.png'); background-size: cover; background-position: center;")
+                    div.ribbon(style="background-image:url('/images/logo-aventura.png');")
+                    div.subtitle.font-1-3 Aventura
+
+    //Overlay wrapper
+    div.page-description.wrapper.dust-grey.light-grey-color(data-device="#{type}")
+        div.container.clear.upspace-90(data-device="#{type}")
+            div.page-box.flex-1-2
+                p.pretitle.font-montserrat-regular O lume a aventurii
+                h4.subtile-grey-color.font-montserrat-bold Flo Adventure Tours
+                div.heading-sep.orange
+                div.btmspace-50.font-open-sans.dark-grey-color(data-aos="fade-right")
+                    p Bun venit in lumea noastra. Uita ceea ce stiai pana acum despre turismul de aventura. Inca nu ne cunosti? Suntem echipa Flo adventure si suntem cei ce vor transforma urmatoarea ta aventura in amintiri ce vor dura o viata intreaga.
+                    p Cu peste 22 de ani de experienta in turismul de aventura, ne caracterizeaza pasiunea pentru ceea ce facem, profesionalismul si adaptarea usoara in functie de nevoile clientilor nostrii. Ne recomanda experienta vasta, calificarea personalului si a colaboratorilor nostrii. Planifica cu noi urmatoarea ta aventura. Suntem aici pentru tine.
+            div.page-box.flex-1-5
+                div.map(style="background-image:url('/images/icons.png')")
+
+
+    hr.light-grey
+    
+    if device.desktop
+        //Destinatiile noastre
+        div.little-about.height-auto.dust-grey
+            div.clear.center
+                h2.title.font-montserrat-bold.dark-grey-color.center.upspace-90 Destinatiile noastre
+                //i.fa.fa-minus.font-1-2.light-grey-color.upspace-35
+                div.heading-sep-middle.light-grey.center
+
+                p.max-width-70.center.dark-grey-color.font-open-sans.font-1.upspace-35 Alege una dintre variatele noastre optiuni pentru vacanta ta, indiferent de natura acesteia. Alege intre #[a.highlight Montblanc], #[a.highlight Elbrus], minunata #[a.highlight Sahara], #[a.highlight Grossglockner], sau chiar cel mai inalt varf de pe Terra, #[a.highlight Everest]. Avem si povesti minunate de relatat de pe #[a.highlight Jebel Toubkal] si #[a.highlight K2].
+
+                div.btmspace-50.upspace-35(style="background-image: url(/images/harta.png);background-size: contain; background-repeat: no-repeat;height: 100vh;")
+
+    if device.mobile
+        div.little-about.height-full.dust-grey
+            div.hoc.container.clear.center
+                h2.title.font-montserrat-bold.dark-grey-color.center Destinatiile noastre
+                div.heading-sep-middle.light-grey.center
+                span.center.upspace-35.font-open-sans.dark-grey-color Alege una dintre variatele noastre optiuni pentru vacanta ta, indiferent de natura acesteia. Alege intre #[a.highlight Montblanc], #[a.highlight Elbrus], minunata #[a.highlight Sahara], #[a.highlight Grossglockner], sau chiar cel mai inalt varf de pe Terra, #[a.highlight Everest]. Avem si povesti minunate de relatat de pe #[a.highlight Jebel Toubkal] si #[a.highlight K2].
+    
+
+
+    if device.mobile || device.tablet
+        div.little-about(style="background:url('/images/kljhskier8304jlkjdf8.jpg'); background-position: -361px; background-size: cover; background-attachment: fixed;")
+            div.hoc.container.clear
+                h4.orange-color Indrazneste
+                p.center Scrie-ne despre urmatoarea ta aventura impreuna cu noi.
+                div.button Contact
+
+    if device.desktop
+        div.little-about.narrow
+            div.hoc.container.clear
+                h4.orange-color Indrazneste
+                p.center.dark-grey-color Scrie-ne despre urmatoarea ta aventura impreuna cu noi.
+                div.button Contact
+
+    div#legend.wrapper.dark-grey.light-grey-color
+        div.hoc.container.clear
+            div.hoc.clear
+                h4.center.dust-white-color Incearca-ti limitele
+                div.center(data-aos="fade-right")
+                p.center.btmspace-20 Programele noastre sunt create pentru persoane cu abilitati diferite, unele aventuri fiind mai dificile din punct de vedere fizic decat celelalte. Din acest motiv fiecare program este incadrat la o anumita categorie de dificultate.
+
+
+            div#grades-carousel.carousel.upspace-35.slide(data-ride='carousel')
+
+
+                div.carousel-inner
+                    div.carousel-item.expeditii.active
+                        div.category-title.center.btmspace-20 Expeditii
+                        ul.nospace.group(data-device="#{type}")
+
+                            li.first.inspace-10
+
+                                div.text
+
+                                    div.logo.easy.btmspace-20
+                                    div.title.dust-white-color USOR
+                                    span In unele cazuri va fi nevoie de utilizarea echipamentului tehnic, nefiind necesare cunostinte de utilizare ale acestuia. In teren se pot intalni pante usoare.
+
+                            li.inspace-10
+
+                                div.text
+                                    div.logo.medium.btmspace-10
+                                    div.title.dust-white-color  MODERAT
+                                    span Utilizarea echipamentului tehnic va fi necesara in unele sectiuni ale traseului, fiind indicata o minima experienta anterioara in activitati, precum: catarare pe gheata,  escalada pe stanca sau mersul pe ghetar.
+
+
+                            li.inspace-10
+
+                                div.text
+                                    div.logo.difficult.btmspace-10
+                                    div.title.dust-white-color DIFICIL
+                                    span Terenul este accidenta cu pante abrupte, fiind obligatorie experienta tehnica in catarare pe gheata, escalada pe stanca si mers pe ghetar.
+
+
+                    div.carousel-item.aventura
+                        div.category-title.center.btmspace-20 Aventura
+                        ul.nospace.group(data-device="#{type}")
+
+                            li.first.inspace-10
+
+                                div.text
+                                    div.logo.easy.btmspace-20
+                                    div.title.dust-white-color USOR
+                                    span De activitatile incadrate in aceasta categorie se poate bucura oricine, nivelul de efort depus este minim. Nu sunt necesare cunostinte tehnice sau o experienta anterioara pe munte.
+
+
+
+                            li.inspace-10
+
+                                div.text
+                                    div.logo.medium.btmspace-10
+                                    div.title.dust-white-color  MODERAT
+                                    span La acest nivel este necesara o conditie fizica de baza. In functie de programul ales, anumite cunostinte tehnice de baza sunt obligatorii.
+
+
+                            li.inspace-10
+
+                                div.text
+                                    div.logo.difficult.btmspace-10
+                                    div.title.dust-white-color DIFICIL
+                                    span Aici sunt incluse aventurile cele mai grele, dar care merita sacrificiul facut. Este necesara o buna pregatire fizica si o atitudine mentala potrivita pentru a atinge obiectivul propus. In functie de programul ales, anumite cunostinte tehnice sunt obligatorii.
+
+
+                ol.carousel-indicators
+                    li.active(data-target="#grades-carousel" data-slide-to="0")
+                    li(data-target="#grades-carousel" data-slide-to="1")
+
+
+
+
+    //section.single-item.slider(style="margin: 0 auto")
+    //	div
+    //		img(src="http://placehold.it/350x100?text=1")
+    //	div
+    //		img(src="http://placehold.it/350x100?text=2")
+    //	div
+    //		img(src="http://placehold.it/350x100?text=3")
+    //	div
+    //		img(src="http://placehold.it/350x100?text=4")
+    //	div
+    //		img(src="http://placehold.it/350x100?text=5")
+    //	div
+    //		img(src="http://placehold.it/350x100?text=6")
+
+
+
+    //Events area
+    div
+        div
+
+            //div.event-box
+            //	div.event-image(style="background-image:url('/images/africa.png')")
+            //	div.event-overlay
+            //		//div.event-title Vf. Grossglockner
+            //		//div.event-desc Este vârful montan cel mai înalt din Alpii de Est. Pot participa incepatori si avansati, dar cu o stare de sanatate si conditie fizica buna.
+            //		//div.event-footer.dark-grey
+            //		//	div.time adsf
+            //		//	div.time adsf
+            //		//	div.time adsf
+            //
+            //div.event-box
+            //
+            //	div.event-overlay
+            //	div.event-image(style="background-image:url('/images/grossglockner.png')")
+            //
+            //div.event-box
+            //	div.event-image(style="background-image:url('/images/belioara.jpg')")
+            //	div.event-overlay
+
+            //ul.nospace.elements
+            //	li.one_third.first
+            //		article
+            //			a(href='/africa')
+            //				img(src="/images/grossglockner.jpg")
+            //			div.txtwrap
+            //				h6.heading Vf.Grossglockner 3798m
+            //				time(datetime="2045-04-06") 30 iulie 2018 - 4 august 2018
+            //				p Este vârful montan cel mai înalt din Alpii de Est. Pot participa incepatori si avansati,dar cu o stare de sanatate si conditie fizica buna.
+            //				footer
+            //					a.orange-color(href='#') Descopera
+            //
+            //	li.one_third
+            //		article
+            //			a(href='#')
+            //				img(src="/images/africa.jpg")
+            //			div.txtwrap
+            //				h6.heading Vf.Elbrus 5642m
+            //				time(datetime="2045-04-06") August - Septembrie
+            //				p Elbrus are altitudinea de 5.642 m , fiind cel mai înalt munte din Europa. Pot participa incepatori si avansati, dar cu o stare de sanatate si conditie fizica buna.
+            //				footer
+            //					a.orange-color(href='#') Descopera
+            //
+            //	li.one_third
+            //		article
+            //			a(href='#')
+            //				img(src="/images/africa.jpg")
+            //			div.txtwrap
+            //				h6.heading Vf.Jebel 4167m
+            //				time(datetime="2045-04-06") 21 Septembrie 2018 - 28 Septembrie 2018
+            //				p Jebel Toubkal - 4165m  fiind cel mai înalt munte în Maroc si Africa de Nord si curs de supravietuire in Desertul Sahara.
+            //				footer
+            //					a.orange-color(href='#') Descopera
+    div.repeat-ribbon.wrapper.coloured
+        div.repeat(style="background-image: url('/images/repeat.png');height: 50px;background-size: contain;")
+    //Logos and sponsors
+
+    div.wrapper.coloured.orange
+        div.hoc.clear
+            figure#logos
+                ul.nospace.group
+                    li
+                        a(href='#')
+                            img(src="/images/logo-lowe.png")
+                    li
+                        a(href='#')
+                            img(src="/images/logo-gopro.png")
+                    li
+                        a(href='#')
+                            img(src="/images/logo-pro.png")
+                    li
+                        a(href='#')
+                            img(src="/images/logo-free.png")
+                    li
+                        a(href='#')
+                            img(src="/images/logo-tete.png")

@@ -1,0 +1,20 @@
+extends ./index.jade
+
+block content
+	div.bgded.bgded-top(style="background:url('/images/mont-blanc.png'); background-size:cover;background-position: center center;")
+		div.wrapper.dust-white-color
+			header#header.hoc.clear
+
+				if device.desktop
+					nav#mainav.clear
+						include components/navigation
+				else
+					div.mobile-nav
+						i.fa.fa-bars.fa-2x.upper.show-panel
+						nav.sidenav.clear
+							include components/navigation
+
+				div#logo.upspace-40vh.text-center
+					h1.font-4
+						a(href="#top") K2 Basecamp
+					h3.upspace-35 Flo Adventure Tours

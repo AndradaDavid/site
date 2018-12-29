@@ -1,0 +1,195 @@
+@import "colors";
+
+
+//Fonts
+@font-face {font-family: 'Cardo-Bold'; src: url("fonts/Cardo-Bold.ttf");}
+@font-face {font-family: 'Cardo-Regular'; src: url("fonts/Cardo-Regular.ttf");}
+@font-face {font-family: 'Cardo-Italic'; src: url("fonts/Cardo-Italic.ttf");}
+
+@font-face {font-family: 'Montserrat-Black'; src: url("fonts/Montserrat-Black.ttf");  }
+@font-face {font-family: 'Montserrat-Bold'; src: url("fonts/Montserrat-Bold.ttf");  }
+@font-face {font-family: 'Montserrat-Light'; src: url("fonts/Montserrat-Light.ttf");  }
+@font-face {font-family: 'Montserrat-Regular'; src: url("fonts/Montserrat-Regular.ttf");  }
+@font-face {font-family: 'Montserrat-Thin'; src: url("fonts/Montserrat-Thin.ttf");  }
+
+@font-face {font-family: 'Effra-Regular'; src: url("fonts/Effra_Std_Rg.ttf");  }
+@font-face {font-family: 'Effra-Italic'; src: url("fonts/Effra_Std_It.ttf");  }
+@font-face {font-family: 'Effra-Mid'; src: url("fonts/Effra_Std_Md.ttf");  }
+//Variables
+
+@font-base-cardo-bold: 'Cardo-Bold';
+@font-base-cardo-regular: 'Cardo-Regular';
+@font-base-cardo-italic: 'Cardo-Italic';
+
+@font-base-montserrat-black: 'Montserrat-Black';
+@font-base-montserrat-bold: 'Montserrat-Bold';
+@font-base-montserrat-light: 'Montserrat-Light';
+@font-base-montserrat-regular: 'Montserrat-Regular';
+@font-base-montserrat-thin: 'Montserrat-Thin';
+
+@font-base-effra-regular: 'Effra-Regular';
+@font-base-effra-mid: 'Effra-Mid';
+@font-base-effra-italic: 'Effra-Italic';
+
+@font-open-sans: 'Open Sans', sans-serif;
+
+@font-size-base: 14px;
+@font-size-mobile-base: 13px;
+@line-height-base: 1.6em;
+
+
+@font-10: 10px;
+@line-height-10: 10px;
+
+.font-1 {font-size: 1em !important;}
+.font-1-2 {font-size: 1.2em !important;}
+.font-1-3 {font-size: 1.3em !important;}
+.font-1-5 {font-size: 1.5em !important;}
+.font-2 {font-size: 2em !important;}
+.font-3 {font-size: 3em !important;}
+.font-4 {font-size: 4em !important;}
+
+.font-montserrat-black{font-family: @font-base-montserrat-black;}
+.font-montserrat-bold{font-family: @font-base-montserrat-bold;}
+.font-montserrat-thin{font-family: @font-base-montserrat-thin;}
+.font-montserrat-regular{font-family: @font-base-montserrat-regular;}
+.font-montserrat-light{font-family: @font-base-montserrat-light;}
+
+.font-cardo-regular{font-family: @font-base-cardo-regular;}
+
+.font-open-sans{font-family: @font-open-sans;}
+
+
+
+//--------------- Spacing -------------------------
+
+
+.flex-1 { flex: 1;}
+.flex-1-2 { flex: 1.2;}
+.flex-1-5 { flex: 1.5;}
+.flex-1-6 { flex: 1.6;}
+.flex-4 { flex: 4;}
+
+.left {text-align: left !important;}
+.right {text-align: right !important;}
+
+
+.padding-top-bottom(@pixels) {
+  padding: @pixels 0;
+}
+
+.padding-left-right(@pixels) {
+  padding: 0 @pixels;
+}
+ 
+.max-width-60{max-width: 60% !important;}
+.max-width-40{max-width: 40% !important;}
+.max-width-80{max-width: 80% !important;}
+.max-width-95{max-width: 95% !important;}
+.max-width-70{max-width: 70%;}
+.max-width-full{max-width: 100vw !important;} 
+ 
+
+
+.width-full{margin:0; width:100vw !important;}
+
+.height-200{height:200px !important;}
+.height-300{height:300px !important;}
+.height-400{height:400px !important;}
+.height-500{height:500px !important;}
+.height-600{height:600px !important;}
+.height-800{height:800px !important;}
+.height-full{height:100vh !important;}
+.height-auto{height: auto !important;}
+.height-half{height: 50% !important;}
+.height-100{height: 100% !important;}
+.height-40{height: 40% !important;}
+.height-60{height: 60% !important;}
+
+.upspace-0{padding-top:0 !important;}
+.upspace-5{padding-top:5px;}
+.upspace-10{padding-top:10px !important;;}
+.upspace-15{padding-top:15px !important;;}
+.upspace-20{padding-top:20px;}
+.upspace-35{padding-top:35px !important;}
+.upspace-40{padding-top:40px !important;}
+.upspace-50{padding-top:50px;}
+.upspace-40vh{padding-top:40vh;}
+.upspace-90{padding-top:90px !important;}
+
+.downspace-40{padding-bottom: 40px;}
+.downspace-50{padding-bottom: 50px;}
+
+.btmspace-10{margin-bottom:10px;}
+.btmspace-15{margin-bottom:15px;}
+.btmspace-30{margin-bottom:30px !important; }
+.btmspace-50{margin-bottom:50px !important; }
+.btmspace-80{margin-bottom:80px;}
+
+.inspace-0{padding: 0;}
+.inspace-5{padding:5px;}
+.inspace-10{padding:10px;}
+.inspace-15{padding:15px !important;}
+.inspace-30{padding:30px;}
+.inspace-50{padding:50px !important;}
+.inspace-80{padding:80px;}
+
+.margin-auto{margin: 0 auto;}
+.padding-0{padding: 0 !important;}
+.z-index-1{z-index:1};
+
+
+/*Grid*/
+.one_half,
+.one_third,
+.two_third,
+.one_quarter,
+.two_quarter,
+.three_quarter{display:inline-block; float:left; margin:0 0 0 3.06748466257669%; list-style:none;}
+
+.first{margin-left:0; clear:left;}
+
+.one_quarter{width:22.69938650306748%;}
+.one_third{width:30.28834355828221%;}
+.one_half, .two_quarter{width:46.46625766871166%;}
+.two_third{width:60.6441717791411%;}
+.three_quarter{width:74.23312883435584%;}
+.full_width{width:100% !important;}
+
+
+@media screen and (max-width:750px){
+  .imgl, .imgr{display:inline-block; float:none; margin:0 0 10px 0;}
+  .fl_left, .fl_right{display:block; float:none;}
+  .one_half, .one_third, .two_third, .one_quarter, .two_quarter, .three_quarter{display:block; float:none; width:auto; margin:0 0 30px 0; padding:0;}
+
+}
+
+/* Layering*/
+.upper {z-index: 20;}
+.downer {z-index: 0;}
+
+/* Positioning */
+.fixed {position: fixed};
+
+
+/*Colors*/
+.olive {background-color: #956304;}
+.orange {background-color: @yellow !important;}
+.dark-grey {background-color: #1D1D1D;}
+.dust-white {background-color: @dust-white !important;}
+.light-grey {background-color: #949495 !important;}
+.dark-grey-normal {background-color: @darker-grey-normal;}
+.cloudy {background-color: @cloudy;}
+.dust-grey {background-color: @dust-grey !important;}
+
+/*Colors*/
+.white-color {color: @white;}
+.olive-color {color: #956304;}
+.orange-color {color: @yellow !important;}
+.dark-grey-color {color: @dark-grey !important;}
+.dust-white-color {color: @dust-white !important;}
+.light-grey-color {color: @light-grey !important;}
+.subtile-grey-color {color: #2E2E2E !important;}
+.cloudy-color {color: @cloudy !important;}
+.dust-grey-color {color: @dust-grey !important;}
+.primary-grey-color {color: @grey !important;}

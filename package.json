@@ -1,0 +1,24 @@
+{
+  "name": "floadventuretours",
+  "version": "3.0.0",
+  "description": "Flo Adventure Tours ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrada David",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.16.3",
+    "express-device": "^0.4.2",
+    "isotope-layout": "^3.0.5",
+    "jade": "^1.11.0",
+    "less": "^3.8.1",
+    "method-override": "^2.3.5",
+    "stylus": "^0.52.4"
+  },
+  "devDependencies": {
+    "node-sass": "^4.8.3"
+  }
+}

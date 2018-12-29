@@ -1,0 +1,169 @@
+extends ./index.jade
+
+block content
+	div.bgded.bgded-top(style="background:url('/images/.png') black;")
+		div.wrapper.dust-white-color
+			header#header.hoc.clear
+
+				if device.desktop
+					nav#mainav.clear
+						include components/navigation
+				else
+					div.mobile-nav
+						i.fa.fa-bars.fa-2x.upper.show-panel
+						nav.sidenav.clear
+							include components/navigation
+
+				div#logo.text-center
+					h1
+						a(href="#top") Circuitul castelelor
+					h3.upspace-35 Flo Adventure Tours
+
+	div.scroll-down
+		div.chevron
+		div.chevron
+		div.chevron
+
+	div.page-description.wrapper.dust-white.light-grey-color
+		div.container.clear(data-device="#{type}")
+			div.page-box.flex-1
+				h4.orange-color Titlu 1
+				div.btmspace-50(data-aos="fade-right")
+					p Cateva detalii despre circuitul castelelor
+			div.page-box.flex-1-5
+				div.map(style="background-image:url('/images/harta-circuitul-castelelor.png')")
+
+	div.image.wrapper(style="background:url('/images/.png') black", data-device='#{type}')
+		div.hoc.container.clear
+
+			div.desc-item
+				i.fa.fa-calendar
+
+				div.item-header Perioada
+				div.item-text ????
+			div.desc-item
+				i.fa.fa-male
+				div.item-header Persoane
+				div.item-text minim 3
+			div.desc-item
+				div.item-icon(style="background:url('/images/sprite.png') -52px -3px; ")
+				div.item-header Categorie
+				div.item-text cultura
+			div.desc-item
+				i.fa.fa-car
+				div.item-header Transport
+				div.item-text ???
+			div.desc-item
+				i.fa.fa-home
+				div.item-header Cazare
+				div.item-text ???
+
+	div.separator.wrapper.dust-white
+		div.center.upspace-50.orange-color
+			div.fa.fa-fort-awesome.fa-3x
+
+	div.page-description.wrapper.dust-white.light-grey-color
+		div.container.itinerary.clear(data-device="#{type}")
+			div.page-box.left-box.flex-1
+				h4.orange-color Castelul 1
+				div.btmspace-50(data-aos="fade-right")
+					p Descriere despre castelul 1
+					p Descriere despre castelul 1 in continuare
+			div.page-box.flex-1
+
+
+	div.page-description.wrapper.dust-white.light-grey-color
+		div.container.itinerary.clear(data-device="#{type}")
+			div.page-box.flex-1
+
+			div.page-box.right-box.flex-1
+				h4.orange-color Castelul 2
+				div.btmspace-50(data-aos="fade-left")
+					p Descriere despre castelul 2
+					p Descriere despre castelul 2 in continuare
+
+	div.page-description.wrapper.dust-white.light-grey-color
+		div.container.itinerary.clear(data-device="#{type}")
+			div.page-box.left-box.flex-1
+				h4.orange-color Castelul 3
+				div.btmspace-50(data-aos="fade-right")
+					p Descriere despre castelul 3
+					p Descriere despre castelul 3 in continuare
+			div.page-box.flex-1
+
+	div.page-description.wrapper.dust-white.light-grey-color
+		div.container.itinerary.clear(data-device="#{type}")
+			div.page-box.flex-1
+
+			div.page-box.right-box.flex-1
+				h4.orange-color Castelul 4
+				div.btmspace-50(data-aos="fade-left")
+					p Descriere despre castelul 4
+					p Descriere despre castelul 4 in continuare
+
+	div.page-description.wrapper.dust-white.light-grey-color
+		div.container.itinerary.clear(data-device="#{type}")
+			div.page-box.left-box.flex-1
+				h4.orange-color Castelul 5
+				div.btmspace-50(data-aos="fade-right")
+					p Descriere despre castelul 5
+					p Descriere despre castelul 5 in continuare
+			div.page-box.flex-1
+
+	div.page-description.wrapper.dust-white.light-grey-color
+		div.container.itinerary.clear(data-device="#{type}")
+			div.page-box.flex-1
+
+			div.page-box.right-box.flex-1
+				h4.orange-color Castelul 6
+				div.btmspace-50(data-aos="fade-left")
+					p Descriere despre castelul 6
+					p Descriere despre castelul 6 in continuare
+
+	div.page-description.wrapper.dust-white.light-grey-color
+		div.container.itinerary.clear(data-device="#{type}")
+			div.page-box.left-box.flex-1
+				h4.orange-color Castelul 7
+				div.btmspace-50(data-aos="fade-right")
+					p Descriere despre castelul 7
+					p Descriere despre castelul 7 in continuare
+			div.page-box.flex-1
+
+
+	div.separator.wrapper.dust-white
+		div.center.downspace-50.orange-color
+			div.fa.fa-times.fa-3x
+
+	div.image.height-500(style="background:url('/images/.png') black")
+
+	div.page-description.wrapper.dust-white.dark-grey-color
+		div.container.clear
+			p.text Detalii despre castel.
+
+	div.image.height-600(style="background:url('/images/.png') black")
+
+		div.page-description.wrapper.dust-white.dark-grey-color
+			div.container.clear
+				p.text Detalii despre castel.
+
+	div.image.height-600(style="background:url('/images/.png') black")
+
+		div.page-description.wrapper.dust-white.dark-grey-color
+			div.container.clear
+				p.text Detalii despre castel.
+
+
+
+	div.image.height-500.wrapper(style="background:url('/images/circuit-2.png') black")
+		div.overlay
+			div.overlay-text.flex-1
+				i.fa.fa-euro.fa-4x
+				p ???
+				p /persoana
+
+
+	div.little-about.narrow
+		div.hoc.container.clear
+			h4.orange-color Inscriere
+			p.center.dark-grey-color Hai in vacanta cu noi in circuitul castelelor.
+			div.button Vreau sa vin

@@ -1,0 +1,37 @@
+extends ./index.jade
+
+block content
+    div.bgded(style="background-image:url('/images/background-top-2.jpg'")
+        div.wrapper.overlay
+            header#header.hoc.clear
+
+                include components/navigation
+
+                div#logo
+                    h1
+                        a(href="#top") Flo Adventure Tours
+                    p Sa ne vedem cat mai sus!
+
+    div.wrapper.row3
+        main.hoc.container.clear
+            div.sidebar.one_quarter.first
+                nav.sdb_holder
+                    ul
+                        li
+                            a(href="/") Home
+                        li
+                            a(href="/") Romania
+                            ul
+                                li
+                                    a(href="/") 4x4 in 3 zile
+                                li
+                                    a(href="/") 4x4 in 5 zile
+
+                        li
+                            a(href="/") Expeditii
+                            ul
+                                li
+                                    a(href="/africa") Africa
+                                li
+                                    a(href="/") Everest
+    div africa

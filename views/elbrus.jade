@@ -1,0 +1,246 @@
+extends ./index.jade
+
+block content
+	div.bgded.bgded-top(style="background-image:url('/images/elbrus.png');")
+		div.wrapper.dust-white-color
+			header#header.clear
+
+				if device.desktop
+					div.main-nav.downspace-40.dark-grey-color.flex-1.clear
+						include components/navigation
+						ul.fl.clear
+							li.fl.language
+								a(href="en") ro
+							// ul.sl
+								li.sl
+									a(href="en") en
+								li.sl
+									a(href="ru") ru
+				else
+					div.mobile-nav.flex-1
+						i.fa.fa-bars.fa-2x.upper.show-panel
+						nav.sidenav.clear
+							include components/navigation
+
+				div#logo.text-center.flex-4.upspace-35
+					h3.dark-grey-color.font-2 Flo Adventure Tours
+
+					h1.font-4
+						a.dark-grey-color(href="#top") Elbrus
+					h2.font-montserrat-regular.dark-grey-color Ruta Barrels - Pastuckhov
+
+	div.scroll-down
+		div.chevron
+		div.chevron
+		div.chevron
+
+	div.page-description.wrapper.dark-grey.light-grey-color
+		div.container.clear(data-device="#{type}")
+
+			div.page-box.flex-1(style="height: auto;")
+				h4.orange-color.font-montserrat-bold Strobilus
+				div.heading-sep.orange
+				div.btmspace-50.font-open-sans(data-aos="fade-right")
+					p.pre-text.font-open-sans Cu o altitudine de 5642 metri, Elbrus este varful cel mai inalt din Europa si al 10-lea ca proeminenta topografica din lume.  Se situeaza in Muntii Caucaz, in partea sudica a  Rusiei, langa granita cu Georgia.
+						p Elbrus are 2 varfuri, cu o diferenta de 21m intre ele. Prima ascensiune pe varful estic (5621m) a avut loc in 1829, realizata de Khillar Khachirov, in timp ce pe varful vestic ( 5642m) a ajuns pentru prima data expeditia britanica condusa de F. Crauford Grove.
+						p In antichitate, Elbrus era cunoscut sub denumirea de 'Strobilus', ceea ce inseamna 'un obiect rasucit'.
+			div.page-box.flex-1-5(style="height: auto;")
+				div.map(style="background-image:url('/images/harta-elbrus.png'); background-position: center;")
+
+
+	div.page-description.wrapper.dark-grey.cloudy-color
+		div.container.clear(data-device="#{type}")
+
+			div.item-list
+				div.number 5642m
+				div.description altitudine varf
+			div.item-list
+				div.number 9 zile
+				div.description durata
+			div.item-list
+				div.number medie
+				div.description dificultate
+			div.item-list
+				div.number 3404m
+				div.description altitudine baza
+
+	//detalii si itinerariu
+	div.page-description.wrapper.dust-grey.subtile-grey-color.font-montserrat-light
+		div.container.clear(data-device="#{type}", style="align-items: flex-start;")
+			div.page-box.flex-1(style="padding-right: 80px;")
+				h4.font-montserrat-bold Detalii
+				div.heading-sep.light-grey
+
+				p Detalli despre ruta
+
+			div.page-box.flex-1.subtile-grey-color
+				h4.font-montserrat-bold Itinerariu
+				div.heading-sep.light-grey
+				p Ne tinem de program dar uneori suntem flexibili
+
+				h5.left.upspace-20 Ziua 1
+				p Transfer la Cheget.
+				p Se alege ruta de la Bucuresti sau Budapesta catre Moscova, apoi Mineralniy Vody pana la Cheget.
+
+				h5.left.upspace-20 Ziua 2
+				p Aclimatizare
+				p Se urca pana pe varful Cheget (3404 m) pentru adaptare dupa care ne intoarcerem la cazare.
+
+				h5.left.upspace-20 Ziua 3
+				p Aclimatizare
+					p Se revine cu un programare de aclimatizare la o altitudine mai mare. Urcam din Azau cu telecabina  de la  Garabashi (3800m) pana la Pirut (4200m) dupa care ne intoarcem la cazare.
+
+				h5.left.upspace-20 Ziua 4-5-6-7-8
+				p Aclimatizare si ascensiune
+				p Vom avea un curs de initiere in nodurile necesare in expeditie, tehnica de ghetar precum si franarea cu pioletul pe o panta cu zapada. Apoi urcam pana la 4200m la Pirut iar apoi pe varful Elbrus (5642m), cel mai inalt varf din Caucaz.
+				p Urmeaza coborarea pana la Azau
+
+				h5.left.upspace-20 Ziua 9
+				p Intoarcerea acasa
+
+	hr.cloudy
+	div.image.dark-grey.cloudy-color
+		div.hoc.clear.center.upspace-35.btmspace-30(data-device="#{type}")
+			div.desc-item
+				i.fa.fa-calendar.font-2
+				span.item-header Perioada
+				span.item-text ???, 2019
+			div.desc-item
+				i.fa.fa-male.fa-3x.font-2
+				span.item-header Persoane
+				span.item-text minim 3
+			div.desc-item
+				i.fa.fa-home.fa-3x.font-2
+				span.item-header Cazare
+				span.item-text hotel, cort
+			div.desc-item
+				i.fa.fa-car.fa-3x.font-2
+				span.item-header Transport
+				span.item-text masina, avion
+
+	//grid de imagini
+	div.page-description.wrapper
+		div.container.width-full.max-width-full.padding-0.clear(data-device="#{type}")
+			div#full-grid.width-full(data-device="#{type}")
+				a.full-grid-item.big
+					div.flex-1(style="background-image:url('/images/elbrus-grid-1.png'); background-size: cover; background-position: bottom center;")
+				a.full-grid-item
+					div.flex-1(style="background-image:url('/images/elbrus-grid-2.png'); background-size: cover; background-position:top;")
+
+				a.full-grid-item
+					div.flex-1(style="background-image:url('/images/elbrus-grid-3.png'); background-size: cover; background-position: center;")
+				a.full-grid-item
+					div.flex-1(style="background-image:url('/images/elbrus-grid-4.png'); background-size: cover; background-position: center;")
+				a.full-grid-item.half
+					div.flex-1(style="background-image:url('/images/elbrus-grid-5.png'); background-size: cover; background-position: center;")
+	hr.cloudy
+
+	//extra informatii
+	div.page-description.wrapper.dust-white.dark-grey-color
+		div.container.clear(data-device="#{type}", style="align-items: flex-start;")
+
+
+			div.page-box.flex-1.font-montserrat-light(style="padding-right: 80px;")
+				h4.font-montserrat-regular Echipament tehnic
+				div.heading-sep.light-grey
+				span Cort (se poate inchiria de la agentie)
+				span Sac de dormit (se poate inchiria de la agentie)
+				span Izolir (se poate inchiria de la agentie)
+				span Rucsac 60-80 L
+				span Piolet (se poate inchiria de la agentie)
+				span Coltari (se poate inchiria de la agentie)
+				span Casca (se poate inchiria de la agentie)
+				span Ochelari de soare- 100%UV
+				span Crema de protectie - fata si buze- contra soarelui
+				span Bidon pentru apa
+				span.btmspace-30 Frontala sau lanterna
+
+				h4.font-montserrat-regular Asigurare
+				div.heading-sep.light-grey
+				span Recomandam asigurari de calatorie si optiuni de interventie, recomandate de firmele de asigurare ce sunt in colaborare cu agentia noastra de turism. Dupa ce optezi pentru o expeditie cu noi, un consultant te va indruma pentru achizitia unei polite potrivita pentru tine.
+
+
+			div.page-box.flex-1.font-montserrat-light
+
+				h4.font-montserrat-regular Imbracaminte si incaltaminte
+				div.heading-sep.light-grey
+				span 2-3 tricouri.
+				span 1 flanela din bumbac.
+				span 1 bluza termala.
+				span Suprapantaloni.
+				span Pantaloni termali care se iau pe sub suprapantaloni.
+				span O haina din Gore-tex.
+				span Polar.
+				span Pufoaica.
+				span Pelerina
+				span 2 perechi de manusi.
+				span Caciula.
+				span Masca de fata (cagula) pentru vant.
+				span Sosete termale (macar o pereche pe zi).
+				span Bocanci tehnici sau semitehnici
+				p Dupa altitudinea de 5000 m temperatura poate  sa fie foarte scazuta.
+
+	div.little-about.height-600(style="background-image:url('/images/elbrus-grid-6.png');background-size:cover;background-position: right center;")
+
+	//extra informatii
+	div.page-description.wrapper.dark-grey.cloudy-color
+		div.container.clear(data-device="#{type}", style="align-items: flex-start;")
+
+
+			div.page-box.flex-1.font-montserrat-thin(style="padding-right: 80px;")
+				h4.font-montserrat-regular Ce include?
+				div.heading-sep.light-grey
+				span Instructorul
+				span Echipament de ascensiune (corzile de ascensiune. ham, cuie de gheata, carabina pt asigurare)
+
+
+			div.page-box.flex-1.font-montserrat-thin(style="padding-right: 80px;")
+				h4.font-montserrat-regular Ce nu include?
+				div.heading-sep.light-grey
+
+				span Biletul de avion
+				span Mincarea
+				span Cazarea
+				span Asigurarea medicala (obligatorie)
+				span Taxa de viza
+				span Taxa pentru invitatie
+
+
+	div.little-about.narrow.cloudy.height-400
+		div.hoc.container.clear
+
+			a.button.orange(href="/download/mont-blanc.doc") Note de expeditie
+			div.button.dark-grey Rezerva-ti locul
+
+	hr.cloudy
+	div.price-about.height-300.wrapper.dark-grey.light-grey-color
+		div.overlay-text.flex-1.font-3
+			i.fa.fa-euro
+			p 650
+			p.down /persoana
+
+
+	div.repeat-ribbon.wrapper.coloured
+		div.repeat(style="background-image: url('/images/repeat.png');height: 50px;background-size: contain;")
+
+	//Logos and sponsors
+
+	div.wrapper.coloured.orange
+		div.hoc.clear
+			figure#logos
+				ul.nospace.group
+					li
+						a(href='#')
+							img(src="/images/logo-lowe.png")
+					li
+						a(href='#')
+							img(src="/images/logo-gopro.png")
+					li
+						a(href='#')
+							img(src="/images/logo-pro.png")
+					li
+						a(href='#')
+							img(src="/images/logo-free.png")
+					li
+						a(href='#')
+							img(src="/images/logo-tete.png")

@@ -1,0 +1,171 @@
+extends ./index.jade
+
+block content
+	div.bgded.bgded-top(style="background-image:url('/images/apuseni-3-platou.png');")
+		div.wrapper.dust-white-color
+			header#header.clear
+
+				if device.desktop
+					div.main-nav.downspace-40.primary-grey-color.flex-1.clear
+						include components/navigation
+						ul.fl.clear
+							li.fl.language
+								a(href="en") ro
+							// ul.sl
+								li.sl
+									a(href="en") en
+								li.sl
+									a(href="ru") ru
+				else
+					div.mobile-nav.flex-1-5
+						i.fa.fa-bars.fa-2x.upper.show-panel
+						nav.sidenav.clear
+							include components/navigation
+
+				div#logo.text-center.flex-1.upspace-35
+					h1.font-4
+						a.cloudy-color(href="#top") 3 zile in Apuseni
+					h3.cloudy-color.font-2 Flo Adventure Tours
+
+	div.scroll-down
+		div.chevron
+		div.chevron
+		div.chevron
+
+	div.page-description.wrapper.dust-grey.light-grey-color
+		div.container.clear(data-device="#{type}")
+			div.page-box.flex-1
+				h4.subtile-grey-color.font-montserrat-bold Zona de poveste
+				div.heading-sep.orange
+				div.btmspace-50.font-open-sans.dark-grey-color(data-aos="fade-right")
+					p Bucurați-vă de 3 zile de aventură  în Transilvania, o zonă plină de cultură, istorie și natură sălbatică. Descoperă alături de noi unicitatea orașului Cluj-Napoca, frumusețea trecutului în muzeul de istorie a mineritului în sare a Salinei Turda și diversitatea naturii în Rezervația Naturală Cheile Turzii  și Rezervația Geobotanică Scărița-Belioara.
+			div.page-box.flex-1-5
+				div.map(style="background-image:url('/images/harta-apuseni-3.png')")
+
+	hr.cloudy
+	div.image.dark-grey.light-grey-color
+		div.hoc.clear.center.upspace-35.btmspace-30(data-device="#{type}")
+			div.desc-item
+				i.fa.fa-calendar.font-1-5
+				span.item-header Perioada
+				span.item-text Aprilie, 2019 - Noiembrie, 2019
+			div.desc-item
+				i.fa.fa-male.fa-3x.font-1-5
+				span.item-header Persoane
+				span.item-text minim 3
+			div.desc-item
+				i.fa.fa-map-marker.fa-3x.font-1-5
+				span.item-header Regiune
+				span.item-text zona Apuseni
+			div.desc-item
+				i.fa.fa-car.fa-3x.font-1-5
+				span.item-header Transport
+				span.item-text masina
+
+	div.little-about.height-600(style="background-image:url('/images/apuseni-3-platou-1.png');background-size:cover;background-position: right center;")
+
+
+	//detalii si itinerariu
+	div.page-description.wrapper.dust-grey.dark-grey-color
+		div.container.clear(data-device="#{type}", style="align-items: flex-start;")
+			div.page-box.flex-1(style="padding-right: 30px;")
+				h4.font-montserrat-bold Detalii
+				div.heading-sep.light-grey
+				p Muntii Apuseni cuprinsi intre dealurile domoale ale Depresiunii Transilvane si Campia Tisei, acestia formeaza o veriga ce inchide spre vest arcul Carpatilor Romanesti. Ocupand o suprafata de circa 20.000 km patrati, ei apar ca o insula muntoasa. In nici o regiune din Carpatii Romaniei subsolul nu este ca un mozaic de formatiuni geologice cum este in muntii Apuseni . Golurile alpine apar  de la altitudinea de 1600m in sus , in golurile alpine predomina gramineele si pe locuri mai pietroase se deswzvolta tufele de ienupar, smirdar, afine si merisoare. Padurile din Muntii Apuseni adapostesc numeroase specii de animale salbatice ursii, lupi , mistreti, rasi, cocosi-de-munte, veverite, caprioare serpi si chiar si vipere. Paraiele de munte sunt sant bogate in pastravi  care atrag multi pescari.
+			div.page-box.flex-1
+				h4.font-montserrat-bold Itinerariu
+				div.heading-sep.light-grey
+				p Ne tinem de program dar uneori suntem flexibili
+
+				h5.left.upspace-20 Ziua 1
+				p Sosire in Cluj-Napoca. Transfer de la aeroport in oraș, ulterior pensiune. Vizitarea orașului sau timp liber la alegere. Biserica Sf. Mihail-P-ta Unirii, Palatul Banffy, Muzeul  Etnografic.
+
+				h5.left.upspace-20 Ziua 2
+				p Mic dejun. Vizitarea Salinei Turda din care fac parte Galeria de transport Franz Josef, săpată între anii 1853-1871, Mina Iosif- sala ecourilor etc. precum și o sală de agrement cu dive§rse facilități de recreere. Urmează Rezervația Cheile Turzii, importante atât din punct de vedere științific, cât și a frumuseților sălbatice.
+				p Celor aproximativ 1000 de specii floristice, vegetale, plante rare și celor 67 specii de păsări și alte animale li se adaugă o mare varietate a formelor de relief carstice cu peșteri, grohotișuri, colțuri stâncoase. Transport și cazare la Belioara.
+
+				h5.left.upspace-20 Ziua 3
+				p Mic dejun tradițional românesc. Ziua a treia este dedicată Rezervației Scărița Belioara, o rezervație geo-botanică din masivul Muntele Mare cu vârfuri muntoase înalte sub formă de turle, țarcuri și numeroase peșteri. Este un adevărat paradis pentru iubitorii de animale sălbatice și plante rare.
+				p Prin ce se remarcă Scărița-Belioara? Rezervația cuprinde “Șesul Craiului” situat pe un platou calcaros la peste 1350 m altitudine, spectaculoase abrupturi ce urmăresc Valea Belioara, pereți verticali și creste ascuțite. Circuitul durează în jur de 5-6 ore si are o dificultate medie; sunt aproximativ 11 km și o diferență de nivel de 850 m. După terminarea traseului se revine în Cluj-Napoca. Cazare.
+
+
+	//grid de imagini
+	div.page-description.wrapper
+		div.container.width-full.max-width-full.padding-0.clear(data-device="#{type}")
+			div#full-grid.width-full(data-device="#{type}")
+				a.full-grid-item.big
+					div.flex-1(style="background-image:url('/images/apuseni-3-grid-1.png'); background-size: cover; background-position: bottom center;")
+				a.full-grid-item
+					div.flex-1(style="background-image:url('/images/apuseni-3-grid-2.png'); background-size: cover; background-position:top;")
+
+				a.full-grid-item
+					div.flex-1(style="background-image:url('/images/apuseni-3-grid-3.png'); background-size: cover; background-position: center;")
+				a.full-grid-item
+					div.flex-1(style="background-image:url('/images/apuseni-3-grid-5.png'); background-size: cover; background-position: center;")
+				a.full-grid-item.half
+					div.flex-1(style="background-image:url('/images/apuseni-3-grid-4.png'); background-size: cover; background-position: center;")
+				a.full-grid-item.big
+					div.flex-1(style="background-image:url('/images/apuseni-3-grid-6.png'); background-size: cover; background-position: top center;")
+				a.full-grid-item
+					div.flex-1(style="background-image:url('/images/apuseni-3-grid-7.png'); background-size: cover; background-position: right;")
+	hr.cloudy
+
+	//extra informatii
+	div.page-description.wrapper.dark-grey.cloudy-color
+		div.container.clear(data-device="#{type}", style="align-items: flex-start;")
+			div.page-box.flex-1.font-montserrat-thin(style="padding-right: 20px;")
+				h4.font-montserrat-regular Ce include
+				div.heading-sep.light-grey
+				p Transfer aeroport
+				P Transport
+				P Taxele de vizitare
+				P Cazare la pensiune de 3 stele
+
+			div.page-box.flex-1.font-montserrat-thin
+				h4.font-montserrat-regular Ce nu include
+				div.heading-sep.light-grey
+				p Asigurare de calatorie
+				p Mancare
+
+	//rezervati locul sau contacteaza-ne
+	div.little-about.height-auto.cloudy
+		div.hoc.container.clear.font-1-2
+			div.button Rezerva-ti locul
+			div.button Ai o intrebare?
+
+
+	hr.cloudy
+	div.price-about.height-300.wrapper.dark-grey.light-grey-color
+
+
+		div.overlay-text.flex-1.font-3
+
+			p.font-1-2 ????
+			p ron
+			p.down /persoana
+
+
+	div.repeat-ribbon.wrapper.coloured
+		div.repeat(style="background-image: url('/images/repeat.png');height: 50px;background-size: contain;")
+
+	//Logos and sponsors
+
+	div.wrapper.coloured.orange
+		div.hoc.clear
+			figure#logos
+				ul.nospace.group
+					li
+						a(href='#')
+							img(src="/images/logo-lowe.png")
+					li
+						a(href='#')
+							img(src="/images/logo-gopro.png")
+					li
+						a(href='#')
+							img(src="/images/logo-pro.png")
+					li
+						a(href='#')
+							img(src="/images/logo-free.png")
+					li
+						a(href='#')
+							img(src="/images/logo-tete.png")

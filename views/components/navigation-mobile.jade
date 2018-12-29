@@ -1,0 +1,56 @@
+- classHome = (navigation == 'home'? 'active': '')
+- classRomania = (navigation == 'romania'? 'active': '')
+- classExpeditii = (navigation == 'expeditii'? 'active': '')
+
+ul.fl.clear
+
+    i.fa.fa-close.fa-2x.upper
+    li.fl.home-desk(class=classHome)
+        a(href="/").fa.fa-home
+    li.fl.home-mob(class=classHome)
+        a(href="/") Acasa
+
+    li.fl(class=classRomania)
+
+        a.drop(href="/romania") Romania
+        if device.mobile || device.tablet
+            div.dash
+        ul.sl
+            li.sl
+                a(href="/4x4-1-zi") 4x4 in 3 zile
+            li.sl
+                a(href="4x4-3-zile") 4x4 in 5 zile
+            li.sl
+                a(href="/apuseni-3-zile") 3 zile in Apuseni
+            li.sl
+                a(href="/apuseni-5-zile") 5 zile in Apuseni
+
+    li.fl(class=classExpeditii)
+
+        a.drop(href="/expeditii") Expeditii
+        if device.mobile || device.tablet
+            div.dash
+        ul.sl
+            li.sl
+                a.drop(href="/alpi") Mont Blanc
+            li.sl
+                a.drop(href="/alpi") Grossglockner
+            li.sl
+                a(href="/elbrus") Elbrus
+            li.sl
+                a(href="/kilimanjaro") Kilimanjaro
+            li.sl
+                a(href="/maroc") Jebel Toubkal  
+            li.sl
+                a(href="/maroc") Everest Basecamp
+            li.sl
+                a(href="/maroc") Everest + intoarcerea cu elicopterul
+            li.sl
+                a(href="/maroc") Everest Basecamp + Island peak
+                
+            li.sl
+                a(href="/k2-basecamp") K2 Basecamp
+    li.fl
+        a(href="index.html") Contact
+
+    
