@@ -212,3 +212,11 @@ exports.montblanc = function(req, res){
             'navigation':'expeditii'
         });
 };
+exports.contact = function(req, res){
+    res.render('contact',
+        {
+            'device': getDevice(req),
+            'type': getDeviceType(req),
+            'navigation':'contact'
+        });
+};

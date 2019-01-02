@@ -47,6 +47,8 @@ app.get('/everest-basecamp', routes.everestbc);
 app.get('/everest-intoarcerea-cu-elicopter', routes.everesteli);
 app.get('/island-peak-basecamp', routes.island);
 app.get('/k2-basecamp', routes.k2);
+app.get('/contact', routes.contact);
+
 
 http.createServer(app).listen(app.get('port'), function(){
 

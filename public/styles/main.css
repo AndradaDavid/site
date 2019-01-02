@@ -129,6 +129,9 @@
   margin: 0;
   width: 100vw !important;
 }
+.height-30 {
+  height: 30px !important;
+}
 .height-200 {
   height: 200px !important;
 }
@@ -194,6 +197,9 @@
 }
 .upspace-90 {
   padding-top: 90px !important;
+}
+.upspace-200 {
+  padding-top: 200px !important;
 }
 .downspace-40 {
   padding-bottom: 40px;
@@ -379,10 +385,10 @@ html {
 }
 html body {
   font-family: 'Cardo-Regular';
-  font-size: 14px;
+  font-size: 16px;
 }
 html body[data-device='phone'] {
-  font-size: 13px;
+  font-size: 15px;
 }
 html *,
 html *::before,
@@ -599,7 +605,6 @@ html #header .main-nav ul.fl {
   margin: 0;
   padding: 0;
   list-style: none;
-  text-transform: lowercase;
   text-align: center;
   position: relative;
 }
@@ -974,6 +979,37 @@ html .page-description .container .page-box-tiny .map {
   background-position: bottom center;
   background-repeat: no-repeat;
 }
+html .page-description .container .page-box form input,
+html .page-description .container .page-box-tiny form input {
+  background: rgba(255, 255, 255, 0.8);
+  font-family: 'Open Sans', sans-serif;
+  line-height: 18px;
+  font-size: 16px;
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+  display: block;
+  float: left;
+  border: none;
+}
+html .page-description .container .page-box form textarea,
+html .page-description .container .page-box-tiny form textarea {
+  background: rgba(255, 255, 255, 0.8);
+  font-family: 'Open Sans', sans-serif;
+  color: #646461;
+  line-height: 18px;
+  font-size: 16px;
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+  height: 200px;
+  border: none;
+}
+html .page-description .container .page-box form .button,
+html .page-description .container .page-box-tiny form .button {
+  float: left;
+  padding: 20px;
+}
 html .page-description .container #full-grid {
   width: 100%;
   height: 100vh;
@@ -1006,6 +1042,7 @@ html .page-description .container #full-grid .full-grid-item .subtitle {
   color: #ffffff;
   text-transform: uppercase;
   font-family: 'Montserrat-Bold';
+  text-shadow: 1px 1px #333;
 }
 html .page-description .container #full-grid .full-grid-item.half {
   width: 50%;
@@ -1036,7 +1073,7 @@ html .page-description .container #demo-grid .grid-item {
   color: #3c3c3c;
   text-decoration: none;
   font-family: 'Montserrat-Bold';
-  font-size: 14px;
+  font-size: 16px;
   flex-flow: column;
   text-align: left;
   justify-content: center;
@@ -1252,7 +1289,7 @@ html .price-about {
 }
 html .price-about > p {
   position: relative;
-  top: 50px;
+  top: 40px;
 }
 html .price-about .overlay-text {
   flex: 1;

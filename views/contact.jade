@@ -1,0 +1,50 @@
+extends ./index.jade
+
+block content
+	div.bgded
+		div.wrapper.dark-grey
+			header#header.clear
+
+				if device.desktop
+					div.main-nav.downspace-40.dust-grey-color.flex-1.clear
+						include components/navigation
+
+				else
+					div.mobile-nav
+						i.fa.fa-bars.fa-2x.upper.show-panel
+						nav.sidenav.clear
+							include components/navigation
+
+				div#logo.text-center.flex-1.upspace-200
+					h1.font-3
+						a.dust-grey-color(href="#top") Contact
+					h3.dust-grey-color.font-1-2 Flo Adventure Tours
+
+	//detalii si itinerariu
+	div.page-description.wrapper.dust-grey.dark-grey-color
+		div.container.clear(data-device="#{type}", style="align-items: flex-start;")
+			div.page-box.flex-2(style="padding-right: 70px;")
+
+				h3 #[a.dark-grey-color(href="tel:0040753012119") +4 (753) 012 119]
+				h3 #[a.highlight(href='mailto:officefloadventure@gmail.com') officefloadventure@gmail.com]
+				div.heading-sep.light-grey
+				p Nu ezitati sa ne contactati pentru a pune la cale urmatoarea dumneavoastra aventura.
+
+
+				form#sendContact.dark-grey-color(onsubmi="return false;")
+					input(type="hidden",name="action",value="arwd_contact")
+
+					input#firstname(type="text",name="firstname",placeholder="Nume")
+					input#secondname(type="text",name="secondname",placeholder="Prenume")
+					input#address(type="text",name="address",placeholder="E-mail")
+					input#phone(type="text",name="phone",placeholder="Telefon")
+					input#subject(type="text",name="subject",placeholder="Subiect / Intrebare")
+					textarea#body(type="text",name="body",placeholder="Spune-ne cu ce te putem ajuta")
+					div.button.orange Trimite
+
+
+			div.page-box.flex-1
+				h4.font-montserrat-bold ff
+				div.heading-sep.light-grey
+				p Ne tinem de program dar uneori suntem flexibili
+
