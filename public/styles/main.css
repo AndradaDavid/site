@@ -388,7 +388,7 @@ html body {
   font-size: 16px;
 }
 html body[data-device='phone'] {
-  font-size: 15px;
+  font-size: 14px;
 }
 html *,
 html *::before,
@@ -708,6 +708,7 @@ html #header div#logo h1 {
   text-transform: uppercase;
   font-family: 'Montserrat-Black';
   letter-spacing: 1px;
+  word-wrap: normal;
 }
 html #header div#logo h3 {
   font-family: 'Montserrat-Light';

@@ -31,8 +31,8 @@ block content
 				p Nu ezitati sa ne contactati pentru a pune la cale urmatoarea dumneavoastra aventura.
 
 
-				form#sendContact.dark-grey-color(onsubmi="return false;")
-					input(type="hidden",name="action",value="arwd_contact")
+				form#sendContact.dark-grey-color(action="/send-email",method="post")
+					input(type="hidden", name="action", value="arwd_contact")
 
 					input#firstname(type="text",name="firstname",placeholder="Nume")
 					input#secondname(type="text",name="secondname",placeholder="Prenume")
@@ -41,6 +41,8 @@ block content
 					input#subject(type="text",name="subject",placeholder="Subiect / Intrebare")
 					textarea#body(type="text",name="body",placeholder="Spune-ne cu ce te putem ajuta")
 					div.button.orange Trimite
+					button trimite
+
 
 
 			div.page-box.flex-1

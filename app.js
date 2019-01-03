@@ -4,10 +4,22 @@ var  express = require('express')
     , path = require('path')
     , bodyParser = require('body-parser')
     , methodOverride = require('method-override')
-    , device = require('express-device');
+    , device = require('express-device')
+    , nodemailer = require("nodemailer")
+    , smtpTransport = require('nodemailer-smtp-transport');
 
 
 var app = express();
+
+
+var smtpTransport = nodemailer.createTransport(smtpTransport({
+    service: 'Gmail',
+    auth: {
+        user: 'cristina.k.david@gmail.com',
+        pass: 'jvMM4paMCristina'
+    }
+}));
+
 
 
 app.set('port', process.env.PORT || 3000);
@@ -16,6 +28,7 @@ app.set('view engine', 'jade');
 app.set('view options',{layout:false});
 
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json())
 app.use(methodOverride('_method'));
 
 app.use(device.capture());
@@ -48,6 +61,27 @@ app.get('/everest-intoarcerea-cu-elicopter', routes.everesteli);
 app.get('/island-peak-basecamp', routes.island);
 app.get('/k2-basecamp', routes.k2);
 app.get('/contact', routes.contact);
+
+//sending mails
+app.post('/send-email', function(req, res) {
+    console.log(req.body);
+    var mailOptions = {
+        from: req.body.address, // sender address
+        to: "cristina.k.david@gmail.com", // list of receivers
+        subject: 'Vrem sa ne inscriem pe Grossglockner', // Subject line
+        text: "Sa zicem ca e un test: " + req.body.body// plaintext body
+
+    };
+    smtpTransport.sendMail(mailOptions, function(error, info) {
+        if (error) {
+            return console.log(error);
+        }
+        console.log('Message sent: ' + info.response);
+    });
+
+    res.redirect("/romania");
+});
+
 
 
 http.createServer(app).listen(app.get('port'), function(){
