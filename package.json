@@ -16,7 +16,9 @@
     "jade": "^1.11.0",
     "less": "^3.8.1",
     "method-override": "^2.3.5",
-    "stylus": "^0.52.4"
+    "stylus": "^0.52.4",
+    "nodemailer": "^5.0.0",
+    "nodemailer-smtp-transport": "^2.7.4"
   },
   "devDependencies": {
     "node-sass": "^4.8.3"

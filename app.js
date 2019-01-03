@@ -69,7 +69,7 @@ app.post('/send-email', function(req, res) {
         from: req.body.address, // sender address
         to: "cristina.k.david@gmail.com", // list of receivers
         subject: 'Vrem sa ne inscriem pe Grossglockner', // Subject line
-        text: "Sa zicem ca e un test: " + req.body.body// plaintext body
+        text: "Sa zicem ca e un test----------------: " + req.body.body// plaintext body
 
     };
     smtpTransport.sendMail(mailOptions, function(error, info) {
