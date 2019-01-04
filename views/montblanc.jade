@@ -12,11 +12,6 @@ block content
 						ul.fl.clear
 							li.fl.language
 								a(href="en") ro
-							// ul.sl
-								li.sl
-									a(href="en") en
-								li.sl
-									a(href="ru") ru
 				else
 					div.mobile-nav.flex-1
 						i.fa.fa-bars.fa-2x.upper.show-panel
@@ -54,44 +49,39 @@ block content
 				div.number 4810m
 				div.description altitudine varf
 			div.item-list
-				div.number 8 zile
+				div.number 6 zile
 				div.description durata
 			div.item-list
 				div.number medie
 				div.description dificultate
 			div.item-list
-				div.number 2372m
+				div.number 3167m
 				div.description altitudine baza
 
 	//detalii si itinerariu
 	div.page-description.wrapper.dust-grey.subtile-grey-color.font-montserrat-light
 		div.container.clear(data-device="#{type}", style="align-items: flex-start;")
-			div.page-box.flex-1(style="padding-right: 80px;")
+			div.page-box.flex-1(style=("#{type}" === 'phone') ? "" : "padding-right: 70px;")
 				h4.font-montserrat-bold Detalii
 				div.heading-sep.light-grey
 
-				p Cea mai populara ruta de ascensiune este Voie Des Cristalliers, cunoscuta si sub numele de 'Voie Royale. Incepand de la Saint-Gervais-les-Bains, cu trenuletul se ajunge la Gare du Nid d'Aigle (Cuibul vulturului).
-				p Pregatirea tehnica si aclimatizarea sunt foarte importante in primele zile de ascensiune. In aceasta expeditie vei invata tehnici de ascensiune pe un varf precum si tehnici elementare si esentiale in alpinism.
-				p Avand o fereastra de cateva zile de ascensiune, ne ofera flexibilitatea sa urcam pe varf in functie de vremea pe care o vom intalni la fata locului.
+				p.font-effra-regular Cea mai populara ruta de ascensiune este Voie Des Cristalliers, cunoscuta si sub numele de 'Voie Royale. Incepand de la Saint-Gervais-les-Bains, cu trenuletul se ajunge la Gare du Nid d'Aigle (Cuibul vulturului). Pregatirea tehnica si aclimatizarea sunt foarte importante in primele zile de ascensiune. In aceasta expeditie vei invata tehnici de ascensiune pe un varf precum si tehnici elementare si esentiale in alpinism. Avand o fereastra de cateva zile de ascensiune, ne ofera flexibilitatea sa urcam pe varf in functie de vremea pe care o vom intalni la fata locului.
 
-			div.page-box.flex-1.subtile-grey-color
+			div.page-box.flex-1-6
 				h4.font-montserrat-bold Itinerariu
 				div.heading-sep.light-grey
-				p Ne tinem de program dar uneori suntem flexibili
+				p Ne tinem de program, dar uneori suntem flexibili, ne adaptam la conditiile meteo si la situatiile neprevazute.
 
-				h5.left.upspace-20 Ziua 1
-				p Transfer din  Cluj in Venetia sau Salzburg.
-				p Cazare la alegere.
-
-				h5.left.upspace-20 Ziua 2
-				p Venetia sau Salzburg - Chamonix - Les Houches.
-				p Vizitarea zonei si cazare in camping.
-
-				h5.left.upspace-20 Ziua 3-4-5-6
+				h5.left.upspace-15 Ziua 1
+				p Ne intalnim in Chamonix si vizitam obiectivele din zona. Apoi mergem sa ne cazam in camping.
+				h5.left.upspace-15 Ziua 2-3-4
 				p Urcare din Les Houches cu telecabina si pe urma cu trenuletul pana la Nid d'Aigle (2372m) – urcare pe jos pina la  refugiu Tête Rousse ( 3167 m). Curs de initiere cu noduri, tehnica de ghetar, franarea cu pioletul in caz de alunecare pe panta cu zapada si tehnica de ascensiune pe un vart inalt. In functie de vreme se va face urcarea varfului Mont Blanc 4810m, cel mai inalt varf din Alpi şi din Europa de Vest. Ruta – Tête Rousse Dôme du Goûter 4304m - Refugiul Vallot 4362m – Varful Mt Blanc – sosire Tête Rousse in aceeasi zi.
 
-				h5.left.upspace-20 Ziua 7-8
-				p Coborarea pana la Les Houches. Intoarcerea spre Venetia sau Salzburg si transferul in Cluj-Napoca.
+				h5.left.upspace-15 Ziua 5
+				p Se coboara pana la Les Houches si avem la dispozitie o zi libera.
+
+				h5.left.upspace-15 Ziua 6
+				p Intoarcerea acasa
 
 
 	hr.cloudy
@@ -140,9 +130,9 @@ block content
 			div.page-box.flex-1.font-montserrat-light(style="padding-right: 80px;")
 				h4.font-montserrat-regular Echipament tehnic
 				div.heading-sep.light-grey
-				span Cort (se poate inchiria de la agentie)
-				span Sac de dormit (se poate inchiria de la agentie)
-				span Izolir (se poate inchiria de la agentie)
+				span Cort
+				span Sac de dormit
+				span Izolir
 				span Rucsac 60-80 L
 				span Piolet (se poate inchiria de la agentie)
 				span Coltari (se poate inchiria de la agentie)
