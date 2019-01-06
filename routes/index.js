@@ -12,6 +12,18 @@ function getDeviceType(req) {
 }
 
 
+exports.getDevice = function(req) {
+    device.mobile = req.device.type == 'phone' ? true : false;
+    device.desktop = req.device.type == 'desktop' ? true : false;
+    device.tablet = req.device.type == 'tablet' ? true : false;
+    return device;
+
+};
+
+exports.getDeviceType= function(req) {
+    return req.device.type;
+};
+
 
 
 //home route
@@ -215,6 +227,19 @@ exports.montblanc = function(req, res){
 exports.contact = function(req, res){
     res.render('contact',
         {
+            'sent': 'no',
+            'bla': 'no',
+            'device': getDevice(req),
+            'type': getDeviceType(req),
+            'navigation':'contact'
+        });
+};
+
+exports.inscriere = function(req, res){
+    res.render('inscriere',
+        {
+            'sent': 'no',
+            'bla': 'no',
             'device': getDevice(req),
             'type': getDeviceType(req),
             'navigation':'contact'

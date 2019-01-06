@@ -15,12 +15,10 @@ var app = express();
 var smtpTransport = nodemailer.createTransport(smtpTransport({
     service: 'Gmail',
     auth: {
-        user: 'cristina.k.david@gmail.com',
-        pass: 'jvMM4paMCristina'
+        user: 'notificare.officefloadventure@gmail.com',
+        pass: '8stelute'
     }
 }));
-
-
 
 app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
@@ -61,28 +59,43 @@ app.get('/everest-intoarcerea-cu-elicopter', routes.everesteli);
 app.get('/island-peak-basecamp', routes.island);
 app.get('/k2-basecamp', routes.k2);
 app.get('/contact', routes.contact);
+app.get('/inscriere', routes.inscriere);
 
-//sending mails
-app.post('/send-email', function(req, res) {
-    console.log(req.body);
+app.post('/contact', function(req, res) {
+
+    var messageBody = "<b>NUME: </b>" + req.body.firstname + " " + req.body.secondname + "<br>" + "<b>EMAIL: </b>" + req.body.address + "<br>" + "<b>TELEFON: </b>" + req.body.phone + "<br>" + "<b>MESAJ: </b>" + req.body.body;
+
     var mailOptions = {
-        from: req.body.address, // sender address
-        to: "cristina.k.david@gmail.com", // list of receivers
-        subject: 'Vrem sa ne inscriem pe Grossglockner', // Subject line
-        text: "Sa zicem ca e un test----------------: " + req.body.body// plaintext body
-
+        from: req.body.address,
+        to: "cristina.k.david@gmail.com",
+        subject: '[Contact] ' + req.body.subject,
+        html: messageBody
     };
     smtpTransport.sendMail(mailOptions, function(error, info) {
+        console.log('error');
         if (error) {
-            return console.log(error);
+            res.render('contact',
+                {
+                    'sent': 'no',
+                    'bla': 'yes',
+                    'device': routes.getDevice(req),
+                    'type': routes.getDeviceType(req),
+                    'navigation':'contact'
+                });
+        } else {
+            console.log('Message sent: ' + info.response);
+            res.render('contact',
+                {
+                    'sent': 'yes',
+                    'bla': 'no',
+                    'device': routes.getDevice(req),
+                    'type': routes.getDeviceType(req),
+                    'navigation':'contact'
+                });
         }
-        console.log('Message sent: ' + info.response);
+
     });
-
-    res.redirect("/romania");
 });
-
-
 
 http.createServer(app).listen(app.get('port'), function(){
 
