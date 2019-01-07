@@ -9,14 +9,7 @@ block content
 				if device.desktop
 					div.main-nav.downspace-40.dark-grey-color.flex-1.clear
 						include components/navigation
-						ul.fl.clear
-							li.fl.language
-								a(href="en") ro
-							// ul.sl
-								li.sl
-									a(href="en") en
-								li.sl
-									a(href="ru") ru
+
 				else
 					div.mobile-nav.flex-1
 						i.fa.fa-bars.fa-2x.upper.show-panel.dark-grey-color
@@ -49,14 +42,14 @@ block content
 				div.map(style="background-image:url('/images/harta-maroc.png'); background-position: center;")
 
 
-	div.page-description.wrapper.dark-grey.cloudy-color
+	div.page-description.wrapper.dark-grey.orange-color
 		div.container.clear(data-device="#{type}")
 
 			div.item-list
 				div.number 4167m
 				div.description altitudine varf
 			div.item-list
-				div.number 7 zile
+				div.number 8 zile
 				div.description durata
 			div.item-list
 				div.number usor
@@ -68,13 +61,14 @@ block content
 	//detalii si itinerariu
 	div.page-description.wrapper.dust-grey.subtile-grey-color.font-montserrat-light
 		div.container.clear(data-device="#{type}", style="align-items: flex-start;")
-			div.page-box.flex-1(style="padding-right: 80px;")
+			div.page-box.flex-1(style=("#{type}" === 'phone') ? "" : "padding-right: 70px;")
 				h4.font-montserrat-bold Detalii
 				div.heading-sep.light-grey
 
-				p ????
+				p.font-effra-regular Muntii Atlas  s-au format atunci cand placile tectonice ale Europei si Africii s-au ciocnit, producand ridicarea scoartei terestre. Ei formeaza un lant inalt in nord-vestul Africii, cu varful cel mai inalt denumit Toubkal. Acesta este situat in sudul Marocului si are o inaltime de 4165m. Muntii Atlas actioneaza ca o bariera climatica intre zonele de coasta ale Atlanticului si Mediteranei si gigantul Sahara, care cuprinde o treime din Africa. Desertul Sahara se intinde de la Oceanul Atlantic  in vest, pana la Marea Rosie in est, fiind de 26 de ori mai mare decat suprafata Germaniei.
+				p.font-effra-regular Marrakech-ul este unul dintre centrele turistice importante din nordul Africii. Este renumit pentru monumentele de arhitectura din partea veche a orasului denumita "medina".  Aici intalnesti stradute ascunse, palate si cateva dintre cunoscutele bazaruri orientale. Djemaa el Fna este piata in jurul careia s-a dezvoltat orasul vechi si un important punct turistic.
 
-			div.page-box.flex-1.subtile-grey-color
+			div.page-box.flex-1-6.subtile-grey-color
 				h4.font-montserrat-bold Itinerariu
 				div.heading-sep.light-grey
 				p Ne tinem de program dar uneori suntem flexibili
@@ -84,7 +78,6 @@ block content
 				p Se alege ruta din Cluj sau Bucuresti catre Marrakech si apoi la Imlil, la 60 km sud de Marrakech. Ne vom caza la Riad si avem timp liber si vizitarea unui sat berber de munte.
 
 				h5.left.upspace-20 Ziua 2
-				p Curs si ascensiune
 				p Urcam din Imlil (1740m) pana la Refuge du Toubkal (3207m). Vom avea curs de initiere in supravietuire, orientare pe munte, vom invata sa citim o harta precum si tehnica de ascensiune pe un varf inalt.
 
 				h5.left.upspace-20 Ziua 3
@@ -135,7 +128,6 @@ block content
 
 
 				h5.left.upspace-20 Ziua 5
-				p Curs initiere in supravietuire/
 				p Plecam la ora 8 dimineata ca sa vizitam canionul Dades si apoi impresonantul canion Toudra. Din canionul Toudra vom ajunge in Merzouga, poarta de intrare in desertul Sahara. Aici vom lasa masinile si ne vom continua drumul pe dromaderi, deplasandu-ne mai departe in desert, pana aproape de frontiera cu Algeria, unde se va desfasura cursul de initiere in supravietuire: orientarea in desert, procurarea hranei in aceasta parte a lumii, citirea unei harti, cum sa iti procuri apa, cum procedezi cand te surprinde o furtuna de nisip, cum faci un foc si din ce materiale.
 
 				h5.left.upspace-20 Ziua 6
@@ -143,7 +135,10 @@ block content
 				p Plecam la ora 6 dimineata pentru a surpinde rasaritul de soare in plin desert. Dupa ce luam micul dejun, pornim spre Marrakech, seara vizitam cunoscuta piata Jemma'Él'Fna.
 
 				h5.left.upspace-20 Ziua 7
-				p Intoarcerea acasa.
+				p Zi libera de vizitare si cumparaturi in Marrakech.
+
+				h5.left.upspace-20 Ziua 8
+				p Intoarcearea acasa.
 
 
 	hr.cloudy
@@ -152,7 +147,7 @@ block content
 			div.desc-item
 				i.fa.fa-calendar.font-2
 				span.item-header Perioada
-				span.item-text Septembrie, 2019
+				span.item-text ??? 2019
 			div.desc-item
 				i.fa.fa-male.fa-3x.font-2
 				span.item-header Persoane
@@ -197,11 +192,12 @@ block content
 			div.page-box.flex-1.font-montserrat-light(style="padding-right: 80px;")
 				h4.font-montserrat-regular Echipament tehnic
 				div.heading-sep.light-grey
-				span Rucsac 40-60 litri.
-				span Ochelari de soare- 100%UV.
-				span Crema de protectie - fata si buze- contra soarelui.
-				span Bidon pentru apa.
-				span Frontala sau lanterna.
+				span Rucsac 40-60 litri
+				span Sac de dormit usor (temperatura de comfort 0 grade)
+				span Ochelari de soare- 100%UV
+				span Crema de protectie - fata si buze - factor de protectie ridicat
+				span Sticla pentru apa
+				span Frontala
 
 				h4.font-montserrat-regular Asigurare
 				div.heading-sep.light-grey
@@ -222,7 +218,6 @@ block content
 				span Masca de fata (cagula) pentru vant
 				span Sandale sau o pereche de pantofi sport
 				span Bocanci clasici
-
 
 
 	div.little-about.height-600(style="background-image:url('/images/maroc-grid-8.png');background-size:cover;background-position: right center;")
@@ -249,11 +244,11 @@ block content
 				span Biletul de avion pana la Marrakech dus-intors
 				span Pranzul
 				span Bauturile din afara meselor
-				span Biletele de intrare la muzee
+				span Biletele de intrare la muzee (daca va fi cazul)
 				span Bacsisuri
 				span Asigurarea medicara (obligatorie)
 
-	div.little-about.narrow.cloudy.height-400
+	div.little-about.narrow.cloudy.height-400(style="background-image:url('/images/price-background-maroc.jpg');background-size:cover;background-position: center center;")
 		div.hoc.container.clear
 
 			a.button.orange(href="/download/mont-blanc.doc") Note de expeditie
@@ -261,9 +256,10 @@ block content
 
 	hr.cloudy
 	div.price-about.height-300.wrapper.dark-grey.light-grey-color
-		div.overlay-text.flex-1.font-3
+		p.dust-white-color.font-2(style="top: 80px;") Pretul pachetului:
+		div.overlay-text.flex-1.font-3.orange-color
 			i.fa.fa-euro
-			p 620
+			p 690
 			p.down /persoana
 
 

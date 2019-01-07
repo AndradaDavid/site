@@ -676,15 +676,18 @@ html #header .main-nav ul.fl li.fl a {
   text-shadow: none;
   color: inherit;
 }
-html #header .main-nav ul.fl li.fl.fl:hover,
-html #header .main-nav ul.fl li.fl.fl.active {
+html #header .main-nav ul.fl li.fl.fl:hover {
   border-color: rgba(255, 255, 255, 0.7);
   border-bottom-color: transparent;
   background-color: rgba(255, 255, 255, 0.7);
 }
-html #header .main-nav ul.fl li.fl.fl:hover ul.sl,
-html #header .main-nav ul.fl li.fl.fl.active ul.sl {
+html #header .main-nav ul.fl li.fl.fl:hover ul.sl {
   display: block;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+html #header .main-nav ul.fl li.fl.fl.active {
+  border-color: rgba(255, 255, 255, 0.7);
+  border-bottom-color: transparent;
   background-color: rgba(255, 255, 255, 0.7);
 }
 html #header .main-nav ul.fl li.fl ul.sl {
