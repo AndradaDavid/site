@@ -19,15 +19,21 @@ block content
                         //                a(href="ru") ru
                         
                 else
-                    div.mobile-nav
+                    div.mobile-nav.flex-1
                         i.fa.fa-bars.fa-2x.upper.show-panel
                         nav.sidenav.clear
                             include components/navigation
 
-                div#logo.text-center.flex-1
-                    h1.font-4
-                        a.dark-grey-color(href="#top") Flo Adventure Tours
-                    h3.dark-grey-color.font-2 Sa ne vedem cat mai sus!
+                div#logo.text-center.flex-2
+                    if device.desktop
+                        h1.font-4
+                            a.dark-grey-color(href="#top") Flo Adventure Tours
+                        h3.dark-grey-color.font-2 Sa ne vedem cat mai sus!
+
+                    else
+                        h1.font-3
+                            a.dark-grey-color(href="#top") Flo Adventure Tours
+                        h3.dark-grey-color.font-1-5 Sa ne vedem cat mai sus!
 
         if device.desktop || device.tablet
            // div#pageintro.hoc.clear
@@ -67,11 +73,14 @@ block content
 
     div.little-about.dark-grey-normal.height-30
         p
+        p
+        p
+
 
 
     div.page-description.wrapper
         div.container.width-full.max-width-full.padding-0.clear(data-device="#{type}")
-            div#full-grid.width-full(data-device="#{type}")
+            div#full-grid.width-full.dark-grey-normal(data-device="#{type}")
                 a.full-grid-item.big(href="/expeditii")
                     div.flex-1(style="background-image:url('/images/kkkjf765ghfyd654.png'); background-size: cover;")
                     div.ribbon(style="background-image:url('/images/logo-expeditii.png');")

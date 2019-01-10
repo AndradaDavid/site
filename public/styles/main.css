@@ -100,6 +100,9 @@
 .flex-1-6 {
   flex: 1.6;
 }
+.flex-2 {
+  flex: 2;
+}
 .flex-4 {
   flex: 4;
 }
@@ -696,7 +699,7 @@ html #header .main-nav ul.fl li.fl ul.sl {
   position: absolute;
   padding: 0;
   left: -2px;
-  top: 37px;
+  top: 38px;
   margin: 0;
   width: 190px;
 }
@@ -875,7 +878,6 @@ html .page-description h5 {
   flex: 1;
 }
 html .page-description[data-device='phone'] {
-  height: 100vh !important;
   overflow: hidden;
 }
 html .page-description span {
@@ -1062,6 +1064,7 @@ html .page-description .container #full-grid .full-grid-item {
   visibility: hidden;
   width: 25%;
   height: 420px;
+  padding: 3px;
   display: flex;
   flex-flow: column;
   justify-content: center;
