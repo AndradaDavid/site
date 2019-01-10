@@ -1064,7 +1064,7 @@ html .page-description .container #full-grid .full-grid-item {
   visibility: hidden;
   width: 25%;
   height: 420px;
-  padding: 3px;
+  padding: 2px;
   display: flex;
   flex-flow: column;
   justify-content: center;
