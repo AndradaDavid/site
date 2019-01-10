@@ -1,26 +1,26 @@
 extends ./index.jade
 
 block content
-	div.bgded.bgded-top(style="background:url('/images/ebch.png')fixed center; background-position: top center; background-size: cover; background-attachment: fixed;")
-		div.curtain
-		div.wrapper.dust-white-color
-			header#header.hoc.clear
+	div.bgded.bgded-top(style="background-image:url('/images/???.png');")
+		div.wrapper.dark-grey-color
+			header#header.clear
 
 				if device.desktop
-					nav#mainav.clear
+					div.main-nav.downspace-40.dark-grey-color.flex-1.clear
 						include components/navigation
+
 				else
-					div.mobile-nav
+					div.mobile-nav.flex-1
 						i.fa.fa-bars.fa-2x.upper.show-panel
 						nav.sidenav.clear
 							include components/navigation
 
-				div#logo.upspace-40vh.text-center
-					h1.font-4
-						a(href="#top") Everest Basecamp
-					h1.font-3 Intoarcerea cu elicopterul
-					h3.upspace-35 Flo Adventure Tours
+				div#logo.text-center.flex-4.upspace-35
+					h3.dark-grey-color.font-2 Flo Adventure Tours
 
+					h1.font-4
+						a.dark-grey-color(href="#top") Everest Base camp
+					h2.font-montserrat-regular.font-3.dark-grey-color Intoarcerea cu elicopterul
 
 	div.scroll-down
 		div.chevron
@@ -31,11 +31,12 @@ block content
 		div.container.clear(data-device="#{type}")
 
 			div.page-box.flex-1(style="height: auto;")
-				h4.orange-color ????
-				div.btmspace-50(data-aos="fade-right")
-					p.pre-text Tabara de baza a Everestului este cea mai populara destinatie de aventura din Nepal Himalaya. Primii care au deschis ruta pe Everest in mai 1953 au fost Sir Edmund Hillary si Tenzing Norgay. „Everest Base Camp Trekking” este tinta finala pentru cei care prefera trekking-ul si pentru alpinistii incepatori. Programul Everest Base Camp si Kala Patthar este genul de aventura „o data in viata”, cu provocari si realizari, cu bucuria de a fi atat de aproape de cel mai inalt munte din lume. Peisajul este superb, cu varfuri inconjurati de ghetari, manastiri antice si bineinteles fascinanta cultura si traditie a serpasilor.
+				h4.orange-color.font-montserrat-bold ???
+				div.heading-sep.orange
+				div.btmspace-50.font-open-sans(data-aos="fade-right")
+					p.pre-text.font-open-sans ???
 			div.page-box.flex-1-5(style="height: auto;")
-				div.map(style="background-image:url('/images/???.png')")
+				div.map(style="background-image:url('/images/harta-everestbc.png'); background-position: center;")
 
 	div.page-description.wrapper.dark-grey.orange-color
 		div.container.clear(data-device="#{type}")
