@@ -1,7 +1,8 @@
 extends ./index.jade
 
 block content
-	div.bgded
+
+	div.bgded(style="background-image:url('/images/home.png');")
 		div.wrapper.dark-grey
 			header#header.clear
 
@@ -13,7 +14,7 @@ block content
 					div.mobile-nav
 						i.fa.fa-bars.fa-2x.upper.show-panel.light-grey-color
 						nav.sidenav.clear
-							include components/navigation
+							include components/navigation-mobile
 
 				div#logo.text-center.flex-1.upspace-200
 
@@ -22,13 +23,15 @@ block content
 						a.dust-grey-color(href="#top") Formular de inscriere
 					case name
 						when 'patru3'
-							h3.dust-grey-color.font-3 4x4 in 3 zile
+							h3.dust-grey-color.font-2 4x4 in 3 zile
 						when 'patru5'
-							h3.dust-grey-color.font-3 4x4 in 5 zile
+							h3.dust-grey-color.font-2 4x4 in 5 zile
+						when 'apuseni3'
+							h3.dust-grey-color.font-2 Apuseni in 3 zile
+						when 'apuseni5'
+							h3.dust-grey-color.font-2 Apuseni in 5 zile
 						default
 							h3
-
-
 
 
 
@@ -39,7 +42,7 @@ block content
 			h3.hide-me.orange-color(style=("#{bla}" === 'yes') ? "display: block;" : "display: none;") Ne pare rau, dar mesajul nu a fost trimit. Reincercati!
 
 	//formular 4 x 4 in 3 zile
-	if (name == 'patru3'|| name == 'patru5')
+	if (name == 'patru3' || name == 'patru5')
 		div.page-description.wrapper.dust-grey.dark-grey-color
 			div.container.clear(data-device="#{type}", style="align-items: flex-start;")
 				div.page-box.flex-2
@@ -50,7 +53,7 @@ block content
 
 					p.font-open-sans Dupa completarea acestui formular vei fi contactat pentru confirmare si pentru plata avansului, care ti-l vom comunica in urma confirmarii. Pentru intrebari si nelamuriri, te rugam sa folosesti #[a.highlight(href="/contact") pagina de contact].
 
-					form#sendContact.dark-grey-color(action="/inscriere/#{name}", method="post")
+					form.dark-grey-color(action="/inscriere/#{name}", method="post")
 						if (name == 'patru3')
 							input(type="hidden", name="formular", value="Pentru 4x4 in 3 zile")
 						if (name == 'patru5')
@@ -79,3 +82,39 @@ block content
 
 						button.orange trimite
 
+
+
+	if(name == 'apuseni3' || name == 'apuseni5')
+		div.page-description.wrapper.dust-grey.dark-grey-color
+			div.container.clear(data-device="#{type}", style="align-items: flex-start;")
+				div.page-box.flex-2
+
+					h3 #[a.dark-grey-color(href="tel:0040753012119") +40 (753) 012 119]
+					h3 #[a.highlight(href='mailto:officefloadventure@gmail.com') officefloadventure @ gmail.com]
+					div.heading-sep.light-grey
+
+					p.font-open-sans Dupa completarea acestui formular vei fi contactat pentru confirmare si pentru plata avansului, pe care ti-l vom comunica in urma confirmarii. Pentru intrebari si nelamuriri, te rugam sa folosesti #[a.highlight(href="/contact") pagina de contact].
+
+					form.dark-grey-color(action="/inscriere/#{name}", method="post")
+						if (name == 'apuseni3')
+							input(type="hidden", name="formular", value="Pentru Apuseni in 3 zile")
+						if (name == 'apuseni5')
+							input(type="hidden", name="formular", value="Pentru Apuseni in 5 zile")
+
+
+						input#firstname(type="text", name="firstname", placeholder="Nume",required)
+						input#secondname(type="text", name="secondname", placeholder="Prenume")
+						input#address(type="text", name="email", placeholder="E-mail", required)
+						input#phone(type="text", name="phone", placeholder="Telefon", required)
+						input.btmspace-80(type="text", name="p_address", placeholder="Adresa completa", required)
+
+						p.font-open-sans Te rugam sa completezi formularul cat mai exact posibil. Este foarte important sa stim ce echipament detii si care este starea ta de sanatate pentru a te bucura din plin de expeditia aleasa.
+
+						input#phone(type="text", name="age", placeholder="Varsta", required)
+						input#phone(type="text", name="occupation", placeholder="Ocupatia", required)
+						textarea(type="text", name="health", placeholder="Probleme de sanatate relevante.")
+
+						textarea#body(type="text", name="tent", placeholder="Detii un cort sau preferi cabanuta cu priciuri?")
+
+
+						button.orange trimite

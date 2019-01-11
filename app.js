@@ -26,7 +26,7 @@ app.set('view engine', 'jade');
 app.set('view options', {layout: false});
 
 app.use(bodyParser.urlencoded({extended: false}));
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 app.use(methodOverride('_method'));
 
 app.use(device.capture());
@@ -101,6 +101,7 @@ app.post('/contact', function (req, res) {
 
 
 app.post('/inscriere/:id', function (req, res) {
+    console.log(req.body.formular);
 
     var messageBody = "<b>NUME: </b>" + req.body.firstname + " " + req.body.secondname + "<br>" + "<b>EMAIL: </b>" + req.body.email + "<br>" + "<b>TELEFON: </b>" + req.body.phone + "<br>" + "<b>ADRESA COMPLETA: </b>" + req.body.p_address + "<br>" + "<b>VARSTA: </b>" + req.body.age + "<br>" + "<b>OCUPATIA: </b>" + req.body.occupation + "<br>" + "<b>STAREA DE SANATATE: </b>" + req.body.health + "<br>" + "<b>MASINA: </b>" + req.body.car + "<br>" + "<b>EXPERIENTA: </b>" + req.body.experience + "<br>" + "<b>CORT: </b>" + req.body.tent + "<br>" + "<b>FAMILIE: </b>" + req.body.family;
 
