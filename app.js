@@ -75,7 +75,6 @@ app.post('/contact', function (req, res) {
         html: messageBody
     };
     smtpTransport.sendMail(mailOptions, function (error, info) {
-        console.log('error');
         if (error) {
             res.render('contact',
                 {
@@ -106,6 +105,7 @@ app.post('/inscriere/:id', function (req, res) {
     var messageBody = "<b>NUME: </b>" + req.body.firstname + " " + req.body.secondname + "<br>" + "<b>EMAIL: </b>" + req.body.email + "<br>" + "<b>TELEFON: </b>" + req.body.phone + "<br>" + "<b>ADRESA COMPLETA: </b>" + req.body.p_address + "<br>" + "<b>VARSTA: </b>" + req.body.age + "<br>" + "<b>OCUPATIA: </b>" + req.body.occupation + "<br>" + "<b>STAREA DE SANATATE: </b>" + req.body.health + "<br>" + "<b>MASINA: </b>" + req.body.car + "<br>" + "<b>EXPERIENTA: </b>" + req.body.experience + "<br>" + "<b>CORT: </b>" + req.body.tent + "<br>" + "<b>FAMILIE: </b>" + req.body.family;
 
 
+
     var mailOptions = {
         from: req.body.email,
         to: "cristina.k.david@gmail.com",
@@ -113,9 +113,8 @@ app.post('/inscriere/:id', function (req, res) {
         html: messageBody
     };
 
-    console.log(messageBody);
     smtpTransport.sendMail(mailOptions, function (error, info) {
-        console.log(error);
+
         if (error) {
             res.render('inscriere',
                 {
@@ -123,7 +122,7 @@ app.post('/inscriere/:id', function (req, res) {
                     'bla': 'yes',
                     'device': routes.getDevice(req),
                     'type': routes.getDeviceType(req),
-                    'name': 'patru3',
+                    'name': req.params.id,
                     'navigation': 'contact'
                 });
         } else {
@@ -133,7 +132,7 @@ app.post('/inscriere/:id', function (req, res) {
                     'bla': 'no',
                     'device': routes.getDevice(req),
                     'type': routes.getDeviceType(req),
-                    'name': 'patru3',
+                    'name': req.params.id,
                     'navigation': 'contact'
                 });
         }

@@ -39,7 +39,7 @@ block content
 			h3.hide-me.orange-color(style=("#{bla}" === 'yes') ? "display: block;" : "display: none;") Ne pare rau, dar mesajul nu a fost trimit. Reincercati!
 
 	//formular 4 x 4 in 3 zile
-	if (name == 'patru3')
+	if (name == 'patru3'|| name == 'patru5')
 		div.page-description.wrapper.dust-grey.dark-grey-color
 			div.container.clear(data-device="#{type}", style="align-items: flex-start;")
 				div.page-box.flex-2
@@ -50,8 +50,12 @@ block content
 
 					p.font-open-sans Dupa completarea acestui formular vei fi contactat pentru confirmare si pentru plata avansului, care ti-l vom comunica in urma confirmarii. Pentru intrebari si nelamuriri, te rugam sa folosesti #[a.highlight(href="/contact") pagina de contact].
 
-					form#sendContact.dark-grey-color(action="/inscriere/patru3", method="post")
-						input(type="hidden", name="formular", value="Pentru 4x4 in 3 zile")
+					form#sendContact.dark-grey-color(action="/inscriere/#{name}", method="post")
+						if (name == 'patru3')
+							input(type="hidden", name="formular", value="Pentru 4x4 in 3 zile")
+						if (name == 'patru5')
+							input(type="hidden", name="formular", value="Pentru 4x4 in 5 zile")
+
 
 						input#firstname(type="text", name="firstname", placeholder="Nume",required)
 						input#secondname(type="text", name="secondname", placeholder="Prenume")
