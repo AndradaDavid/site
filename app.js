@@ -20,7 +20,7 @@ var smtpTransport = nodemailer.createTransport(smtpTransport({
     }
 }));
 
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 80);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 app.set('view options', {layout: false});
@@ -70,7 +70,7 @@ app.post('/contact', function (req, res) {
 
     var mailOptions = {
         from: req.body.address,
-        to: "cristina.k.david@gmail.com",
+        to: "officefloadventure@gmail.com",
         subject: '[Contact] ' + req.body.subject,
         html: messageBody
     };
