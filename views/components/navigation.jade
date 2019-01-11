@@ -2,6 +2,7 @@
 - classRomania = (navigation == 'romania'? 'active': '')
 - classExpeditii = (navigation == 'expeditii'? 'active': '')
 - classContact = (navigation == 'contact'? 'active': '')
+- classPlanificator = (navigation == 'planificator'? 'active': '')
 
 ul.fl.clear
 
@@ -11,8 +12,8 @@ ul.fl.clear
     li.fl.home-mob(class=classHome)
         a(href="/") Acasa
 
-    li.fl
-        a.drop(href="/romania") Planificator
+    li.fl(class=classPlanificator)
+        a.drop(href="/planificator") Planificator
         
     li.fl(class=classRomania)
 

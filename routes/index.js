@@ -236,12 +236,25 @@ exports.contact = function(req, res){
 };
 
 exports.inscriere = function(req, res){
+
     res.render('inscriere',
         {
             'sent': 'no',
             'bla': 'no',
             'device': getDevice(req),
             'type': getDeviceType(req),
+            'name': req.params.name,
             'navigation':'contact'
+        });
+};
+
+exports.planificator = function(req, res){
+    res.render('planificator',
+        {
+            'sent': 'no',
+            'bla': 'no',
+            'device': getDevice(req),
+            'type': getDeviceType(req),
+            'navigation':'planificator'
         });
 };

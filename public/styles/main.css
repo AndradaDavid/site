@@ -225,7 +225,7 @@
   margin-bottom: 50px !important;
 }
 .btmspace-80 {
-  margin-bottom: 80px;
+  margin-bottom: 80px !important;
 }
 .inspace-0 {
   padding: 0;
@@ -1064,7 +1064,7 @@ html .page-description .container #full-grid .full-grid-item {
   visibility: hidden;
   width: 25%;
   height: 420px;
-  padding: 2px;
+  padding: 3px;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -1092,6 +1092,9 @@ html .page-description .container #full-grid .full-grid-item.half {
 }
 html .page-description .container #full-grid .full-grid-item.big {
   width: 75%;
+}
+html .page-description .container #full-grid .full-grid-item.planning {
+  padding: 20px;
 }
 html .page-description .container #full-grid[data-device="phone"] .full-grid-item {
   border-top: 1px solid rgba(46, 46, 46, 0.8);

@@ -1,4 +1,4 @@
-var  express = require('express')
+var express = require('express')
     , routes = require('./routes')
     , http = require('http')
     , path = require('path')
@@ -23,9 +23,9 @@ var smtpTransport = nodemailer.createTransport(smtpTransport({
 app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
-app.set('view options',{layout:false});
+app.set('view options', {layout: false});
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json())
 app.use(methodOverride('_method'));
 
@@ -59,9 +59,12 @@ app.get('/everest-intoarcerea-cu-elicopter', routes.everesteli);
 app.get('/island-peak-basecamp', routes.island);
 app.get('/k2-basecamp', routes.k2);
 app.get('/contact', routes.contact);
+app.get('/inscriere/:name', routes.inscriere);
 app.get('/inscriere', routes.inscriere);
+app.get('/planificator', routes.planificator);
 
-app.post('/contact', function(req, res) {
+
+app.post('/contact', function (req, res) {
 
     var messageBody = "<b>NUME: </b>" + req.body.firstname + " " + req.body.secondname + "<br>" + "<b>EMAIL: </b>" + req.body.address + "<br>" + "<b>TELEFON: </b>" + req.body.phone + "<br>" + "<b>MESAJ: </b>" + req.body.body;
 
@@ -71,7 +74,7 @@ app.post('/contact', function(req, res) {
         subject: '[Contact] ' + req.body.subject,
         html: messageBody
     };
-    smtpTransport.sendMail(mailOptions, function(error, info) {
+    smtpTransport.sendMail(mailOptions, function (error, info) {
         console.log('error');
         if (error) {
             res.render('contact',
@@ -80,7 +83,7 @@ app.post('/contact', function(req, res) {
                     'bla': 'yes',
                     'device': routes.getDevice(req),
                     'type': routes.getDeviceType(req),
-                    'navigation':'contact'
+                    'navigation': 'contact'
                 });
         } else {
             console.log('Message sent: ' + info.response);
@@ -90,14 +93,55 @@ app.post('/contact', function(req, res) {
                     'bla': 'no',
                     'device': routes.getDevice(req),
                     'type': routes.getDeviceType(req),
-                    'navigation':'contact'
+                    'navigation': 'contact'
                 });
         }
 
     });
 });
 
-http.createServer(app).listen(app.get('port'), function(){
+
+app.post('/inscriere/:id', function (req, res) {
+
+    var messageBody = "<b>NUME: </b>" + req.body.firstname + " " + req.body.secondname + "<br>" + "<b>EMAIL: </b>" + req.body.email + "<br>" + "<b>TELEFON: </b>" + req.body.phone + "<br>" + "<b>ADRESA COMPLETA: </b>" + req.body.p_address + "<br>" + "<b>VARSTA: </b>" + req.body.age + "<br>" + "<b>OCUPATIA: </b>" + req.body.occupation + "<br>" + "<b>STAREA DE SANATATE: </b>" + req.body.health + "<br>" + "<b>MASINA: </b>" + req.body.car + "<br>" + "<b>EXPERIENTA: </b>" + req.body.experience + "<br>" + "<b>CORT: </b>" + req.body.tent + "<br>" + "<b>FAMILIE: </b>" + req.body.family;
+
+
+    var mailOptions = {
+        from: req.body.email,
+        to: "cristina.k.david@gmail.com",
+        subject: '[Inscriere] ' + req.body.formular,
+        html: messageBody
+    };
+
+    console.log(messageBody);
+    smtpTransport.sendMail(mailOptions, function (error, info) {
+        console.log(error);
+        if (error) {
+            res.render('inscriere',
+                {
+                    'sent': 'no',
+                    'bla': 'yes',
+                    'device': routes.getDevice(req),
+                    'type': routes.getDeviceType(req),
+                    'name': 'patru3',
+                    'navigation': 'contact'
+                });
+        } else {
+            res.render('inscriere',
+                {
+                    'sent': 'yes',
+                    'bla': 'no',
+                    'device': routes.getDevice(req),
+                    'type': routes.getDeviceType(req),
+                    'name': 'patru3',
+                    'navigation': 'contact'
+                });
+        }
+    });
+});
+
+
+http.createServer(app).listen(app.get('port'), function () {
 
 
     console.log("Server listening on " + app.get('port'));

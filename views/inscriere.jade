@@ -16,44 +16,62 @@ block content
 							include components/navigation
 
 				div#logo.text-center.flex-1.upspace-200
+
+					h3.dust-grey-color.font-1-2 Flo Adventure Tours
 					h1.font-3
 						a.dust-grey-color(href="#top") Formular de inscriere
-					h3.dust-grey-color.font-1-2 Flo Adventure Tours
+					case name
+						when 'patru3'
+							h3.dust-grey-color.font-3 4x4 in 3 zile
+						when 'patru5'
+							h3.dust-grey-color.font-3 4x4 in 5 zile
+						default
+							h3
+
+
+
 
 
 	//mesaje
 	div.page-description.wrapper.dust-white.dark-grey-color
 		div.container.clear(data-device="#{type}", style="align-items: flex-start;")
-			h3.hide-me.orange-color(style=("#{sent}" === 'yes') ? "display: block;" : "display: none;") Mesajul tau a fost trimis.Iti vom raspunde in cel mai scurt timp posibil!
+			h3.hide-me.orange-color(style=("#{sent}" === 'yes') ? "display: block;" : "display: none;") Mesajul tau a fost trimis. Iti vom raspunde in cel mai scurt timp posibil!
 			h3.hide-me.orange-color(style=("#{bla}" === 'yes') ? "display: block;" : "display: none;") Ne pare rau, dar mesajul nu a fost trimit. Reincercati!
 
-	//formular
-	div.page-description.wrapper.dust-grey.dark-grey-color
-		div.container.clear(data-device="#{type}", style="align-items: flex-start;")
-			div.page-box.flex-2(style=("#{type}" === 'phone') ? "" : "padding-right: 70px;")
+	//formular 4 x 4 in 3 zile
+	if (name == 'patru3')
+		div.page-description.wrapper.dust-grey.dark-grey-color
+			div.container.clear(data-device="#{type}", style="align-items: flex-start;")
+				div.page-box.flex-2
 
-				h3 #[a.dark-grey-color(href="tel:0040753012119") +40 (753) 012 119]
-				h3 #[a.highlight(href='mailto:officefloadventure@gmail.com') officefloadventure @ gmail.com]
-				div.heading-sep.light-grey
-				p.font-open-sans Nu ezitat sa ne contactezi pentru a pune la cale urmatoarea ta aventura. Vom incerca sa iti raspundem cat mai repede la mesajele tale. Daca vrei sa te inscrii pentru o anumita expeditie sau aventura, foloseste #[a.highlight formularul de inscriere].
+					h3 #[a.dark-grey-color(href="tel:0040753012119") +40 (753) 012 119]
+					h3 #[a.highlight(href='mailto:officefloadventure@gmail.com') officefloadventure @ gmail.com]
+					div.heading-sep.light-grey
+
+					p.font-open-sans Dupa completarea acestui formular vei fi contactat pentru confirmare si pentru plata avansului, care ti-l vom comunica in urma confirmarii. Pentru intrebari si nelamuriri, te rugam sa folosesti #[a.highlight(href="/contact") pagina de contact].
+
+					form#sendContact.dark-grey-color(action="/inscriere/patru3", method="post")
+						input(type="hidden", name="formular", value="Pentru 4x4 in 3 zile")
+
+						input#firstname(type="text", name="firstname", placeholder="Nume",required)
+						input#secondname(type="text", name="secondname", placeholder="Prenume")
+						input#address(type="text", name="email", placeholder="E-mail", required)
+						input#phone(type="text", name="phone", placeholder="Telefon", required)
+						input.btmspace-80(type="text", name="p_address", placeholder="Adresa completa", required)
+
+						p.font-open-sans Te rugam sa completezi formularul cat mai complet posibil. Este foarte important sa stim ce echipament detii si care este starea ta de sanatate pentru a te bucura din plin de expeditia aleasa.
+
+						input#phone(type="text", name="age", placeholder="Varsta", required)
+						input#phone(type="text", name="occupation", placeholder="Ocupatia", required)
+						textarea.btmspace-80(type="text", name="health", placeholder="Probleme de sanatate pe care le consideri a fi mentionate.")
+
+						input#phone(type="text", name="car", placeholder="Detii o masina si vrei sa vii cu ea? Daca da, spune-ne ce model e.", required)
+
+						textarea#body(type="text", name="experience", placeholder="Experiente anterioare in 4x4? ")
+						textarea#body(type="text", name="tent", placeholder="Detii un cort?")
+						textarea#body(type="text", name="family", placeholder="Vii cu familia? Sunteti insotiti de un copil cu varsta maxima de 15 ani?")
 
 
-				form#sendContact.dark-grey-color(action="/contact",method="post")
-					input(type="hidden", name="action", value="arwd_contact")
 
-					input#firstname(type="text",name="firstname",placeholder="Nume",required)
-					input#secondname(type="text",name="secondname",placeholder="Prenume")
-					input#address(type="text",name="address",placeholder="E-mail", required)
-					input#phone(type="text",name="phone",placeholder="Telefon", required)
-					input#subject(type="text",name="subject",placeholder="Subiect / Intrebare")
-					textarea#body(type="text",name="body",placeholder="Spune-ne cu ce te putem ajuta")
-
-					button.orange trimite
-
-
-
-			div.page-box.flex-1
-				h4.font-montserrat-bold ff
-				div.heading-sep.light-grey
-				p Ne tinem de program dar uneori suntem flexibili
+						button.orange trimite
 

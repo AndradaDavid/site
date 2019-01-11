@@ -1,0 +1,42 @@
+extends ./index.jade
+
+block content
+	div.bgded
+		div.wrapper.dark-grey
+			header#header.clear
+
+				if device.desktop
+					div.main-nav.downspace-40.dust-grey-color.flex-1.clear
+						include components/navigation
+
+				else
+					div.mobile-nav
+						i.fa.fa-bars.fa-2x.upper.show-panel.light-grey-color
+						nav.sidenav.clear
+							include components/navigation
+
+				div#logo.text-center.flex-1.upspace-200
+					h1.font-3
+						a.dust-grey-color(href="#top") Planificator
+					h3.dust-grey-color.font-1-2 Flo Adventure Tours
+
+
+	div.page-description.wrapper.dust-white.dark-grey-color
+		div.container.clear(data-device="#{type}")
+			h3 Martie
+
+	div.page-description.wrapper.dust-white.dark-grey-color
+		div.container.max-width-full.padding-0.clear(data-device="#{type}")
+
+			div#full-grid.width-full.dust-white(data-device="#{type}")
+				a.full-grid-item.half.planning
+					div.flex-1(style="background-image:url('/images/montblanc-grid-1.png'); background-size: cover; background-position: bottom center;")
+				a.full-grid-item.half.planning
+					div.flex-1(style="background-image:url('/images/montblanc-grid-2.png'); background-size: cover; background-position:top;")
+
+				a.full-grid-item.half.planning
+					div.flex-1(style="background-image:url('/images/montblanc-grid-3.png'); background-size: cover; background-position: center;")
+				a.full-grid-item.half.planning
+					div.flex-1(style="background-image:url('/images/montblanc-grid-4.png'); background-size: cover; background-position: center;")
+				a.full-grid-item
+					div.flex
