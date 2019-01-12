@@ -996,6 +996,34 @@ html {
             padding: 20px;
           }
 
+          .checkbox {
+            width: auto;
+          }
+
+          .group {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+
+            &[data-device='phone'] {
+              flex-direction: column;
+            }
+
+            span {
+              width: 140px;
+              flex: 1;
+              height: 35px;
+
+            }
+
+            label {
+              line-height: 35px;
+              padding-left: 7px;
+              font-weight: normal;
+            }
+          }
+
+
         }
       }
         

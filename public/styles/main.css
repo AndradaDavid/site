@@ -1051,6 +1051,32 @@ html .page-description .container .page-box-tiny form button {
   float: left;
   padding: 20px;
 }
+html .page-description .container .page-box form .checkbox,
+html .page-description .container .page-box-tiny form .checkbox {
+  width: auto;
+}
+html .page-description .container .page-box form .group,
+html .page-description .container .page-box-tiny form .group {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+html .page-description .container .page-box form .group[data-device='phone'],
+html .page-description .container .page-box-tiny form .group[data-device='phone'] {
+  flex-direction: column;
+}
+html .page-description .container .page-box form .group span,
+html .page-description .container .page-box-tiny form .group span {
+  width: 140px;
+  flex: 1;
+  height: 35px;
+}
+html .page-description .container .page-box form .group label,
+html .page-description .container .page-box-tiny form .group label {
+  line-height: 35px;
+  padding-left: 7px;
+  font-weight: normal;
+}
 html .page-description .container #full-grid {
   width: 100%;
   height: 100vh;
