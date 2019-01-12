@@ -31,6 +31,16 @@ block content
 							h3.dust-grey-color.font-2 Apuseni in 3 zile
 						when 'apuseni5'
 							h3.dust-grey-color.font-2 Apuseni in 5 zile
+						when 'montblanc'
+							h3.dust-grey-color.font-2 Mont Blanc
+						when 'grossglockner'
+							h3.dust-grey-color.font-2 Grossglockner
+						when 'elbrus'
+							h3.dust-grey-color.font-2 Elbrus
+						when 'maroc'
+							h3.dust-grey-color.font-2 Jebel Toubkal
+						when 'everestbc'
+							h3.dust-grey-color.font-2 Everest Base camp
 						default
 							h3
 
@@ -119,7 +129,8 @@ block content
 
 
 						button.orange trimite
-	if(name == 'montblanc')
+
+	if (name == 'montblanc' || name == "grossglockner" | name == "elbrus" || name == "maroc" || name == "everestbc")
 		div.page-description.wrapper.dust-grey.dark-grey-color
 			div.container.clear(data-device="#{type}", style="align-items: flex-start;")
 				div.page-box.flex-2
@@ -132,7 +143,16 @@ block content
 
 					form.dark-grey-color(action="/inscriere/#{name}", method="post")
 
-						input(type="hidden", name="formular", value="Pentru Montblanc")
+						if (name == 'grossglockner')
+							input(type="hidden", name="formular", value="Pentru Grossglockner")
+						if (name == 'montblanc')
+							input(type="hidden", name="formular", value="Pentru Montblanc")
+						if (name == 'elbrus')
+							input(type="hidden", name="formular", value="Pentru Elbrus")
+						if (name == 'maroc')
+							input(type="hidden", name="formular", value="Pentru Maroc")
+						if (name == 'everestbc')
+							input(type="hidden", name="formular", value="Pentru Everest base camp")
 
 						input#firstname(type="text", name="firstname", placeholder="Nume",required)
 						input#secondname(type="text", name="secondname", placeholder="Prenume")
@@ -142,24 +162,25 @@ block content
 
 						p.font-open-sans Te rugam sa completezi formularul cat mai exact posibil. Este foarte important sa stim ce echipament detii si care este starea ta de sanatate pentru a te bucura din plin de expeditia aleasa.
 
-						input#phone(type="text", name="age", placeholder="Varsta", required)
-						input#phone(type="text", name="occupation", placeholder="Ocupatia", required)
+						input#phone(type="text", name="age", placeholder="Varsta")
+						input#phone(type="text", name="occupation", placeholder="Ocupatia")
 						textarea.btmspace-80(type="text", name="health", placeholder="Probleme de sanatate relevante.")
 
-						p.font-open-sans Ce echipament tehnic detii?
-						div.group(data-device="#{type}").max-width-60
-							span.font-open-sans
-								input#casca.checkbox(type='checkbox', name='casca')
-								label(for='casca') Casca
-							span.font-open-sans
-								input#piolet.checkbox(type='checkbox', name='piolet')
-								label(for='piolet') Piolet
-							span.font-open-sans
-								input#coltari.checkbox(type='checkbox', name='coltari')
-								label(for='coltari') Coltari
-							span.font-open-sans
-								input#ham.checkbox(type='checkbox', name='ham')
-								label(for='ham') Ham
+						if (name !== "maroc")
+							p.font-open-sans Ce echipament tehnic detii?
+							div.group(data-device="#{type}").max-width-60
+								span.font-open-sans
+									input#casca.checkbox(type='checkbox', name='casca', value= 'da')
+									label(for='casca') Casca
+								span.font-open-sans
+									input#piolet.checkbox(type='checkbox', name='piolet', value= 'da')
+									label(for='piolet') Piolet
+								span.font-open-sans
+									input#coltari.checkbox(type='checkbox', name='coltari' value= 'da')
+									label(for='coltari') Coltari
+								span.font-open-sans
+									input#ham.checkbox(type='checkbox', name='ham', value= 'da')
+									label(for='ham') Ham
 
 						textarea#body(type="text", name="experience", placeholder="Experiente anterioare in ascensiuni? Daca da, unde? ")
 

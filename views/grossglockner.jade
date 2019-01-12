@@ -8,14 +8,7 @@ block content
 				if device.desktop
 					div.main-nav.downspace-40.dark-grey-color.flex-1.clear
 						include components/navigation
-						ul.fl.clear
-							li.fl.language
-								a(href="en") ro
-							// ul.sl
-								li.sl
-									a(href="en") en
-								li.sl
-									a(href="ru") ru
+
 				else
 					div.mobile-nav.flex-1
 						i.fa.fa-bars.fa-2x.upper.show-panel
@@ -25,9 +18,14 @@ block content
 				div#logo.text-center.flex-4.upspace-35
 					h3.dark-grey-color.font-2 Flo Adventure Tours
 
-					h1.font-4
-						a.dark-grey-color(href="#top") Grossglockner
-					h2.font-montserrat-regular.dark-grey-color Ruta Salm Hutte
+					if device.phone
+						h1.font-2
+							a.dark-grey-color(href="#top") Grossglockner
+						h2.font-montserrat-regular.dark-grey-color Ruta Salm Hutte
+					else
+						h1.font-4
+							a.dark-grey-color(href="#top") Grossglockner
+						h2.font-montserrat-regular.dark-grey-color Ruta Salm Hutte
 
 	div.scroll-down
 		div.chevron
@@ -65,14 +63,14 @@ block content
 	//detalii si itinerariu
 	div.page-description.wrapper.dust-grey.subtile-grey-color.font-montserrat-light
 		div.container.clear(data-device="#{type}", style="align-items: flex-start;")
-			div.page-box.flex-1(style="padding-right: 80px;")
+			div.page-box.flex-1(style=("#{type}" === 'phone') ? "" : "padding-right: 70px;")
 				h4.font-montserrat-bold Detalii
 				div.heading-sep.light-grey
 
-				p Drumul de trecere, cel mai inalt al Austriei, ajunge la 2.576 m si este una dintre cele mai populare atracții turistice din țara (al doilea dupa Palatul Schönbrunn), cu aproximativ 270.000 de vehicule si 900.000 de vizitatori in fiecare an.
+				p.font-effra-regular Drumul de trecere, cel mai inalt al Austriei, ajunge la 2.576 m si este una dintre cele mai populare atracții turistice din țara (al doilea dupa Palatul Schönbrunn), cu aproximativ 270.000 de vehicule si 900.000 de vizitatori in fiecare an.
 
 
-			div.page-box.flex-1.subtile-grey-color
+			div.page-box.flex-1-6.subtile-grey-color
 				h4.font-montserrat-bold Itinerariu
 				div.heading-sep.light-grey
 				p Ne tinem de program dar uneori suntem flexibili
@@ -99,7 +97,7 @@ block content
 			div.desc-item
 				i.fa.fa-calendar.font-2
 				span.item-header Perioada
-				span.item-text 29 iulie, 2019
+				span.item-text Iulie, 2019
 			div.desc-item
 				i.fa.fa-male.fa-3x.font-2
 				span.item-header Persoane
@@ -139,18 +137,16 @@ block content
 	div.page-description.wrapper.dust-white.dark-grey-color
 		div.container.clear(data-device="#{type}", style="align-items: flex-start;")
 
-
-			div.page-box.flex-1.font-montserrat-light(style="padding-right: 80px;")
+			div.page-box.flex-1.font-montserrat-light(style=("#{type}" === 'phone') ? "" : "padding-right: 60px;")
 				h4.font-montserrat-regular Echipament tehnic
 				div.heading-sep.light-grey
-				span Cort (se poate inchiria de la agentie)
-				span Sac de dormit (se poate inchiria de la agentie)
-				span Izolir (se poate inchiria de la agentie)
-				span Rucsac 60-80 L
+				span Sac de dormit + cort (pentru camping)
+				span Rucsac 45-60 L
 				span Piolet (se poate inchiria de la agentie)
 				span Coltari (se poate inchiria de la agentie)
+				span Ham (se poate inchiria de la agentie)
 				span Casca (se poate inchiria de la agentie)
-				span Ochelari de soare- 100%UV
+				span Ochelari de soare - 100% protectie UV
 				span Crema de protectie solara
 				span Sticla pentru apa
 				span.btmspace-30 Frontala
@@ -176,7 +172,7 @@ block content
 				span Caciula
 				span Masca de fata (cagula) pentru vant
 				span Sosete termale (macar o pereche pe zi)
-				span Bocanci tehnici, semitehnici
+				span Bocanci semitehnici sau clasici
 
 	div.little-about.height-600(style="background-image:url('/images/grossglokner-grid-8.png');background-size:cover;background-position: right center;")
 
@@ -185,26 +181,27 @@ block content
 		div.container.clear(data-device="#{type}", style="align-items: flex-start;")
 
 
-			div.page-box.flex-1.font-montserrat-thin(style="padding-right: 80px;")
+			div.page-box.flex-1.font-montserrat-thin(style=("#{type}" === 'phone') ? "" : "padding-right: 70px;")
 				h4.font-montserrat-regular Ce include?
 				div.heading-sep.light-grey
 				span Instructorul si echipamentul  de curs (coarda,  ham, cuie de gheata, carabina)
 
-			div.page-box.flex-1.font-montserrat-thin(style="padding-right: 80px;")
+			div.page-box.flex-1.font-montserrat-thin
 				h4.font-montserrat-regular Ce nu include?
 				div.heading-sep.light-grey
 				span Coltari, casca, cort, piolet se pot inchiria de la noi, transportul, mincarea, cazarea (se poate efectua si in cabana Tete Rousse doar cu o rezervare prealabila) , asigurarea medicala (obligatorie).
 
-	div.little-about.narrow.cloudy.height-400
+	div.little-about.narrow.cloudy.height-400(style="background-image:url('/images/price-background-gross.jpg');background-size:cover;background-position: center center;")
 		div.hoc.container.clear
 
 			a.button.orange(href="/download/mont-blanc.doc") Note de expeditie
-			div.button.dark-grey Rezerva-ti locul
+			a.button.orange(href="/inscriere/grossglockner") Rezerva-ti locul
 
 	hr.cloudy
 	div.price-about.height-300.wrapper.dark-grey.light-grey-color
-		div.overlay-text.flex-1.font-3
-			i.fa.fa-euro.
+		p.dust-white-color.font-2(style="top: 80px;") Pretul pachetului:
+		div.overlay-text.flex-1.font-3.orange-color
+			i.fa.fa-euro
 			p 490
 			p.down /persoana
 
@@ -213,7 +210,6 @@ block content
 		div.repeat(style="background-image: url('/images/repeat.png');height: 50px;background-size: contain;")
 
 	//Logos and sponsors
-
 	div.wrapper.coloured.orange
 		div.hoc.clear
 			figure#logos

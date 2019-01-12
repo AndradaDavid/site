@@ -114,7 +114,7 @@ block content
     //extra informatii
     div.page-description.wrapper.dark-grey.cloudy-color
         div.container.clear(data-device="#{type}", style="align-items: flex-start;")
-            div.page-box.flex-1.font-montserrat-thin(style="padding-right: 20px;")
+            div.page-box.flex-1.font-montserrat-thin(style=("#{type}" === 'phone') ? "" : "padding-right: 60px;")
                 h4.font-montserrat-regular Ce include
                 div.heading-sep.light-grey
                 p Transfer aeroport

@@ -147,7 +147,7 @@ block content
 			div.desc-item
 				i.fa.fa-calendar.font-2
 				span.item-header Perioada
-				span.item-text 13 septembrie, 2019
+				span.item-text Septembrie, 2019
 			div.desc-item
 				i.fa.fa-male.fa-3x.font-2
 				span.item-header Persoane
@@ -189,7 +189,8 @@ block content
 		div.container.clear(data-device="#{type}", style="align-items: flex-start;")
 
 
-			div.page-box.flex-1.font-montserrat-light(style="padding-right: 80px;")
+
+			div.page-box.flex-1.font-montserrat-light(style=("#{type}" === 'phone') ? "" : "padding-right: 70px;")
 				h4.font-montserrat-regular Echipament tehnic
 				div.heading-sep.light-grey
 				span Rucsac 40-60 litri
@@ -226,7 +227,7 @@ block content
 	div.page-description.wrapper.dark-grey.cloudy-color
 		div.container.clear(data-device="#{type}", style="align-items: flex-start;")
 
-			div.page-box.flex-1.font-montserrat-thin(style="padding-right: 80px;")
+			div.page-box.flex-1.font-montserrat-thin(style=("#{type}" === 'phone') ? "" : "padding-right: 70px;")
 				h4.font-montserrat-regular Ce include?
 				div.heading-sep.light-grey
 				span Instructorul
@@ -252,7 +253,7 @@ block content
 		div.hoc.container.clear
 
 			a.button.orange(href="/download/mont-blanc.doc") Note de expeditie
-			div.button.dark-grey Rezerva-ti locul
+			a.button.dark-grey(href="/inscriere/maroc") Rezerva-ti locul
 
 	hr.cloudy
 	div.price-about.height-300.wrapper.dark-grey.light-grey-color
