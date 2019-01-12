@@ -41,6 +41,10 @@ block content
 							h3.dust-grey-color.font-2 Jebel Toubkal
 						when 'everestbc'
 							h3.dust-grey-color.font-2 Everest Base camp
+						when 'everesteli'
+							h3.dust-grey-color.font-2 Everest Base camp si intoarcerea cu elicopterul
+						when 'island'
+							h3.dust-grey-color.font-2 Island Peak
 						default
 							h3
 
@@ -130,7 +134,7 @@ block content
 
 						button.orange trimite
 
-	if (name == 'montblanc' || name == "grossglockner" | name == "elbrus" || name == "maroc" || name == "everestbc")
+	if (name == 'montblanc' || name == "grossglockner" | name == "elbrus" || name == "maroc" || name == "everestbc" || name == "everesteli"  || name == "island")
 		div.page-description.wrapper.dust-grey.dark-grey-color
 			div.container.clear(data-device="#{type}", style="align-items: flex-start;")
 				div.page-box.flex-2
@@ -153,6 +157,10 @@ block content
 							input(type="hidden", name="formular", value="Pentru Maroc")
 						if (name == 'everestbc')
 							input(type="hidden", name="formular", value="Pentru Everest base camp")
+						if (name == 'everesteli')
+							input(type="hidden", name="formular", value="Pentru Everest base camp si intoarcerea cu elicopterul")
+						if (name == 'island')
+							input(type="hidden", name="formular", value="Pentru Island Peak")
 
 						input#firstname(type="text", name="firstname", placeholder="Nume",required)
 						input#secondname(type="text", name="secondname", placeholder="Prenume")

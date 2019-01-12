@@ -109,7 +109,7 @@ app.post('/inscriere/:id', function (req, res) {
     }
 
 
-    if (req.params.id == 'montblanc' || req.params.id == 'grossglockner' || req.params.id == 'elbrus' || req.params.id == "everestbc" || req.params.id == "everesteli") {
+    if (req.params.id == 'montblanc' || req.params.id == 'grossglockner' || req.params.id == 'elbrus' || req.params.id == "everestbc" || req.params.id == "everesteli" || req.params.id == "island") {
 
         messageBody = "<b>NUME: </b>" + req.body.firstname + " " + req.body.secondname + "<br>" + "<b>EMAIL: </b>" + req.body.email + "<br>" + "<b>TELEFON: </b>" + req.body.phone + "<br>" + "<b>ADRESA COMPLETA: </b>" + req.body.p_address + "<br>" + "<b>VARSTA: </b>" + req.body.age + "<br>" + "<b>OCUPATIA: </b>" + req.body.occupation + "<br>" + "<b>STAREA DE SANATATE: </b>" + req.body.health + "<br>" + "<b>Piolet: </b>" + req.body.piolet + "<br>" + "<b>CASCA: </b>" + req.body.casca + "<br>" + "<b>COLTARI: </b>" + req.body.coltari + "<br>" + "<b>HAM: </b>" + req.body.ham + "<br>" + "<b>EXPERIENTA: </b>" + req.body.experience;
     }
@@ -120,11 +120,9 @@ app.post('/inscriere/:id', function (req, res) {
     }
 
 
-
-
     var mailOptions = {
         from: req.body.email,
-        to: "cristina.k.david@gmail.com",
+        to: "officefloadventure@gmail.com",
         subject: '[Inscriere] ' + req.body.formular,
         html: messageBody
     };
