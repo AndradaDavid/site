@@ -45,7 +45,7 @@ app.get('/expeditii', routes.expeditii);
 app.get('/apuseni-3-zile', routes.apuseni3);
 app.get('/apuseni-5-zile', routes.apuseni5);
 app.get('/circuitul-castelelor', routes.circuit);
-app.get('/4x4-1-zi', routes.patru1);
+
 app.get('/4x4-3-zile', routes.patru3);
 app.get('/4x4-5-zile', routes.patru5);
 app.get('/weekend-in-maramures', routes.weekend);
