@@ -24,9 +24,22 @@ $(function() {
             "gridResize": "expand"
 
         });
+
         asyncGrid.append(asyncGrid.collectNew());
+
     }
 
+    if  ($("#martie").length) {
+
+        var bgrid = $("#martie");
+        var asyncGrid = new Gridifier(bgrid, {
+            "class": "full-grid-item",
+            "dragifier": false,
+            "gridResize": "expand"
+
+        });
+        asyncGrid.append(asyncGrid.collectNew());
+    }
 
 
 
