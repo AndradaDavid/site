@@ -41,19 +41,36 @@ block content
 				form#sendContact.dark-grey-color(action="/contact",method="post")
 					input(type="hidden", name="action", value="arwd_contact")
 
-					input#firstname(type="text",name="firstname",placeholder="Nume",required)
-					input#secondname(type="text",name="secondname",placeholder="Prenume")
-					input#address(type="text",name="address",placeholder="E-mail", required)
-					input#phone(type="text",name="phone",placeholder="Telefon", required)
-					input#subject(type="text",name="subject",placeholder="Subiect / Intrebare")
-					textarea#body(type="text",name="body",placeholder="Spune-ne cu ce te putem ajuta")
+					input#firstname(type="text", name="firstname",placeholder="Nume",required)
+					input#secondname(type="text", name="secondname",placeholder="Prenume")
+					input#address(type="text", name="address",placeholder="E-mail", required)
+					input#phone(type="text", name="phone",placeholder="Telefon", required)
+					input#subject(type="text", name="subject",placeholder="Subiect / Intrebare")
+					textarea#body(type="text", name="body",placeholder="Spune-ne cu ce te putem ajuta")
 
 					button.orange trimite
 
 
 
-			div.page-box.flex-1
-				h4.font-montserrat-bold ff
-				div.heading-sep.light-grey
-				p Ne tinem de program dar uneori suntem flexibili
+			div.page-box.flex-1.upspace-40
+
+				span.font-1-2.font-montserrat-bold Flo Adventure SRL 
+				span CIF 37077399
+
+				span.font-1-2.upspace-20.font-montserrat-bold adresa
+				span strada Berariei, nr. 6
+				span Cluj-Napoca
+
+				span.font-1-2.upspace-20.font-montserrat-bold licenta de turism
+				span numarul 7783
+
+				span.font-1-2.upspace-20.font-montserrat-bold asigurare
+				span seria IF-i
+				span numarul 2889
+
+				span.font-1-2.upspace-20.font-montserrat-bold marca inregistrata
+				span Logo  #[a.highlight Flo Adventure] si
+				span motto-ul #[a.highlight Sa ne vedem cat mai sus!]
+				span sunt marci inregistrate la OSIM  SC.
+
 
