@@ -2,7 +2,9 @@ extends ./index.jade
 
 block content
 
-    div.bgded.bgded-top(style="background-image:url('/images/home.png');")
+    div.bgded.bgded-top
+        video(autoplay="", loop="", muted="")
+            source(src="/images/video.mp4" type="video/mp4")
         div.wrapper.dust-white-color
             header#header.clear
 
@@ -17,26 +19,26 @@ block content
                         //                a(href="en") en
                         //            li.sl
                         //                a(href="ru") ru
-                        
+
                 else
                     div.mobile-nav.flex-1
-                        i.fa.fa-bars.fa-2x.upper.show-panel
+                        i.fa.fa-bars.fa-2x.upper.show-panel.dark-grey-color
                         nav.sidenav.clear
                             include components/navigation-mobile
 
                 div#logo.text-center.flex-2
                     if device.desktop
                         h1.font-4
-                            a.dark-grey-color(href="#top") Flo Adventure Tours
-                        h3.dark-grey-color.font-2 Sa ne vedem cat mai sus!
+                            a.dust-white-color(href="#top") Flo Adventure Tours
+                        h3.dust-white-color.font-2 Sa ne vedem cat mai sus!
 
                     else
                         h1.font-3
-                            a.dark-grey-color(href="#top") Flo Adventure Tours
-                        h3.dark-grey-color.font-1-5 Sa ne vedem cat mai sus!
+                            a.dust-white-color(href="#top") Flo Adventure Tours
+                        h3.dust-white-color.font-1-5 Sa ne vedem cat mai sus!
 
         if device.desktop || device.tablet
-           // div#pageintro.hoc.clear
+            // div#pageintro.hoc.clear
                 article
                     div.introtxt
                         div.quote
@@ -71,10 +73,12 @@ block content
         div.chevron
         div.chevron
 
-    div.little-about.dark-grey-normal.height-30
-        p
-        p
-        p
+    if device.desktop
+        div.little-about.dark-grey-normal.height-300
+            div.container.clear.upspace-90
+                h3.center.dust-white-color.font-montserrat-bold.font-1-5 Misiunea noastra - Aventura
+                div.center.font-montserrat-thin.font-1-2.dust-white-color.upspace-20.max-width-40 Credem ca orice loc din lumea asta se poate descoperi cu aventura in suflet si spirit de calator.
+
 
     div.page-description.wrapper
         div.container.width-full.max-width-full.padding-0.clear(data-device="#{type}")
@@ -87,7 +91,7 @@ block content
                     div.flex-1(style="background-image:url('/images/2342asdfa3.png'); background-size: cover; background-position:top;")
                     div.ribbon(style="background-image:url('/images/logo-drumetii.png');")
                     div.subtitle.font-1-5 Drumetii
-                        
+
                 a.full-grid-item(href="http://www.extremromania.ro")
                     div.flex-1(style="background-image:url('/images/kajhsdf67894.png'); background-size: cover;")
                     div.ribbon(style="background-image:url('/images/logo-cursuri.png');")
@@ -100,6 +104,10 @@ block content
                     div.flex-1(style="background-image:url('/images/hhghhga.png'); background-size: cover; background-position: center;")
                     div.ribbon(style="background-image:url('/images/logo-aventura.png');")
                     div.subtitle.font-1-5 Aventura
+
+    //umplutura
+    div.little-about.dark-grey-normal.height-60
+        div.container.clear.upspace-90
 
     //Overlay wrapper
     div.page-description.wrapper.dust-grey.light-grey-color(data-device="#{type}")
@@ -115,8 +123,9 @@ block content
                 div.map(style="background-image:url('/images/icons.png')")
 
 
+
     hr.light-grey
-    
+
     if device.desktop
         //Destinatiile noastre
         div.little-about.height-auto.dust-grey
