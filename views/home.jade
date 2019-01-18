@@ -37,48 +37,22 @@ block content
                             a.orange-color(href="#top") Flo Adventure Tours
                         h3.dust-white-color.font-1-5 Sa ne vedem cat mai sus!
 
-        if device.desktop || device.tablet
-            // div#pageintro.hoc.clear
-                article
-                    div.introtxt
-                        div.quote
-                            i.fa.fa-quote-right.fa-5x
-
-
-                        div#quote-carousel.carousel.slide(data-ride='carousel')
-                            ol.carousel-indicators
-                                li.active(data-target="#quote-carousel" data-slide-to="0")
-                                li(data-target="#quote-carousel" data-slide-to="1")
-                                li(data-target="#quote-carousel" data-slide-to="2")
-
-                            div.carousel-inner
-                                div.carousel-item.active
-                                    div
-                                        p Flo thanks a lot for this amazing weekend!! What you teach will become soon the most important subjects in life... I hope this is only the beginning!
-                                        p.author.center.light-grey-color Dan Fintescu - Galati
-
-                                div.carousel-item
-                                    div
-                                        p Flo Adventure nu este o scoala de supravietuire cu traditie, este mai mult decat atat. Este o scoala unde oamenii isi indeplinesc visele, unde visul devine realitate unde omul invata sa devina om printre oameni.
-                                        p.author.center.light-grey-color Cosmin Durbanca - Galati
-
-                                div.carousel-item
-                                    div
-                                        p Prima data in opt ani, cand am ocazia sa invat de la un om cu asa experienta, care imi poate impartasi cu dragoste experientele traite in domeniul alpinismului. Iti multumesc mult!
-                                        p.author.center.light-grey-color Szemusi Zoltan - Cluj Napoca
-
-
     div.scroll-down
         div.chevron
         div.chevron
         div.chevron
+
 
     if device.desktop
         div.little-about.dark-grey-normal.height-300
             div.container.clear.upspace-90
                 h3.center.dust-white-color.font-montserrat-bold.font-1-5 Misiunea noastra - Aventura
                 div.center.font-montserrat-thin.font-1-2.dust-white-color.upspace-20.max-width-40 Credem ca orice loc din lumea asta se poate descoperi cu aventura in suflet si spirit de calator.
-
+    else
+        div.little-about.dark-grey-normal.height-400
+            div.container.clear.upspace-90
+                h3.center.dust-white-color.font-montserrat-bold.font-1-5 Misiunea noastra Aventura
+                div.center.font-montserrat-thin.dust-white-color.upspace-20 Credem ca orice loc din lumea asta se poate descoperi cu aventura in suflet si spirit de calator.
 
     div.page-description.wrapper
         div.container.width-full.max-width-full.padding-0.clear(data-device="#{type}")
