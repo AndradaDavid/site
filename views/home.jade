@@ -3,7 +3,7 @@ extends ./index.jade
 block content
 
     div.bgded.bgded-top
-        video(autoplay="", loop="", muted="")
+        video(autoplay="", loop="", muted="", data-device="#{type}")
             source(src="/images/video.MP4" type="video/mp4")
         div.wrapper.dust-white-color
             header#header.clear
@@ -29,12 +29,12 @@ block content
                 div#logo.text-center.flex-2
                     if device.desktop
                         h1.font-4
-                            a.dust-white-color(href="#top") Flo Adventure Tours
+                            a.orange-color(href="#top") Flo Adventure Tours
                         h3.dust-white-color.font-2 Sa ne vedem cat mai sus!
 
                     else
                         h1.font-3
-                            a.dust-white-color(href="#top") Flo Adventure Tours
+                            a.orange-color(href="#top") Flo Adventure Tours
                         h3.dust-white-color.font-1-5 Sa ne vedem cat mai sus!
 
         if device.desktop || device.tablet

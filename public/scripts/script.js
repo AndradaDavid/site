@@ -26,10 +26,7 @@ $(function() {
             "gridResize": "expand"
 
         });
-
         asyncGrid.append(asyncGrid.collectNew());
-
-
     }
 
     if  ($("#martie").length) {

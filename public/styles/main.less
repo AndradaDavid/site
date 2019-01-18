@@ -99,6 +99,7 @@ html {
     background-attachment: fixed;
     display: flex;
     flex-direction: column;
+
   }
 
   .bgded-top {
@@ -142,15 +143,20 @@ html {
 
   video {
     margin: auto;
-    position: fixed;
+    position: absolute;
     z-index: -1;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     visibility: visible;
     opacity: 1;
-    width: auto;
-    height: 100vh;
+    width: 100vw;
+    height: auto;
+
+    &[data-device='phone'] {
+      width: auto;
+      height: 100vh;
+    }
   }
 
   .center {
@@ -1048,10 +1054,10 @@ html {
              .ribbon {
                 position: absolute;
                 left: calc(50% - 8px);
-                background-color: @dark-grey-opacity;
+                background-color: @yellow-opacity;
                 background-repeat: no-repeat;
                 background-position: center; 
-                padding: 45px;
+                padding: 50px;
                 border-radius: 50px;
              }
              

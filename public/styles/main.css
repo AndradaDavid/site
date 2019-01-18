@@ -506,13 +506,17 @@ html .curtain-gradient-back {
 }
 html video {
   margin: auto;
-  position: fixed;
+  position: absolute;
   z-index: -1;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   visibility: visible;
   opacity: 1;
+  width: 100vw;
+  height: auto;
+}
+html video[data-device='phone'] {
   width: auto;
   height: 100vh;
 }
@@ -1102,10 +1106,10 @@ html .page-description .container #martie .full-grid-item .ribbon,
 html .page-description .container #august .full-grid-item .ribbon {
   position: absolute;
   left: calc(50% - 8px);
-  background-color: rgba(46, 46, 46, 0.8);
+  background-color: rgba(248, 176, 7, 0.7);
   background-repeat: no-repeat;
   background-position: center;
-  padding: 45px;
+  padding: 50px;
   border-radius: 50px;
 }
 html .page-description .container #full-grid .full-grid-item .subtitle,
