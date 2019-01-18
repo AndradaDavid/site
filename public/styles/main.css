@@ -1105,7 +1105,7 @@ html .page-description .container #full-grid .full-grid-item .ribbon,
 html .page-description .container #martie .full-grid-item .ribbon,
 html .page-description .container #august .full-grid-item .ribbon {
   position: absolute;
-  left: calc(50% - 8px);
+  left: calc(50% - 50px);
   background-color: rgba(248, 176, 7, 0.7);
   background-repeat: no-repeat;
   background-position: center;
