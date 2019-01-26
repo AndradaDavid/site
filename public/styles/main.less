@@ -145,15 +145,15 @@ html {
     margin: auto;
     position: absolute;
     z-index: -1;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
     visibility: visible;
     opacity: 1;
-    width: 100vw;
+    width: 110%;
     height: auto;
 
-    &[data-device='phone'] {
+    &[data-device='phone'],
+    &[data-device='tablet'] {
       width: auto;
       height: 100vh;
     }
@@ -2029,41 +2029,40 @@ html {
 
   //------------------ Footer -------------------
   #footer {
-
     display: flex;
 
-    div {
-      padding: 0 15px;
-    }
+      div {
 
-    .padding-top-bottom(30px);
-    font-family: @font-base-cardo-regular;
-    .linklist {
-      border-color: @darker-grey;
+          a {
+            display: block;
+            cursor: pointer;
 
-      li {
-        display: block;
-        margin-bottom: 15px;
-        padding: 0 0 15px 0;
-        border-bottom: 0.5px dotted @darker-grey-normal;
+            &:hover,
+            &:focus,
+            &:visited{
+              text-decoration: none;
+              color: @darker-grey-normal;
 
-        &:last-child {
-          margin: 0;
-          padding: 0;
-          border: none;
-        }
+          }
+          span {
+            text-transform: uppercase;
+          }
 
-        address {
-          display: inline-block;
-          padding-left: 1em;
-        }
+      &[data-device="phone"] {
+        padding-top: 15px;
       }
+      }
+
     }
 
-    legend {
-      font-family: 'Montserrat-Regular';
-      color: @light-grey;
+    &[data-device='phone'] {
+      flex-direction: column;
     }
+
+
+
+
+
   }
 
   //------------------ Copyright -------------------
