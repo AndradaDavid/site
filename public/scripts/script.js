@@ -41,6 +41,17 @@ $(function() {
         asyncGrid.append(asyncGrid.collectNew());
     }
 
+    if  ($("#aprilie").length) {
+
+        var cgrid = $("#aprilie");
+        asyncGrid = new Gridifier(cgrid, {
+            "class": "full-grid-item",
+            "dragifier": false,
+            "gridResize": "expand"
+
+        });
+        asyncGrid.append(asyncGrid.collectNew());
+    }
 
 
 
@@ -147,16 +158,16 @@ $(function() {
         }
     });
 
-    $(window).scroll(function() {
-
-        if ($(this).scrollTop()>700)
-        {
-            $('.scroll-down').fadeOut( 1600, "swing");
-        }
-        else {
-            $('.scroll-down').fadeIn( 1600, "swing");
-        }
-    });
+    // $(window).scroll(function() {
+    //
+    //     if ($(this).scrollTop()>700)
+    //     {
+    //         $('.scroll-down').fadeOut( 1600, "swing");
+    //     }
+    //     else {
+    //         $('.scroll-down').fadeIn( 1600, "swing");
+    //     }
+    // });
 
     $('.grid').isotope({
         itemSelector: '.grid-item',

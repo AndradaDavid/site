@@ -1,6 +1,17 @@
 doctype html
 html
-    include components/header.jade
+    block vars
+    head
+        title #{title}
+        meta(name='description', content='#{description}')
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+
+        link(href="/styles/bootstrap.min.css" rel="stylesheet")
+        link(href="/styles/slick.css" rel="stylesheet")
+        link(href="/styles/main.css" rel="stylesheet" type="text/css" media="all")
+
+
 
     body#top.dark-grey-normal(data-device="#{type}")
 

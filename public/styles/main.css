@@ -141,6 +141,10 @@
   margin: 0;
   width: 100vw !important;
 }
+.width-80 {
+  margin: 0;
+  width: 80vw !important;
+}
 .height-30 {
   height: 30px !important;
 }
@@ -1089,6 +1093,7 @@ html .page-description .container .page-box-tiny form .group label {
 }
 html .page-description .container #full-grid,
 html .page-description .container #martie,
+html .page-description .container #aprilie,
 html .page-description .container #august {
   width: 100%;
   height: 100vh;
@@ -1096,13 +1101,14 @@ html .page-description .container #august {
 }
 html .page-description .container #full-grid .full-grid-item,
 html .page-description .container #martie .full-grid-item,
+html .page-description .container #aprilie .full-grid-item,
 html .page-description .container #august .full-grid-item {
   position: relative;
   left: 0;
   top: 0;
   visibility: hidden;
   width: 25%;
-  height: 420px;
+  height: 350px;
   padding: 3px;
   display: flex;
   flex-flow: column;
@@ -1110,6 +1116,7 @@ html .page-description .container #august .full-grid-item {
 }
 html .page-description .container #full-grid .full-grid-item .ribbon,
 html .page-description .container #martie .full-grid-item .ribbon,
+html .page-description .container #aprilie .full-grid-item .ribbon,
 html .page-description .container #august .full-grid-item .ribbon {
   position: absolute;
   left: calc(50% - 50px);
@@ -1119,8 +1126,24 @@ html .page-description .container #august .full-grid-item .ribbon {
   padding: 50px;
   border-radius: 50px;
 }
+html .page-description .container #full-grid .full-grid-item .ribbon-small,
+html .page-description .container #martie .full-grid-item .ribbon-small,
+html .page-description .container #aprilie .full-grid-item .ribbon-small,
+html .page-description .container #august .full-grid-item .ribbon-small {
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 40px;
+  left: calc(50% - 40px);
+  background-color: rgba(46, 46, 46, 0.8);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 40px;
+  border-radius: 40px;
+}
 html .page-description .container #full-grid .full-grid-item .subtitle,
 html .page-description .container #martie .full-grid-item .subtitle,
+html .page-description .container #aprilie .full-grid-item .subtitle,
 html .page-description .container #august .full-grid-item .subtitle {
   position: absolute;
   left: 10%;
@@ -1130,28 +1153,77 @@ html .page-description .container #august .full-grid-item .subtitle {
   font-family: 'Montserrat-Bold';
   text-shadow: 1px 1px #333;
 }
+html .page-description .container #full-grid .full-grid-item .upper-details,
+html .page-description .container #martie .full-grid-item .upper-details,
+html .page-description .container #aprilie .full-grid-item .upper-details,
+html .page-description .container #august .full-grid-item .upper-details {
+  position: absolute;
+  padding: 0 30px;
+  width: 100%;
+  top: 10%;
+}
+html .page-description .container #full-grid .full-grid-item .upper-details .date,
+html .page-description .container #martie .full-grid-item .upper-details .date,
+html .page-description .container #aprilie .full-grid-item .upper-details .date,
+html .page-description .container #august .full-grid-item .upper-details .date {
+  font-weight: bold;
+}
+html .page-description .container #full-grid .full-grid-item .details,
+html .page-description .container #martie .full-grid-item .details,
+html .page-description .container #aprilie .full-grid-item .details,
+html .page-description .container #august .full-grid-item .details {
+  position: absolute;
+  padding: 0 20px;
+  bottom: 10%;
+  width: 100%;
+}
+html .page-description .container #full-grid .full-grid-item .details .separator,
+html .page-description .container #martie .full-grid-item .details .separator,
+html .page-description .container #aprilie .full-grid-item .details .separator,
+html .page-description .container #august .full-grid-item .details .separator {
+  width: 60px;
+  height: 5px;
+}
+html .page-description .container #full-grid .full-grid-item .details .title,
+html .page-description .container #martie .full-grid-item .details .title,
+html .page-description .container #aprilie .full-grid-item .details .title,
+html .page-description .container #august .full-grid-item .details .title {
+  font-family: 'Montserrat-Bold';
+  font-weight: bold;
+}
+html .page-description .container #full-grid .full-grid-item .details .price,
+html .page-description .container #martie .full-grid-item .details .price,
+html .page-description .container #aprilie .full-grid-item .details .price,
+html .page-description .container #august .full-grid-item .details .price {
+  font-family: 'Montserrat-Regular';
+}
 html .page-description .container #full-grid .full-grid-item.third,
 html .page-description .container #martie .full-grid-item.third,
+html .page-description .container #aprilie .full-grid-item.third,
 html .page-description .container #august .full-grid-item.third {
   width: 33%;
 }
 html .page-description .container #full-grid .full-grid-item.half,
 html .page-description .container #martie .full-grid-item.half,
+html .page-description .container #aprilie .full-grid-item.half,
 html .page-description .container #august .full-grid-item.half {
   width: 50%;
 }
 html .page-description .container #full-grid .full-grid-item.big,
 html .page-description .container #martie .full-grid-item.big,
+html .page-description .container #aprilie .full-grid-item.big,
 html .page-description .container #august .full-grid-item.big {
   width: 75%;
 }
 html .page-description .container #full-grid .full-grid-item.planning,
 html .page-description .container #martie .full-grid-item.planning,
+html .page-description .container #aprilie .full-grid-item.planning,
 html .page-description .container #august .full-grid-item.planning {
   padding: 3px;
 }
 html .page-description .container #full-grid[data-device="phone"] .full-grid-item,
 html .page-description .container #martie[data-device="phone"] .full-grid-item,
+html .page-description .container #aprilie[data-device="phone"] .full-grid-item,
 html .page-description .container #august[data-device="phone"] .full-grid-item {
   border-top: 1px solid rgba(46, 46, 46, 0.8);
   width: 100%;

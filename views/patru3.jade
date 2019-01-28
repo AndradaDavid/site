@@ -1,5 +1,9 @@
 extends ./index.jade
 
+block vars
+    - var title='Aventura 4x4 in 3 zile: Flo Aventure Tours'
+    - var description = 'Welcome to my patru3'
+
 block content
     div.bgded.bgded-top(style="background-image:url('/images/patrol.png');")
         div.wrapper.dust-white-color
@@ -29,7 +33,7 @@ block content
             div.page-box.flex-1
                 h4.subtile-grey-color.font-montserrat-bold Adrenalina pe 4 roti
                 div.heading-sep.orange
-                div.btmspace-50.font-open-sans.dark-grey-color(data-aos="fade-right")
+                div.btmspace-50.font-open-sans.dark-grey-color
                     p Frumusetea zonei Apusenilor nu este cunoscuta de foarte multi, cu atat mai putin adaugand o picatura de aventura pe traseu. Daca te consideri aventuros si vrei sa inveti sa iti folosesti masina la adevarata putere in zone dificile dar si sa te adaptezi situatiilor limita, iesirea aceasta este pentru tine.
             div.page-box.flex-1-5
                 div.map(style="background-image:url('/images/harta-apuseni-3.png')")
