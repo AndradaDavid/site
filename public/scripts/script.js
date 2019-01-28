@@ -53,11 +53,11 @@ $(function() {
         interval: 4000,
         wrap: true
     });
-    AOS.init({
-        easing: 'ease',
-        once: true,
-        mirror: false
-    });
+    // AOS.init({
+    //     easing: 'ease',
+    //     once: true,
+    //     mirror: false
+    // });
 
     $('.single-item').slick({
         dots: true,
