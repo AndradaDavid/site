@@ -61,6 +61,9 @@
 .font-3 {
   font-size: 3em !important;
 }
+.font-3-5 {
+  font-size: 3.5em !important;
+}
 .font-4 {
   font-size: 4em !important;
 }
@@ -660,7 +663,6 @@ html #header .main-nav ul.fl li.fl {
   border-style: solid;
 }
 html #header .main-nav ul.fl li.fl.home-desk {
-  float: left;
   padding: 8px 10px;
   margin: 0 20px;
 }
@@ -750,6 +752,7 @@ html #header div#logo h1 {
   font-family: 'Montserrat-Black';
   letter-spacing: 1px;
   word-wrap: normal;
+  padding: 0 10px;
 }
 html #header div#logo h3 {
   font-family: 'Montserrat-Light';
@@ -1878,6 +1881,7 @@ html #events .container .grid-item--height2 {
 }
 html #footer {
   display: flex;
+  align-items: flex-start;
 }
 html #footer div a {
   display: block;
@@ -1885,14 +1889,33 @@ html #footer div a {
 }
 html #footer div a:hover,
 html #footer div a:focus,
-html #footer div a:visited {
+html #footer div a:visited,
+html #footer div a:-webkit-any-link {
   text-decoration: none;
   color: #2e2e2e;
 }
-html #footer div a span {
+html #footer div span {
   text-transform: uppercase;
 }
-html #footer div a[data-device="phone"] {
+html #footer div form {
+  display: flex;
+}
+html #footer div form input {
+  background: rgba(255, 255, 255, 0.8);
+  font-family: 'Open Sans', sans-serif;
+  line-height: 18px;
+  font-size: 16px;
+  padding: 10px;
+  margin: 16px 0;
+  width: 80%;
+  flex: 1;
+  border: none;
+}
+html #footer div form button {
+  padding: 10px;
+  flex: 1;
+}
+html #footer div[data-device="phone"] {
   padding-top: 15px;
 }
 html #footer[data-device='phone'] {

@@ -64,6 +64,25 @@ app.get('/inscriere', routes.inscriere);
 app.get('/planificator', routes.planificator);
 
 
+app.post('/abonare', function (req, res) {
+
+    var messageBody = "<b>NUME: </b>" + req.body.firstname + " " + req.body.secondname + "<br>" + "<b>EMAIL: </b>" + req.body.address + "<br>" + "<b>TELEFON: </b>" + req.body.phone + "<br>" + "<b>MESAJ: </b>" + req.body.body;
+
+    var mailOptions = {
+        from: req.body.address,
+        to: "cristina.k.david@gmail.com",
+        subject: '[Abonare] ' + req.body.email
+    };
+    smtpTransport.sendMail(mailOptions, function (error, info) {
+        if (error) {
+            console.log("error");
+        } else {
+            res.redirect(req.headers.referer);
+        }
+
+    });
+});
+
 app.post('/contact', function (req, res) {
 
     var messageBody = "<b>NUME: </b>" + req.body.firstname + " " + req.body.secondname + "<br>" + "<b>EMAIL: </b>" + req.body.address + "<br>" + "<b>TELEFON: </b>" + req.body.phone + "<br>" + "<b>MESAJ: </b>" + req.body.body;

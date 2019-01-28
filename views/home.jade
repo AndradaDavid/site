@@ -4,12 +4,12 @@ block content
 
     div.bgded.bgded-top
         video(autoplay="", loop="", muted="", data-device="#{type}")
-            source(src="/images/video.MP4" type="video/mp4")
+            source(src="/images/GH0137751.MP4" type="video/mp4")
         div.wrapper.dust-white-color
             header#header.clear
 
                 if device.desktop || device.tablet
-                    div.main-nav.downspace-40.dark-grey-color.flex-1.clear
+                    div.main-nav.downspace-40.dust-white-color.flex-1.clear
                         include components/navigation
                         //ul.fl.clear
                         //    li.fl.language
@@ -22,7 +22,7 @@ block content
 
                 if device.mobile
                     div.mobile-nav.flex-1
-                        i.fa.fa-bars.fa-2x.upper.show-panel.dark-grey-color
+                        i.fa.fa-bars.fa-2x.upper.show-panel.dust-white-color
                         nav.sidenav.clear
                             include components/navigation-mobile
 
@@ -33,9 +33,9 @@ block content
                         h3.dust-white-color.font-2 Sa ne vedem cat mai sus!
 
                     else
-                        h1.font-3
+                        h1.font-3-5
                             a.orange-color(href="#top") Flo Adventure Tours
-                        h3.dust-white-color.font-1-5 Sa ne vedem cat mai sus!
+                        h3.dark-grey-color.font-1-5 Sa ne vedem cat mai sus!
 
     div.scroll-down
         div.chevron

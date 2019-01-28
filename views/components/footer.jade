@@ -2,23 +2,30 @@ div.page-description.orange.dark-grey-color
     div#footer.hoc.container.clear.downspace-50.upspace-40(data-device="#{type}")
         div.flex-1.upspace-20(data-device="#{type}")
             span.font-montserrat-bold.font-1-2 Despre noi
-            a(href="/planificator").font-montserrat-light evenimente
+            a(href="/planificator").font-montserrat-light planificator
             a(href="/contact").font-montserrat-light contact
+            a(href="/inscriere").font-montserrat-light inscriere
             a(href="/sitemap.xml").font-montserrat-light sitemap
 
 
 
         div.flex-1.upspace-20(data-device="#{type}")
-            span.font-montserrat-bold Echipa
+            span.font-montserrat-bold.font-1-2 Echipa
             a(href="http://www.extremromania.ro").font-montserrat-light extremromania
             a(href="http://www.freewall.ro").font-montserrat-light freewall
 
 
 
-        div.flex-1-5(data-device="#{type}")
+        div.flex-1-5.upspace-20(data-device="#{type}")
+            span.font-montserrat-bold.font-1-2 Abonare
+
+            form.dark-grey-color(action="/abonare", method="post")
+                input(type="text", name="email", placeholder="E-mail", required)
+                button.dark-grey trimite
+
 
 
 //Copyright
-div.wrapper.row4.dark-grey.border-line
-    div#copyright.hoc.clear.light-grey-color
+div.wrapper.row4.orange.dust-white-color.border-line
+    div#copyright.hoc.clear.dust-white-color
         p.fl_left Copyright &copy; 2018 - All Rights Reserved - Flo Adventure Tours
