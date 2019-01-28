@@ -70,7 +70,7 @@ app.post('/abonare', function (req, res) {
 
     var mailOptions = {
         from: req.body.address,
-        to: "cristina.k.david@gmail.com",
+        to: "officefloadventure@gmail.com",
         subject: '[Abonare] ' + req.body.email
     };
     smtpTransport.sendMail(mailOptions, function (error, info) {
@@ -141,7 +141,7 @@ app.post('/inscriere/:id', function (req, res) {
 
     var mailOptions = {
         from: req.body.email,
-        to: "cristina.k.david@gmail.com",
+        to: "officefloadventure@gmail.com",
         subject: '[Inscriere] ' + req.body.formular,
         html: messageBody
     };
