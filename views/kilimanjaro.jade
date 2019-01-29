@@ -1,259 +1,52 @@
 extends ./index.jade
 
 block content
-	div.bgded.bgded-top(style="background:url('/images/maroc-7.png')fixed center; bckground-position: top center; background-size: cover; background-attachment: fixed;")
-		div.curtain
+	div.bgded.bgded-top(style="background-image:url('/images/kilimanjaro.png');")
 		div.wrapper.dust-white-color
-			header#header.hoc.clear
+			header#header.clear
 
 				if device.desktop
-					nav#mainav.clear
+					div.main-nav.downspace-40.dust-white-color.flex-1.clear
 						include components/navigation
+
 				else
-					div.mobile-nav
-						i.fa.fa-bars.fa-2x.upper.show-panel
+					div.mobile-nav.flex-1
+						i.fa.fa-bars.fa-2x.upper.show-panel.dust-white-color
 						nav.sidenav.clear
-							include components/navigation
+							include components/navigation-mobile
 
-				div#logo.upspace-40vh.text-center
+				div#logo.text-center.flex-4.upspace-35
+					h3.dust-white-color.font-2 Flo Adventure Tours
+
 					h1.font-3
-						a(href="#top") Kilimanjaro
-					h3.upspace-35 Flo Adventure Tours
+						a.dust-white-color(href="#top") Kilimanjaro
+					h1.orange-color.font-3.font-montserrat-bold In Curand
 
 
-	div.scroll-down
-		div.chevron
-		div.chevron
-		div.chevron
+	div.repeat-ribbon.wrapper.coloured
+		div.repeat(style="background-image: url('/images/repeat.png');height: 50px;background-size: contain;")
 
-	div.page-description.wrapper.dark-grey.light-grey-color
-		div.container.clear(data-device="#{type}")
+	//Logos and sponsors
 
-			div.page-box.flex-1(style="height: auto;")
-				h4.orange-color Varful Africii
-				div.btmspace-50(data-aos="fade-right")
-
-					p.pre-text Muntii Kilimanjaro sunt localizati in Tanzania si reprezinta, cu cei 5895m ai sai, cel mai inalt varf al Africii.
-					p Sunt formati din 3 conuri vulcanice: Kibo (5895m), Mawenzi (5149m) si Shira (4005m). Prima ascensiune a celui mai inalt con vulcanic are loc in 1889 de catre Hans Meyer si Ludwig Purtscheller.
-
-
-			div.page-box.flex-1-5(style="height: auto;")
-				div.map(style="background-image:url('/images/maroc.png')")
-
-	div.page-description.wrapper.dark-grey.orange-color
-		div.container.clear(data-device="#{type}")
-
-			div.item-list
-				div.number 5895
-				div.description altitudine varf
-			div.item-list
-				div.number ???
-				div.description durata
-			div.item-list
-				div.number ???
-				div.description dificultate
-			div.item-list
-				div.number ???
-				div.description altitudine baza
-
-
-	//itinerariu - echipament - informatii
-	div.page-description.wrapper.dust-white.light-grey-color.height-auto
-		div.container.clear(data-device="#{type}")
-			div.board.upspace-40.btmspace-40
-
-				ul.nav.nav-pills.mb-3#pills-tab(role="tablist")
-					div.linner
-
-					li.nav-item
-						a.nav-link.active#pills-home-tab(data-toggle="pill", href="#pills-itinerariu", role="tab", aria-controls="pills-itinerariu", aria-selected="true", data-device="#{type}")
-							if device.mobile
-								i.fa.fa-calendar
-							else
-								i.fa.fa-calendar.fa-2x
-					li.nav-item
-						a.nav-link#pills-echipament-tab(data-toggle="pill", href="#pills-echipament", role="tab", aria-controls="pills-echipament", aria-selected="false", data-device="#{type}")
-							if device.mobile
-								i.fa.fa-briefcase
-							else
-								i.fa.fa-briefcase.fa-2x
-					li.nav-item
-						a.nav-link#pills-asigurare-tab(data-toggle="pill", href="#pills-asigurare", role="tab", aria-controls="pills-asigurare", aria-selected="false", data-device="#{type}")
-							if device.mobile
-								i.fa.fa-file
-							else
-								i.fa.fa-file.fa-2x
-					li.nav-item
-						a.nav-link#pills-contact-tab(data-toggle="pill", href="#pills-informatii", role="tab", aria-controls="pills-informatii", aria-selected="false", data-device="#{type}")
-							if device.mobile
-								i.fa.fa-info
-							else
-								i.fa.fa-info.fa-2x
+	div.wrapper.coloured.orange
+		div.hoc.clear
+			figure#logos
+				ul.nospace.group
+					li
+						a(href='#')
+							img(src="/images/logo-tete.png")
+					li
+						a(href='#')
+							img(src="/images/logo-free.png")
+					li
+						a(href='#')
+							img(src="/images/logo-pro.png")
+					li
+						a(href='#')
+							img(src="/images/logo-lowe.png")
 
 
 
-				div.tab-content.upspace-20#pills-tabContent
-					div.tab-pane.show.active#pills-itinerariu(role="tabpanel", aria-labelledby="pills-itinerariu-tab")
-						h3.text.orange-color Itinerariu
-
-						div.container.itinerary(data-device="#{type}")
-							div.page-box-tiny.left-box.flex-1
-								h4.tiny.orange-color Ziua 1
-								div.btmspace-10(data-aos="fade-right")
-									p
-							div.page-box-tiny.flex-1
-
-						div.container.itinerary(data-device="#{type}")
-							div.page-box-tiny.flex-1
-							div.page-box-tiny.right-box.flex-1
-								h4.tiny.orange-color Ziua 2
-								div.btmspace-10(data-aos="fade-left")
-									p
-
-						div.container.itinerary(data-device="#{type}")
-							div.page-box-tiny.left-box.flex-1
-								h4.tiny.orange-color Ziua 3
-								div.btmspace-10(data-aos="fade-right")
-									p
-							div.page-box-tiny.flex-1
-
-
-					div.tab-pane#pills-echipament(role="tabpanel", aria-labelledby="pills-echipament-tab")
-						h3.text.orange-color Echipament
-
-						div.container.itinerary(data-device="#{type}")
-							div.page-box-tiny.flex-1
-								h4.tiny.right.orange-color Campare
-							div.page-box-tiny.right-box.flex-1
-								div.btmspace-10(data-aos="fade-right")
-									span
-
-						div.container.itinerary(data-device="#{type}")
-							div.page-box-tiny.flex-1
-								h4.tiny.right.orange-color Tehnic
-
-							div.page-box-tiny.right-box.flex-1
-								div.btmspace-10(data-aos="fade-right")
-									span
-
-
-						div.container.itinerary(data-device="#{type}")
-							div.page-box-tiny.flex-1
-								h4.tiny.right.orange-color Imbracaminte si incaltaminte
-							div.page-box-tiny.right-box.flex-1
-
-								div.btmspace-10(data-aos="fade-left")
-									span
-
-					div.tab-pane#pills-asigurare(role="tabpanel", aria-labelledby="pills-asigurare-tab")
-						h3.text.orange-color Asigurare
-						div.container
-							p Recomandam asigurari de calatorie si optiuni de interventie, recomandate de firmele de asigurare ce sunt in colaborare cu agentia noastra de turism. Dupa ce optezi pentru o expeditie cu noi, un consultant te va indruma pentru achizitia unei polite potrivita pentru tine. etc .. etc..
-					div.tab-pane#pills-informatii(role="tabpanel", aria-labelledby="pills-informatii-tab")
-						h3.text.orange-color Informatii
-						div.container.itinerary(data-device="#{type}")
-
-							div.page-box-tiny.flex-1
-								h4.tiny.right.orange-color Include
-							div.page-box-tiny.right-box.flex-1
-								div.btmspace-10(data-aos="fade-right")
-									span
-
-						div.container.itinerary(data-device="#{type}")
-							div.page-box-tiny.flex-1
-								h4.tiny.right.orange-color Nu include
-							div.page-box-tiny.right-box.flex-1
-								div.btmspace-10(data-aos="fade-right")
-									span
-
-	//descriere categorii
-	div.image.wrapper.light-grey.dust-white-color.height-auto(style="background:url('/images/maroc-1.png') fixed center")
-		div.curtain
-		div.container.z-index-1.clear(data-device="#{type}")
-
-			div.desc-item
-				i.fa.fa-calendar
-
-				div.item-header.orange-color
-				div.item-text.dust-white-color perioada
-			div.desc-item
-				i.fa.fa-male
-				div.item-header.orange-color
-				div.item-text.dust-white-color persoane
-			div.desc-item
-				div.item-icon(style="background:url('/images/sprite.png')-52px -46px; ")
-				div.item-header.orange-color
-				div.item-text.dust-white-color categorie
-			div.desc-item
-				i.fa.fa-car
-				div.item-header.orange-color
-				div.item-text.dust-white-color transport
-			div.desc-item
-				i.fa.fa-home
-				div.item-header.orange-color hotel
-				div.item-text.dust-white-color cazare
-
-	div.little-about.narrow
-		div.hoc.container.clear
-			h4.orange-color Note de expeditie
-			p.center.primary-grey-color Ai toate informatiile despre expeditie intr-un singur loc.
-			a.button.orange(href="/download/mont-blanc.doc") Download
-			div.button.dark-grey Trimite-le pe mail
-
-	div.little-about.narrow.white-color(style="background:url('/images/maroc-2.png'); background-size:cover;background-position: center center; ")
-		div.hoc.container.clear
-
-	//High Alpine Road
-	div.page-description.height-auto.light-grey-color
-		h5.upspace-35.primary-grey-color ???
-		div.hoc.container.clear.max-width-40.margin-auto.upspace-10
-			p.center ???
-
-
-	//calea regala
-	div.little-about.narrow.white-color(style="background:url('/images/maroc-3.png'); background-size:cover;background-position: center center; ")
-		div.hoc.container.clear
-
-	div.page-description.height-auto.light-grey-color
-		h5.upspace-35.primary-grey-color ???
-		div.hoc.container.clear.max-width-40.margin-auto.upspace-10
-			p.center ???
-
-	div.little-about.narrow.white-color(style="background:url('/images/maroc-4.png'); background-size:cover;background-position: center center; ")
-		div.hoc.container.clear
-
-
-	//ascensiunea pe varf
-	div.page-description.height-auto.light-grey-color
-		h5.upspace-35.primary-grey-color ???
-			div.hoc.container.clear.max-width-40.margin-auto.upspace-10
-				p.center ???
-
-	div.little-about.narrow.white-color(style="background:url('/images/maroc-6.png'); background-size:cover;background-position: center center; ")
-		div.hoc.container.clear
-
-
-	//ascensiunea pe varf
-	div.page-description.height-auto.light-grey-color
-		h5.upspace-35.primary-grey-color ???
-			div.hoc.container.clear.max-width-40.margin-auto.upspace-10
-				p.center ???
-
-	div.little-about.narrow.white-color(style="background:url('/images/maroc-7.png'); background-size:cover;background-position: center center; ")
-		div.hoc.container.clear
-
-	//ascensiunea pe varf
-	div.page-description.height-auto.light-grey-color
-		h5.upspace-35.primary-grey-color ???
-			div.hoc.container.clear.max-width-40.margin-auto.upspace-10
-				p.center ???
-
-	div.image.height-500.wrapper(style="background:url('/images/maroc-5.png'); background-size:cover;background-position: center center;")
-		div.overlay
-			div.overlay-text.flex-1
-				i.fa.fa-euro.fa-4x
-				p 620
-				p.down /persoana
 
 
 

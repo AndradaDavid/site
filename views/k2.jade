@@ -1,20 +1,52 @@
 extends ./index.jade
 
 block content
-	div.bgded.bgded-top(style="background:url('/images/mont-blanc.png'); background-size:cover;background-position: center center;")
+	div.bgded.bgded-top(style="background-image:url('/images/k2-bc.png');")
 		div.wrapper.dust-white-color
-			header#header.hoc.clear
+			header#header.clear
 
 				if device.desktop
-					nav#mainav.clear
+					div.main-nav.downspace-40.dust-white-color.flex-1.clear
 						include components/navigation
-				else
-					div.mobile-nav
-						i.fa.fa-bars.fa-2x.upper.show-panel
-						nav.sidenav.clear
-							include components/navigation
 
-				div#logo.upspace-40vh.text-center
+				else
+					div.mobile-nav.flex-1
+						i.fa.fa-bars.fa-2x.upper.show-panel.dust-white-color
+						nav.sidenav.clear
+							include components/navigation-mobile
+
+				div#logo.text-center.flex-4.upspace-35
+					h3.dust-white-color.font-2 Flo Adventure Tours
+
 					h1.font-4
-						a(href="#top") K2 Basecamp
-					h3.upspace-35 Flo Adventure Tours
+						a.dust-white-color(href="#top") K2 Base Camp
+					h1.orange-color.font-3.font-montserrat-bold In Curand
+
+
+	div.repeat-ribbon.wrapper.coloured
+		div.repeat(style="background-image: url('/images/repeat.png');height: 50px;background-size: contain;")
+
+	//Logos and sponsors
+
+	div.wrapper.coloured.orange
+		div.hoc.clear
+			figure#logos
+				ul.nospace.group
+					li
+						a(href='#')
+							img(src="/images/logo-tete.png")
+					li
+						a(href='#')
+							img(src="/images/logo-free.png")
+					li
+						a(href='#')
+							img(src="/images/logo-pro.png")
+					li
+						a(href='#')
+							img(src="/images/logo-lowe.png")
+
+
+
+
+
+
