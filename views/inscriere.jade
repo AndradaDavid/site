@@ -2,18 +2,44 @@ extends ./index.jade
 
 block content
 
-	div.bgded
+	case name
+		when 'patru3'
+			- image = "background-image:url('/images/patrol.png'); "
+		when 'patru5'
+			- image = "background-image:url('/images/aventura-5.png'); "
+		when 'apuseni3'
+			- image = "background-image:url('/images/apuseni-3-platou.png');"
+		when 'apuseni5'
+			- image = "background-image:url('/images/apuseni-5-platou.png');"
+		when 'montblanc'
+			- image = "background-image:url('/images/montblanc.png');"
+		when 'grossglockner'
+			- image = "background-image:url('/images/grossglockner.png');"
+		when 'elbrus'
+			- image = "background-image:url('/images/elbrus.png');"
+		when 'maroc'
+			- image = "background-image:url('/images/maroc.png');"
+		when 'everestbc'
+			- image = "background-image:url('/images/everestbc.png');"
+		when 'everesteli'
+			- image = "background-image:url('/images/eli.png');"
+		when 'island'
+			- image = "background-image:url('/images/island.png');"
+		default
+			- image = ""
 
-		div.wrapper.dark-grey
+	div.bgded(style=("#{type}" === 'phone') ? "height: 70vh" : "height: 60vh;")
+		div.curtain(style=image)
+		div.wrapper
 			header#header.clear
 
 				if device.desktop
-					div.main-nav.downspace-40.dust-grey-color.flex-1.clear
+					div.main-nav.downspace-40.dust-white-color.flex-1.clear
 						include components/navigation
 
 				else
 					div.mobile-nav
-						i.fa.fa-bars.fa-2x.upper.show-panel.light-grey-color
+						i.fa.fa-bars.fa-2x.upper.show-panel.dust-white-color
 						nav.sidenav.clear
 							include components/navigation-mobile
 
