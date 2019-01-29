@@ -244,7 +244,7 @@ exports.inscriere = function(req, res){
             'device': getDevice(req),
             'type': getDeviceType(req),
             'name': req.params.name,
-            'navigation':'contact'
+            'navigation':'inscriere'
         });
 };
 

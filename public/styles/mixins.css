@@ -144,6 +144,10 @@
   margin: 0;
   width: 80vw !important;
 }
+.width-90 {
+  margin: 0;
+  width: 90vw !important;
+}
 .height-30 {
   height: 30px !important;
 }

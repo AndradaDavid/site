@@ -1052,18 +1052,20 @@ html {
                 left: calc(50% - 50px);
                 background-color: @dark-grey-opacity;
                 background-repeat: no-repeat;
-                background-position: center; 
+                background-position: center;
                 padding: 50px;
                 border-radius: 50px;
              }
 
              .ribbon-small {
                position: absolute;
-               display: block;
-               width: 40px;
-               height: 40px;
+               display: flex;
+               align-items: center;
+               width: 30px;
+               height: 30px;
                left: calc(50% - 40px);
                background-color: @dark-grey-opacity;
+               background-size: 40px 40px;
                background-repeat: no-repeat;
                background-position: center;
                padding: 40px;
@@ -1115,7 +1117,10 @@ html {
 
              
              &.third {
-               width: 33%;
+               width: 33.2%;
+             }
+             &.two-third {
+               width: 66.4%;
              }
              &.half {
                 width: 50%;
@@ -2260,7 +2265,8 @@ html {
                           letter-spacing: 3px;
                       }
                       
-                      &.home-mob {
+                      &.home-mob,
+                      &.inscriere-mob{
                           padding-bottom: 0;
                       }
                       

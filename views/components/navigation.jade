@@ -3,6 +3,7 @@
 - classExpeditii = (navigation == 'expeditii'? 'active': '')
 - classContact = (navigation == 'contact'? 'active': '')
 - classPlanificator = (navigation == 'planificator'? 'active': '')
+- classInscriere = (navigation == 'inscriere'? 'active': '')
 
 ul.fl.clear
 
@@ -12,8 +13,8 @@ ul.fl.clear
     li.fl.home-mob(class=classHome)
         a(href="/") Acasa
 
-    li.fl(class=classPlanificator)
-        a.drop(href="/planificator") Planificator
+    //li.fl(class=classPlanificator)
+    //    a.drop(href="/planificator") Planificator
         
     li.fl(class=classRomania)
 
@@ -61,6 +62,10 @@ ul.fl.clear
                         a(href="/island-peak-basecamp") Island Peak, Chhukung Ri si Nangkartshang
             li.sl
                 a K2 Base camp
+
+    li.fl(class=classInscriere)
+        a(href="/inscriere") Inscriere
+
     li.fl(class=classContact)
         a(href="/contact") Contact
 
