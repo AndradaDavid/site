@@ -2011,6 +2011,7 @@ html #footer div form button {
 }
 html #footer div[data-device="phone"] {
   padding-top: 15px;
+  width: 100%;
 }
 html #footer[data-device='phone'] {
   flex-direction: column;
