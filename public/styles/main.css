@@ -1985,6 +1985,9 @@ html #footer div a:-webkit-any-link {
   text-decoration: none;
   color: #2e2e2e;
 }
+html #footer div a.inline {
+  display: inline-block;
+}
 html #footer div span {
   text-transform: uppercase;
 }
