@@ -39,7 +39,7 @@ block content
                     else
                         h1.font-3-5
                             a.orange-color(href="#top") Flo Adventure Tours
-                        h3.dark-grey-color.font-1-5 Sa ne vedem cat mai sus!
+                        h3.dust-white-color.font-1-5 Sa ne vedem cat mai sus!
 
     div.scroll-down
         div.chevron
@@ -61,7 +61,7 @@ block content
 
     div.page-description.wrapper
         div.container.width-full.max-width-full.padding-0.clear(data-device="#{type}")
-            div#full-grid.width-full.dark-grey-normal(data-device="#{type}", style=("#{type}" === 'phone') ? "height: auto" : "height: 845px;")
+            div#full-grid.width-full.dark-grey-normal(data-device="#{type}", style=("#{type}" === 'phone') ? "height: auto" : "height: 704px;")
                 a.full-grid-item.big
                     div.flex-1(style="background-image:url('/images/kkkjf765ghfyd654.png'); background-size: cover;")
                     div.ribbon(style="background-image:url('/images/logo-expeditii.png');")
@@ -121,166 +121,16 @@ block content
                 span.center.upspace-35.font-open-sans.dark-grey-color Alege una dintre variatele noastre optiuni pentru vacanta ta, indiferent de natura acesteia. Alege intre #[a.highlight muntii Apuseni], #[a.highlight Montblanc], #[a.highlight Elbrus], minunata #[a.highlight Sahara], #[a.highlight Grossglockner] sau chiar cel mai inalt varf de pe Terra, #[a.highlight Everest]. Avem si povesti minunate de relatat de pe #[a.highlight Jebel Toubkal] si #[a.highlight Kilimanjaro]. Daca vrei sa vezi renumitul #[a.highlight K2], te asteptam alaturi de noi.
 
 
-
-    if device.mobile || device.tablet
-        div.little-about(style="background:url('/images/kljhskier8304jlkjdf8.jpg'); background-position: -361px; background-size: cover; background-attachment: fixed;")
-            div.hoc.container.clear
-                h4.orange-color Indrazneste
-                p.center Scrie-ne despre urmatoarea ta aventura impreuna cu noi.
-                div.button Contact
-
-    if device.desktop
-        div.little-about.height-400.dust-white
-            div.hoc.container.clear
-                h4.orange-color Indrazneste
-                p.center.dark-grey-color Scrie-ne despre urmatoarea ta aventura impreuna cu noi.
-                div.button Contact
-
-    //div#legend.wrapper.dark-grey.light-grey-color
+    div.little-about.narrow.dark-grey-normal.height-400
         div.hoc.container.clear
-            div.hoc.clear
-                h4.center.dust-white-color Incearca-ti limitele
-                div.center(data-aos="fade-right")
-                p.center.btmspace-20 Programele noastre sunt create pentru persoane cu abilitati diferite, unele aventuri fiind mai dificile din punct de vedere fizic decat celelalte. Din acest motiv fiecare program este incadrat la o anumita categorie de dificultate.
-
-            //div#grades-carousel.carousel.upspace-35.slide(data-ride='carousel')
-                div.carousel-inner
-                    div.carousel-item.expeditii.active
-                        div.category-title.center.btmspace-20 Expeditii
-                        ul.nospace.group(data-device="#{type}")
-
-                            li.first.inspace-10
-
-                                div.text
-
-                                    div.logo.easy.btmspace-20
-                                    div.title.dust-white-color USOR
-                                    span In unele cazuri va fi nevoie de utilizarea echipamentului tehnic, nefiind necesare cunostinte de utilizare ale acestuia. In teren se pot intalni pante usoare.
-
-                            li.inspace-10
-
-                                div.text
-                                    div.logo.medium.btmspace-10
-                                    div.title.dust-white-color  MODERAT
-                                    span Utilizarea echipamentului tehnic va fi necesara in unele sectiuni ale traseului, fiind indicata o minima experienta anterioara in activitati, precum: catarare pe gheata,  escalada pe stanca sau mersul pe ghetar.
+            h2.title.font-montserrat-bold.dust-white-color.center Indrazneste
+            div.heading-sep-middle.dust-white.center
+            span.center.font-open-sans.cloudy-color Alege-ti urmatoarea aventura impreuna cu noi.
+            a.button.dark-grey.upspace-35(href="/inscriere") Rezerva-ti locul
 
 
-                            li.inspace-10
+    div.little-about.narrow.height-400(style="background-image:url('/images/home.png');background-size:cover;background-position: center center;")
 
-                                div.text
-                                    div.logo.difficult.btmspace-10
-                                    div.title.dust-white-color DIFICIL
-                                    span Terenul este accidenta cu pante abrupte, fiind obligatorie experienta tehnica in catarare pe gheata, escalada pe stanca si mers pe ghetar.
-
-
-                    div.carousel-item.aventura
-                        div.category-title.center.btmspace-20 Aventura
-                        ul.nospace.group(data-device="#{type}")
-
-                            li.first.inspace-10
-
-                                div.text
-                                    div.logo.easy.btmspace-20
-                                    div.title.dust-white-color USOR
-                                    span De activitatile incadrate in aceasta categorie se poate bucura oricine, nivelul de efort depus este minim. Nu sunt necesare cunostinte tehnice sau o experienta anterioara pe munte.
-
-
-
-                            li.inspace-10
-
-                                div.text
-                                    div.logo.medium.btmspace-10
-                                    div.title.dust-white-color  MODERAT
-                                    span La acest nivel este necesara o conditie fizica de baza. In functie de programul ales, anumite cunostinte tehnice de baza sunt obligatorii.
-
-
-                            li.inspace-10
-
-                                div.text
-                                    div.logo.difficult.btmspace-10
-                                    div.title.dust-white-color DIFICIL
-                                    span Aici sunt incluse aventurile cele mai grele, dar care merita sacrificiul facut. Este necesara o buna pregatire fizica si o atitudine mentala potrivita pentru a atinge obiectivul propus. In functie de programul ales, anumite cunostinte tehnice sunt obligatorii.
-
-
-                ol.carousel-indicators
-                    li.active(data-target="#grades-carousel" data-slide-to="0")
-                    li(data-target="#grades-carousel" data-slide-to="1")
-
-
-
-
-    //section.single-item.slider(style="margin: 0 auto")
-    //	div
-    //		img(src="http://placehold.it/350x100?text=1")
-    //	div
-    //		img(src="http://placehold.it/350x100?text=2")
-    //	div
-    //		img(src="http://placehold.it/350x100?text=3")
-    //	div
-    //		img(src="http://placehold.it/350x100?text=4")
-    //	div
-    //		img(src="http://placehold.it/350x100?text=5")
-    //	div
-    //		img(src="http://placehold.it/350x100?text=6")
-
-
-
-    //Events area
-    div
-        div
-
-            //div.event-box
-            //	div.event-image(style="background-image:url('/images/africa.png')")
-            //	div.event-overlay
-            //		//div.event-title Vf. Grossglockner
-            //		//div.event-desc Este varful montan cel mai inalt din Alpii de Est. Pot participa incepatori si avansati, dar cu o stare de sanatate si conditie fizica buna.
-            //		//div.event-footer.dark-grey
-            //		//	div.time adsf
-            //		//	div.time adsf
-            //		//	div.time adsf
-            //
-            //div.event-box
-            //
-            //	div.event-overlay
-            //	div.event-image(style="background-image:url('/images/grossglockner.png')")
-            //
-            //div.event-box
-            //	div.event-image(style="background-image:url('/images/belioara.jpg')")
-            //	div.event-overlay
-
-            //ul.nospace.elements
-            //	li.one_third.first
-            //		article
-            //			a(href='/africa')
-            //				img(src="/images/grossglockner.jpg")
-            //			div.txtwrap
-            //				h6.heading Vf.Grossglockner 3798m
-            //				time(datetime="2045-04-06") 30 iulie 2018 - 4 august 2018
-            //				p Este varful montan cel mai inalt din Alpii de Est. Pot participa incepatori si avansati,dar cu o stare de sanatate si conditie fizica buna.
-            //				footer
-            //					a.orange-color(href='#') Descopera
-            //
-            //	li.one_third
-            //		article
-            //			a(href='#')
-            //				img(src="/images/africa.jpg")
-            //			div.txtwrap
-            //				h6.heading Vf.Elbrus 5642m
-            //				time(datetime="2045-04-06") August - Septembrie
-            //				p Elbrus are altitudinea de 5.642 m , fiind cel mai inalt munte din Europa. Pot participa incepatori si avansati, dar cu o stare de sanatate si conditie fizica buna.
-            //				footer
-            //					a.orange-color(href='#') Descopera
-            //
-            //	li.one_third
-            //		article
-            //			a(href='#')
-            //				img(src="/images/africa.jpg")
-            //			div.txtwrap
-            //				h6.heading Vf.Jebel 4167m
-            //				time(datetime="2045-04-06") 21 Septembrie 2018 - 28 Septembrie 2018
-            //				p Jebel Toubkal - 4165m  fiind cel mai inalt munte in Maroc si Africa de Nord si curs de supravietuire in Desertul Sahara.
-            //				footer
-            //					a.orange-color(href='#') Descopera
     div.repeat-ribbon.wrapper.coloured
         div.repeat(style="background-image: url('/images/repeat.png');height: 50px;background-size: contain;")
     //Logos and sponsors
