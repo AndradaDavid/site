@@ -20,7 +20,7 @@ var smtpTransport = nodemailer.createTransport(smtpTransport({
     }
 }));
 
-app.set('port', process.env.PORT || 80);
+app.set('port', process.env.PORT || 8001);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 app.set('view options', {layout: false});
