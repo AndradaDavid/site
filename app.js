@@ -35,20 +35,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.get('/', routes.index);
-
-app.get('/romania', routes.romania);
 app.get('/everest', routes.everest);
-app.get('/alpi', routes.alpi);
-app.get('/expeditii', routes.expeditii);
-
-
 app.get('/apuseni-3-zile', routes.apuseni3);
 app.get('/apuseni-5-zile', routes.apuseni5);
-app.get('/circuitul-castelelor', routes.circuit);
 
 app.get('/4x4-3-zile', routes.patru3);
 app.get('/4x4-5-zile', routes.patru5);
-app.get('/weekend-in-maramures', routes.weekend);
 app.get('/montblanc', routes.montblanc);
 app.get('/grossglockner', routes.grossglockner);
 app.get('/elbrus', routes.elbrus);
@@ -61,7 +53,7 @@ app.get('/k2-basecamp', routes.k2);
 app.get('/contact', routes.contact);
 app.get('/inscriere/:name', routes.inscriere);
 app.get('/inscriere', routes.inscriere);
-app.get('/planificator', routes.planificator);
+// app.get('/planificator', routes.planificator);
 
 
 app.post('/abonare', function (req, res) {
@@ -174,7 +166,6 @@ app.post('/inscriere/:id', function (req, res) {
 
 
 http.createServer(app).listen(app.get('port'), function () {
-
 
     console.log("Server listening on " + app.get('port'));
 });

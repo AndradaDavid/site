@@ -13,9 +13,9 @@ block content
 				if device.desktop
 					div.main-nav.downspace-40.dark-grey-color.flex-1.clear
 						include components/navigation
-						ul.fl.clear
-							li.fl.language
-								a(href="en") ro
+						//ul.fl.clear
+						//	li.fl.language
+						//		a(href="en") ro
 				else
 					div.mobile-nav.flex-1
 						i.fa.fa-bars.fa-2x.upper.show-panel
@@ -26,7 +26,7 @@ block content
 					h3.dark-grey-color.font-2 Flo Adventure Tours
 
 					h1.font-4
-						a.dark-grey-color(href="#top") Mont Blanc
+						a.dark-grey-color(href="#top", title="Mont Blanc") Mont Blanc
 					h2.font-montserrat-regular.dark-grey-color Ruta Gouter
 
 	div.scroll-down
@@ -191,8 +191,8 @@ block content
 	div.little-about.narrow.cloudy.height-400(style="background-image:url('/images/price-background-montblanc.jpg');background-size:cover;background-position: center center;")
 		div.hoc.container.clear
 
-			a.button.orange(href="/download/mont-blanc.doc") Note de expeditie
-			a.button.orange(href="/inscriere/montblanc") Rezerva-ti locul
+			a.button.orange(href="/contact", title="Contact") Contact
+			a.button.orange(href="/inscriere/montblanc", title="Inscriere") Rezerva-ti locul
 
 	hr.cloudy
 	div.price-about.height-300.wrapper.dark-grey.light-grey-color

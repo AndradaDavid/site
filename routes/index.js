@@ -36,33 +36,6 @@ exports.index = function(req, res){
         });
 };
 
-//main categories routes
-exports.romania = function(req, res){
-    res.render('romania',
-        {
-            'device': getDevice(req),
-            'type': getDeviceType(req),
-            'navigation':'romania'
-        });
-};
-
-exports.expeditii = function(req, res){
-    res.render('expeditii',
-        {
-            'device': getDevice(req),
-            'type': getDeviceType(req),
-            'navigation':'expeditii'
-        });
-};
-
-exports.alpi = function(req, res){
-    res.render('alpi',
-        {
-            'device': getDevice(req),
-            'type': getDeviceType(req),
-            'navigation':'expeditii'
-        });
-};
 exports.everest = function(req, res){
     res.render('everest',
         {
@@ -90,25 +63,6 @@ exports.apuseni5 = function(req, res){
             'navigation':'romania'
         });
 };
-
-exports.circuit = function(req, res){
-    res.render('circuit',
-        {
-            'device': getDevice(req),
-            'type': getDeviceType(req),
-            'navigation':'romania'
-        });
-};
-
-exports.patru1 = function(req, res){
-    res.render('patru1',
-        {
-            'device': getDevice(req),
-            'type': getDeviceType(req),
-            'navigation':'romania'
-        });
-};
-
 exports.patru3 = function(req, res){
     res.render('patru3',
         {
@@ -119,15 +73,6 @@ exports.patru3 = function(req, res){
 };
 exports.patru5 = function(req, res){
     res.render('patru5',
-        {
-            'device': getDevice(req),
-            'type': getDeviceType(req),
-            'navigation':'romania'
-        });
-};
-
-exports.weekend = function(req, res){
-    res.render('weekend',
         {
             'device': getDevice(req),
             'type': getDeviceType(req),
