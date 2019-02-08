@@ -1,11 +1,11 @@
 extends ./index.jade
 
 block vars
-    - var title='Flo Adventure Tours - Agentie de turism de aventura'
-    - var description = 'Agentie de turism de aventura. Expeditii, cursuri, drumetii si ture de aventura 4x4. Alpi, Himalaya, Africa, Romania, Elbrus.'
+    - var title='Flo Adventure Tours | Agentie de turism de aventura'
+    - var description = 'Flo Adventure Tours ofera expeditii montane, cursuri de alpinism si escalada, drumetii si ture de aventura 4x4. Vino cu noi in Alpi, Himalaya, Africa, Romania, Elbrus.'
     - var ogtitle= title
-    - var ogurl = 'www.floadventure.ro'
-    - var ogimage = "www.floadventure.ro/images/kkkjf765ghfyd654.png"
+    - var ogurl = 'http://www.floadventure.ro'
+    - var ogimage = "http://www.floadventure.ro/images/kkkjf765ghfyd654.png"
 
 
 block content
@@ -66,24 +66,24 @@ block content
     div.page-description.wrapper
         div.container.width-full.max-width-full.padding-0.clear(data-device="#{type}")
             div#full-grid.width-full.dark-grey-normal(data-device="#{type}", style=("#{type}" === 'phone') ? "height: auto" : "height: 704px;")
-                a.full-grid-item.big
+                a(title="Flo Adventure Tours - expeditii").full-grid-item.big
                     div.flex-1(style="background-image:url('/images/kkkjf765ghfyd654.png'); background-size: cover;")
                     div.ribbon(style="background-image:url('/images/logo-expeditii.png');")
                     div.subtitle.font-1-5 Expeditii
-                a.full-grid-item
+                a(title="Flo Adventure Tours - drumetii").full-grid-item
                     div.flex-1(style="background-image:url('/images/2342asdfa3.png'); background-size: cover; background-position:top;")
                     div.ribbon(style="background-image:url('/images/logo-drumetii.png');")
                     div.subtitle.font-1-5 Drumetii
 
-                a.full-grid-item(href="http://www.extremromania.ro", title="Cursuri")
+                a(title="Flo Adventure Tours - cursuri").full-grid-item(href="http://www.extremromania.ro", title="Cursuri")
                     div.flex-1(style="background-image:url('/images/kajhsdf67894.png'); background-size: cover;")
                     div.ribbon(style="background-image:url('/images/logo-cursuri.png');")
                     div.subtitle.font-1-5 Cursuri
-                a.full-grid-item
+                a(title="Flo Adventure Tours - cultura").full-grid-item
                     div.flex-1(style="background-image:url('/images/hhghhg.png'); background-size: cover; background-position: center;")
                     div.ribbon(style="background-image:url('/images/logo-cultura.png');")
                     div.subtitle.font-1-5 Cultura
-                a.full-grid-item.half
+                a(title="Flo Adventure Tours - aventura").full-grid-item.half
                     div.flex-1(style="background-image:url('/images/hhghhga.png'); background-size: cover; background-position: center;")
                     div.ribbon(style="background-image:url('/images/logo-aventura.png');")
                     div.subtitle.font-1-5 Aventura
