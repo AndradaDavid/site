@@ -3,6 +3,33 @@ extends ./index.jade
 block vars
 	- var title='Inscriere - Flo Aventure Tours'
 	- var description = 'Inscriere expeditii si drumetii. Grossglockner, Mont blanc, Elbrus, Maroc, Jebel Toubkhal, Kilimanjaro, Everest base camp, Intoarcerea cu elicopterul, Island Peak, Apuseni, aventuri 4x4.'
+	- var ogtitle= title
+	- var ogurl = 'http://www.floadventure.ro/inscriere'
+	case name
+		when 'patru3'
+			- ogimage = "http://www.floadventure.ro/images/patrol.png"
+		when 'patru5'
+			- ogimage = "http://www.floadventure.ro/images/aventura-5.png"
+		when 'apuseni3'
+			- ogimage = "http://www.floadventure.ro/images/apuseni-3-platou.png"
+		when 'apuseni5'
+			- ogimage = "http://www.floadventure.ro/images/apuseni-5-platou.png"
+		when 'montblanc'
+			- ogimage = "http://www.floadventure.ro/images/montblanc.png"
+		when 'grossglockner'
+			- ogimage = "http://www.floadventure.ro/images/grossglockner.png"
+		when 'elbrus'
+			- ogimage = "http://www.floadventure.ro/images/elbrus.png"
+		when 'maroc'
+			- ogimage = "http://www.floadventure.ro/images/maroc.png"
+		when 'everestbc'
+			- ogimage = "http://www.floadventure.ro/images/everestbc.png"
+		when 'everesteli'
+			- ogimage = "http://www.floadventure.ro/images/eli.png"
+		when 'island'
+			- ogimage = "http://www.floadventure.ro/images/island.png"
+		default
+			- ogimage = "http://www.floadventure.ro/images/everestbc.png"
 
 block content
 
