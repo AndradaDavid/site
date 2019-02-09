@@ -192,14 +192,3 @@ exports.inscriere = function(req, res){
             'navigation':'inscriere'
         });
 };
-
-// exports.planificator = function(req, res){
-//     res.render('planificator',
-//         {
-//             'sent': 'no',
-//             'bla': 'no',
-//             'device': getDevice(req),
-//             'type': getDeviceType(req),
-//             'navigation':'planificator'
-//         });
-// };
