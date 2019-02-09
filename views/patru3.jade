@@ -5,7 +5,7 @@ block vars
     - var description = 'Curs in tehnici de supravietuire pe durata a 3 zile folosind masina de teren. Admiram frumusetile Apusenilor si invatam sa folosim masina 4x4 pe teren accidentat.'
     - var ogtitle= title
     - var ogDescription= description
-    - var ogurl = 'http://www.floadventure.ro/4x4-3-zile'
+    - var ogurl = 'http://www.floadventure.ro/4x4-3-zile/'
     - var ogimage = "http://www.floadventure.ro/images/patrol.png"
 
 block content
@@ -166,7 +166,7 @@ block content
             p ron
             p.down /persoana
         div(data-href="https://developers.facebook.com/docs/plugins/", data-layout="button-count", data-size="small" data-mobile-iframe="true").fa.fa-2x.fa-share-alt-square.inline.dust-white-color
-            a.dust-white-color.font-open-sans.share-button.fb-xfbml-parse-ignore.inline(target="_blank", href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.floadventure.ro%2F4x4-3-zile&amp;src=sdkpreparse", title="Share") Share
+            a.dust-white-color.font-open-sans.share-button.fb-xfbml-parse-ignore.inline(target="_blank", href="https://www.facebook.com/sharer/sharer.php?u=#{encodeURIComponent(ogurl)}&amp;src=sdkpreparse", title="Share") Share
 
     div.repeat-ribbon.wrapper.coloured
         div.repeat.dark-grey(style="background-image: url('/images/repeat.png');height: 50px;background-size: contain;")
