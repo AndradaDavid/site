@@ -593,7 +593,16 @@ html button i {
   text-transform: uppercase;
   color: #ffffff;
   text-align: center;
+  font-size: 0.5em;
+}
+html .share-button {
   font-size: 0.6em;
+  vertical-align: middle;
+  padding-left: 3px;
+  text-decoration: none;
+}
+html .share-button:hover {
+  cursor: pointer;
 }
 html hr {
   margin: 0;

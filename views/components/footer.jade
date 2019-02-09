@@ -43,7 +43,8 @@ div.page-description.orange.dark-grey-color
                 button.dark-grey trimite
             a(href="https://www.facebook.com/floadventure/", title="Facebook Flo Adventure").inline.dark-grey-color.fa.fa-2x.fa-facebook-f.padding-left-right-10
             a(href="https://www.youtube.com/channel/UCpxI7-uEqDFqVevg9UB3PDQ/videos", title="Youtube Flo Adventure").inline.dark-grey-color.fa.fa-2x.fa-youtube-square.padding-left-right-10
-
+            div(data-href="https://developers.facebook.com/docs/plugins/", data-layout="button-count", data-size="small" data-mobile-iframe="true").fa.fa-2x.fa-share-alt-square.inline.dark-grey-color
+                a.font-open-sans.share-button.fb-xfbml-parse-ignore.inline(target="_blank", href="https://www.facebook.com/sharer/sharer.php?u=#{encodeURIComponent(ogurl)}&amp;src=sdkpreparse", title="Share") Share
 
 
 
@@ -52,3 +53,13 @@ div.orange.dust-white-color.border-line
     div#copyright.hoc.clear.dust-white-color
         span Copyright &copy; 2019 - All Rights Reserved -
         span.dark-grey-color  Flo Adventure Tours
+
+div#fb-root
+script.
+    function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/ro_RO/sdk.js#xfbml=1&version=v3.2';
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
