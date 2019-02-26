@@ -2,7 +2,7 @@ extends ./index.jade
 
 block vars
 	- var title='Expeditie Mont blanc | Flo Aventure Tours'
-	- var description = 'Expeditie e cel mai inalt varf din Alpi alaturi de ghizii Flo Adventure. Curs si ascensiune.'
+	- var description = 'Expeditie e cel mai inalt varf din Alpi alaturi de ghizii Flo Adventure.'
 	- var ogtitle= title
 	- var ogDescription= description
 	- var ogurl = 'http://www.floadventure.ro/montblanc'
@@ -61,7 +61,7 @@ block content
 				div.number 4810m
 				div.description altitudine varf
 			div.item-list
-				div.number 6 zile
+				div.number 4 zile
 				div.description durata
 			div.item-list
 				div.number medie
@@ -77,23 +77,23 @@ block content
 				h4.font-montserrat-bold Detalii
 				div.heading-sep.light-grey
 
-				p.font-effra-regular Cea mai populara ruta de ascensiune este Voie Des Cristalliers, cunoscuta si sub numele de 'Voie Royale. Incepand de la Saint-Gervais-les-Bains, cu trenuletul se ajunge la Gare du Nid d'Aigle (Cuibul vulturului). Pregatirea tehnica si aclimatizarea sunt foarte importante in primele zile de ascensiune. In aceasta expeditie vei invata tehnici de ascensiune pe un varf precum si tehnici elementare si esentiale in alpinism. Avand o fereastra de cateva zile de ascensiune, ne ofera flexibilitatea sa urcam pe varf in functie de vremea pe care o vom intalni la fata locului.
+				p.font-effra-regular Muntele se afla la granita dintre regiunile Haute O Savoie (Franta) si Valle d’Aosta (Italia). Localizarea varfului este un subiect de controversa intre cele doua tari, fiecare plasandu-l pe harta intre granitele sale. Hartile franceze oficiale arata frontiera ca ocolind varful principal pe la sud, sustinand ca cel mai inalt punct al Italiei este Mont Blanc de Courmayeur. In urma unei conventii semnata la Torino in 1861, intre Franta si Regatul Sardiniei a fost fixata in cel mai inalt punct al masivului, dar deseori hartile franceze, datorita conventiei din 1861 isi a analizelor topografice ale cumpenei apelor, nu sunt de acord cu aceasta solutie.
 
 			div.page-box.flex-1-6
 				h4.font-montserrat-bold Itinerariu
 				div.heading-sep.light-grey
-				p Ne tinem de program, dar uneori suntem flexibili, ne adaptam la conditiile meteo si la situatiile neprevazute.
 
 				h5.left.upspace-15 Ziua 1
-				p Ne intalnim in Chamonix, considerata capitala sporturilor montane si al alpinismului, fiind cunoscuta la nivel mondial. Vizitam obiectivele din zona, apoi mergem sa ne cazam in camping.
-				h5.left.upspace-15 Ziua 2-3-4
-				p Urcare din Les Houches cu telecabina, apoi cu trenul pana la Nid d’Aigle ( 2372m). De aici urmeaza urcarea pe jos pana la refugiul Tête Rousse ( 3167 m). Curs de initiere: noduri, tehnica de ghetar, franarea cu pioletul in caz de alunecare pe panta cu zapada si tehnica de ascensiune pe un varf inalt. In functie de vreme se va face urcarea varfului Mont Blanc – 4810 m, cel mai inalt varf din Alpi si din Europa de Vest. Ruta  Tête Rousse – Dôme du Goûter 4303 m – Refugiul Vallot 4362m – Varful Mont Blanc – inapoi la Tête Rousse in aceeasi zi.
+				p Sosire in Chamonix, considerata capitala sporturilor montane si al alpinismului, fiind cunoscuta la nivel mondial.
 
+				h5.left.upspace-15 Ziua 2
+				p Intalnire cu ghidul in Les Houches, de unde se pleaca, la ora 8 dimineata. Cu ajutorul telecabinei si apoi a trenului cu cremaliera, vom ajunge la Nid d’Aigle. De acolo, pe un traseu usor la inceput si mai apoi mai antrenant si intr-o zona in care sunt montate corzi fixe, se ajunge la refugiul Gouter la altitudinea de 3814 de metri. Durata ascensiunii va fi de aproximativ 5 ore.
 
-				h5.left.upspace-15 Ziua 5
-				p Se coboara pana la Les Houches si avem la dispozitie o zi libera.
+				h5.left.upspace-15 Ziua 3
+				p Ne trezim dimineata la ora 1, iar intr-o jumatate de ora se porneste pe traseu. Acesta se va parcurge exclusiv pe zapada, pe zone inghetate, in sir, asigurati in coarda din motive de siguranta. Prima parte a traseului va lasa in curand locul unei frumoase creste finale pe care o vom parcurge dupa ce vom trece de refugiul  Vallot, un punct de bivouac la care se apeleaza in caz de urgenta.
+				p Timpul de ascensiune efectiv va fi de 5 pana la 7 ore, varful de 4810 metri, fiind atins undeva in jurul orei 10 a diminetii. Daca conditiile meteo o sa permita, vom face o pauza de o jumatate de ora, dupa care vom incepe coborarea pana la refugiul Gouter care va dura aproximativ 3 ore. Aici ne vom opri pentru o masa si pentru cateva bauturi necesare pentru refacerea energiei, inainte de a continua coborarea pana la Nid d’Aigle.
 
-				h5.left.upspace-15 Ziua 6
+				h5.left.upspace-15 Ziua 4
 				p Intoarcerea acasa.
 
 
@@ -120,7 +120,7 @@ block content
 	//grid de imagini
 	div.page-description.wrapper.gridul-vietii
 		div.container.width-full.max-width-full.padding-0.clear(data-device="#{type}")
-			div#full-grid.width-full.dark-grey(data-device="#{type}")
+			div#full-grid.width-full.dark-grey(data-device="#{type}", style=("#{type}" === 'phone') ? "height: auto" : "height: 704px;")
 				a(title="Flo Adventure Tours - Mont blanc").full-grid-item.big
 					div.flex-1(style="background-image:url('/images/montblanc-grid-1.png'); background-size: cover; background-position: top center;")
 				a(title="Flo Adventure Tours - Mont blanc").full-grid-item
@@ -143,17 +143,12 @@ block content
 			div.page-box.flex-1.font-montserrat-light(style="padding-right: 80px;")
 				h4.font-montserrat-regular Echipament tehnic
 				div.heading-sep.light-grey
-				span Cort
-				span Sac de dormit
-				span Izolir
-				span Rucsac 60-80 L
-				span Piolet (se poate inchiria de la agentie)
-				span Coltari (se poate inchiria de la agentie)
-				span Casca (se poate inchiria de la agentie)
-				span Ochelari de soare- 100%UV
-				span Crema de protectie solara
-				span Sticla pentru apa
-				span.btmspace-30 Frontala
+				span Ham
+				span Piolet de tura
+				span Coltari
+				span Casca
+				span Ochelari de soare - 100%UV
+				span.btmspace-30 Frontala cu baterii noi
 
 				h4.font-montserrat-regular Asigurare
 				div.heading-sep.light-grey
@@ -177,6 +172,7 @@ block content
 				span Masca de fata (cagula) pentru vant
 				span Sosete termale (macar o pereche pe zi)
 				span Bocanci tehnici, semitehnici
+				span Crema de protectie solara
 
 
 	div.little-about.height-600(style="background-image:url('/images/montblanc-grid-6.png');background-size:cover;background-position: right center;")
@@ -189,12 +185,11 @@ block content
 			div.page-box.flex-1.font-montserrat-thin(style="padding-right: 80px;")
 				h4.font-montserrat-regular Ce include?
 				div.heading-sep.light-grey
-				span Instructorul si echipamentul  de curs (coarda,  ham, cuie de gheata, carabina)
-
+				span Ghidajul, polita de asigurare de raspundere civila si recuperare.
 			div.page-box.flex-1.font-montserrat-thin(style="padding-right: 80px;")
 				h4.font-montserrat-regular Ce nu include?
 				div.heading-sep.light-grey
-				span Coltari, casca, cort, piolet se pot inchiria de la noi, transportul, mancarea, cazarea (se poate efectua si in cabana Tete Rousse doar cu o rezervare prealabila), asigurarea medicala (obligatorie).
+				span Transport, cazare (de rezervarea pentru cazarea se va ocupa ghidul) masa.
 
 	div.little-about.narrow.cloudy.height-400(style="background-image:url('/images/price-background-montblanc.jpg');background-size:cover;background-position: center center;")
 		div.hoc.container.clear
