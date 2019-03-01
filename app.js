@@ -53,7 +53,10 @@ app.get('/k2-basecamp', routes.k2);
 app.get('/contact', routes.contact);
 app.get('/inscriere/:name', routes.inscriere);
 app.get('/inscriere', routes.inscriere);
-// app.get('/planificator', routes.planificator);
+
+
+app.get('/romania', routes.romania);
+
 
 
 app.post('/abonare', function (req, res) {

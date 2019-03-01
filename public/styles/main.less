@@ -152,7 +152,7 @@ html {
     left: 0;
     visibility: visible;
     opacity: 1;
-    width: 110%;
+    width: 100%;
     height: auto;
 
     &[data-device='phone'],
@@ -634,6 +634,18 @@ html {
         line-height: 1;
       }
 
+      .sign {
+        background-size: cover;
+        width: 110px;
+        height: 113px;
+        text-align: center;
+        margin: 0 auto;
+
+        &[data-device='phone'] {
+          width: 88px;
+          height: 91px;
+        }
+      }
       h1 {
         font-size: 3em;
         text-transform: uppercase;
@@ -1086,18 +1098,16 @@ html {
                border-radius: 40px;
              }
 
-
-
-
              .subtitle {
-                position: absolute;
-                left: 10%;
-                bottom: 10%;
-                color: @white;
-                text-transform: uppercase;
-                font-family: @font-base-montserrat-bold;
-                text-shadow: 1px 1px @dark-grey;
+               position: absolute;
+               left: 10%;
+               bottom: 10%;
+               color: @white;
+               text-transform: uppercase;
+               font-family: @font-base-montserrat-bold;
+               text-shadow: 1px 1px @dark-grey;
              }
+
              .upper-details {
                position: absolute;
                .padding-left-right(30px);
@@ -1106,6 +1116,7 @@ html {
 
                .date {
                  font-weight: bold;
+                 text-shadow: 0 0 3px @dark-grey;
                }
              }
 
@@ -1122,9 +1133,11 @@ html {
                .title {
                  font-family: @font-base-montserrat-bold;
                  font-weight: bold;
+                 text-shadow: 0 0 2px @dark-grey;
                }
                .price {
                  font-family: @font-base-montserrat-regular;
+                 text-shadow: 0 0 2px @dark-grey;
                }
              }
 

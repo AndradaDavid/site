@@ -1,0 +1,167 @@
+extends ./index.jade
+
+block vars
+	- var title='Romania - Flo Aventure Tours'
+	- var description = 'Flo Adventure Tours ofera cursuri, ture de aventura 4x4 si drumetii in muntii Apuseni.'
+	- var ogtitle= title
+	- var ogDescription= description
+	- var ogurl = 'http://www.floadventure.ro/romania'
+	- var ogimage = "http://www.floadventure.ro/images/apuseni-3-platou.png"
+
+block content
+	div.bgded.bgded-top(style="background-image:url('/images/apuseni-3-platou.png');")
+		div.wrapper.dust-white-color
+			header#header.clear
+
+				if device.desktop
+					div.main-nav.downspace-40.primary-grey-color.flex-1.clear
+						include components/navigation
+						//ul.fl.clear
+						//    li.fl.language
+						//        a(href="en", title="English") ro
+							// ul.sl
+								li.sl
+									a(href="en") en
+								li.sl
+									a(href="ru") ru
+				else
+					div.mobile-nav.flex-1-5
+						i.fa.fa-bars.fa-2x.upper.show-panel.dark-grey-color
+						nav.sidenav.clear
+							include components/navigation-mobile
+
+				div#logo.text-center.flex-1.upspace-35
+					div.sign(data-device="#{type}", style="background-image:url('/images/logo-flo-adventure.png');")
+					h1.font-4
+						a.cloudy-color(href="#", title="Romania") Romania
+					h3.cloudy-color.font-2 Flo Adventure Tours
+
+	div.scroll-down
+		div.chevron
+		div.chevron
+		div.chevron
+
+
+	div.page-description.wrapper.dust-white-color.dark-grey
+		div.container.clear.center.height-100(data-device="#{type}")
+			p.font-open-sans.center Hai cu noi la o doza de aventura sau alege unul din cursurile noastre puse la dispozitie.
+	div.page-description.wrapper.dust-white-color.dark-grey
+		div.container.width-full.max-width-full.padding-0.clear.dark-grey(data-device="#{type}", style="align-items:normal;")
+
+			div#full-grid.width-90(data-device="#{type}", style="height: 2000px;")
+				a(title="Aventura").full-grid-item.third.planning(style="height: 400px;")
+					div.flex-1.dark-grey
+					div.details.dust-white-color(style="bottom: 35%; left:10%")
+						div.separator.orange.btmspace-10
+						div.title.font-2 AVENTURA
+
+
+				a(href="/4x4-3-zile", title="Inscriere program 4x4 in 3 zile", style="height: 400px;").full-grid-item.third.planning
+					div.flex-1(style="background-image:url('/images/aventura-grid-2.png'); background-sze: cover; background-position: bottom center;")
+					div.upper-details.orange-color
+						div.date.font-1-3 aprilie - noiembrie
+
+					div.ribbon-small(style="background-image:url('/images/logo-aventura.png'); ")
+					div.details.dust-white-color
+						div.separator.orange.btmspace-10
+						div.title.font-1-5 Aventura 4x4 in 3 zile
+						div.price.font-1-2 de la 350 Ron
+
+
+
+				a(href="/apuseni-3-zile", title="Inscriere program Apuseni in 3 zile", style="height: 400px;").full-grid-item.third.planning
+					div.flex-1(style="background-image:url('/images/apuseni-3-grid-7.png'); background-size: cover; background-position: bottom center;")
+					div.upper-details.orange-color
+						div.date.font-1-3 aprilie - noiembrie
+					div.ribbon-small(style="background-image:url('/images/logo-aventura.png');")
+					div.details.dust-white-color
+						div.separator.orange.btmspace-10
+						div.title.font-1-5 Apuseni in 3 zile
+						div.price.font-1-2 280 euro
+
+
+
+				a(href="/4x4-5-zile", title="Inscriere program 4x4 in 3 zile", style="height: 400px;" ).full-grid-item.third.planning
+					div.flex-1(style="background-image:url('/images/aventura-5-grid-4.png'); background-size: cover; background-position: bottom center;")
+					div.upper-details.orange-color
+						div.date.font-1-3 aprilie - noiembrie
+					div.ribbon-small(style="background-image:url('/images/logo-aventura.png'); ")
+					div.details.dust-white-color
+						div.separator.orange.btmspace-10
+						div.title.font-1-5 Aventura 4x4 in 5 zile
+						div.price.font-1-2 de la 450 ron
+
+				a(href="/apuseni-5-zile", title="Inscriere program Apuseni in 5 zile", style="height: 400px;").full-grid-item.two-third.planning
+					div.flex-1(style="background-image:url('/images/apuseni-5-grid-4.png'); background-size: cover; background-position: bottom center;")
+					div.upper-details.white-color
+						div.date.font-1-3 aprilie - noiembrie
+					div.ribbon-small(style="background-image:url('/images/logo-aventura.png');")
+					div.details.dust-white-color
+						div.separator.orange.btmspace-10
+						div.title.font-1-5 Apuseni in 5 zile
+						div.price.font-1-2 350 euro
+
+				a(href="http://www.extremromania.ro/supravietuire.html", title="Inscriere curs de supravietuire - 3 zile", style="height: 400px;").full-grid-item.two-third.planning
+					div.flex-1(style="background-image:url('/images/curs-supravietuire.png'); background-size: cover; background-position: top;")
+					div.upper-details.orange-color
+						div.date.font-1-3 17 - 19 mai
+					div.ribbon-small(style="background-image:url('/images/logo-cursuri.png');")
+					div.details.dust-white-color
+						div.separator.orange.btmspace-10
+						div.title.font-1-5 Curs de supravietuire incepatori
+						div.price.font-1-2 450 ron
+
+				a(title="Cursuri").full-grid-item.third.planning
+					div.flex-1.dark-grey
+					div.details.dust-white-color(style="bottom: 35%; left:10%")
+						div.separator.orange.btmspace-10
+						div.title.font-2 CURSURI
+						div.title.font-2 TABERE
+
+				a(href="http://www.extremromania.ro/family.html", title="Family Survival", style="height: 400px;").full-grid-item.half.planning
+					div.flex-1(style="background-image:url('/images/curs-family.png'); background-size: cover; background-position: bottom;")
+					div.upper-details.orange-color
+						div.date.font-1-3 24 - 28 iulie
+					div.ribbon-small(style="background-image:url('/images/logo-cursuri.png');")
+					div.details.dust-white-color
+						div.separator.orange.btmspace-10
+						div.title.font-1-5 Tabara Family Survival
+						div.price.font-1-2 750 ron
+
+				a(href="http://www.extremromania.ro/scoala%20de%20iarna.html", title="Scoala de iarna", style="height: 400px;").full-grid-item.half.planning
+					div.flex-1(style="background-image:url('/images/curs-iarna.png'); background-size: cover; background-position: top center;")
+					div.upper-details.orange-color
+						div.date.font-1-3 22 - 24 februarie
+					div.ribbon-small(style="background-image:url('/images/logo-cursuri.png');")
+					div.details.dust-white-color
+						div.separator.orange.btmspace-10
+						div.title.font-1-5 Scoala de iarna
+						div.price.font-1-2 450 ron
+
+				a(href="http://www.extremromania.ro/scoala4luni.html", title="Scoala de alpinism si supravietuire", style="height: 400px;").full-grid-item.two-third.planning
+					div.flex-1(style="background-image:url('/images/curs-scoala-4luni.png'); background-size: cover; background-position: bottom;")
+					div.upper-details.orange-color
+						div.date.font-1-3 aprilie - noiembrie
+					div.ribbon-small(style="background-image:url('/images/logo-cursuri.png');")
+					div.details.dust-white-color
+						div.separator.orange.btmspace-10
+						div.title.font-1-5 Scoala de alpinism si supravietuire
+						div.title.font-1-5 4 luni
+						div.price.font-1-2 250 ron/luna
+
+				a(href="http://www.extremromania.ro/scoala%20de%20vara.html", title="Scoala de iarna", style="height: 400px;").full-grid-item.third.planning.btmspace-50
+					div.flex-1(style="background-image:url('/images/curs-vara.png'); background-size: cover; background-position: top center;")
+					div.upper-details.orange-color
+						div.date.font-1-3 7 - 11 august
+					div.ribbon-small(style="background-image:url('/images/logo-cursuri.png');")
+					div.details.dust-white-color
+						div.separator.orange.btmspace-10
+						div.title.font-1-5 Scoala de vara
+						div.price.font-1-2 700 ron
+
+
+
+	div.repeat-ribbon.wrapper.coloured
+		div.repeat(style="background-image: url('/images/repeat.png');height: 50px;background-size: contain;")
+
+

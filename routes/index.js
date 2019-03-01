@@ -192,3 +192,13 @@ exports.inscriere = function(req, res){
             'navigation':'inscriere'
         });
 };
+
+exports.romania = function(req, res){
+
+    res.render('romania',
+        {
+            'device': getDevice(req),
+            'type': getDeviceType(req),
+            'navigation':'romania'
+        });
+};
