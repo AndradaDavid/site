@@ -202,3 +202,13 @@ exports.romania = function(req, res){
             'navigation':'romania'
         });
 };
+
+exports.expeditii = function(req, res){
+
+    res.render('expeditii',
+        {
+            'device': getDevice(req),
+            'type': getDeviceType(req),
+            'navigation':'expeditii'
+        });
+};

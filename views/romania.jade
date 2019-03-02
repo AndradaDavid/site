@@ -16,14 +16,6 @@ block content
 				if device.desktop
 					div.main-nav.downspace-40.primary-grey-color.flex-1.clear
 						include components/navigation
-						//ul.fl.clear
-						//    li.fl.language
-						//        a(href="en", title="English") ro
-							// ul.sl
-								li.sl
-									a(href="en") en
-								li.sl
-									a(href="ru") ru
 				else
 					div.mobile-nav.flex-1-5
 						i.fa.fa-bars.fa-2x.upper.show-panel.dark-grey-color
@@ -101,22 +93,41 @@ block content
 						div.title.font-1-5 Apuseni in 5 zile
 						div.price.font-1-2 350 euro
 
-				a(href="http://www.extremromania.ro/supravietuire.html", title="Inscriere curs de supravietuire - 3 zile", style="height: 400px;").full-grid-item.two-third.planning
-					div.flex-1(style="background-image:url('/images/curs-supravietuire.png'); background-size: cover; background-position: top;")
-					div.upper-details.orange-color
-						div.date.font-1-3 17 - 19 mai
-					div.ribbon-small(style="background-image:url('/images/logo-cursuri.png');")
-					div.details.dust-white-color
-						div.separator.orange.btmspace-10
-						div.title.font-1-5 Curs de supravietuire incepatori
-						div.price.font-1-2 450 ron
+				if device.desktop || device.tablet
+					a(href="http://www.extremromania.ro/supravietuire.html", title="Inscriere curs de supravietuire - 3 zile", style="height: 400px;").full-grid-item.two-third.planning
+						div.flex-1(style="background-image:url('/images/curs-supravietuire.png'); background-size: cover; background-position: top;")
+						div.upper-details.orange-color
+							div.date.font-1-3 17 - 19 mai
+						div.ribbon-small(style="background-image:url('/images/logo-cursuri.png');")
+						div.details.dust-white-color
+							div.separator.orange.btmspace-10
+							div.title.font-1-5 Curs de supravietuire incepatori
+							div.price.font-1-2 450 ron
 
-				a(title="Cursuri").full-grid-item.third.planning
-					div.flex-1.dark-grey
-					div.details.dust-white-color(style="bottom: 35%; left:10%")
-						div.separator.orange.btmspace-10
-						div.title.font-2 CURSURI
-						div.title.font-2 TABERE
+					a(title="Cursuri").full-grid-item.third.planning
+						div.flex-1.dark-grey
+						div.details.dust-white-color(style="bottom: 35%; left:10%")
+							div.separator.orange.btmspace-10
+							div.title.font-2 CURSURI
+							div.title.font-2 TABERE
+
+				if device.mobile
+					a(title="Cursuri").full-grid-item.third.planning
+						div.flex-1.dark-grey
+						div.details.dust-white-color(style="bottom: 35%; left:10%")
+							div.separator.orange.btmspace-10
+							div.title.font-2 CURSURI
+							div.title.font-2 TABERE
+
+					a(href="http://www.extremromania.ro/supravietuire.html", title="Inscriere curs de supravietuire - 3 zile", style="height: 400px;").full-grid-item.two-third.planning
+						div.flex-1(style="background-image:url('/images/curs-supravietuire.png'); background-size: cover; background-position: top;")
+						div.upper-details.orange-color
+							div.date.font-1-3 17 - 19 mai
+						div.ribbon-small(style="background-image:url('/images/logo-cursuri.png');")
+						div.details.dust-white-color
+							div.separator.orange.btmspace-10
+							div.title.font-1-5 Curs de supravietuire incepatori
+							div.price.font-1-2 450 ron
 
 				a(href="http://www.extremromania.ro/family.html", title="Family Survival", style="height: 400px;").full-grid-item.half.planning
 					div.flex-1(style="background-image:url('/images/curs-family.png'); background-size: cover; background-position: bottom;")

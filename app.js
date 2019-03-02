@@ -56,6 +56,7 @@ app.get('/inscriere', routes.inscriere);
 
 
 app.get('/romania', routes.romania);
+app.get('/expeditii', routes.expeditii);
 
 
 
