@@ -26,12 +26,20 @@ block content
 
 				div#logo.text-center.flex-4.upspace-35
 					div.sign(data-device="#{type}", style="background-image:url('/images/logo-flo-adventure.png');")
-					h3.dark-grey-color.font-2 Flo Adventure Tours
+					if device.mobile
+						h3.dust-white-color.font-2 Flo Adventure Tours
 
-					h1.font-4
-						a.dark-grey-color(href="#top", title="Jebel Toubkal") Jebel Toubkal
-					h3.dark-grey-color.font-2.font-montserrat-bold Desertul Sahara
-					h2.font-montserrat-regular.dark-grey-color Ruta clasica
+						h1.font-4
+							a.dust-white-color(href="#top", title="Jebel Toubkal") Jebel Toubkal
+						h3.dust-white-color.font-2.font-montserrat-bold Desertul Sahara
+						h2.font-montserrat-regular.dust-white-color Ruta clasica
+					else
+						h3.dark-grey-color.font-2 Flo Adventure Tours
+
+						h1.font-4
+							a.dark-grey-color(href="#top", title="Jebel Toubkal") Jebel Toubkal
+						h3.dark-grey-color.font-2.font-montserrat-bold Desertul Sahara
+						h2.font-montserrat-regular.dark-grey-color Ruta clasica
 
 	div.scroll-down
 		div.chevron
