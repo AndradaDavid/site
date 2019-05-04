@@ -58,6 +58,8 @@ app.get('/inscriere', routes.inscriere);
 app.get('/romania', routes.romania);
 app.get('/expeditii', routes.expeditii);
 
+app.get('/tabara-family-survival', routes.family);
+
 
 
 app.post('/abonare', function (req, res) {
@@ -123,6 +125,9 @@ app.post('/inscriere/:id', function (req, res) {
         messageBody = "<b>NUME: </b>" + req.body.firstname + " " + req.body.secondname + "<br>" + "<b>EMAIL: </b>" + req.body.email + "<br>" + "<b>TELEFON: </b>" + req.body.phone + "<br>" + "<b>ADRESA COMPLETA: </b>" + req.body.p_address + "<br>" + "<b>VARSTA: </b>" + req.body.age + "<br>" + "<b>OCUPATIA: </b>" + req.body.occupation + "<br>" + "<b>STAREA DE SANATATE: </b>" + req.body.health + "<br>" + "<b>MASINA: </b>" + req.body.car + "<br>" + "<b>EXPERIENTA: </b>" + req.body.experience + "<br>" + "<b>CORT: </b>" + req.body.tent + "<br>" + "<b>FAMILIE: </b>" + req.body.family;
     }
 
+    if (req.params.id == 'family') {
+        messageBody = "<b>NUME: </b>" + req.body.firstname + " " + req.body.secondname + "<br>" + "<b>EMAIL: </b>" + req.body.email + "<br>" + "<b>TELEFON: </b>" + req.body.phone + "<br>" + "<b>ADRESA COMPLETA: </b>" + req.body.p_address + "<br>" + "<b>VARSTA: </b>" + req.body.age + "<br>" + "<b>NUMAR DE COPII: </b>" + req.body.copii + "<br>";
+    }
 
     if (req.params.id == 'montblanc' || req.params.id == 'grossglockner' || req.params.id == 'elbrus' || req.params.id == "everestbc" || req.params.id == "everesteli" || req.params.id == "island") {
 
@@ -131,13 +136,12 @@ app.post('/inscriere/:id', function (req, res) {
 
     if (req.params.id == 'maroc') {
         messageBody = "<b>NUME: </b>" + req.body.firstname + " " + req.body.secondname + "<br>" + "<b>EMAIL: </b>" + req.body.email + "<br>" + "<b>TELEFON: </b>" + req.body.phone + "<br>" + "<b>ADRESA COMPLETA: </b>" + req.body.p_address + "<br>" + "<b>VARSTA: </b>" + req.body.age + "<br>" + "<b>OCUPATIA: </b>" + req.body.occupation + "<br>" + "<b>STAREA DE SANATATE: </b>" + req.body.health + "<br>" + "<b>EXPERIENTA: </b>" + req.body.experience;
-
     }
 
 
     var mailOptions = {
         from: req.body.email,
-        to: "officefloadventure@gmail.com",
+        to: "cristina.k.david@gmail.com",
         subject: '[Inscriere] ' + req.body.formular,
         html: messageBody
     };

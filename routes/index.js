@@ -212,3 +212,13 @@ exports.expeditii = function(req, res){
             'navigation':'expeditii'
         });
 };
+
+exports.family = function(req, res){
+
+    res.render('family',
+        {
+            'device': getDevice(req),
+            'type': getDeviceType(req),
+            'navigation':'cursuri'
+        });
+};

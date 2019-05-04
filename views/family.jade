@@ -1,0 +1,159 @@
+extends ./index.jade
+
+block vars
+	- var title='Family Survival | Tabara de supravietuire pentru familii | Flo Aventure School'
+	- var description = 'Tabara de supravietuire pentru familii Flo Adventure.'
+	- var ogtitle= title
+	- var ogDescription= description
+	- var ogurl = 'http://www.floadventure.ro/tabara-family-survival'
+	- var ogimage = ""
+
+block content
+	div.bgded.bgded-top(style="background-image:url('/images/family-background.jpg');")
+		div.wrapper.dust-white-color
+			header#header.clear
+
+				if device.desktop
+					div.main-nav.downspace-40.dark-grey-color.flex-1.clear
+						include components/navigation
+				else
+					div.mobile-nav.flex-1
+						i.fa.fa-bars.fa-2x.upper.show-panel.dark-grey-color
+						nav.sidenav.clear
+							include components/navigation-mobile
+
+				div#logo.text-center.flex-4.upspace-35
+					div.sign(data-device="#{type}", style="background-image:url('/images/logo-flo-adventure.png');")
+
+
+					if device.mobile
+						h1.font-4
+							a.orange-color(href="#top", title="Family Survival") Family Survival
+						h2.font-montserrat-regular.white-color Tabara de supravietuire pentru familii
+					else
+						h1.font-4
+							a.orange-color(href="#top", title="Family Survival") Family Survival
+						h2.font-montserrat-regular.subtile-grey-color Tabara de supravietuire pentru familii
+
+	div.scroll-down
+		div.chevron
+		div.chevron
+		div.chevron
+
+	div.page-description.wrapper.orange.dark-grey-color
+		div.container.clear(data-device="#{type}")
+
+			div.page-box.flex-1(style=("#{type}" === 'phone') ? "" : "padding-right: 60px;")
+				h4.dust-white-color.font-montserrat-bold Tabara pentru mari si mici
+				div.heading-sep.dust-white
+				div.btmspace-50.font-open-sans(data-aos="fade-right")
+					p.pre-text.font-open-sans Ofera-i o vacanta unica alturi de parinti in care puteti invata tainele tehnicilor de supravietuire.
+					p Cursurile sunt unice ca si structura, adaptate pentru familie si sunt marca Flo Adventure. Cursul este sustinut de instructori recunoscuti de M.T.S si I.F.B.S (International Federation of Bushcraft and Survival) pregatiti in acest domeniu.
+
+						div(data-href="https://developers.facebook.com/docs/plugins/", data-layout="button-count", data-size="small" data-mobile-iframe="true").fa.fa-2x.fa-share-alt-square.inline.white-color
+							a.white-color.font-open-sans.share-button.fb-xfbml-parse-ignore.inline(target="_blank", href="https://www.facebook.com/sharer/sharer.php?u=#{encodeURIComponent(ogurl)}&amp;src=sdkpreparse", title="Share") Share
+
+			div.page-box.flex-1-5
+				div.map(style="background-image:url('/images/harta-apuseni-3.png')")
+
+
+	div.image.dust-white.orange-color
+		div.hoc.clear.center.upspace-35.btmspace-30(data-device="#{type}")
+			div.desc-item
+				i.fa.fa-calendar.font-2
+				span.item-header Perioada
+				span.item-text.subtile-grey-color 24 - 28 iulie
+			div.desc-item
+				i.fa.fa-male.fa-3x.font-2
+				span.item-header Persoane
+				span.item-text.dark-grey-color minim 5 ani - maxim 14 ani
+			div.desc-item
+				i.fa.fa-map-marker.fa-3x.font-2
+				span.item-header Regiune
+				span.item-text.dark-grey-color zona Apuseni
+			div.desc-item
+				i.fa.fa-car.fa-3x.font-2
+				span.item-header Transport
+				span.item-text.dark-grey-color masina
+
+	div.little-about.height-600(style="background-image:url('/images/family-grid-0.jpg');background-size:cover;background-position: right center;")
+
+	//detalii si itinerariu
+	div.page-description.wrapper.dust-grey.dark-grey-color
+		div.container.clear(data-device="#{type}", style="align-items: flex-start;")
+			div.page-box.flex-1(style=("#{type}" === 'phone') ? "" : "padding-right: 70px;")
+				h4.font-montserrat-bold Descriere
+				div.heading-sep.orange
+				p.font-effra-regular O tabara gandita pentru a intari relatiile in familia ta. Cunoaste-ti copilul intr-un mediu controlat, inconjurat de natura. Te asteapta tehnici de supravietuire prezentate intr-un mod interactiv si pe intelesul copiilor, jocuri pline de aventura, escalada si multe alte surprize.
+			div.page-box.flex-1-6
+				h4.font-montserrat-bold Activitati
+				div.heading-sep.orange
+				p Ne tinem de program dar uneori suntem flexibil, ne adaptam la conditiile meteo si la situatiile neprevazute.
+
+				p Activitatile sunt special gandite pentru a crea apropiere intre parinti si copii. Vor fi programe unde familiile se vor intrece cu alte familii, dar si probe individuale pentru copii. Acestia vor invata sa socializeze si sa interactioneze cu alti copii si adulti, vor invata notiuni cum ar fi: lucru in echipa, perseverenta, coordonare, invingerea fricii intr-un mod constructiv, sustinerea echipei in timpul jocurilor, sustinerea echipei adverse si fair play-ul.
+				p Vom discuta despre "Planul de urgenta al familiei mele", cum reactionam in situatii de urgenta (cutremur, incendiu etc), cum ne protejam copii si ce ii invatam ca sa fie in siguranta orice s-ar intampla.
+				p Tehnicile de supravietuire vor fi prezentate in asa fel incat sa prezinte informatii reale si de folos chiar si celor mici. Cum se aprinde focul, care plante ne sunt de ajutor si pe care trebuie sa le evitam, cum se construieste un adapost, orientarea in natura vor fi deliciul copiilor. Acestea vor fi urmate de jocuri de orientare, mici intreceri si programe menite sa sudeze si sa intareasca relatiile dintre noi.
+				p Pentru a avea si parintii cate un moment de liniste, unele activitati vor fi dedicate doar copiilor, activitati care vor fi legate de subiectul taberei, urmate de mici proiecte handmade pe care le vor putea lua acasa ca amintire.
+
+	//grid de imagini
+	div.page-description.wrapper
+		div.container.width-full.max-width-full.padding-0.clear(data-device="#{type}")
+			div#full-grid.width-full.dark-grey(data-device="#{type}")
+				a.full-grid-item.big
+					div.flex-1(style="background-image:url('/images/family-grid-1.jpg'); background-size: cover; background-position: top center;")
+				a.full-grid-item
+					div.flex-1(style="background-image:url('/images/family-grid-2.jpg'); background-size: cover; background-position:top;")
+
+				a.full-grid-item
+					div.flex-1(style="background-image:url('/images/family-grid-3.jpg'); background-size: cover; background-position: center;")
+				a.full-grid-item
+					div.flex-1(style="background-image:url('/images/family-grid-5.jpg'); background-size: cover; background-position: center;")
+				a.full-grid-item.half
+					div.flex-1(style="background-image:url('/images/family3-grid-4.jpg'); background-size: cover; background-position: center;")
+				a.full-grid-item.big
+					div.flex-1(style="background-image:url('/images/family-grid-6.jpg'); background-size: cover; background-position: top center;")
+				a.full-grid-item
+					div.flex-1(style="background-image:url('/images/family-grid-7.jpg'); background-size: cover; background-position: right;")
+	hr.cloudy
+
+
+	//extra informatii
+	div.page-description.wrapper.dust-grey.dark-grey-color
+		div.container.clear(data-device="#{type}", style="align-items: flex-start;")
+			div.page-box.flex-1.font-open-sans(style=("#{type}" === 'phone') ? "" : "padding-right: 60px;")
+				h4.font-montserrat-regular Ce include
+				div.heading-sep.orange
+				p Instructorul
+				p.btmspace-50 Echipamentul pentru escalada
+
+				h4.font-montserrat-regular Informatii
+				div.heading-sep.orange
+				p Familia trebuie sa fie compusa din minim un copil si un parinte.
+				p Varsta copiilor trebuie sa fie cuprinsa intre 5 si 14 ani.
+				p Pentru copii cu varsta peste 14 ani va sta la dispozitie scoala de vara din luna august.
+
+			div.page-box.flex-1.font-open-sans
+				h4.font-montserrat-regular Ce nu include
+				div.heading-sep.orange
+				p Transportul
+				p Masa
+				p Cazarea care se va face la cort (fiecare familie trebuie sa isi aduca cortul propriu)
+
+
+	//rezervati locul sau contacteaza-ne
+	div.little-about.height-500.cloudy(style="background-image:url('/images/family-price.jpg');background-size:cover;background-position: center center;")
+		div.hoc.container.clear.font-1-2
+			a.button(href="/inscriere/family", title="Inscriere") Rezerva-ti locul
+			a.button(href="/contact", title="Contact") Ai o intrebare?
+
+	hr.cloudy
+	div.price-about.height-400.wrapper.dark-grey.light-grey-color
+
+		p.dust-white-color.font-2(style="top: 97px;") Pretul pachetului:
+		div.overlay-text.flex-1.font-2.orange-color
+			p.font-1-2 750&nbsp;
+			p ron/familie
+		p.font-1-3(style="top: -90px;") (parinti + 2 copii)
+		p.font-1-3(style="top: -95px;") fiecare membru in plus, extra 100 ron/persoana
+		div(data-href="http://www.floadventure.ro/tabara-family-survival", data-layout="button-count", data-size="small" data-mobile-iframe="true", style="top: -62px; position: relative;").fa.fa-2x.fa-share-alt-square.inline.dust-white-color
+			a.dust-white-color.font-open-sans.share-button.fb-xfbml-parse-ignore.inline(target="_blank", href="https://www.facebook.com/sharer/sharer.php?u=#{encodeURIComponent(ogurl)}&amp;src=sdkpreparse", title="Share") Share

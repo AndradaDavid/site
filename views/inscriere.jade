@@ -29,6 +29,8 @@ block vars
 			- ogimage = "http://www.floadventure.ro/images/eli.png"
 		when 'island'
 			- ogimage = "http://www.floadventure.ro/images/island.png"
+		when 'family'
+			- ogimage = "http://www.floadventure.ro/images/???.png"
 		default
 			- ogimage = "http://www.floadventure.ro/images/everestbc.png"
 
@@ -57,6 +59,8 @@ block content
 			- image = "background-image:url('/images/eli.png');"
 		when 'island'
 			- image = "background-image:url('/images/island.png');"
+		when 'family'
+			- image = "background-image:url('/images/???.png');"
 		default
 			- image = ""
 
@@ -191,6 +195,33 @@ block content
 
 						textarea(type="text", name="tent", placeholder="Detii un cort sau preferi cabanuta cu priciuri?")
 
+
+						button.orange trimite
+
+	if (name == 'family')
+		div.page-description.wrapper.dust-grey.dark-grey-color
+			div.container.clear(data-device="#{type}", style="align-items: flex-start;")
+				div.page-box.flex-2
+
+					h3 #[a.dark-grey-color(href="tel:0040753012119", title="Telefon agentie") +40 (753) 012 119]
+					h3 #[a.highlight(href='mailto:officefloadventure@gmail.com',title='Mail agentie') officefloadventure @ gmail.com]
+					div.heading-sep.light-grey
+
+					p.font-open-sans Dupa completarea acestui formular vei fi contactat pentru confirmare si pentru plata avansului, pe care ti-l vom comunica in urma confirmarii. Pentru intrebari si nelamuriri, te rugam sa folosesti #[a.highlight(href="/contact", title="Contact") pagina de contact].
+
+					form.dark-grey-color(action="/inscriere/#{name}", method="post")
+						input(type="hidden", name="formular", value="Pentru Family Survival")
+
+						input(type="text", name="firstname", placeholder="Nume",required)
+						input(type="text", name="secondname", placeholder="Prenume")
+						input(type="text", name="email", placeholder="E-mail", required)
+						input(type="text", name="phone", placeholder="Telefon", required)
+						input.btmspace-80(type="text", name="p_address", placeholder="Adresa completa", required)
+
+						p.font-open-sans Te rugam sa completezi formularul cat mai exact posibil. Este foarte important sa stim ce echipament detii si care este starea ta de sanatate pentru a te bucura din plin de expeditia aleasa.
+
+						input(type="text", name="age", placeholder="Varsta")
+						input(type="text", name="copii", placeholder="Numar de copii")
 
 						button.orange trimite
 
@@ -400,7 +431,6 @@ block content
 							div.separator.orange.btmspace-10
 							div.title.font-1-5 Island Peak - Chhukung Ri + Nangkartshang
 							div.price.font-1-2 1.990 euro
-
 
 	div.repeat-ribbon.wrapper.coloured
 		div.repeat(style="background-image: url('/images/repeat.png');height: 50px;background-size: contain;")
