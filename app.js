@@ -141,7 +141,7 @@ app.post('/inscriere/:id', function (req, res) {
 
     var mailOptions = {
         from: req.body.email,
-        to: "cristina.k.david@gmail.com",
+        to: "officefloadventure@gmail.com",
         subject: '[Inscriere] ' + req.body.formular,
         html: messageBody
     };
