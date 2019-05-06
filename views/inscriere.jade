@@ -148,8 +148,16 @@ block content
 						p.font-open-sans Te rugam sa completezi formularul cat mai complet posibil. Este foarte important sa stim ce echipament detii si care este starea ta de sanatate pentru a te bucura din plin de expeditia aleasa.
 
 						input(type="text", name="age", placeholder="Varsta")
-						input(type="text", name="occupation", placeholder="Ocupatia")
-						textarea.btmspace-80(type="text", name="health", placeholder="Probleme de sanatate pe care le consideri a fi mentionate.")
+						input.btmspace-30(type="text", name="occupation", placeholder="Ocupatia")
+
+						p.font-open-sans Inscriere pentru:
+						div.group(data-device="#{type}").max-width-40
+							span.font-open-sans
+								input#casca.checkbox(type='checkbox', name='seria1', value= 'da')
+								label(for='seria1') Seria 1
+							span.font-open-sans
+								input#piolet.checkbox(type='checkbox', name='seria2', value= 'da')
+								label(for='seria2') Seria 2
 
 						input(type="text", name="car", placeholder="Detii o masina si vrei sa vii cu ea? Daca da, spune-ne ce model e.", required)
 

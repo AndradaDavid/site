@@ -121,9 +121,30 @@ app.post('/inscriere/:id', function (req, res) {
 
     var messageBody = '';
 
-    if (req.params.id == 'apuseni3' || req.params.id == 'apuseni5' || req.params.id == 'patru3' || req.params.id == 'patru5') {
+    if (req.params.id == 'apuseni3' || req.params.id == 'apuseni5' ) {
         messageBody = "<b>NUME: </b>" + req.body.firstname + " " + req.body.secondname + "<br>" + "<b>EMAIL: </b>" + req.body.email + "<br>" + "<b>TELEFON: </b>" + req.body.phone + "<br>" + "<b>ADRESA COMPLETA: </b>" + req.body.p_address + "<br>" + "<b>VARSTA: </b>" + req.body.age + "<br>" + "<b>OCUPATIA: </b>" + req.body.occupation + "<br>" + "<b>STAREA DE SANATATE: </b>" + req.body.health + "<br>" + "<b>MASINA: </b>" + req.body.car + "<br>" + "<b>EXPERIENTA: </b>" + req.body.experience + "<br>" + "<b>CORT: </b>" + req.body.tent + "<br>" + "<b>FAMILIE: </b>" + req.body.family;
     }
+
+
+
+    if (req.params.id == 'patru3' || req.params.id == 'patru5') {
+
+        messageBody = "<b>NUME: </b>" + req.body.firstname + " " + req.body.secondname + "<br>" +
+            "<b>EMAIL: </b>" + req.body.email + "<br>" + "" +
+            "<b>TELEFON: </b>" + req.body.phone + "<br>" +
+            "<b>ADRESA COMPLETA: </b>" + req.body.p_address + "<br>" +
+            "<b>VARSTA: </b>" + req.body.age + "<br>" + "" +
+            "<b>OCUPATIA: </b>" + req.body.occupation + "<br>" +
+            "<b>SERIA 1: </b>" + ((req.body.seria1 === 'da')?"da":"nu") + "<br>" +
+            "<b>SERIA 2: </b>" + ((req.body.seria2 === 'da')?"da":"nu") + "<br>" +
+            "<b>MASINA: </b>" + req.body.car + "<br>" +
+            "<b>EXPERIENTA: </b>" + req.body.experience + "<br>" +
+            "<b>CORT: </b>" + req.body.tent + "<br>" +
+            "<b>FAMILIE: </b>" + req.body.family;
+    }
+
+
+
 
     if (req.params.id == 'family') {
         messageBody = "<b>NUME: </b>" + req.body.firstname + " " + req.body.secondname + "<br>" + "<b>EMAIL: </b>" + req.body.email + "<br>" + "<b>TELEFON: </b>" + req.body.phone + "<br>" + "<b>ADRESA COMPLETA: </b>" + req.body.p_address + "<br>" + "<b>VARSTA: </b>" + req.body.age + "<br>" + "<b>NUMAR DE COPII: </b>" + req.body.copii + "<br>";
@@ -131,7 +152,17 @@ app.post('/inscriere/:id', function (req, res) {
 
     if (req.params.id == 'montblanc' || req.params.id == 'grossglockner' || req.params.id == 'elbrus' || req.params.id == "everestbc" || req.params.id == "everesteli" || req.params.id == "island") {
 
-        messageBody = "<b>NUME: </b>" + req.body.firstname + " " + req.body.secondname + "<br>" + "<b>EMAIL: </b>" + req.body.email + "<br>" + "<b>TELEFON: </b>" + req.body.phone + "<br>" + "<b>ADRESA COMPLETA: </b>" + req.body.p_address + "<br>" + "<b>VARSTA: </b>" + req.body.age + "<br>" + "<b>OCUPATIA: </b>" + req.body.occupation + "<br>" + "<b>STAREA DE SANATATE: </b>" + req.body.health + "<br>" + "<b>Piolet: </b>" + req.body.piolet + "<br>" + "<b>CASCA: </b>" + req.body.casca + "<br>" + "<b>COLTARI: </b>" + req.body.coltari + "<br>" + "<b>HAM: </b>" + req.body.ham + "<br>" + "<b>EXPERIENTA: </b>" + req.body.experience;
+        messageBody = "<b>NUME: </b>" + req.body.firstname + " " + req.body.secondname + "<br>" +
+            "<b>EMAIL: </b>" + req.body.email + "<br>" +
+            "<b>TELEFON: </b>" + req.body.phone + "<br>" +
+            "<b>ADRESA COMPLETA: </b>" + req.body.p_address + "<br>" +
+            "<b>VARSTA: </b>" + req.body.age + "<br>" +
+            "<b>OCUPATIA: </b>" + req.body.occupation + "<br>" +
+            "<b>STAREA DE SANATATE: </b>" + req.body.health + "<br>" + "<b>Piolet: </b>" + req.body.piolet + "<br>" +
+            "<b>CASCA: </b>" + req.body.casca + "<br>" +
+            "<b>COLTARI: </b>" + req.body.coltari + "<br>" +
+            "<b>HAM: </b>" + req.body.ham + "<br>" +
+            "<b>EXPERIENTA: </b>" + req.body.experience;
     }
 
     if (req.params.id == 'maroc') {
