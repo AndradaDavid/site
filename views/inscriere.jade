@@ -30,7 +30,7 @@ block vars
 		when 'island'
 			- ogimage = "http://www.floadventure.ro/images/island.png"
 		when 'family'
-			- ogimage = "http://www.floadventure.ro/images/???.png"
+			- ogimage = "http://www.floadventure.ro/images/family-suvival-price.jpg"
 		default
 			- ogimage = "http://www.floadventure.ro/images/everestbc.png"
 
@@ -60,7 +60,7 @@ block content
 		when 'island'
 			- image = "background-image:url('/images/island.png');"
 		when 'family'
-			- image = "background-image:url('/images/???.png');"
+			- image = "background-image:url('/images/family-suvival-price.jpg');"
 		default
 			- image = ""
 
@@ -107,6 +107,8 @@ block content
 							h3.dust-grey-color.font-2 Everest Base camp si intoarcerea cu elicopterul
 						when 'island'
 							h3.dust-grey-color.font-2 Island Peak
+						when 'family'
+							h3.dust-grey-color.font-2 Family Survival
 						default
 							h3
 
@@ -342,7 +344,19 @@ block content
 							div.title.font-1-5 Apuseni in 5 zile
 							div.price.font-1-2 350 euro
 
-					a(href="/inscriere/grossglockner", title="Inscriere expeditie Grossglockner").full-grid-item.two-third.planning
+					a(href="/inscriere/family", title="Inscriere family survival").full-grid-item.two-third.planning
+						div.flex-1(style="background-image:url('/images/family-grid-5.jpg'); background-size: cover; background-position: top center;")
+						div.upper-details.orange-color
+							div.date.font-1-3 24 -28 iulie, 2019
+						div.ribbon-small(style="background-image:url('/images/logo-form.png'); background-size: 30px 30px;")
+						div.details.dust-white-color
+							div.separator.orange.btmspace-10
+							div.title.font-1-5 Family Survival
+							div.title.font-1-5 Curs supravietuire
+							div.price.font-1-2 750 ron
+
+
+					a(href="/inscriere/grossglockner", title="Inscriere expeditie Grossglockner").full-grid-item.full.planning
 						div.flex-1(style="background-image:url('/images/grossglokner-grid-1.png'); background-size: cover; background-position: top center;")
 						div.upper-details.orange-color
 							div.date.font-1-3 iulie, 2019

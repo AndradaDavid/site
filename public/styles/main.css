@@ -1256,6 +1256,12 @@ html .page-description .container #aprilie .full-grid-item.big,
 html .page-description .container #august .full-grid-item.big {
   width: 75%;
 }
+html .page-description .container #full-grid .full-grid-item.full,
+html .page-description .container #martie .full-grid-item.full,
+html .page-description .container #aprilie .full-grid-item.full,
+html .page-description .container #august .full-grid-item.full {
+  width: 100%;
+}
 html .page-description .container #full-grid .full-grid-item.planning,
 html .page-description .container #martie .full-grid-item.planning,
 html .page-description .container #aprilie .full-grid-item.planning,

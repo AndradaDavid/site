@@ -134,7 +134,7 @@ block content
 	//grid de imagini
 	div.page-description.wrapper
 		div.container.width-full.max-width-full.padding-0.clear(data-device="#{type}")
-			div#full-grid.width-full.dark-grey(data-device="#{type}")
+			div#full-grid.width-full.dark-grey(data-device="#{type}", style=("#{type}" === 'phone') ? "height: auto" : "height: 703px;")
 				a(title="Flo Adventure Tours - Elbrus").full-grid-item.big
 					div.flex-1(style="background-image:url('/images/elbrus-grid-1.png'); background-size: cover; background-position: bottom center;")
 				a(title="Flo Adventure Tours - Elbrus").full-grid-item

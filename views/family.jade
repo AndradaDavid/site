@@ -14,10 +14,10 @@ block content
 			header#header.clear
 
 				if device.desktop
-					div.main-nav.downspace-40.dark-grey-color.flex-1.clear
+					div.main-nav.downspace-40.dark-grey-color.clear
 						include components/navigation
 				else
-					div.mobile-nav.flex-1
+					div.mobile-nav.flex-4
 						i.fa.fa-bars.fa-2x.upper.show-panel.dark-grey-color
 						nav.sidenav.clear
 							include components/navigation-mobile
@@ -76,7 +76,7 @@ block content
 				span.item-header Transport
 				span.item-text.dark-grey-color masina
 
-	div.little-about.height-600(style="background-image:url('/images/family-grid-0.jpg');background-size:cover;background-position: right center;")
+	div.little-about.height-800(style="background-image:url('/images/family-grid-0.jpg');background-size:cover;background-position: center center;")
 
 	//detalii si itinerariu
 	div.page-description.wrapper.dust-grey.dark-grey-color
@@ -98,22 +98,23 @@ block content
 	//grid de imagini
 	div.page-description.wrapper
 		div.container.width-full.max-width-full.padding-0.clear(data-device="#{type}")
-			div#full-grid.width-full.dark-grey(data-device="#{type}")
-				a.full-grid-item.big
-					div.flex-1(style="background-image:url('/images/family-grid-1.jpg'); background-size: cover; background-position: top center;")
-				a.full-grid-item
-					div.flex-1(style="background-image:url('/images/family-grid-2.jpg'); background-size: cover; background-position:top;")
+			div#full-grid.width-full.dark-grey(data-device="#{type}", style=("#{type}" === 'phone') ? "height: auto" : "height: 1050px;")
+				a.full-grid-item.half
+					div.flex-1(style="background-image:url('/images/family-grid-1.jpg'); background-size: cover; background-position: bottom center;")
+				a.full-grid-item.half
+					div.flex-1(style="background-image:url('/images/family-grid-2.jpg'); background-size: cover; background-position: center;")
 
 				a.full-grid-item
 					div.flex-1(style="background-image:url('/images/family-grid-3.jpg'); background-size: cover; background-position: center;")
-				a.full-grid-item
-					div.flex-1(style="background-image:url('/images/family-grid-5.jpg'); background-size: cover; background-position: center;")
-				a.full-grid-item.half
-					div.flex-1(style="background-image:url('/images/family3-grid-4.jpg'); background-size: cover; background-position: center;")
 				a.full-grid-item.big
-					div.flex-1(style="background-image:url('/images/family-grid-6.jpg'); background-size: cover; background-position: top center;")
-				a.full-grid-item
+					div.flex-1(style="background-image:url('/images/family-grid-5.jpg'); background-size: cover; background-position: center;")
+
+				a.full-grid-item.third
+					div.flex-1(style="background-image:url('/images/family-grid-4.jpg'); background-size: cover; background-position: top center;")
+				a.full-grid-item.third
 					div.flex-1(style="background-image:url('/images/family-grid-7.jpg'); background-size: cover; background-position: right;")
+				a.full-grid-item.third
+					div.flex-1(style="background-image:url('/images/family-grid-8.jpg'); background-size: cover; background-position: right;")
 	hr.cloudy
 
 
@@ -141,7 +142,7 @@ block content
 
 
 	//rezervati locul sau contacteaza-ne
-	div.little-about.height-500.cloudy(style="background-image:url('/images/family-price.jpg');background-size:cover;background-position: center center;")
+	div.little-about.height-500.cloudy(style="background-image:url('/images/family-suvival-price.jpg');background-size:cover;background-position: center center;")
 		div.hoc.container.clear.font-1-2
 			a.button(href="/inscriere/family", title="Inscriere") Rezerva-ti locul
 			a.button(href="/contact", title="Contact") Ai o intrebare?

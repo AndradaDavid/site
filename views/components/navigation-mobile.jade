@@ -1,6 +1,7 @@
 - classHome = (navigation == 'home'? 'active': '')
 - classRomania = (navigation == 'romania'? 'active': '')
 - classExpeditii = (navigation == 'expeditii'? 'active': '')
+- classCursuri = (navigation == 'cursuri'? 'active': '')
 
 ul.fl.clear
 
@@ -17,13 +18,22 @@ ul.fl.clear
             div.dash
         ul.sl
             li.sl
+                a(href="/apuseni-3-zile", title="3 zile in Apuseni") 3 zile in Apuseni
+            li.sl
+                a(href="/apuseni-5-zile", title="5 zile in Apuseni") 5 zile in Apuseni
+
+    li.fl(class=classCursuri)
+
+        a(href="#", title="Cursuri").drop Cursuri
+        if device.mobile || device.tablet
+            div.dash
+        ul.sl
+            li.sl
                 a(href="/4x4-3-zile", title="4x4 in 3 zile") 4x4 in 3 zile
             li.sl
                 a(href="/4x4-5-zile", title="4x4 in 5 zile") 4x4 in 5 zile
             li.sl
-                a(href="/apuseni-3-zile", title="3 zile in Apuseni") 3 zile in Apuseni
-            li.sl
-                a(href="/apuseni-5-zile", title="5 zile in Apuseni") 5 zile in Apuseni
+                a(href="/tabara-family-survival", title="Tabara Family Survival") Family Survival
 
     li.fl(class=classExpeditii)
 
