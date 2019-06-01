@@ -16,24 +16,42 @@ block content
                 if device.desktop
                     div.main-nav.downspace-40.primary-grey-color.flex-1.clear
                         include components/navigation
-                        //ul.fl.clear
-                        //    li.fl.language
-                        //        a(href="en", title="English") ro
-                            // ul.sl
-                                li.sl
-                                    a(href="en") en
-                                li.sl
-                                    a(href="ru") ru
+                        ul.fl.clear
+                            li.fl.language
+
+                                if (lang === 'en')
+                                    a(href="apuseni-3-zile/en") en
+                                    ul.sl
+                                        li.sl
+                                            a(href="/apuseni-3-zile/ro") ro
+                                else
+                                    a(href="/apuseni-3-zile/ro") ro
+                                    ul.sl
+                                        li.sl
+                                            a(href="/apuseni-3-zile/en") en
                 else
                     div.mobile-nav.flex-1-5
                         i.fa.fa-bars.fa-2x.upper.show-panel.dark-grey-color
                         nav.sidenav.clear
                             include components/navigation-mobile
+                        ul.fl.clear.lang.dark-grey-color
+                            li.fl.language
+
+                                if (lang === 'en')
+                                    a en
+                                    ul.sl
+                                        li.sl
+                                            a(href="/apuseni-3-zile/ro") ro
+                                else
+                                    a ro
+                                    ul.sl
+                                        li.sl
+                                            a(href="/apuseni-3-zile/en") en
 
                 div#logo.text-center.flex-4.upspace-35
                     div.sign(data-device="#{type}", style="background-image:url('/images/logo-flo-adventure.png');")
                     h1.font-4
-                        a.cloudy-color(href="#top", title="3 zile in Apuseni") 3 zile in Apuseni
+                        a.cloudy-color(href="#top", title="3 zile in Apuseni") #{i18n.__("apuseni3.titlu")}
                     h3.cloudy-color.font-2 Flo Adventure Tours
 
     div.scroll-down
@@ -44,7 +62,7 @@ block content
     div.page-description.wrapper.dust-grey.light-grey-color
         div.container.clear(data-device="#{type}")
             div.page-box.flex-1
-                h4.subtile-grey-color.font-montserrat-bold Zona de poveste
+                h4.subtile-grey-color.font-montserrat-bold #{i18n.__("apuseni3.titlu1")}
                 div.heading-sep.orange
                 div.btmspace-50.font-open-sans.dark-grey-color(data-aos="fade-right")
                     p Bucurati-va de 3 zile de aventura in Transilvania, o zona plina de cultura, istorie si natura salbatica. Descopera alaturi de noi unicitatea orasului Cluj-Napoca, frumusetea trecutului in muzeul de istorie a mineritului in sare a Salinei Turda si diversitatea naturii in Rezervatia Naturala Cheile Turzii si Rezervatia Geobotanica Scarita-Belioara.
@@ -59,20 +77,20 @@ block content
         div.hoc.clear.center.upspace-35.btmspace-30(data-device="#{type}")
             div.desc-item
                 i.fa.fa-calendar.font-2
-                span.item-header Perioada
-                span.item-text Aprilie, 2019 - Noiembrie, 2019
+                span.item-header #{i18n.__("descriere.perioada")}
+                span.item-text #{i18n.__("data.aprilie")}, 2019 - #{i18n.__("data.noiembrie")}, 2019
             div.desc-item
                 i.fa.fa-male.fa-3x.font-2
-                span.item-header Persoane
-                span.item-text minim 3
+                span.item-header #{i18n.__("descriere.persoane")}
+                span.item-text #{i18n.__("descriere.minim")} 3
             div.desc-item
                 i.fa.fa-map-marker.fa-3x.font-2
-                span.item-header Regiune
-                span.item-text zona Apuseni
+                span.item-header #{i18n.__("descriere.regiune")}
+                span.item-text Apuseni
             div.desc-item
                 i.fa.fa-car.fa-3x.font-2
-                span.item-header Transport
-                span.item-text masina
+                span.item-header #{i18n.__("descriere.transport")}
+                span.item-text #{i18n.__("descriere.masina")}
 
     div.little-about.height-600(style="background-image:url('/images/apuseni-3-platou-1.png');background-size:cover;background-position: right center;")
 
@@ -81,25 +99,24 @@ block content
     div.page-description.wrapper.dust-grey.dark-grey-color
         div.container.clear(data-device="#{type}", style="align-items: flex-start;")
             div.page-box.flex-1(style=("#{type}" === 'phone') ? "" : "padding-right: 70px;")
-                h4.font-montserrat-bold Detalii
+                h4.font-montserrat-bold #{i18n.__("descriere.detalii")}
                 div.heading-sep.light-grey
-                p.font-effra-regular Denumire generala pentru Carpatii Occidentali, Apusenii grupeaza la nord muntii Padurea Craiului si Vladeasa, la nord-est Muntele Mare, la est si sudul muntelui Trascau si Metaliferi si la vest Zarand si Codru Moma. In zona Muntele Mare se gaseste "bijuteria" Rezervatia Scarita Belioara si Cheile Runcului prin care vom trece. Altitudinea maxima este varful Muntele Mare – 1826m, fiind al treilea ca inaltime din muntii Apuseni.
+                p.font-effra-regular #{i18n.__("apuseni3.detalii1")}
             div.page-box.flex-1-6
-                h4.font-montserrat-bold Itinerariu
+                h4.font-montserrat-bold #{i18n.__("descriere.itinerariu")}
                 div.heading-sep.light-grey
-                p Ne tinem de program dar uneori suntem flexibil, ne adaptam la conditiile meteo si la situatiile neprevazute.
+                p #{i18n.__("descriere.itinerariu2")}
 
-                h5.left.upspace-15 Ziua 1
-                p Sosire in Cluj-Napoca. Transfer de la aeroport in oras, ulterior pensiune. Vizitarea orasului sau timp liber la alegere (Biserica Sf. Mihail din Piata Unirii, Palatul Banffy, Muzeul  Etnografic).
+                h5.left.upspace-15 #{i18n.__("data.ziua1")}
+                p #{i18n.__("apuseni3.itinerariu1")}
 
-                h5.left.upspace-15 Ziua 2
-                p Mic dejun. Vizitarea Salinei Turda din care fac parte Galeria de transport Franz Josef, sapata intre anii 1853-1871, Mina Iosif - sala ecourilor, precum si o sala de agrement cu diverse facilitati de recreere. Urmeaza Rezervatia Cheile Turzii, importante atat din punct de vedere stiintific, cat si a frumusetilor salbatice.
-                p Celor aproximativ 1000 de specii floristice, vegetale, plante rare si celor 67 specii de pasari si alte animale li se adauga o mare varietate a formelor de relief carstice cu pesteri, grohotisuri, colturi stancoase. Transport si cazare la Belioara.
+                h5.left.upspace-15 #{i18n.__("data.ziua2")}
+                p #{i18n.__("apuseni3.itinerariu2")}
+                p #{i18n.__("apuseni3.itinerariu3")}
 
-                h5.left.upspace-15 Ziua 3
-                p Mic dejun traditional romanesc. Ziua a treia este dedicata Rezervatiei Scarita Belioara, o rezervatie geo-botanica din masivul Muntele Mare cu varfuri muntoase inalte sub forma de turle, tarcuri si numeroase pesteri. Este un adevarat paradis pentru iubitorii de animale salbatice si plante rare.
-
-                p Prin ce se remarca Scarita-Belioara? Rezervatia cuprinde “sesul Craiului” situat pe un platou calcaros la peste 1350 m altitudine, spectaculoase abrupturi ce urmaresc Valea Belioara, pereti verticali si creste ascutite. Circuitul dureaza in jur de 5-6 ore si are o dificultate medie; sunt aproximativ 11 km si o diferenta de nivel de 850 m. Dupa terminarea traseului se revine in Cluj-Napoca. Cazare.
+                h5.left.upspace-15 #{i18n.__("data.ziua3")}
+                p #{i18n.__("apuseni3.itinerariu4")}
+                p #{i18n.__("apuseni3.itinerariu5")}
 
 
     //grid de imagini
@@ -127,35 +144,35 @@ block content
     div.page-description.wrapper.dark-grey.cloudy-color
         div.container.clear(data-device="#{type}", style="align-items: flex-start;")
             div.page-box.flex-1.font-montserrat-thin(style=("#{type}" === 'phone') ? "" : "padding-right: 60px;")
-                h4.font-montserrat-regular Ce include
+                h4.font-montserrat-regular #{i18n.__("descriere.include")}
                 div.heading-sep.light-grey
-                p Transfer aeroport
+                p #{i18n.__("apuseni3.include1")}
                 P Transport
-                P Taxele de vizitare
-                P 2 nopti cazare la pensiune de 3 stele in Cluj
-                p 1 noapte cazare la cabanuta cu priciuri (optional cort)
+                P #{i18n.__("apuseni3.include2")}
+                P #{i18n.__("apuseni3.include3")}
+                p #{i18n.__("apuseni3.include4")}
 
             div.page-box.flex-1.font-montserrat-thin
-                h4.font-montserrat-regular Ce nu include
+                h4.font-montserrat-regular #{i18n.__("descriere.nuinclude")}
                 div.heading-sep.light-grey
-                p Asigurare de calatorie
-                p Mancare
+                p #{i18n.__("apuseni3.nuinclude1")}
+                p #{i18n.__("apuseni3.nuinclude2")}
 
     //rezervati locul sau contacteaza-ne
     div.little-about.height-500.cloudy(style="background-image:url('/images/price-background-1.jpg');background-size:cover;background-position: center center;")
         div.hoc.container.clear.font-1-2
-            a.button(href="/inscriere/apuseni3", title="Inscriere") Rezerva-ti locul
-            a.button(href="/contact", title="Contact") Ai o intrebare?
+            a.button(href="/inscriere/apuseni3", title="Inscriere") #{i18n.__("descriere.rezerva")}
+            a.button(href="/contact", title="Contact") #{i18n.__("descriere.q")}
 
 
     hr.cloudy
     div.price-about.height-300.wrapper.dark-grey.light-grey-color
 
-        p.dust-white-color.font-2(style="top: 80px;") Pretul pachetului:
+        p.dust-white-color.font-2(style="top: 80px;") #{i18n.__("descriere.pretul")}
         div.overlay-text.flex-1.font-2.orange-color
             i.fa.fa-euro
             p.font-1-2 280&nbsp;
-            p.down /persoana
+            p.down #{i18n.__("descriere.persoana")}
 
 
     div.repeat-ribbon.wrapper.coloured
