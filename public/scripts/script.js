@@ -52,6 +52,9 @@ $(function() {
         $(".sidenav").toggleClass('cbp-spmenu-open');
         $('body').toggleClass("fixed");
     });
+    $('.mobile-nav ul.fl.lang').click(function() {
+        $(this).find('ul.sl').toggleClass('active');
+    });
     
     $('.sidenav i.fa-close').click(function(e) {
         $(".sidenav").toggleClass('cbp-spmenu-open');

@@ -38,6 +38,19 @@ block content
                         i.fa.fa-bars.fa-2x.upper.show-panel.dust-white-color
                         nav.sidenav.clear
                             include components/navigation-mobile
+                        ul.fl.clear.lang
+                            li.fl.language
+
+                                if (lang === 'en')
+                                    a en
+                                    ul.sl
+                                        li.sl
+                                            a(href="/ro") ro
+                                else
+                                    a ro
+                                    ul.sl
+                                        li.sl
+                                            a(href="/en") en
 
                 div#logo.text-center.flex-2
                     div.sign(data-device="#{type}", style="background-image:url('/images/logo-flo-adventure.png');")

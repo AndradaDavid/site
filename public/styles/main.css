@@ -2116,6 +2116,52 @@ html #copyright .border-line {
     left: 0;
     position: relative;
   }
+  #header .mobile-nav ul.fl.lang {
+    margin: 0;
+    padding: 0;
+    top: 0;
+    right: 0;
+    float: right;
+    width: 120px;
+    list-style: none;
+    text-align: center;
+    position: relative;
+  }
+  #header .mobile-nav ul.fl.lang li.fl {
+    float: right;
+    top: -39px;
+    padding: 6px;
+    margin: 0 20px;
+    border-color: inherit;
+    border-width: 2px;
+    border-style: solid;
+  }
+  #header .mobile-nav ul.fl.lang li.fl a {
+    text-shadow: none;
+    color: inherit;
+  }
+  #header .mobile-nav ul.fl.lang ul.sl {
+    z-index: 0;
+    position: absolute;
+    display: none;
+    padding: 0;
+    right: 20px;
+    top: 35px;
+    margin: 0;
+    border-color: inherit;
+    border-width: 2px;
+    border-style: solid;
+  }
+  #header .mobile-nav ul.fl.lang ul.sl.active {
+    display: block;
+  }
+  #header .mobile-nav ul.fl.lang ul.sl li.sl {
+    position: relative;
+    list-style: none;
+    text-transform: none;
+    text-align: left;
+    padding: 10px 30px;
+  }
   #header .mobile-nav i.expand {
     float: right;
     left: 0;
