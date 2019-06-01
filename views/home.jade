@@ -19,14 +19,19 @@ block content
                 if device.desktop || device.tablet
                     div.main-nav.downspace-40.dust-white-color.flex-1.clear
                         include components/navigation
-                        //ul.fl.clear
-                        //    li.fl.language
-                        //        a(href="en") ro
-                        //        ul.sl
-                        //            li.sl
-                        //                a(href="en") en
-                        //            li.sl
-                        //                a(href="ru") ru
+                        ul.fl.clear
+                            li.fl.language
+
+                                if (lang === 'en')
+                                    a(href="/en") en
+                                    ul.sl
+                                        li.sl
+                                            a(href="/ro") ro
+                                else
+                                    a(href="/ro") ro
+                                    ul.sl
+                                        li.sl
+                                            a(href="/en") en
 
                 if device.mobile
                     div.mobile-nav.flex-1
@@ -54,14 +59,14 @@ block content
     if device.desktop
         div.little-about.dark-grey-normal.height-300
             div.clear.upspace-90
-                h2.center.title.dust-white-color.font-montserrat-bold.font-1-5 Misiunea noastra - Aventura
-                div.center.font-montserrat-light.font-1-2.dust-white-color.upspace-20.max-width-40 Credem ca orice loc din lumea asta se poate descoperi cu aventura in suflet si spirit de calator.
+                h2.center.title.dust-white-color.font-montserrat-bold.font-1-5 #{i18n.__("descriere.misiune")}
+                div.center.font-montserrat-light.font-1-2.dust-white-color.upspace-20.max-width-40 #{i18n.__("descriere.misiune2")}
 
     if device.mobile
         div.little-about.dark-grey-normal.height-400
             div.clear.upspace-90.padding-left-right-10
-                h3.center.dust-white-color.font-montserrat-bold.font-1-5 Misiunea noastra Aventura
-                div.center.font-montserrat-thin.dust-white-color.upspace-20 Credem ca orice loc din lumea asta se poate descoperi cu aventura in suflet si spirit de calator.
+                h3.center.dust-white-color.font-montserrat-bold.font-1-5 #{i18n.__("descriere.misiune")}
+                div.center.font-montserrat-thin.dust-white-color.upspace-20 #{i18n.__("descriere.misiune2")}
 
     div.page-description.wrapper
         div.container.width-full.max-width-full.padding-0.clear(data-device="#{type}")
@@ -69,34 +74,34 @@ block content
                 a(href="/expeditii", title="Flo Adventure Tours - expeditii").full-grid-item.big
                     div.flex-1(style="background-image:url('/images/kkkjf765ghfyd654.png'); background-size: cover;")
                     div.ribbon(style="background-image:url('/images/logo-expeditii.png');")
-                    div.subtitle.font-1-5 Expeditii
+                    div.subtitle.font-1-5 #{i18n.__("grid.expeditii")}
                 a(href="/apuseni-5-zile", title="Flo Adventure Tours - Romania").full-grid-item
                     div.flex-1(style="background-image:url('/images/2342asdfa3.png'); background-size: cover; background-position:top;")
                     div.ribbon(style="background-image:url('/images/logo-drumetii.png');")
-                    div.subtitle.font-1-5 Drumetii
+                    div.subtitle.font-1-5 #{i18n.__("grid.drumetii")}
                 a(href="http://www.extremromania.ro", title="Cursuri").full-grid-item
                     div.flex-1(style="background-image:url('/images/kajhsdf67894.png'); background-size: cover;")
                     div.ribbon(style="background-image:url('/images/logo-cursuri.png');")
-                    div.subtitle.font-1-5 Cursuri
+                    div.subtitle.font-1-5 #{i18n.__("grid.cursuri")}
                 a(href="/romania", title="Flo Adventure Tours - Romania").full-grid-item
                     div.flex-1(style="background-image:url('/images/hhghhg.png'); background-size: cover; background-position: center;")
                     div.ribbon(style="background-image:url('/images/logo-cultura.png');")
-                    div.subtitle.font-1-5 Cultura
+                    div.subtitle.font-1-5 #{i18n.__("grid.cultura")}
                 a(href="/4x4-5-zile", title="Flo Adventure Tours - aventura").full-grid-item.half
                     div.flex-1(style="background-image:url('/images/hhghhga.png'); background-size: cover; background-position: bottom;")
                     div.ribbon(style="background-image:url('/images/logo-aventura.png');")
-                    div.subtitle.font-1-5 Aventura
+                    div.subtitle.font-1-5 #{i18n.__("grid.aventura")}
 
     //Overlay wrapper
     div.page-description.wrapper.dust-grey.light-grey-color(data-device="#{type}")
         div.container.clear.upspace-90(data-device="#{type}")
             div.page-box.flex-1-2
-                p.pretitle.font-montserrat-regular O lume a aventurii
+                p.pretitle.font-montserrat-regular #{i18n.__("descriere.lume")}
                 h4.subtile-grey-color.font-montserrat-bold Flo Adventure Tours
                 div.heading-sep.orange
                 div.btmspace-50.font-open-sans.dark-grey-color
-                    p Bun venit in lumea noastra. Uita ceea ce stiai pana acum despre turismul de aventura. Inca nu ne cunosti? Suntem echipa Flo Adventure Tours si suntem cei ce vor transforma urmatoarea ta aventura in amintiri ce vor dura o viata intreaga.
-                    p Din 1995, am acumulat experienta in turismul de aventura si am pregatit prin scolile noastre mii de cursanti carora le-am inspirat dragostea de munte si aventura. Ne caracterizeaza pasiunea pentru ceea ce facem, profesionalismul si adaptarea usoara in functie de nevoile clientilor nostri. Ne recomanda experienta vasta, calificarea personalului si a colaboratorilor nostri. Planifica cu noi urmatoarea ta aventura. Suntem aici pentru tine.
+                    p #{i18n.__("descriere.agentie")}
+                    p #{i18n.__("descriere.agentie2")}
                     div(data-href="https://developers.facebook.com/docs/plugins/", data-layout="button-count", data-size="small" data-mobile-iframe="true").fa.fa-2x.fa-share-alt-square.inline.dark-grey-color
                         a.dark-grey-color.font-open-sans.share-button.fb-xfbml-parse-ignore.inline(target="_blank", href="https://www.facebook.com/sharer/sharer.php?u=#{encodeURIComponent(ogurl)}&amp;src=sdkpreparse", title="Share") Share
             div.page-box.flex-1-5
@@ -110,26 +115,26 @@ block content
         //Destinatiile noastre
         div.little-about.height-auto.dust-grey
             div.clear.center
-                h2.title.font-montserrat-bold.dark-grey-color.center.upspace-90 Destinatiile noastre
+                h2.title.font-montserrat-bold.dark-grey-color.center.upspace-90 #{i18n.__("descriere.destinatii")}
                 //i.fa.fa-minus.font-1-2.light-grey-color.upspace-35
                 div.heading-sep-middle.light-grey.center
 
-                p.max-width-70.center.dark-grey-color.font-open-sans.font-1.upspace-35 Alege una dintre variatele noastre optiuni Flo Adventure Tours pentru vacanta ta, indiferent de natura acesteia. Alege intre #[a(title="Flo Adventure Tours").highlight muntii Apuseni], #[a(href="/montblanc", title="Montblanc").highlight Montblanc], #[a(href="/elbrus", title="Elbrus").highlight Elbrus], minunata #[a(href="/maroc", title="Sahara").highlight Sahara], #[a(href="/grossglockner", title="Grossglockner").highlight Grossglockner] sau chiar cel mai inalt varf de pe Terra, #[a(href="/everest-basecamp", title="Everest").highlight Everest]. Avem si povesti minunate de relatat de pe #[a(href="/maroc", title="Jebel Toubkal").highlight Jebel Toubkal] si #[a(href="/kilimanjaro", title="Kilimanjaro").highlight Kilimanjaro]. Daca vrei sa vezi renumitul #[a(href="/k2-basecamp", title="K2").highlight K2], te asteptam alaturi de noi.
+                p.max-width-70.center.dark-grey-color.font-open-sans.font-1.upspace-35 #{i18n.__("descriere.destinatii2")} #[a(title="Flo Adventure Tours").highlight Apuseni], #[a(href="/montblanc", title="Montblanc").highlight Montblanc], #[a(href="/elbrus", title="Elbrus").highlight Elbrus], #{i18n.__("descriere.destinatii3")}  #[a(href="/maroc", title="Sahara").highlight Sahara], #[a(href="/grossglockner", title="Grossglockner").highlight Grossglockner] #{i18n.__("descriere.destinatii4")} #[a(href="/everest-basecamp", title="Everest").highlight Everest].#{i18n.__("descriere.destinatii5")} #[a(href="/maroc", title="Jebel Toubkal").highlight Jebel Toubkal] #{i18n.__("descriere.destinatii6")} #[a(href="/kilimanjaro", title="Kilimanjaro").highlight Kilimanjaro]. #{i18n.__("descriere.destinatii8")} #[a(href="/k2-basecamp", title="K2").highlight K2], #{i18n.__("descriere.destinatii7")}
                 img.upspace-40(src="/images/harta.png", style="width: 100%;", alt="Harta destinatii Flo Adventure Tours - agentie de turism de aventura")
 
     if device.mobile
         div.little-about.height-full.dust-grey
             div.hoc.container.clear.center
-                h2.title.font-montserrat-bold.dark-grey-color.center Destinatiile noastre
+                h2.title.font-montserrat-bold.dark-grey-color.center #{i18n.__("descriere.destinatii")}
                 div.heading-sep-middle.light-grey.center
-                span.center.upspace-35.font-open-sans.dark-grey-color Alege una dintre variatele noastre optiuni Flo Adventure Tours pentru vacanta ta, indiferent de natura acesteia. Alege intre #[a(title="Flo Adventure Tours").highlight muntii Apuseni], #[a(href="/montblanc", title="Montblanc").highlight Montblanc], #[a(href="/elbrus", title="Elbrus").highlight Elbrus], minunata #[a(href="/maroc", title="Sahara").highlight Sahara], #[a(href="/grossglockner", title="Grossglockner").highlight Grossglockner] sau chiar cel mai inalt varf de pe Terra, #[a(href="/everest-basecamp", title="Everest").highlight Everest]. Avem si povesti minunate de relatat de pe #[a(href="/maroc", title="Jebel Toubkal").highlight Jebel Toubkal] si #[a(href="/kilimanjaro", title="Kilimanjaro").highlight Kilimanjaro]. Daca vrei sa vezi renumitul #[a(href="/k2-basecamp", title="K2").highlight K2], te asteptam alaturi de noi.
+                span.center.upspace-35.font-open-sans.dark-grey-color #{i18n.__("descriere.destinatii2")} #[a(title="Flo Adventure Tours").highlight Apuseni], #[a(href="/montblanc", title="Montblanc").highlight Montblanc], #[a(href="/elbrus", title="Elbrus").highlight Elbrus], #{i18n.__("descriere.destinatii3")}  #[a(href="/maroc", title="Sahara").highlight Sahara], #[a(href="/grossglockner", title="Grossglockner").highlight Grossglockner] #{i18n.__("descriere.destinatii4")} #[a(href="/everest-basecamp", title="Everest").highlight Everest].#{i18n.__("descriere.destinatii5")} #[a(href="/maroc", title="Jebel Toubkal").highlight Jebel Toubkal] #{i18n.__("descriere.destinatii6")} #[a(href="/kilimanjaro", title="Kilimanjaro").highlight Kilimanjaro]. Daca vrei sa vezi renumitul #[a(href="/k2-basecamp", title="K2").highlight K2], #{i18n.__("descriere.destinatii7")}
 
     div.little-about.narrow.dark-grey-normal.height-400
         div.hoc.container.clear
-            h2.title.font-montserrat-bold.dust-white-color.center Indrazneste
+            h2.title.font-montserrat-bold.dust-white-color.center #{i18n.__("descriere.indrazneste")}
             div.heading-sep-middle.dust-white.center
-            span.center.font-open-sans.cloudy-color Alege-ti urmatoarea aventura impreuna cu noi.
-            a.button.dark-grey(href="/inscriere", title="Inscriere") Rezerva-ti locul
+            span.center.font-open-sans.cloudy-color #{i18n.__("descriere.alege")}
+            a.button.dark-grey(href="/inscriere", title="Inscriere") #{i18n.__("descriere.rezerva")}
 
     div.little-about.narrow.height-400(style="background-image:url('/images/price-background-elbrus-comp.jpg');background-size:cover;background-position: center center;")
 

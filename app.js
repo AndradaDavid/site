@@ -6,10 +6,39 @@ var express = require('express')
     , methodOverride = require('method-override')
     , device = require('express-device')
     , nodemailer = require("nodemailer")
-    , smtpTransport = require('nodemailer-smtp-transport');
+    , smtpTransport = require('nodemailer-smtp-transport')
+    , session = require('express-session')
+    , cookieParser = require('cookie-parser')
+    , i18n = require('i18n');
+
 
 
 var app = express();
+
+i18n.configure({
+
+//define how many languages we would support in our application
+    locales:['en', 'ro'],
+
+//define the path to language json files, default is /locales
+    directory: __dirname + '/locales',
+
+//define the default language
+    defaultLocale: 'en',
+
+// define a custom cookie name to parse locale settings from
+    cookie: 'i18n'
+});
+
+app.use(cookieParser("i18n_demo"));
+app.use(session({
+    secret: "i18n_demo",
+    resave: true,
+    saveUninitialized: true,
+    cookie: { maxAge: 60000 }
+}));
+
+app.use(i18n.init);
 
 
 var smtpTransport = nodemailer.createTransport(smtpTransport({
@@ -51,13 +80,240 @@ app.get('/everest-intoarcerea-cu-elicopter', routes.everesteli);
 app.get('/island-peak-basecamp', routes.island);
 app.get('/k2-basecamp', routes.k2);
 app.get('/contact', routes.contact);
-app.get('/inscriere/:name', routes.inscriere);
 app.get('/inscriere', routes.inscriere);
+app.get('/inscriere/:name', routes.inscriere);
 
 app.get('/romania', routes.romania);
 app.get('/expeditii', routes.expeditii);
 
 app.get('/tabara-family-survival', routes.family);
+
+
+//languages
+app.get('/en', function (req, res) {
+    res.cookie('i18n', 'en');
+    res.redirect('/')
+});
+
+app.get('/ro', function (req, res) {
+    res.cookie('i18n', 'ro');
+    res.redirect('/')
+});
+app.get('/4x4-3-zile/en', function (req, res)
+{
+    res.cookie('i18n', 'en');
+    res.redirect('/4x4-3-zile/')
+});
+
+app.get('/4x4-3-zile/ro', function (req, res)
+{
+    res.cookie('i18n', 'ro');
+    res.redirect('/4x4-3-zile/')
+});
+app.get('/4x4-5-zile/en', function (req, res)
+{
+    res.cookie('i18n', 'en');
+    res.redirect('/4x4-5-zile/')
+});
+
+app.get('/4x4-5-zile/ro', function (req, res)
+{
+    res.cookie('i18n', 'ro');
+    res.redirect('/4x4-5-zile/')
+});
+
+app.get('/apuseni-3-zile/en', function (req, res)
+{
+    res.cookie('i18n', 'en');
+    res.redirect('/apuseni-3-zile/')
+});
+
+app.get('/apuseni-3-zile/ro', function (req, res)
+{
+    res.cookie('i18n', 'ro');
+    res.redirect('/apuseni-3-zile/')
+});
+app.get('/apuseni-5-zile/en', function (req, res)
+{
+    res.cookie('i18n', 'en');
+    res.redirect('/apuseni-5-zile/')
+});
+
+app.get('/apuseni-5-zile/ro', function (req, res)
+{
+    res.cookie('i18n', 'ro');
+    res.redirect('/apuseni-5-zile/')
+});
+app.get('/montblanc/en', function (req, res)
+{
+    res.cookie('i18n', 'en');
+    res.redirect('/montblanc/')
+});
+
+app.get('/montblanc/ro', function (req, res)
+{
+    res.cookie('i18n', 'ro');
+    res.redirect('/montblanc/')
+});
+app.get('/grossglockner/en', function (req, res)
+{
+    res.cookie('i18n', 'en');
+    res.redirect('/grossglockner/')
+});
+
+app.get('/grossglockner/ro', function (req, res)
+{
+    res.cookie('i18n', 'ro');
+    res.redirect('/grossglockner/')
+});
+app.get('/elbrus/en', function (req, res)
+{
+    res.cookie('i18n', 'en');
+    res.redirect('/elbrus/')
+});
+
+app.get('/elbrus/ro', function (req, res)
+{
+    res.cookie('i18n', 'ro');
+    res.redirect('/elbrus/')
+});
+app.get('/kilimanjaro/en', function (req, res)
+{
+    res.cookie('i18n', 'en');
+    res.redirect('/kilimanjaro/')
+});
+
+app.get('/kilimanjaro/ro', function (req, res)
+{
+    res.cookie('i18n', 'ro');
+    res.redirect('/kilimanjaro/')
+});
+app.get('/maroc/en', function (req, res)
+{
+    res.cookie('i18n', 'en');
+    res.redirect('/maroc/')
+});
+
+app.get('/maroc/ro', function (req, res)
+{
+    res.cookie('i18n', 'ro');
+    res.redirect('/maroc/')
+});
+app.get('/everest-basecamp/en', function (req, res)
+{
+    res.cookie('i18n', 'en');
+    res.redirect('/everest-basecamp/')
+});
+
+app.get('/everest-basecamp/ro', function (req, res)
+{
+    res.cookie('i18n', 'ro');
+    res.redirect('/everest-basecamp/')
+});
+app.get('/everest-intoarcerea-cu-elicopter/en', function (req, res)
+{
+    res.cookie('i18n', 'en');
+    res.redirect('/everest-intoarcerea-cu-elicopter/')
+});
+
+app.get('/everest-intoarcerea-cu-elicopter/ro', function (req, res)
+{
+    res.cookie('i18n', 'ro');
+    res.redirect('/everest-intoarcerea-cu-elicopter/')
+});
+app.get('/island-peak-basecamp/en', function (req, res)
+{
+    res.cookie('i18n', 'en');
+    res.redirect('/island-peak-basecamp/')
+});
+
+app.get('/island-peak-basecamp/ro', function (req, res)
+{
+    res.cookie('i18n', 'ro');
+    res.redirect('/island-peak-basecamp/')
+});
+app.get('/k2-basecamp/en', function (req, res)
+{
+    res.cookie('i18n', 'en');
+    res.redirect('/k2-basecamp/')
+});
+
+app.get('/k2-basecamp/ro', function (req, res)
+{
+    res.cookie('i18n', 'ro');
+    res.redirect('/k2-basecamp/')
+});
+app.get('/contact/en', function (req, res)
+{
+    res.cookie('i18n', 'en');
+    res.redirect('/contact/')
+});
+
+app.get('/contact/ro', function (req, res)
+{
+    res.cookie('i18n', 'ro');
+    res.redirect('/contact/')
+});
+app.get('/inscriere-en', function (req, res)
+{
+    //console.log(':name:', req.params);
+    res.cookie('i18n', 'en');
+    //res.redirect('/inscriere/')
+});
+
+app.get('/inscriere-ro', function (req, res)
+{
+    res.cookie('i18n', 'ro');
+    //res.redirect('/inscriere/')
+});
+app.get('/inscriere/:name/en', function (req, res)
+{
+    console.log(':name:', req.params);
+    res.cookie('i18n', 'en');
+    res.redirect('/inscriere/'+req.params.name);
+});
+
+app.get('/inscriere/:name/ro', function (req, res)
+{
+    res.cookie('i18n', 'ro');
+    res.redirect('/inscriere/'+req.params.name);
+});
+app.get('/romania/en', function (req, res)
+{
+    res.cookie('i18n', 'en');
+    res.redirect('/romania/')
+});
+
+app.get('/romania/ro', function (req, res)
+{
+    res.cookie('i18n', 'ro');
+    res.redirect('/romania/')
+});
+app.get('/expeditii/en', function (req, res)
+{
+    res.cookie('i18n', 'en');
+    res.redirect('/expeditii/')
+});
+
+app.get('/expeditii/ro', function (req, res)
+{
+    res.cookie('i18n', 'ro');
+    res.redirect('/expeditii/')
+});
+app.get('/tabara-family-survival/en', function (req, res)
+{
+    res.cookie('i18n', 'en');
+    res.redirect('/tabara-family-survival/')
+});
+
+app.get('/tabara-family-survival/ro', function (req, res)
+{
+    res.cookie('i18n', 'ro');
+    res.redirect('/tabara-family-survival/')
+});
+
+
+
 
 app.post('/abonare', function (req, res) {
 

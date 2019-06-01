@@ -16,6 +16,19 @@ block content
                 if device.desktop
                     div.main-nav.downspace-40.olive-color.flex-1.clear
                         include components/navigation
+                        ul.fl.clear
+                            li.fl.language
+
+                                if (lang === 'en')
+                                    a(href="/4x4-3-zile/en") en
+                                    ul.sl
+                                        li.sl
+                                            a(href="/4x4-3-zile/ro") ro
+                                else
+                                    a(href="/4x4-3-zile/ro") ro
+                                    ul.sl
+                                        li.sl
+                                            a(href="/4x4-3-zile/en") en
                 else
                     div.mobile-nav
                         i.fa.fa-bars.fa-2x.upper.show-panel
@@ -24,8 +37,12 @@ block content
 
                 div#logo.text-center.flex-1.upspace-35
                     div.sign(data-device="#{type}", style="background-image:url('/images/logo-flo-adventure.png');")
-                    h1.font-4
-                        a.dust-grey-color(href="#top", title="Aventura 4x4 in 3 zile") Aventura 4x4 in 3 zile
+                    if device.mobile
+                        h1.font-3
+                            a.dust-grey-color(href="#top", title="Aventura 4x4 in 3 zile") #{i18n.__("patru3.titlu")}
+                    else
+                        h1.font-4
+                            a.dust-grey-color(href="#top", title="Aventura 4x4 in 3 zile") #{i18n.__("patru3.titlu")}
                     h3.dust-grey-color.font-2 Flo Adventure Tours
 
     div.scroll-down
@@ -36,10 +53,10 @@ block content
     div.page-description.wrapper.dust-grey.light-grey-color
         div.container.clear(data-device="#{type}")
             div.page-box.flex-1
-                h4.subtile-grey-color.font-montserrat-bold Adrenalina pe 4 roti
+                h4.subtile-grey-color.font-montserrat-bold #{i18n.__("patru3.adrenalina")}
                 div.heading-sep.orange
                 div.btmspace-50.font-open-sans.dark-grey-color
-                    p Frumusetea zonei Apusenilor nu este cunoscuta de foarte multi, cu atat mai putin adaugand o picatura de aventura pe traseu. Daca te consideri aventuros si vrei sa inveti sa iti folosesti masina la adevarata putere in zone dificile dar si sa te adaptezi situatiilor limita, iesirea aceasta este pentru tine.
+                    p #{i18n.__("patru3.descriere")}
             div.page-box.flex-1-5
                 div.map(style="background-image:url('/images/harta-apuseni-3.png')")
 
@@ -48,20 +65,20 @@ block content
         div.hoc.clear.center.upspace-35.btmspace-30(data-device="#{type}")
             div.desc-item
                 i.fa.fa-calendar.font-2
-                span.item-header Perioada
-                span.item-text Aprilie, 2019 - Noiembrie, 2019
+                span.item-header #{i18n.__("descriere.perioada")}
+                span.item-text #{i18n.__("data.aprilie")}, 2019 - #{i18n.__("data.noiembrie")}, 2019
             div.desc-item
                 i.fa.fa-male.fa-3x.font-2
-                span.item-header Persoane
-                span.item-text minim 2
+                span.item-header #{i18n.__("descriere.persoane")}
+                span.item-text #{i18n.__("descriere.minim")} 2
             div.desc-item
                 i.fa.fa-map-marker.fa-3x.font-2
-                span.item-header Regiune
-                span.item-text zona Apuseni
+                span.item-header #{i18n.__("descriere.regiune")}
+                span.item-text Apuseni
             div.desc-item
                 i.fa.fa-car.fa-3x.font-2
-                span.item-header Transport
-                span.item-text masina 4x4
+                span.item-header #{i18n.__("descriere.transport")}
+                span.item-text #{i18n.__("patru3.masina")}
 
 
 
@@ -71,26 +88,25 @@ block content
     div.page-description.wrapper.dust-grey.dark-grey-color
         div.container.clear(data-device="#{type}", style="align-items: flex-start;")
             div.page-box.flex-1(style=("#{type}" === 'phone') ? "" : "padding-right: 70px;")
-                h4.font-montserrat-bold Detalii
+                h4.font-montserrat-bold #{i18n.__("descriere.detalii")}
                 div.heading-sep.light-grey
-                p.font-effra-regular Denumire generala pentru Carpatii Occidentali, Apusenii grupeaza la nord muntii Padurea Craiului si Vladeasa, la nord-est Muntele Mare, la est si sudul muntelui Trascau si Metaliferi si la vest Zarand si Codru Moma. In zona Muntele Mare se gaseste "bijuteria" Rezervatia Scarita Belioara si Cheile Runcului prin care vom trece. Altitudinea maxima este varful Muntele Mare – 1826m, fiind al treilea ca inaltime din muntii Apuseni.
+                p.font-effra-regular #{i18n.__("patru3.descriere2")}
             div.page-box.flex-1-6
-                h4.font-montserrat-bold Itinerariu
+                h4.font-montserrat-bold #{i18n.__("descriere.itinerariu")}
                 div.heading-sep.light-grey
-                p Ne tinem de program, dar uneori suntem flexibili, ne adaptam la conditiile meteo si la situatiile neprevazute.
+                p #{i18n.__("descriere.itinerariu2")}
 
-                h5.left.upspace-15 Ziua 1 - 95 km parcursi
-                p Ne intalnim cu totii in Cluj de unde se pleaca pe drum de tara de pietris combinat cu pamant. Se vor traversa pajisti si parauri pana vom ajunge in comuna Iara unde vom putea alimenta cu carburant fiind si ultima posibilitate de alimentare. De la Iara vom merge pe asfalt o bucata de drum trecand prin spectaculoasele Chei ale Runcului (zona de adapost a partizanilor care au luptat in munti contra comunistilor). Valea Runcului a taiat, de-a lungul vremii, masivul calcaros Vulturese formand aceste chei. La intrarea in aceste chei, pe stanga intalnim o stanca pe care se prelinge usor apa, numita Plansul Cyclops.
-                p Pe urma vom trece pe drumuri  cu pamant si piatra si vom intra  in povestea Apusenilor trecand pe langa locasuri vechi  pe care se vad trecerea timpului. Vom ajunge langa peretii verticali de la Scarita Belioara si ii vom ocoli coborand pe un drum spectaculos pana la baza peretilor de la Belioara  unde vom inopta in baza de antrenament Flo Adventure. Mancarea la ceaun va face deliciul acelei seri.
+                h5.left.upspace-15 #{i18n.__("data.ziua1")} - 95 km #{i18n.__("descriere.parcursi")}
+                p #{i18n.__("patru3.itinerariu1")}
+                p #{i18n.__("patru3.itinerariu2")}
 
-                h5.left.upspace-15 Ziua 2 - 55 km parcursi
-                p Micul dejun. Va urma un curs cu mai multe aplicatii: cum sa folosesti masina si obiectele din masina in caz de supravietuire, cum sa foloseti troliu, scripeti, sufe, ocheti, modele de cricuri pentru masini de teren si folosirea lor in teren cu mult noroi, nisip sau iarba,cum sa iti pregatesti masina si ce trebuie sa ai in ea cand mergi intr-o tura la munte, noduri importante in supravietuire, folosirea corzilor.
-                p Dupa ce terminam partea practica vom pleca cu masinile pe drumuri ce ne vor duce printr-un peisaj spectaculos trecand prin paduri de foioase, apoi de conifere ajungand in pajistea alpina. Pe pantele din padurea de conifere veti invata regulile de baza cum intram si ne deplasam cu masina 4x4 in teren accidentat. In aceasta zi vom atinge cea mai inalta altitudine din aceasta tura de 3 zile. Vom ajunge pe al treilea varf ca inaltime din Muntii Apuseni - varful Muntele Mare, 1.826 m. Vom cobora trecand prin satul parasit Prislop, un sat care iti lasa impresia ca este bantuit de stafii. Dupa iesirea din sat vom ajunge la  altitudinea de 1756m unde vom avea ocazia de  a face practic urmatoarele aplicatii: cum sa iti procuri hrana pe munte, orientarea  in teren cu harta si busola (sau fara), cum sa iti procuri apa si sa o filtrezi, cum sa iti pregatesti masina si ce trebuie sa ai la tine cand mergi intr-o tura 4x4 la munte.
+                h5.left.upspace-15 #{i18n.__("data.ziua2")} - 55 km #{i18n.__("descriere.parcursi")}
+                p #{i18n.__("patru3.itinerariu3")}
+                p #{i18n.__("patru3.itinerariu4")}
+                p #{i18n.__("patru3.itinerariu5")}
 
-                p Vom merge mai departe pana in zona de campare. Seara vom organiza un curs de orientare de noapte cu masina si metode de aprindere a focului, iar la final vom sta la un foc de tabara discutand despre ziua precedenta.
-
-                h5.left.upspace-15 Ziua 3 - 85 km parcursi
-                p Micul dejun. Pregatirea masinilor si plecarea spre locul accidentului aviatic din 2014, unde doua persoane si-au pierdut viata si alte cinci au fost ranite. Dupa vizitarea memorialului vom  tine in zona  un curs despre gandirea correcta in situatii extreme(de exemplu prabusirea unui avion, ratacirea cu masina etc…). De acolo traseul va continua  pe drumuri de piatra si pamant prin zone superbe pajisti si paduri dese de conifere. Inainte de sosirea in Cluj vom lua masa impreuna si ne vom bucura de timpul petrecut la curs.
+                h5.left.upspace-15 #{i18n.__("data.ziua3")} - 85 km #{i18n.__("descriere.parcursi")}
+                p #{i18n.__("patru3.itinerariu6")}
 
 
     //grid de imagini
@@ -121,51 +137,51 @@ block content
         div.container.clear(data-device="#{type}", style="align-items: flex-start;")
 
             div.page-box.flex-1.font-montserrat-thin(style=("#{type}" === 'phone') ? "" : "padding-right: 20px;")
-                h3.font-montserrat-regular Vii cu masina ta de teren?
+                h3.font-montserrat-regular #{i18n.__("patru3.q1")}
                 div.heading-sep.light-grey
-                p.orange-color(style="font-weight: bold;") Costul cursului include:
-                p Instructorul, echipamentul pentru curs (harti, corzi, scripeti, hamuri, casti, mai multe modele de cricuri, sufe, ocheti).
+                p.orange-color(style="font-weight: bold;") #{i18n.__("patru3.include")}
+                p #{i18n.__("patru3.include1")}
 
-                p.orange-color(style="font-weight: bold;") Costul cursului nu include:
-                p Mancarea, transportul - masina de teren, combustibilul, cortul (se poate inchiria si de la noi), asigurarea pe masina.
+                p.orange-color(style="font-weight: bold;") #{i18n.__("patru3.nuinclude")}
+                p #{i18n.__("patru3.nuinclude1")}
 
                 h3.font-montserrat-regular Extra
                 div.heading-sep.light-grey
-                p Copii pana la varsta de 15 ani au gratuitate daca vin impreuna cu unul dintre parinti, cu masina personala.
+                p #{i18n.__("patru3.extra1")}
 
 
             div.page-box.flex-1.font-montserrat-thin
-                h3.font-montserrat-regular Nu vii cu masina ta de teren?
+                h3.font-montserrat-regular #{i18n.__("patru3.q2")}
                 div.heading-sep.light-grey
-                p.orange-color(style="font-weight: bold;") Costul cursului include:
-                p Instructorul, echipamentul pentru curs (harti, corzi, scripeti, hamuri, casti, mai multe modele de cricuri, sufe, ocheti), cort, cazare o noapte la priciuri intr-o cabanuta (in functie de numarul participantilor), transportul - masina de teren, combustibilul, asigurarea pe masina.
+                p.orange-color(style="font-weight: bold;") #{i18n.__("patru3.include")}
+                p #{i18n.__("patru3.include2")}
 
-                p.orange-color(style="font-weight: bold;") Costul cursului nu include:
-                p Mancarea pe toata durata cursului.
+                p.orange-color(style="font-weight: bold;") #{i18n.__("patru3.nuinclude")}
+                p #{i18n.__("patru3.nuinclude2")}
 
     //rezervati locul sau contacteaza-ne
     div.little-about.height-500.cloudy(style="background-image:url('/images/price-background.jpg');background-size:cover;background-position: center center;")
         div.hoc.container.clear.font-1-2
-            a.button(href="/inscriere/patru3", title="Inscriere") Rezerva-ti locul
-            a.button(href="/contact", title="Contact") Ai o intrebare?
+            a.button(href="/inscriere/patru3", title="Inscriere") #{i18n.__("descriere.rezerva")}
+            a.button(href="/contact", title="Contact") #{i18n.__("descriere.q")}
 
 
     hr.cloudy
     div.price-about.height-300.wrapper.dark-grey.light-grey-color.btmspace-50
 
-        p.font-1-2.dust-white-color Daca detineti o masina 4x4 (inclusiv SUV) si doriti sa participati cu ea la curs:
+        p.font-1-2.dust-white-color #{i18n.__("patru3.price1")}
         div.overlay-text.flex-1.font-2.orange-color
 
             p.font-1-2 350&nbsp;
             p ron
-            p.down /persoana
+            p.down /#{i18n.__("descriere.persoana")}
 
-        p.font-1-2.dust-white-color Participare la curs fara masina:
+        p.font-1-2.dust-white-color #{i18n.__("patru3.price2")}
         div.overlay-text.flex-1.font-2.orange-color
 
             p.font-1-2 650&nbsp;
             p ron
-            p.down /persoana
+            p.down /#{i18n.__("descriere.persoana")}
         div(data-href="https://developers.facebook.com/docs/plugins/", data-layout="button-count", data-size="small" data-mobile-iframe="true").fa.fa-2x.fa-share-alt-square.inline.dust-white-color
             a.dust-white-color.font-open-sans.share-button.fb-xfbml-parse-ignore.inline(target="_blank", href="https://www.facebook.com/sharer/sharer.php?u=#{encodeURIComponent(ogurl)}&amp;src=sdkpreparse", title="Share") Share
 

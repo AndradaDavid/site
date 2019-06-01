@@ -24,21 +24,35 @@ exports.getDeviceType= function(req) {
     return req.device.type;
 };
 
+function setLocale(req,res) {
+    if (req.cookies.i18n) {
+        res.setLocale(req.cookies.i18n);
+    } else {
+        res.setLocale('ro');
+    }
+}
+
 
 
 //home route
 exports.index = function(req, res){
+    setLocale(req,res);
     res.render('home',
         {
+            i18n: res,
             'device': getDevice(req),
             'type': getDeviceType(req),
-            'navigation':'home'
+            'navigation':'home',
+            'lang': req.cookies.i18n
         });
 };
 
 exports.everest = function(req, res){
+    setLocale(req,res);
     res.render('everest',
         {
+            i18n: res,
+            'lang': req.cookies.i18n,
             'device': getDevice(req),
             'type': getDeviceType(req),
             'navigation':'expeditii'
@@ -47,8 +61,11 @@ exports.everest = function(req, res){
 
 //subcategories routes
 exports.apuseni3 = function(req, res){
+    setLocale(req,res);
     res.render('apuseni3',
         {
+            i18n: res,
+            'lang': req.cookies.i18n,
             'device': getDevice(req),
             'type': getDeviceType(req),
             'navigation':'romania'
@@ -56,42 +73,45 @@ exports.apuseni3 = function(req, res){
 };
 
 exports.apuseni5 = function(req, res){
+    setLocale(req,res);
     res.render('apuseni5',
         {
+            i18n: res,
+            'lang': req.cookies.i18n,
             'device': getDevice(req),
             'type': getDeviceType(req),
             'navigation':'romania'
         });
 };
 exports.patru3 = function(req, res){
+    setLocale(req,res);
     res.render('patru3',
         {
+            i18n: res,
+            'lang': req.cookies.i18n,
             'device': getDevice(req),
             'type': getDeviceType(req),
             'navigation':'romania'
         });
 };
 exports.patru5 = function(req, res){
+    setLocale(req,res);
     res.render('patru5',
         {
+            i18n: res,
+            'lang': req.cookies.i18n,
             'device': getDevice(req),
             'type': getDeviceType(req),
             'navigation':'romania'
         });
 };
 
-exports.montblanc = function(req, res){
-    res.render('montblanc',
-        {
-            'device': getDevice(req),
-            'type': getDeviceType(req),
-            'navigation':'expeditii'
-        });
-};
-
 exports.grossglockner = function(req, res){
+    setLocale(req,res);
     res.render('grossglockner',
         {
+            i18n: res,
+            'lang': req.cookies.i18n,
             'device': getDevice(req),
             'type': getDeviceType(req),
             'navigation':'expeditii'
@@ -99,8 +119,11 @@ exports.grossglockner = function(req, res){
 };
 
 exports.elbrus = function(req, res){
+    setLocale(req,res);
     res.render('elbrus',
         {
+            i18n: res,
+            'lang': req.cookies.i18n,
             'device': getDevice(req),
             'type': getDeviceType(req),
             'navigation':'expeditii'
@@ -108,8 +131,11 @@ exports.elbrus = function(req, res){
 };
 
 exports.everestbc = function(req, res){
+    setLocale(req,res);
     res.render('everestbc',
         {
+            i18n: res,
+            'lang': req.cookies.i18n,
             'device': getDevice(req),
             'type': getDeviceType(req),
             'navigation':'expeditii'
@@ -117,8 +143,11 @@ exports.everestbc = function(req, res){
 };
 
 exports.everesteli = function(req, res){
+    setLocale(req,res);
     res.render('everesteli',
         {
+            i18n: res,
+            'lang': req.cookies.i18n,
             'device': getDevice(req),
             'type': getDeviceType(req),
             'navigation':'expeditii'
@@ -126,8 +155,11 @@ exports.everesteli = function(req, res){
 };
 
 exports.maroc = function(req, res){
+    setLocale(req,res);
     res.render('maroc',
         {
+            i18n: res,
+            'lang': req.cookies.i18n,
             'device': getDevice(req),
             'type': getDeviceType(req),
             'navigation':'expeditii'
@@ -135,8 +167,11 @@ exports.maroc = function(req, res){
 };
 
 exports.kilimanjaro = function(req, res){
+    setLocale(req,res);
     res.render('kilimanjaro',
         {
+            i18n: res,
+            'lang': req.cookies.i18n,
             'device': getDevice(req),
             'type': getDeviceType(req),
             'navigation':'expeditii'
@@ -144,8 +179,11 @@ exports.kilimanjaro = function(req, res){
 };
 
 exports.island = function(req, res){
+    setLocale(req,res);
     res.render('island',
         {
+            i18n: res,
+            'lang': req.cookies.i18n,
             'device': getDevice(req),
             'type': getDeviceType(req),
             'navigation':'expeditii'
@@ -153,8 +191,11 @@ exports.island = function(req, res){
 };
 
 exports.k2 = function(req, res){
+    setLocale(req,res);
     res.render('k2',
         {
+            i18n: res,
+            'lang': req.cookies.i18n,
             'device': getDevice(req),
             'type': getDeviceType(req),
             'navigation':'expeditii'
@@ -162,16 +203,22 @@ exports.k2 = function(req, res){
 };
 
 exports.montblanc = function(req, res){
+    setLocale(req,res);
     res.render('montblanc',
         {
+            i18n: res,
+            'lang': req.cookies.i18n,
             'device': getDevice(req),
             'type': getDeviceType(req),
             'navigation':'expeditii'
         });
 };
 exports.contact = function(req, res){
+    setLocale(req,res);
     res.render('contact',
         {
+            i18n: res,
+            'lang': req.cookies.i18n,
             'sent': 'no',
             'bla': 'no',
             'device': getDevice(req),
@@ -182,8 +229,11 @@ exports.contact = function(req, res){
 
 exports.inscriere = function(req, res){
 
+    setLocale(req,res);
     res.render('inscriere',
         {
+            i18n: res,
+            'lang': req.cookies.i18n,
             'sent': 'no',
             'bla': 'no',
             'device': getDevice(req),
@@ -194,9 +244,11 @@ exports.inscriere = function(req, res){
 };
 
 exports.romania = function(req, res){
-
+    setLocale(req,res);
     res.render('romania',
         {
+            i18n: res,
+            'lang': req.cookies.i18n,
             'device': getDevice(req),
             'type': getDeviceType(req),
             'navigation':'romania'
@@ -204,9 +256,11 @@ exports.romania = function(req, res){
 };
 
 exports.expeditii = function(req, res){
-
+    setLocale(req,res);
     res.render('expeditii',
         {
+            i18n: res,
+            'lang': req.cookies.i18n,
             'device': getDevice(req),
             'type': getDeviceType(req),
             'navigation':'expeditii'
@@ -214,9 +268,11 @@ exports.expeditii = function(req, res){
 };
 
 exports.family = function(req, res){
-
+    setLocale(req,res);
     res.render('family',
         {
+            i18n: res,
+            'lang': req.cookies.i18n,
             'device': getDevice(req),
             'type': getDeviceType(req),
             'navigation':'cursuri'
