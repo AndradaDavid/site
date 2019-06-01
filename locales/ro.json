@@ -48,6 +48,7 @@
 
 	"data.aprilie": "Aprilie",
 	"data.noiembrie": "Noiembrie",
+	"data.octombrie": "Octombrie",
 	"data.ziua1": "Ziua 1",
 	"data.ziua2": "Ziua 2",
 	"data.ziua3": "Ziua 3",
@@ -105,10 +106,23 @@
 	"apuseni3.itinerariu5": "Prin ce se remarcă Scărița-Belioara? Rezervația cuprinde “șesul Craiului” situat pe un platou calcaros la peste 1350 m altitudine, spectaculoase abrupturi ce urmăresc Valea Belioara, pereți verticali și creste ascuțite. Circuitul durează în jur de 5-6 ore și are o dificultate medie; sunt aproximativ 11 km și o diferență de nivel de 850 m. După terminarea traseului se revine în Cluj-Napoca. Cazare.",
 	"apuseni3.include1": "Transfer aeroport",
 	"apuseni3.include2": "Taxele de vizitare",
-	"apuseni3.include3": "2 nopti cazare la pensiune de 3 stele in Cluj",
+	"apuseni3.include3": "2 nopti cazare la pensiune de 3 stele în Cluj",
 	"apuseni3.include4": "1 noapte cazare la căbănuța cu priciuri (opțional cort)",
 	"apuseni3.nuinclude1": "Asigurare de călătorie",
 	"apuseni3.nuinclude2": "Mâncare",
+
+	"apuseni5.titlu": "5 zile în Apuseni",
+	"apuseni5.titlu2": "Frumusețile zonei",
+	"apuseni5.descriere": "Învață alături de noi despre Cluj-Napoca, un oraș din inima Transilvaniei plin de istorie și cultură, despre tradiția mineritului în sare la muzeul Salinei Turda. Peisajele din rezervațiile si peșterile vizitate îți vor face zilele petrecute în România de neuitat.",
+
+	"apuseni5.detalii1": "Munții Apuseni sunt cuprinși între dealurile domoale ale Depresiunii Transilvane și Câmpia Tisei. Aceștia formează o veriga ce închide spre vest arcul Carpaților Românești. Ocupând o suprafață de circa 20.000 km pătrați, ei apar ca o insulă muntoasă. În nici o regiune din Carpații României subsolul nu este ca un mozaic de formațiuni geologice cum este în munții Apuseni. Golurile alpine apar de la altitudinea de 1600m în sus unde predomină gramineele, iar pe locuri mai pietroase se dezvoltă tufele de ienupăr, smirdar, afine și merișoare. Pădurile din Munții Apuseni adăpostesc numeroase specii de animale sălbatice: urși, lupi, mistreți, râși, cocoși de munte, veverițe, căprioare, șerpi chiar și vipere. Pâraiele de munte sunt bogate în păstravi care atrag mulți pescari.",
+
+	"apuseni5.itinerariu1": "Sosire în Cluj-Napoca. Transfer de la aeroport în oras, ulterior pensiune. Vizitarea orașului sau timp liber la alegere.",
+	"apuseni5.itinerariu2": "Urmează Rezervația Cheile Turzii, importante atât din punct de vedere științific, cât și a frumuseților sălbatice. Celor aproximativ 1000 de specii floristice, vegetale, plante rare și celor 67 specii de păsări și alte animale li se adaugă o mare varietate a formelor de relief carstice cu peșteri, grohotișuri, colțuri stâncoase. Transport și cazare la Belioara. ",
+	"apuseni5.itinerariu3": "Vizitarea Peșterii Scărișoara, renumită pentru faptul că adăpostește cel mai mare ghețar subteran din România. Pe langă numeroasele formațiuni din gheață care atrag privirile turiștilor, peștera are și o importanță stiințifică. Urmează vizitarea Peșterii Urșilor unică în România și în Europa. De ce este unică și ce veți putea vedea în această peșteră? De data aceasta vă vom lăsa imaginația să lucreze și vom lăsa frumusețile peșterii să vorbească de la sine. Cazare la Cabana Cetățile Ponorului – Padiș.",
+	"apuseni5.itinerariu4": "Aceasta zi este destinată descoperirii zonei Cetățile Ponorului, remarcabilă prin fenomene carstice. Peștera Cetățile Ponorului este considerată una dintre cele 7 minuni ale României. Rezervate pentru această ultimă zi sunt și Cascada de la Răchițele – Vălul Miresei și Cetatea de la Bologa, fiecare având farmecul ei greu de descris în cuvinte. Cazare la Cluj-Napoca.",
+	"apuseni5.itinerariu5": "Tranfer cazare-aeroport.",
+	"apuseni5.include3":"Cazare la pensiune de 3 stele",
 
 	"grid.expeditii": "Expediții",
 	"grid.drumetii": "Drumeții",

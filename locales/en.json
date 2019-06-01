@@ -48,6 +48,7 @@
 
 	"data.aprilie": "April",
 	"data.noiembrie": "November",
+	"data.octombrie": "October",
 	"data.ziua1": "Day 1",
 	"data.ziua2": "Day 2",
 	"data.ziua3": "Day 3",
@@ -98,7 +99,7 @@
 	"apuseni3.itinerariu1":"Arriving  in Cluj-Napoca. Transfer from the airport to the city. Accommodate in a bead and breakfast. Visiting the city or time off, at your choice ( St. Mihail church, Banffy Palace, Etnographic Museum).",
 	"apuseni3.itinerariu2":"Breakfast. Visiting Salina Turda, which includes the Franz Josef Gallery, excavated between 1853-1871, the Iosif Mine - echo hall, as well as a recreation room with various recreational facilities. The Cheile Turzii Reservation follows, important from the scientific point of view, as well as the wild beauties.",
 	"apuseni3.itinerariu3":"Approximately 1000 species of flora, plants, rare plants and 67 species of birds and other animals are added to a wide variety of karst reliefs with caves and rocky corners. Transport and accommodation in Belioara.",
-	"apuseni3.itinerariu4":"Romanian traditional breakfast . This day is dedicated to the Scarita Belioara Reservation, a geo-botanical reservation in the Mount Mare area with high mountain peaks, turrets and numerous caves. It is a true paradise for lovers of wild animals and rare plants.",
+	"apuseni3.itinerariu4":"Romanian traditional breakfast . This day is dedicated to the Scarita Belioara Reservation, a geo-botanical reservation in the Mount Mare area with high mountain peaks, turrets and numerous caves. It is a true paradise for lovers of wild animals and rare pants.",
 	"apuseni3.itinerariu5":"What is Scarita-Belioara special for? The Reservation includes the 'Craiul Sesul' located on a limestone plateau at over 1350 m altitude, spectacular steep slopes following the Belioara Valley, vertical walls and sharp ridges. The circuit takes about 5-6 hours and has a medium difficulty; there are about 11 km and a level difference of 850 m. After the end of the route we returns to Cluj-Napoca. Accommodation.",
 	"apuseni3.include1": "Airport transfer",
 	"apuseni3.include2": "Visiting fees",
@@ -106,6 +107,19 @@
 	"apuseni3.include4": "1 night accommodation in a hut (or optional in a tent)",
 	"apuseni3.nuinclude1": "Travel insurance",
 	"apuseni3.nuinclude2": "Food",
+
+	"apuseni5.titlu": "5 days in Apuseni",
+	"apuseni5.titlu2": "Area Beauties",
+	"apuseni5.descriere": "Learn with us about Cluj-Napoca, a city in the heart of Transylvania full of history and culture, about the tradition of salt mining in the Turda Salt Museum. The landscapes of the visited reserves and caves will make your days spent in Romania unforgettable.",
+
+	"apuseni5.detalii1": "The Apuseni Mountains are situated between the tranquil hills of the Transylvanian Depression and the Tisa Plain. They form a link that closes to the west the arch of the Romanian Carpathians. Occupying an area of about 20,000 sq. Km, they appear as a mountainous island. In no area of the Carpathians in Romania, the basement is like a mosaic of geological formations such as in the Apuseni Mountains. The alpine slopes occur at an altitude of 1600m above where the grasses predominate, and the more rocky places grow the juniper, rhododendron, blueberries and apricots. The forests of the Apuseni Mountains are home to many wildlife species: bears, wolves, mountain roosters, mountain cats, squirrels, deer, even vipers. Mountain springs are rich in trout that attract many fishermen.",
+
+	"apuseni5.itinerariu1": "Arriving  in Cluj-Napoca. Transfer from the airport to the city. Accommodate in a bead and breakfast. Visiting the city or time off, at your choice (St. Mihail church, Banffy Palace, Etnographic Museum).",
+	"apuseni5.itinerariu2": "The Cheile Turzii Reservation follows, important both from a scientific point of view, as well as  for it,s wild beauties. Approximately 1000 species of flora, plants, rare plants and 67 species of birds and other animals are added to a wide variety of reliefs with caves, scree, rocky corners. Transport and accommodation in Belioara. Possibility of accommodation at Salciua Guesthouse or Partizanilor House.",
+	"apuseni5.itinerariu3": "Visiting the Scarisoara Cave, famous for sheltering the largest underground glacier in Romania. Besides the numerous ice formations that attract tourists, the cave is also of scientific importance. Then we will visit of the Bears Cave in Romania and Europe. Why is it unique and what can you see in this cave? This time we will let our imagination work and let the beauty of the cave speak for itself. Accommodation at Cabana Cetatii Ponorului - Padis.",
+	"apuseni5.itinerariu4": "This day is for the area of Cetatile Ponor, remarkable with spectacular natural phenomena. Cetatii Ponorului cave is considered one of the 7 wonders of Romania. Reserved for this last day are also the Waterfall of Rachiţele - The Bride's Wave and the Bologa Citadel, each with its charm to be described in words. Accommodation in Cluj-Napoca.",
+	"apuseni5.itinerariu5": "Transfer, accommodation -airport.",
+	"apuseni5.include3":"Accommodation  at a great bead and breakfast (3 stars)",
 
 	"grid.expeditii": "Expeditions",
 	"grid.drumetii": "Treks",

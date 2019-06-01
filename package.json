@@ -19,7 +19,9 @@
     "stylus": "^0.52.4",
     "nodemailer": "^5.0.0",
     "nodemailer-smtp-transport": "^2.7.4",
-    "express-session": "^1.11.3"
+    "express-session": "^1.11.3",
+    "cookie-parser":"*",
+    "i18n":"*"
   },
   "devDependencies": {
     "node-sass": "^4.8.3"
