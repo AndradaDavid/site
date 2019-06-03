@@ -348,6 +348,8 @@ app.post('/contact', function (req, res) {
         if (error) {
             res.render('contact',
                 {
+                    i18n: res,
+                    'lang': req.cookies.i18n,
                     'sent': 'no',
                     'bla': 'yes',
                     'device': routes.getDevice(req),
@@ -358,6 +360,8 @@ app.post('/contact', function (req, res) {
             console.log('Message sent: ' + info.response);
             res.render('contact',
                 {
+                    i18n: res,
+                    'lang': req.cookies.i18n,
                     'sent': 'yes',
                     'bla': 'no',
                     'device': routes.getDevice(req),
@@ -372,6 +376,7 @@ app.post('/contact', function (req, res) {
 
 app.post('/inscriere/:id', function (req, res) {
 
+    res.cookie('i18n', req.cookies.i18n);
     var messageBody = '';
 
     if (req.params.id == 'apuseni3' || req.params.id == 'apuseni5' ) {
@@ -430,6 +435,8 @@ app.post('/inscriere/:id', function (req, res) {
         if (error) {
             res.render('inscriere',
                 {
+                    i18n: res,
+                    'lang': req.cookies.i18n,
                     'sent': 'no',
                     'bla': 'yes',
                     'device': routes.getDevice(req),
@@ -440,6 +447,8 @@ app.post('/inscriere/:id', function (req, res) {
         } else {
             res.render('inscriere',
                 {
+                    i18n: res,
+                    'lang': req.cookies.i18n,
                     'sent': 'yes',
                     'bla': 'no',
                     'device': routes.getDevice(req),
