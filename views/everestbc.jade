@@ -1,268 +1,298 @@
 extends ./index.jade
 
 block vars
-	- var title='Trekking Everest Base camp | Flo Aventure Tours'
-	- var description = 'Everest trekking. Urca si descopera valea Khumbu si cultura serpasilor pana in renumita Everest base camp alaturi de ghizii Flo Adventure. Curs si drumetie.'
-	- var ogtitle= title
-	- var ogDescription= description
-	- var ogurl = 'http://www.floadventure.ro/everest-basecamp'
-	- var ogimage = "http://www.floadventure.ro/images/everestbc.png"
+    - var title='Trekking Everest Base camp | Flo Aventure Tours'
+    - var description = 'Everest trekking. Urca si descopera valea Khumbu si cultura serpasilor pana in renumita Everest base camp alaturi de ghizii Flo Adventure. Curs si drumetie.'
+    - var ogtitle= title
+    - var ogDescription= description
+    - var ogurl = 'http://www.floadventure.ro/everest-basecamp'
+    - var ogimage = "http://www.floadventure.ro/images/everestbc.png"
 
 block content
 
-	div.bgded.bgded-top(style="background-image:url('/images/everestbc.png');")
-		div.wrapper.dust-white-color
-			header#header.clear
+    div.bgded.bgded-top(style="background-image:url('/images/everestbc.png');")
+        div.wrapper.dust-white-color
+            header#header.clear
 
-				if device.desktop
-					div.main-nav.downspace-40.dust-grey-color.flex-1.clear
-						include components/navigation
-				else
-					div.mobile-nav.flex-1
-						i.fa.fa-bars.fa-2x.upper.show-panel
-						nav.sidenav.clear
-							include components/navigation-mobile
+                if device.desktop
+                    div.main-nav.downspace-40.dust-grey-color.flex-1.clear
+                        include components/navigation
+                        ul.fl.clear.dust-white-color
+                            li.fl.language
 
-				div#logo.text-center.flex-4.upspace-35
-					div.sign(data-device="#{type}", style="background-image:url('/images/logo-flo-adventure.png');")
-					h3.dust-grey-color.font-2 Flo Adventure Tours
+                                if (lang === 'en')
+                                    a(href="/everest-basecamp/en") en
+                                    ul.sl
+                                        li.sl
+                                            a(href="/everest-basecamp/ro") ro
+                                else
+                                    a(href="/everest-basecamp/ro") ro
+                                    ul.sl
+                                        li.sl
+                                            a(href="/everest-basecamp/en") en
+                else
+                    div.mobile-nav.flex-1
+                        i.fa.fa-bars.fa-2x.upper.show-panel
+                        nav.sidenav.clear
+                            include components/navigation-mobile
+                        ul.fl.clear.lang.dust-white-color
+                            li.fl.language
 
-					h1.font-4
-						a.dust-grey-color(href="#top", title="Everest Base camp") Everest Base camp
-					h2.font-montserrat-regular.dust-grey-color Ruta Clasica
+                                if (lang === 'en')
+                                    a en
+                                    ul.sl
+                                        li.sl
+                                            a(href="/everest-basecamp/ro") ro
+                                else
+                                    a ro
+                                    ul.sl
+                                        li.sl
+                                            a(href="/everest-basecamp/en") en
 
-	div.scroll-down
-		div.chevron
-		div.chevron
-		div.chevron
+                div#logo.text-center.flex-4.upspace-35
+                    div.sign(data-device="#{type}", style="background-image:url('/images/logo-flo-adventure.png');")
+                    h3.dust-grey-color.font-2 Flo Adventure Tours
 
-	div.page-description.wrapper.dark-grey.light-grey-color
-		div.container.clear(data-device="#{type}")
+                    h1.font-4
+                        a.dust-grey-color(href="#top", title="Everest Base camp") Everest Base camp
+                    h2.font-montserrat-regular.dust-grey-color #{i18n.__("everestbc.clasicroute")}
 
-			div.page-box.flex-1(style="height: auto;")
-				h4.orange-color.font-montserrat-bold Experienta unica
-				div.heading-sep.orange
-				div.btmspace-50.font-open-sans(data-aos="fade-right")
-					p.pre-text.font-open-sans Tabara de baza a Everestului este cea mai populara destinatie de aventura din Nepal Himalaya. Primii care au deschis ruta pe Everest in mai 1953 au fost Sir Edmund Hillary si Tenzing Norgay. „Everest Base Camp Trekking” este tinta finala pentru cei care prefera trekking-ul si pentru alpinistii incepatori. Programul Everest Base Camp si Kala Patthar este genul de aventura „o data in viata”, cu provocari si realizari, cu bucuria de a fi atat de aproape de cel mai inalt munte din lume. Peisajul este superb, cu varfuri inconjurati de ghetari, manastiri antice si bineinteles fascinanta cultura si traditie a serpasilor.
-					div(data-href="https://developers.facebook.com/docs/plugins/", data-layout="button-count", data-size="small" data-mobile-iframe="true").fa.fa-2x.fa-share-alt-square.inline.orange-color
-						a.orange-color.font-open-sans.share-button.fb-xfbml-parse-ignore.inline(target="_blank", href="https://www.facebook.com/sharer/sharer.php?u=#{encodeURIComponent(ogurl)}&amp;src=sdkpreparse", title="Share") Share
+    div.scroll-down
+        div.chevron
+        div.chevron
+        div.chevron
 
-			div.page-box.flex-1-5(style="height: auto;")
-				div.map(style="background-image:url('/images/harta-everestbc.png'); background-position: center;")
+    div.page-description.wrapper.dark-grey.light-grey-color
+        div.container.clear(data-device="#{type}")
 
+            div.page-box.flex-1(style="height: auto;")
+                h4.orange-color.font-montserrat-bold #{i18n.__("everestbc.experience")}
+                div.heading-sep.orange
+                div.btmspace-50.font-open-sans(data-aos="fade-right")
+                    p.pre-text.font-open-sans #{i18n.__("everestbc.description1")}
+                    div(data-href="https://developers.facebook.com/docs/plugins/", data-layout="button-count", data-size="small" data-mobile-iframe="true").fa.fa-2x.fa-share-alt-square.inline.orange-color
+                        a.orange-color.font-open-sans.share-button.fb-xfbml-parse-ignore.inline(target="_blank", href="https://www.facebook.com/sharer/sharer.php?u=#{encodeURIComponent(ogurl)}&amp;src=sdkpreparse", title="Share") Share
 
-	div.page-description.wrapper.dark-grey.orange-color
-		div.container.clear(data-device="#{type}")
-
-			div.item-list
-				div.number 5545m
-				div.description altitudine varf
-			div.item-list
-				div.number 16 zile
-				div.description durata
-			div.item-list
-				div.number mediu
-				div.description dificultate
-			div.item-list
-				div.number 1400m
-				div.description altitudine baza
-
-	//detalii si itinerariu
-	div.page-description.wrapper.dust-grey.subtile-grey-color.font-montserrat-light
-		div.container.clear(data-device="#{type}", style="align-items: flex-start;")
-			div.page-box.flex-1(style=("#{type}" === 'phone') ? "" : "padding-right: 70px;")
-				h4.font-montserrat-bold Detalii
-				div.heading-sep.light-grey
-
-				p.font-effra-regular Everest trekking este un program popular, care reda satele serpasilor, o mare varietate a culturii si traditiei lor, festivaluri colorate si traditionalele manastiri. Flora si fauna reprezinta un alt ornament cu care se mandreste Parcul National Sagarmatha. Povestea lui Yeti inca este un mister din regiunea Khumbu.
-
-				p.font-effra-regular Regiunea Everest, stabilita in 1976 cu arealul de 1248 km², este situata in partea estica a Nepalului, protejata de Parcul National Sagarmatha. Frontiera nordica este comuna cu Tibetul, inclusiv Mt. Everest, cel mai inalt varf din lume. Altitudinea este cuprinsa intre 2845 m si 8848 m( acoperisul lumii -Vf. Everest), incluzand cei mai inalti munti ai lumii: Mt. Everest, Lhotse, Nupse, Choyo, Pomori, Makalu, Ama Dablam , care iti vor rasplati prin frumusetea lor efortul depus.
-
-			div.page-box.flex-1-6.subtile-grey-color
-				h4.font-montserrat-bold Itinerariu
-				div.heading-sep.light-grey
-				p Ne tinem de program, dar uneori suntem flexibili, ne adaptam la conditiile meteo si la situatiile neprevazute.
-
-				h5.left.upspace-20 Ziua 1
-				p Transfer de la aeroport la hotel. Dupa cazare vom avea o sedinta tehnica.
-				h5.left.upspace-20 Ziua 2
-				p Vom vizita cateva obiective turistice in Kathmandu. Stupa Boudhanath impresioneaza prin marimea ei, fiind una dintre cele mai mari astfel de constructii din lume. Din 1979 este trecuta pe Lista Patrimoniului Mondial UNESCO. Orasul istoric Patan este cunoscut pentru mostenirea culturala impresionanta. Se remarca  piata Patan Durbar,  inclusa de UNESCO pe lista celor sapte „zone monument” care formeaza Zona Patrimoniului Mondial din Valea Kathmandu. Datorita sculturilor in piatra, metal si altele, aflate la exteriorul cladirilor, orasul seamana cu un muzeu in aer liber. Templul budist Swayambu face parte dintr-un complex format din stupa, o varietate de altare si temple. Adaugate acestora mai recent gasim o manastire tibetana, un muzeu si o librarie.  Swayambu este cunoscut si ca Templu Maimutelor.
-
-				h5.left.upspace-20 Ziua 3
-				p Zbor Kathmandu-Lukla (dureaza 45 minute). Aeroportul a fost construit in 1964 sub indrumarea lui Edmund Hillary. Initial s-a dorit construirea aeroportului pe terenurile mai plate ale fermierilor, insa acestia nu au vrut sa renunte la pamantul lor. Urcare pana la Phakding sau Mnajo ( 3/4 h, 2640 m). Phakding este un sat din regiunea Khumbu, Nepal, inclus de asemenea in Lista Patrimoniului Mondial UNESCO.
-
-				h5.left.upspace-20 Ziua 4
-				p Urcare de la Phakding sau Mnajo la Namche Bazar ( 3/4h, 3440m). Acest orasel este un cunoscut punct pentru expeditii pe Everest sau alte varfuri din zona. Este inconjurat de peisaje deosebite, incarcat de istorie si de ospitalitate.
-
-				h5.left.upspace-20 Ziua 5
-				p Aclimatizare la Namche Bazzar.
-				h5.left.upspace-20 Ziua 6
-				p Namache – Tengboche (4 / 5h) 3860m. Din acest loc se deschide o panorama a Muntilor Himalaya, cu varfuri faimoase precum: Everest, Nuptse, Lhotse, Ama Dablam.
-				h5.left.upspace-20 Ziua 7
-				p Tengboche – Dingboche (4 / 5h) 4350m.
-				h5.left.upspace-20 Ziua 8
-				p Dingboche – Labuche (4 / 5h) 4910m.
-				h5.left.upspace-20 Ziua 9
-				p Labuche – Goraksep (3 / 4h) 5170m. Everest Base Camp, locul in care multi viseaza sa ajunga cel putin o data in viata. Peisajul este unul impresionant, greu de descris in cuvinte.
-				h5.left.upspace-20 Ziua 10
-				p Goraksep – Acensiune pe Kalapathar 5545m. Se porneste dimineata devreme pentru a vedea rasaritul in zona Mt. Everest si Ghetarul Khumbu (2 / 3h) 5545m. Inapoi la Gorakshep
-				h5.left.upspace-20 Ziua 11
-				p Gorakshep – Tengboche (5/ 6h) 3860m.
-				h5.left.upspace-20 Ziua 12
-				p Tengboche (4 / 5h) 3860m – Phakding (5/6 h) 2640m
-				h5.left.upspace-20 Ziua 13
-				p Phakding – Lukla (2 / 3h)
-				h5.left.upspace-20 Ziua 14
-				p Zbor Lukla – Kathmandu (40 /45m) 1350m si transfer la hotel
-				h5.left.upspace-20 Ziua 15
-				p Zi libera.
-				h5.left.upspace-20 Ziua 16
-				p Intoarcerea acasa
-
-	hr.cloudy
-	div.image.dark-grey.cloudy-color
-		div.hoc.clear.center.upspace-35.btmspace-30(data-device="#{type}")
-			div.desc-item
-				i.fa.fa-calendar.font-2
-				span.item-header Perioada
-				span.item-text Noiembrie
-			div.desc-item
-				i.fa.fa-male.fa-3x.font-2
-				span.item-header Persoane
-				span.item-text minim 4
-			div.desc-item
-				i.fa.fa-home.fa-3x.font-2
-				span.item-header Cazare
-				span.item-text hotel
-			div.desc-item
-				i.fa.fa-car.fa-3x.font-2
-				span.item-header Transport
-				span.item-text masina, avion
+            div.page-box.flex-1-5(style="height: auto;")
+                div.map(style="background-image:url('/images/harta-everestbc.png'); background-position: center;")
 
 
-	//grid de imagini
-	div.page-description.wrapper
-		div.container.width-full.max-width-full.padding-0.clear(data-device="#{type}")
-			div#full-grid.width-full.dark-grey(data-device="#{type}")
-				a(title="Flo Adventure Tours - Everest basecamp").full-grid-item.big
-					div.flex-1(style="background-image:url('/images/everestbc-grid-1.png'); background-size: cover; background-position: center center;")
-				a(title="Flo Adventure Tours - Everest basecamp").full-grid-item
-					div.flex-1(style="background-image:url('/images/everestbc-grid-2.png'); background-size: cover; background-position:top;")
+    div.page-description.wrapper.dark-grey.orange-color
+        div.container.clear(data-device="#{type}")
 
-				a(title="Flo Adventure Tours - Everest basecamp").full-grid-item
-					div.flex-1(style="background-image:url('/images/everestbc-grid-3.png'); background-size: cover; background-position: center;")
-				a(title="Flo Adventure Tours - Everest basecamp").full-grid-item
-					div.flex-1(style="background-image:url('/images/hhghhg.png'); background-size: cover; background-position: center;")
-				a(title="Flo Adventure Tours - Everest basecamp").full-grid-item.half
-					div.flex-1(style="background-image:url('/images/everestbc-grid-4.png'); background-size: cover; background-position: center;")
-				a(title="Flo Adventure Tours - Everest basecamp").full-grid-item.big
-					div.flex-1(style="background-image:url('/images/everestbc-grid-5.png'); background-size: cover; background-position: center;")
-				a(title="Flo Adventure Tours - Everest basecamp").full-grid-item
-					div.flex-1(style="background-image:url('/images/everestbc-grid-6.png'); background-size: cover; background-position: center;")
+            div.item-list
+                div.number 5545m
+                div.description #{i18n.__("descriere.altitudine")}
+            div.item-list
+                div.number 16 #{i18n.__("data.zile")}
+                div.description #{i18n.__("descriere.durata")}
+            div.item-list
+                div.number #{i18n.__("descriere.durata")}
+                div.description #{i18n.__("descriere.dificultate")}
+            div.item-list
+                div.number 1400m
+                div.description #{i18n.__("descriere.altitudinebaza")}
 
-	hr.cloudy
+    //detalii si itinerariu
+    div.page-description.wrapper.dust-grey.subtile-grey-color.font-montserrat-light
+        div.container.clear(data-device="#{type}", style="align-items: flex-start;")
+            div.page-box.flex-1(style=("#{type}" === 'phone') ? "" : "padding-right: 70px;")
+                h4.font-montserrat-bold #{i18n.__("descriere.detalii")}
+                div.heading-sep.light-grey
 
+                p.font-effra-regular #{i18n.__("everestbc.detalii1")}
 
-	//extra informatii
-	div.page-description.wrapper.dust-white.dark-grey-color
-		div.container.clear(data-device="#{type}", style="align-items: flex-start;")
+                p.font-effra-regular #{i18n.__("everestbc.detalii2")}
 
-			div.page-box.flex-1.font-montserrat-light(style=("#{type}" === 'phone') ? "" : "padding-right: 70px;")
-				h4.font-montserrat-regular Echipament tehnic
-				div.heading-sep.light-grey
-				span Sac de dormit cu temperatura de confort minim  – 10 grade celsius
-				span Rucsac
-				span Coltari + piolet si daca doresti bete de trekking
-				span Casca alpinism (se poate inchiria de la agentie)
-				span Ham alpinism
-				span 2 carabiniere cu filet
-				span Ochelari de soare - 100% protectie UV
-				span Crema de protectie - fata si buze - factor mare de protectie
-				span Bidon pentru apa
-				span Trusa de prim ajutor
-				span Frontala si baterii de rezerva
+            div.page-box.flex-1-6.subtile-grey-color
+                h4.font-montserrat-bold #{i18n.__("descriere.itinerariu")}
+                div.heading-sep.light-grey
+                p #{i18n.__("descriere.itinerariu2")}
 
+                h5.left.upspace-20 #{i18n.__("data.ziua1")}
+                p #{i18n.__("everestbc.itinerariu1")}
 
-				h4.font-montserrat-regular Asigurare
-				div.heading-sep.light-grey
-				span Recomandam asigurari de calatorie si optiuni de interventie, recomandate de firmele de asigurare ce sunt in colaborare cu agentia noastra de turism. Dupa ce optezi pentru o expeditie cu noi, un consultant te va indruma pentru achizitia unei polite potrivita pentru tine.
+                h5.left.upspace-20 #{i18n.__("data.ziua2")}
+                p #{i18n.__("everestbc.itinerariu2")}
 
+                h5.left.upspace-20 #{i18n.__("data.ziua3")}
+                p #{i18n.__("everestbc.itinerariu3")}
 
-			div.page-box.flex-1.font-montserrat-light
+                h5.left.upspace-20 #{i18n.__("data.ziua4")}
+                p #{i18n.__("everestbc.itinerariu4")}
 
-				h4.font-montserrat-regular Imbracaminte si incaltaminte
-				div.heading-sep.light-grey
-				span Bluza termala cu maneca lunga si pantaloni
-				span Pantaloni usori pentru drumetie
-				span Suprapantaloni
-				span Bete de trekking (optionali)
-				span O haina din Gore-tex
-				span Polar sau softshell
-				span Pufoaica
-				span Pelerina
-				span 2 perechi de manusi
-				span Caciula
-				span Masca de fata (cagula) pentru vant
-				span 4-5 perechi de sosete
-				span Bocanci pentru ascensiune si ncaltaminte usoara pentru vizitele scurte (sandale, pantofi sport)
+                h5.left.upspace-20 #{i18n.__("data.ziua5")}
+                p #{i18n.__("everestbc.itinerariu5")}
 
+                h5.left.upspace-20 #{i18n.__("data.ziua6")}
+                p #{i18n.__("everestbc.itinerariu6")}
 
-	div.little-about.height-600(style="background-image:url('/images/everestbc-grid-7.png');background-size:cover;background-position: right center;")
+                h5.left.upspace-20 #{i18n.__("data.ziua7")}
+                p #{i18n.__("everestbc.itinerariu7")}
+                h5.left.upspace-20 #{i18n.__("data.ziua8")}
+                p #{i18n.__("everestbc.itinerariu8")}
+                h5.left.upspace-20 #{i18n.__("data.ziua9")}
+                p #{i18n.__("everestbc.itinerariu9")}
+                h5.left.upspace-20 #{i18n.__("data.ziua10")}
+                p #{i18n.__("everestbc.itinerariu10")}
+                h5.left.upspace-20 #{i18n.__("data.ziua11")}
+                p #{i18n.__("everestbc.itinerariu11")}
+                h5.left.upspace-20 #{i18n.__("data.ziua12")}
+                p #{i18n.__("everestbc.itinerariu12")}
+                h5.left.upspace-20 #{i18n.__("data.ziua13")}
+                p #{i18n.__("everestbc.itinerariu13")}
+                h5.left.upspace-20 #{i18n.__("data.ziua14")}
+                p #{i18n.__("everestbc.itinerariu14")}
+                h5.left.upspace-20 #{i18n.__("data.ziua15")}
+                p #{i18n.__("everestbc.itinerariu15")}
+                h5.left.upspace-20 #{i18n.__("data.ziua16")}
+                p #{i18n.__("everestbc.itinerariu16")}
 
-	//extra informatii
-	div.page-description.wrapper.dark-grey.cloudy-color
-		div.container.clear(data-device="#{type}", style="align-items: flex-start;")
-
-
-			div.page-box.flex-1.font-montserrat-thin(style=("#{type}" === 'phone') ? "" : "padding-right: 70px;")
-				h4.font-montserrat-regular Ce include?
-				div.heading-sep.light-grey
-				span Transfer de la aeroport la hotel si inapoi, sedinta tehnica in Kathmandu.
-				span Cazare cu mic dejun inclus la hotel de 3-4 stele in Kathmandu.
-				span Cazare pe toata durata ascensiunii.
-				span Taxele necesare intrarilor in parc si TIM card.
-				span Permisul pentru varf.
-				span Asigurare completa  pentru staff-ul Nepalez in timpul ascensiunii.
-				span Mese complete pe durata ascensiunii: mic dejun, pranz ( doua feluri de mancare) si cina (un singur fel).
-				span Bauturi calde pe durata meselor: (ceai, cafea etc).
-				span Transport pana la  punctul de start si finish al ascensiunii.
-				span Zborul intern KTM – LUKLA – KTM si taxele de aeroport.
-				span Trusa de prim ajutor pentru staff.
-				span Ghid atestat local si porteri.
-				span Un bagaj pana la 15 kg pe care il va duce porterul.
-				span Hartile necesare.
-
-			div.page-box.flex-1.font-montserrat-thin(style=("#{type}" === 'phone') ? "" : "padding-right: 70px;")
-				h4.font-montserrat-regular Ce nu include?
-				div.heading-sep.light-grey
-				span Biletul de avion pana in Kathmandu.
-				span Pranz si cina in Kathmandu.
-				span Bauturi ca: bere, whisky, rom , apa, apa minerala etc.
-				span Taxele de intrare din timpul vizitelor in Kathmandu si celelalte zone turistice
-				span Costuri suplimentare aparute datorita conditiilor nefavorabile, ca de exemplu vremea rea.
-				span Cheltuieli personale pentru: apa calda sau incarcarea bateriilor( telefon, laptop etc)
-				span Echipament personal
-				span Asigurarea medicala – este obligatorie
-				span Evacuare de urgenta, daca este necesar., spitalizare etc..
-				span Bacsisul pentru porteri si ghizii locali
-				span Taxa de viza de 40 dolari
-				span Copie pasaport si asigurare medicala
-				span O poza tip pasaport
+    hr.cloudy
+    div.image.dark-grey.cloudy-color
+        div.hoc.clear.center.upspace-35.btmspace-30(data-device="#{type}")
+            div.desc-item
+                i.fa.fa-calendar.font-2
+                span.item-header #{i18n.__("descriere.perioada")}
+                span.item-text #{i18n.__("data.noiembrie")}
+            div.desc-item
+                i.fa.fa-male.fa-3x.font-2
+                span.item-header #{i18n.__("descriere.persoane")}
+                span.item-text #{i18n.__("descriere.minim")} 4
+            div.desc-item
+                i.fa.fa-home.fa-3x.font-2
+                span.item-header #{i18n.__("descriere.cazare")}
+                span.item-text #{i18n.__("descriere.hotel")}
+            div.desc-item
+                i.fa.fa-car.fa-3x.font-2
+                span.item-header #{i18n.__("descriere.transport")}
+                span.item-text #{i18n.__("descriere.masina")}, #{i18n.__("descriere.avion")}
 
 
-	div.little-about.narrow.cloudy.height-400(style="background-image:url('/images/price-background-everestbc.jpg');background-size:cover;background-position: center center;")
-		div.hoc.container.clear
+    //grid de imagini
+    div.page-description.wrapper
+        div.container.width-full.max-width-full.padding-0.clear(data-device="#{type}")
+            div#full-grid.width-full.dark-grey(data-device="#{type}")
+                a(title="Flo Adventure Tours - Everest basecamp").full-grid-item.big
+                    div.flex-1(style="background-image:url('/images/everestbc-grid-1.png'); background-size: cover; background-position: center center;")
+                a(title="Flo Adventure Tours - Everest basecamp").full-grid-item
+                    div.flex-1(style="background-image:url('/images/everestbc-grid-2.png'); background-size: cover; background-position:top;")
 
-			a.button.orange(href="/contact", title="Contact") Contact
-			a.button.dark-grey(href="/inscriere/everestbc", title="Inscriere") Rezerva-ti locul
+                a(title="Flo Adventure Tours - Everest basecamp").full-grid-item
+                    div.flex-1(style="background-image:url('/images/everestbc-grid-3.png'); background-size: cover; background-position: center;")
+                a(title="Flo Adventure Tours - Everest basecamp").full-grid-item
+                    div.flex-1(style="background-image:url('/images/hhghhg.png'); background-size: cover; background-position: center;")
+                a(title="Flo Adventure Tours - Everest basecamp").full-grid-item.half
+                    div.flex-1(style="background-image:url('/images/everestbc-grid-4.png'); background-size: cover; background-position: center;")
+                a(title="Flo Adventure Tours - Everest basecamp").full-grid-item.big
+                    div.flex-1(style="background-image:url('/images/everestbc-grid-5.png'); background-size: cover; background-position: center;")
+                a(title="Flo Adventure Tours - Everest basecamp").full-grid-item
+                    div.flex-1(style="background-image:url('/images/everestbc-grid-6.png'); background-size: cover; background-position: center;")
 
-	hr.cloudy
-	div.price-about.height-300.wrapper.dark-grey.light-grey-color
-		p.font-2.dust-white-color(style="top: 80px") Pretul pachetului:
-		div.overlay-text.flex-1.font-3.orange-color
-			i.fa.fa-euro
-			p 1550
-			p.down /persoana
+    hr.cloudy
 
-	div.repeat-ribbon.wrapper.coloured
-		div.repeat(style="background-image: url('/images/repeat.png');height: 50px;background-size: contain;")
+
+    //extra informatii
+    div.page-description.wrapper.dust-white.dark-grey-color
+        div.container.clear(data-device="#{type}", style="align-items: flex-start;")
+
+            div.page-box.flex-1.font-montserrat-light(style=("#{type}" === 'phone') ? "" : "padding-right: 70px;")
+                h4.font-montserrat-regular #{i18n.__("everestbc.echipamenttehnic")}
+                div.heading-sep.light-grey
+                span #{i18n.__("everestbc.echipamenttehnic1")}
+                span #{i18n.__("everestbc.echipamenttehnic2")}
+                span #{i18n.__("everestbc.echipamenttehnic3")}
+                span #{i18n.__("everestbc.echipamenttehnic4")}
+                span #{i18n.__("everestbc.echipamenttehnic5")}
+                span #{i18n.__("everestbc.echipamenttehnic6")}
+                span #{i18n.__("everestbc.echipamenttehnic7")}
+                span #{i18n.__("everestbc.echipamenttehnic8")}
+                span #{i18n.__("everestbc.echipamenttehnic9")}
+                span #{i18n.__("everestbc.echipamenttehnic10")}
+                span #{i18n.__("everestbc.echipamenttehnic11")}
+
+
+                h4.font-montserrat-regular #{i18n.__("descriere.asigurare")}
+                div.heading-sep.light-grey
+                span #{i18n.__("descriere.asigurare1")}
+
+
+            div.page-box.flex-1.font-montserrat-light
+
+                h4.font-montserrat-regular #{i18n.__("descriere.echipament")}
+                div.heading-sep.light-grey
+                span #{i18n.__("everestbc.echipament1")}
+                span #{i18n.__("everestbc.echipament2")}
+                span #{i18n.__("everestbc.echipament3")}
+                span #{i18n.__("everestbc.echipament4")}
+                span #{i18n.__("everestbc.echipament5")}
+                span #{i18n.__("everestbc.echipament6")}
+                span #{i18n.__("everestbc.echipament7")}
+                span #{i18n.__("everestbc.echipament8")}
+                span #{i18n.__("everestbc.echipament9")}
+                span #{i18n.__("everestbc.echipament10")}
+                span #{i18n.__("everestbc.echipament11")}
+                span #{i18n.__("everestbc.echipament12")}
+                span #{i18n.__("everestbc.echipament13")}
+
+
+
+    div.little-about.height-600(style="background-image:url('/images/everestbc-grid-7.png');background-size:cover;background-position: right center;")
+
+    //extra informatii
+    div.page-description.wrapper.dark-grey.cloudy-color
+        div.container.clear(data-device="#{type}", style="align-items: flex-start;")
+
+
+            div.page-box.flex-1.font-montserrat-thin(style=("#{type}" === 'phone') ? "" : "padding-right: 70px;")
+                h4.font-montserrat-regular #{i18n.__("descriere.include")}
+                div.heading-sep.light-grey
+                span #{i18n.__("everestbc.include1")}
+                span #{i18n.__("everestbc.include2")}
+                span #{i18n.__("everestbc.include3")}
+                span #{i18n.__("everestbc.include4")}
+                span #{i18n.__("everestbc.include5")}
+                span #{i18n.__("everestbc.include6")}
+                span #{i18n.__("everestbc.include7")}
+                span #{i18n.__("everestbc.include8")}
+                span #{i18n.__("everestbc.include9")}
+                span #{i18n.__("everestbc.include10")}
+                span #{i18n.__("everestbc.include11")}
+                span #{i18n.__("everestbc.include12")}
+                span #{i18n.__("everestbc.include13")}
+                span #{i18n.__("everestbc.include14")}
+
+            div.page-box.flex-1.font-montserrat-thin(style=("#{type}" === 'phone') ? "" : "padding-right: 70px;")
+                h4.font-montserrat-regular #{i18n.__("descriere.nuinclude")}
+                div.heading-sep.light-grey
+
+                span #{i18n.__("everestbc.nuinclude1")}
+                span #{i18n.__("everestbc.nuinclude2")}
+                span #{i18n.__("everestbc.nuinclude3")}
+                span #{i18n.__("everestbc.nuinclude4")}
+                span #{i18n.__("everestbc.nuinclude5")}
+                span #{i18n.__("everestbc.nuinclude6")}
+                span #{i18n.__("everestbc.nuinclude7")}
+                span #{i18n.__("everestbc.nuinclude8")}
+                span #{i18n.__("everestbc.nuinclude9")}
+                span #{i18n.__("everestbc.nuinclude10")}
+                span #{i18n.__("everestbc.nuinclude11")}
+                span #{i18n.__("everestbc.nuinclude12")}
+                span #{i18n.__("everestbc.nuinclude13")}
+
+    div.little-about.narrow.cloudy.height-400(style="background-image:url('/images/price-background-everestbc.jpg');background-size:cover;background-position: center center;")
+        div.hoc.container.clear
+
+            a.button.orange(href="/contact", title="Contact")  #{i18n.__("navigation.contact")}
+            a.button.dark-grey(href="/inscriere/everestbc", title="Inscriere") #{i18n.__("descriere.rezerva")}
+
+    hr.cloudy
+    div.price-about.height-300.wrapper.dark-grey.light-grey-color
+        p.font-2.dust-white-color(style="top: 80px") #{i18n.__("descriere.pretul")}
+        div.overlay-text.flex-1.font-3.orange-color
+            i.fa.fa-euro
+            p 1550
+            p.down /#{i18n.__("descriere.persoana")}
+
+    div.repeat-ribbon.wrapper.coloured
+        div.repeat(style="background-image: url('/images/repeat.png');height: 50px;background-size: contain;")
