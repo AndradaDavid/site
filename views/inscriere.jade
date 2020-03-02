@@ -166,8 +166,9 @@ block content
 						textarea(type="text", name="experience", placeholder="Experiente anterioare in 4x4? ")
 						textarea(type="text", name="tent", placeholder="Detii un cort?")
 						textarea(type="text", name="family", placeholder="Vii cu familia? Sunteti insotiti de un copil cu varsta maxima de 15 ani?")
-
-
+						div.promotional-wrapper(style="display: flex;")
+							input#promotional.checkbox(type='checkbox', name='promotional', value= 'da')
+							label(for='promotional', class='promotional-label') !{i18n.__("inscriere.promotional")}
 
 						button.orange trimite
 
@@ -204,6 +205,9 @@ block content
 						textarea(type="text", name="health", placeholder="Probleme de sanatate relevante.")
 
 						textarea(type="text", name="tent", placeholder="Detii un cort sau preferi cabanuta cu priciuri?")
+						div.promotional-wrapper(style="display: flex;")
+							input#promotional.checkbox(type='checkbox', name='promotional', value= 'da')
+							label(for='promotional', class='promotional-label') !{i18n.__("inscriere.promotional")}
 
 
 						button.orange trimite
@@ -232,6 +236,9 @@ block content
 
 						input(type="text", name="age", placeholder="Varsta fiecarui copil, separata prin virgula")
 						input(type="text", name="copii", placeholder="Numele fiecarui copil, separat prin virgula")
+						div.promotional-wrapper(style="display: flex;")
+							input#promotional.checkbox(type='checkbox', name='promotional', value= 'da')
+							label(for='promotional', class='promotional-label') !{i18n.__("inscriere.promotional")}
 
 						button.orange trimite
 
@@ -292,6 +299,9 @@ block content
 									label(for='ham') Ham
 
 						textarea#body(type="text", name="experience", placeholder="Experiente anterioare in ascensiuni? Daca da, unde? ")
+						div.promotional-wrapper(style="display: flex;")
+							input#promotional.checkbox(type='checkbox', name='promotional', value= 'da')
+							label(for='promotional', class='promotional-label') !{i18n.__("inscriere.promotional")}
 
 						button.orange trimite
 
@@ -374,7 +384,7 @@ block content
 							div.title.font-1-5 K2 Base Camp
 							div.price.font-1-2.orange-color In curand
 
-					a(href="http://www.extremromania.ro/catararegheata.html", title="Inscriere curs catarare pe gheata").full-grid-item.third.planning
+					a(href="http://www.extremromania.ro/catarare-pe-gheata.html", target="_blank" title="Inscriere curs catarare pe gheata").full-grid-item.third.planning
 						div.flex-1(style="background-image:url('/images/kajhsdf67894.png'); background-size: cover; background-position: top center;")
 						div.upper-details.orange-color
 							div.date.font-1-3 14 - 16 februarie 2020
@@ -382,7 +392,7 @@ block content
 						div.details.dust-white-color
 							div.separator.orange.btmspace-10
 							div.title.font-1-5 Catarare pe gheata
-							div.price.font-1-2 450 ron
+							div.price.font-1-2 550 ron
 
 					a(href="/inscriere/elbrus", title="Inscriere expeditie Elbrus").full-grid-item.third.planning
 						div.flex-1(style="background-image:url('/images/elbrus-grid-5.png'); background-size: cover; background-position: top center;")

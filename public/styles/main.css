@@ -1219,6 +1219,16 @@ html .page-description .container .page-box-tiny form .group label {
   padding-left: 7px;
   font-weight: normal;
 }
+html .page-description .container .page-box form .promotional-wrapper,
+html .page-description .container .page-box-tiny form .promotional-wrapper {
+  float: left;
+  width: 100%;
+}
+html .page-description .container .page-box form .promotional-wrapper .promotional-label,
+html .page-description .container .page-box-tiny form .promotional-wrapper .promotional-label {
+  line-height: 2;
+  margin-left: 6px;
+}
 html .page-description .container #full-grid,
 html .page-description .container #martie,
 html .page-description .container #aprilie,

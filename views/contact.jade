@@ -52,6 +52,9 @@ block content
 					input#phone(type="text", name="phone",placeholder="Telefon", required)
 					input#subject(type="text", name="subject",placeholder="Subiect / Intrebare")
 					textarea#body(type="text", name="body",placeholder="Spune-ne cu ce te putem ajuta")
+					div.promotional-wrapper(style="display: flex;")
+						input#promotional.checkbox(type='checkbox', name='promotional', value= 'da')
+						label(for='promotional', class='promotional-label') !{i18n.__("inscriere.promotional")}
 
 					button.orange trimite
 

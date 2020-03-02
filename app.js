@@ -353,13 +353,12 @@ app.get('/politica-de-confidentialitate/en', function (req, res)
 
 app.post('/abonare', function (req, res) {
 
-    var messageBody = "<b>NUME: </b>" + req.body.firstname + " " + req.body.secondname + "<br>" + "<b>EMAIL: </b>" + req.body.address + "<br>" + "<b>TELEFON: </b>" + req.body.phone + "<br>" + "<b>MESAJ: </b>" + req.body.body;
-
     var mailOptions = {
         from: req.body.address,
         to: "officefloadventure@gmail.com",
         subject: '[Abonare] ' + req.body.email
     };
+
     smtpTransport.sendMail(mailOptions, function (error, info) {
         if (error) {
             console.log("error");
@@ -372,7 +371,11 @@ app.post('/abonare', function (req, res) {
 
 app.post('/contact', function (req, res) {
 
-    var messageBody = "<b>NUME: </b>" + req.body.firstname + " " + req.body.secondname + "<br>" + "<b>EMAIL: </b>" + req.body.address + "<br>" + "<b>TELEFON: </b>" + req.body.phone + "<br>" + "<b>MESAJ: </b>" + req.body.body;
+    var messageBody = "<b>NUME: </b>" + req.body.firstname + " " + req.body.secondname + "<br>" +
+        "<b>EMAIL: </b>" + req.body.address + "<br>" +
+        "<b>TELEFON: </b>" + req.body.phone + "<br>" +
+        "<b>MESAJ: </b>" + req.body.body + "<br>" +
+        "<b>MAIL PROMOTIONAL:</b>" + ((req.body.promotional === 'da')?"da":"nu");
 
     var mailOptions = {
         from: req.body.address,
@@ -380,6 +383,8 @@ app.post('/contact', function (req, res) {
         subject: '[Contact] ' + req.body.subject,
         html: messageBody
     };
+
+
     smtpTransport.sendMail(mailOptions, function (error, info) {
         if (error) {
             res.render('contact',
@@ -416,7 +421,18 @@ app.post('/inscriere/:id', function (req, res) {
     var messageBody = '';
 
     if (req.params.id == 'apuseni3' || req.params.id == 'apuseni5' ) {
-        messageBody = "<b>NUME: </b>" + req.body.firstname + " " + req.body.secondname + "<br>" + "<b>EMAIL: </b>" + req.body.email + "<br>" + "<b>TELEFON: </b>" + req.body.phone + "<br>" + "<b>ADRESA COMPLETA: </b>" + req.body.p_address + "<br>" + "<b>VARSTA: </b>" + req.body.age + "<br>" + "<b>OCUPATIA: </b>" + req.body.occupation + "<br>" + "<b>STAREA DE SANATATE: </b>" + req.body.health + "<br>" + "<b>MASINA: </b>" + req.body.car + "<br>" + "<b>EXPERIENTA: </b>" + req.body.experience + "<br>" + "<b>CORT: </b>" + req.body.tent + "<br>" + "<b>FAMILIE: </b>" + req.body.family;
+        messageBody = "<b>NUME: </b>" + req.body.firstname + " " + req.body.secondname + "<br>" +
+            "<b>EMAIL: </b>" + req.body.email + "<br>" + "" +
+            "<b>TELEFON: </b>" + req.body.phone + "<br>" +
+            "<b>ADRESA COMPLETA: </b>" + req.body.p_address + "<br>" +
+            "<b>VARSTA: </b>" + req.body.age + "<br>" +
+            "<b>OCUPATIA: </b>" + req.body.occupation + "<br>" +
+            "<b>STAREA DE SANATATE: </b>" + req.body.health + "<br>" +
+            "<b>MASINA: </b>" + req.body.car + "<br>" +
+            "<b>EXPERIENTA: </b>" + req.body.experience + "<br>" +
+            "<b>CORT: </b>" + req.body.tent + "<br>" +
+            "<b>FAMILIE: </b>" + req.body.family + "<br>" +
+            "<b>MAIL PROMOTIONAL:</b>" + ((req.body.promotional === 'da')?"da":"nu");
     }
 
     if (req.params.id == 'patru3' || req.params.id == 'patru5') {
@@ -432,11 +448,18 @@ app.post('/inscriere/:id', function (req, res) {
             "<b>MASINA: </b>" + req.body.car + "<br>" +
             "<b>EXPERIENTA: </b>" + req.body.experience + "<br>" +
             "<b>CORT: </b>" + req.body.tent + "<br>" +
-            "<b>FAMILIE: </b>" + req.body.family;
+            "<b>FAMILIE: </b>" + req.body.family + "<br>" +
+            "<b>MAIL PROMOTIONAL:</b>" + ((req.body.promotional === 'da')?"da":"nu");
     }
 
     if (req.params.id == 'family') {
-        messageBody = "<b>NUME: </b>" + req.body.firstname + " " + req.body.secondname + "<br>" + "<b>EMAIL: </b>" + req.body.email + "<br>" + "<b>TELEFON: </b>" + req.body.phone + "<br>" + "<b>ADRESA COMPLETA: </b>" + req.body.p_address + "<br>" + "<b>VARSTA: </b>" + req.body.age + "<br>" + "<b>NUMAR DE COPII: </b>" + req.body.copii + "<br>";
+        messageBody = "<b>NUME: </b>" + req.body.firstname + " " + req.body.secondname +
+            "<br>" + "<b>EMAIL: </b>" + req.body.email + "<br>" +
+            "<b>TELEFON: </b>" + req.body.phone + "<br>" +
+            "<b>ADRESA COMPLETA: </b>" + req.body.p_address + "<br>" +
+            "<b>VARSTA: </b>" + req.body.age + "<br>" +
+            "<b>NUMAR DE COPII: </b>" + req.body.copii + "<br>" +
+            "<b>MAIL PROMOTIONAL:</b>" + ((req.body.promotional === 'da')?"da":"nu");
     }
 
     if (req.params.id == 'montblanc' || req.params.id == 'grossglockner' || req.params.id == 'elbrus' || req.params.id == "everestbc" || req.params.id == "everesteli" || req.params.id == "island") {
@@ -451,11 +474,20 @@ app.post('/inscriere/:id', function (req, res) {
             "<b>CASCA: </b>" + req.body.casca + "<br>" +
             "<b>COLTARI: </b>" + req.body.coltari + "<br>" +
             "<b>HAM: </b>" + req.body.ham + "<br>" +
-            "<b>EXPERIENTA: </b>" + req.body.experience;
+            "<b>EXPERIENTA: </b>" + req.body.experience + "<br>" +
+            "<b>MAIL PROMOTIONAL:</b>" + ((req.body.promotional === 'da')?"da":"nu");
     }
 
     if (req.params.id == 'maroc') {
-        messageBody = "<b>NUME: </b>" + req.body.firstname + " " + req.body.secondname + "<br>" + "<b>EMAIL: </b>" + req.body.email + "<br>" + "<b>TELEFON: </b>" + req.body.phone + "<br>" + "<b>ADRESA COMPLETA: </b>" + req.body.p_address + "<br>" + "<b>VARSTA: </b>" + req.body.age + "<br>" + "<b>OCUPATIA: </b>" + req.body.occupation + "<br>" + "<b>STAREA DE SANATATE: </b>" + req.body.health + "<br>" + "<b>EXPERIENTA: </b>" + req.body.experience;
+        messageBody = "<b>NUME: </b>" + req.body.firstname + " " + req.body.secondname + "<br>" +
+            "<b>EMAIL: </b>" + req.body.email + "<br>" +
+            "<b>TELEFON: </b>" + req.body.phone + "<br>" +
+            "<b>ADRESA COMPLETA: </b>" + req.body.p_address + "<br>" +
+            "<b>VARSTA: </b>" + req.body.age + "<br>" +
+            "<b>OCUPATIA: </b>" + req.body.occupation + "<br>" +
+            "<b>STAREA DE SANATATE: </b>" + req.body.health + "<br>" +
+            "<b>EXPERIENTA: </b>" + req.body.experience + "<br>" +
+            "<b>MAIL PROMOTIONAL:</b>" + ((req.body.promotional === 'da')?"da":"nu");
     }
 
 

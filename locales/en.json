@@ -384,6 +384,7 @@
 	"cookies.t41": "Multe dintre aplicatiile de detectare si prevenire a spyware-ului includ detectarea atacurilor pe site-uri. Astfel, impiedica browserul de la a accesa website-uri care ar putea sa exploateze vulnerabilitatile browserului sau sa descarce software periculos.",
 	"cookies.t42": "Asigurati-va ca aveti browserul mereu updatat.Multe dintre atacurile bazate pe cookies se realizeaza exploatand punctele slabe ale versiunilor vechi ale browserelor.",
 	"cookies.t43": "Atentie ! dezactivarea si refuzul de a primi cookie-uri pot face anumite site-uri impracticabile sau dificil de vizitat si folosit. De asemenea, refuzul de a accepta cookie-uri nu inseamna ca nu veti mai primi/vedea publicitate online.",
-	"cookies.t44": "Toate browserele moderne ofera posibilitatea de a schimba setarile cookie-urilor. Aceste setari se gasesc de regula in “optiuni” sau in meniul de “preferinte” al browserului dumneavoastra."
+	"cookies.t44": "Toate browserele moderne ofera posibilitatea de a schimba setarile cookie-urilor. Aceste setari se gasesc de regula in “optiuni” sau in meniul de “preferinte” al browserului dumneavoastra.",
+	"inscriere.promotional": "Sunt de acord sa primesc materiale promotionale pe e-mail. Vezi <a class='highlight' href='/politica-de-confidentialitate'> Politica de confidentialitate</a>"
 
 }

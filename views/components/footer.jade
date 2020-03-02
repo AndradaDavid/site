@@ -33,7 +33,7 @@ div.page-description.orange.dark-grey-color
 
         div.flex-1.upspace-20(data-device="#{type}")
             span.font-montserrat-bold.font-1-2 #{i18n.__("footer.echipa")}
-            a(href="http://www.extremromania.ro", title="Extrem Romania").font-montserrat-light extremromania
+            a(href="http://www.extremromania.ro", target="_blank", title="Extrem Romania").font-montserrat-light extremromania
             a(href="http://www.freewall.ro", title="FreeWall").font-montserrat-light freewall
 
 
@@ -44,6 +44,7 @@ div.page-description.orange.dark-grey-color
             form.dark-grey-color(action="/abonare", method="post")
                 input(type="text", name="email", placeholder="E-mail", required)
                 button.dark-grey #{i18n.__("footer.trimite")}
+            p.font-07 !{i18n.__("inscriere.promotional")}
             a(href="https://www.facebook.com/floadventure/", title="Facebook Flo Adventure").inline.dark-grey-color.fa.fa-2x.fa-facebook-f.padding-left-right-10
             a(href="https://www.youtube.com/channel/UCpxI7-uEqDFqVevg9UB3PDQ/videos", title="Youtube Flo Adventure").inline.dark-grey-color.fa.fa-2x.fa-youtube-square.padding-left-right-10
             div(data-href="https://developers.facebook.com/docs/plugins/", data-layout="button-count", data-size="small" data-mobile-iframe="true").fa.fa-2x.fa-share-alt-square.inline.dark-grey-color
