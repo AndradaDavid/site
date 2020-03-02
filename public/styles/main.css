@@ -43,6 +43,12 @@
   font-family: 'Effra-Mid';
   src: url("fonts/Effra_Std_Md.ttf");
 }
+.font-07 {
+  font-size: 0.7em !important;
+}
+.font-09 {
+  font-size: 0.9em !important;
+}
 .font-1 {
   font-size: 1em !important;
 }
@@ -91,6 +97,9 @@
 .font-open-sans {
   font-family: 'Open Sans', sans-serif;
 }
+.flex-0-5 {
+  flex: 0.5;
+}
 .flex-1 {
   flex: 1;
 }
@@ -105,6 +114,9 @@
 }
 .flex-2 {
   flex: 2;
+}
+.flex-2-5 {
+  flex: 2.5;
 }
 .flex-4 {
   flex: 4;
@@ -631,11 +643,88 @@ html .hide-me {
 html .fixed {
   position: fixed;
 }
-html #cookie-modal .modal-content {
+html #cookie-modal {
+  opacity: 1;
   border: none;
   border-radius: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: #FBFBFB;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+}
+html #cookie-modal .modal-dialog {
+  margin-top: 20%;
+  width: 800px;
+}
+html #cookie-modal .modal-dialog .modal-content {
+  background-color: rgba(0, 0, 0, 0.92);
+  border-radius: 0;
+}
+html #cookie-modal .modal-dialog .modal-content .modal-header {
+  border: none;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Montserrat-Bold';
+  color: #F8B007;
+}
+html #cookie-modal .modal-dialog .modal-content .modal-header .modal-title {
+  font-size: 1.3em;
+}
+html #cookie-modal .modal-dialog .modal-content .modal-header .modal-title .heading-sep {
+  margin: 20px auto;
+}
+html #cookie-modal .modal-dialog .modal-content #cookie-modal-body {
+  font-family: 'Effra-Mid';
+}
+html #cookie-modal .modal-dialog .modal-content #cookie-modal-body #cookie-modal-message {
+  text-align: center;
+  font-size: 1.2em;
+}
+html #cookie-modal .modal-dialog .modal-content #cookie-modal-body #cookie-modal-message .orange-link {
+  color: #F8B007;
+  text-decoration: underline;
+}
+html #cookie-modal .modal-dialog .modal-content #cookie-modal-body #cookie-modal-message #cookie-modal-more-link {
+  color: #F8B007;
+}
+html #cookie-modal .modal-dialog .modal-content #cookie-modal-body #cookie-modal-advanced-types {
+  font-size: 1.2em;
+}
+html #cookie-modal .modal-dialog .modal-content #cookie-modal-body #cookie-modal-advanced-types #cookie-modal-advanced-title {
+  font-size: 1em !important;
+}
+html #cookie-modal .modal-dialog .modal-content #cookie-modal-body #cookie-modal-advanced-types li {
+  list-style-type: none;
+  margin-left: 30px;
+}
+html #cookie-modal .modal-dialog .modal-content #cookie-modal-body #cookie-modal-advanced-types .extra {
+  margin-top: 3px;
+}
+html #cookie-modal .modal-dialog .modal-content #cookie-modal-body #cookie-modal-advanced-types .extra em {
+  margin: 0 3px;
+  color: orange;
+  padding: 0 3px;
+}
+html #cookie-modal .modal-dialog .modal-content #cookie-modal-body #cookie-modal-advanced-types .extra .list {
+  margin-left: 2em;
+  width: auto;
+}
+html #cookie-modal .modal-dialog .modal-content #cookie-modal-body #cookie-modal-advanced-types .extra .list-head {
+  font-size: 1em;
+}
+html #cookie-modal .modal-dialog .modal-content .modal-footer {
+  border: none;
+  text-align: center;
+}
+html #cookie-modal .modal-dialog .modal-content .modal-footer #cookie-modal-advanced-btn {
+  color: white;
+  font-family: 'Montserrat-Bold';
+  background-color: #F8B007;
+  border-radius: 0;
+}
+html #cookie-modal .modal-dialog .modal-content .modal-footer #cookie-modal-accept-btn {
+  color: #000000;
+  font-family: 'Montserrat-Bold';
+  background-color: #FBFBFB;
+  border-radius: 0;
 }
 @keyframes cssAnimation {
   0% {
@@ -1434,6 +1523,14 @@ html .page-description .container.itinerary[data-device='phone'] .page-box-tiny 
   border: 0;
   padding: 0;
 }
+html .page-description.terms-description p,
+html .page-description.terms-description span {
+  text-align: justify;
+  text-align-last: start;
+}
+html .cookie-table {
+  font-size: 1em;
+}
 html .image {
   display: flex;
   align-items: center;
@@ -2100,6 +2197,28 @@ html #copyright .border-line {
   .hoc {
     max-width: 90%;
   }
+  #cookie-modal .modal-dialog {
+    margin-top: 150px !important;
+    position: relative;
+    top: 65px;
+    width: auto !important;
+    margin: 10px;
+  }
+  #cookie-modal .modal-dialog .modal-header {
+    padding-bottom: 0;
+  }
+  #cookie-modal .modal-dialog .modal-header .modal-title {
+    font-size: 0.9em !important;
+  }
+  #cookie-modal .modal-dialog #cookie-modal-message {
+    font-size: 0.8em !important;
+  }
+  #cookie-modal .modal-dialog #cookie-modal-advanced-types #cookie-modal-advanced-title {
+    font-size: 0.8em !important;
+  }
+  #cookie-modal .modal-dialog #cookie-modal-advanced-types .list-head {
+    font-size: 0.8em !important;
+  }
   #header {
     padding: 24px 0;
   }
@@ -2251,6 +2370,9 @@ html #copyright .border-line {
   .about p {
     text-align: center;
     font-family: 'Cardo-Italic';
+  }
+  .cookie-table {
+    font-size: 0.7em !important;
   }
   .little-about {
     height: 100vh;

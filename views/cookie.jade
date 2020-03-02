@@ -1,0 +1,155 @@
+extends ./index.jade
+
+block vars
+	- var title='Politica de confidentialitate - Flo Aventure Tours'
+	- var description = 'www.floadventure.ro foloseste cookie-uri'
+	- var ogtitle= title
+	- var ogDescription= description
+	- var ogurl = 'http://www.floadventure.ro/politica-cookie/'
+	- var ogimage = "http://www.floadventure.ro/images/elbrus.png"
+
+block content
+	div.bgded
+		div.wrapper.dust-white-color
+			header#header.clear
+
+				if device.desktop
+					div.main-nav.downspace-40.dust-white-color.flex-1.clear
+						include components/navigation
+						ul.fl.clear
+							li.fl.language
+
+								if (lang === 'en')
+									a(href="/politica-cookie/en") en
+									ul.sl
+										li.sl
+											a(href="/politica-cookie/ro") ro
+								else
+									a(href="/politica-cookie/ro") ro
+									ul.sl
+										li.sl
+											a(href="/politica-cookie/en") en
+				else
+					div.mobile-nav
+						i.fa.fa-bars.fa-2x.upper.show-panel
+						nav.sidenav.clear
+							include components/navigation-mobile
+						ul.fl.clear.lang
+							li.fl.language
+
+								if (lang === 'en')
+									a en
+									ul.sl
+										li.sl
+											a(href="/politica-cookie/ro") ro
+								else
+									a ro
+									ul.sl
+										li.sl
+											a(href="/politica-cookie/en") en
+
+				div#logo.text-center.flex-1.upspace-35
+					div.sign(data-device="#{type}", style="background-image:url('/images/logo-flo-adventure.png');")
+					if device.mobile
+						h1.font-1
+							a.dust-grey-color(href="#top", title="Politica de cookies") #{i18n.__("cookies.title")}
+					else
+						h1.font-2
+							a.dust-grey-color(href="#top", title="Politica de cookies") #{i18n.__("cookies.title")}
+					h3.dust-grey-color.font-1 Flo Adventure Tours
+
+	div.page-description.wrapper.terms-description.dust-grey.dark-grey-color.font-1.font-open-sans
+		div.container.clear(data-device="#{type}", style="flex-direction: column; align-items: flex-start;")
+			div.page-box.flex-2-5
+				p !{i18n.__("cookies.t1")}
+				p !{i18n.__("cookies.t2")}
+				br
+				p.font-montserrat-bold !{i18n.__("cookies.h1")}
+				p !{i18n.__("cookies.t3")}
+				br
+				p.font-montserrat-bold !{i18n.__("cookies.h2")}
+				p !{i18n.__("cookies.t4")}
+				p !{i18n.__("cookies.t5")}
+				br
+				p.font-montserrat-bold !{i18n.__("cookies.h3")}
+				p !{i18n.__("cookies.t6")}
+				p !{i18n.__("cookies.t7")}
+				p !{i18n.__("cookies.t8")}
+				p !{i18n.__("cookies.t10")}
+				span &there4; !{i18n.__("cookies.t11")}
+				span &there4; !{i18n.__("cookies.t12")}
+				br
+				p !{i18n.__("cookies.t13")}
+				span &there4; !{i18n.__("cookies.t14")}
+				span &there4; !{i18n.__("cookies.t15")}
+				br
+				p !{i18n.__("cookies.t16")}
+				span &there4; !{i18n.__("cookies.t17")}
+				span &there4; !{i18n.__("cookies.t18")}
+				br
+				p !{i18n.__("cookies.t19")}
+				span &there4; !{i18n.__("cookies.t20")}
+				span &there4; !{i18n.__("cookies.t21")}
+				span &there4; !{i18n.__("cookies.t22")}
+				span &there4; !{i18n.__("cookies.t23")}
+				br
+				p.font-montserrat-bold !{i18n.__("cookies.h4")}
+				p !{i18n.__("cookies.t24")}
+				p !{i18n.__("cookies.t25")}
+				p !{i18n.__("cookies.t26")}
+				br
+				p.font-montserrat-bold !{i18n.__("cookies.h5")}
+				p !{i18n.__("cookies.t27")}
+				p !{i18n.__("cookies.t28")}
+
+				table.table.cookie-table
+					thead
+						tr
+							th(scope='col') Nume cookie
+							th(scope='col') Scop/Tip
+							th(scope='col') Sesiune/Persistent
+							th(scope='col') Scop cookie
+					tbody
+						tr
+							th(scope='row') i18n
+							td Necesar
+							td Persistent(First Party)
+							td setare limba
+						tr
+							th(scope='row') connect.sid
+							td Necesar
+							td Persistent - 1 ora (Third Party)
+							td pentru setarea sesiunii
+						tr
+							th(scope='row') __cfduid
+							td Statistica
+							td Persistent - 2 sapt (Third Party)
+							td Cloudflare, monitorizare trafic
+
+				p !{i18n.__("cookies.t29")}
+				br
+				p.font-montserrat-bold !{i18n.__("cookies.h6")}
+				p !{i18n.__("cookies.t30")}
+				span &there4; !{i18n.__("cookies.t31")}
+				span &there4; !{i18n.__("cookies.t32")}
+				span &there4; !{i18n.__("cookies.t33")}
+				span &there4; !{i18n.__("cookies.t34")}
+				p !{i18n.__("cookies.t35")}
+				p !{i18n.__("cookies.t36")}
+				br
+				p.font-montserrat-bold !{i18n.__("cookies.h7")}
+				p !{i18n.__("cookies.t37")}
+				span &there4; !{i18n.__("cookies.t38")}
+				span &there4; !{i18n.__("cookies.t39")}
+				span &there4; !{i18n.__("cookies.t40")}
+				span &there4; !{i18n.__("cookies.t41")}
+				span &there4; !{i18n.__("cookies.t42")}
+				span &there4; !{i18n.__("cookies.t43")}
+				span &there4; !{i18n.__("cookies.t44")}
+
+			div.page-box.flex-0-5.upspace-40
+
+				p.font-montserrat-bold #{i18n.__("descriere.altelinkuri")}
+				p: a.highlight(href="/termeni-si-conditii"): b #{i18n.__("terms.t0")}
+				p: a.highlight(href="/politica-de-confidentialitate"): b #{i18n.__("conf.t0")}
+

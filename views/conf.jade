@@ -1,0 +1,124 @@
+extends ./index.jade
+
+block vars
+    - var title='Politica de confidentialitate - Flo Aventure Tours'
+    - var description = 'www.floadventure.ro'
+    - var ogtitle= title
+    - var ogDescription= description
+    - var ogurl = 'http://www.floadventure.ro/politica-de-confidentialitate/'
+    - var ogimage = "http://www.floadventure.ro/images/elbrus.png"
+
+block content
+    div.bgded
+        div.wrapper.dust-white-color
+            header#header.clear
+
+                if device.desktop
+                    div.main-nav.downspace-40.dust-white-color.flex-1.clear
+                        include components/navigation
+                        ul.fl.clear
+                            li.fl.language
+
+                                if (lang === 'en')
+                                    a(href="/politica-de-confidentialitate/en") en
+                                    ul.sl
+                                        li.sl
+                                            a(href="/politica-de-confidentialitate/ro") ro
+                                else
+                                    a(href="/politica-de-confidentialitate/ro") ro
+                                    ul.sl
+                                        li.sl
+                                            a(href="/politica-de-confidentialitate/en") en
+                else
+                    div.mobile-nav
+                        i.fa.fa-bars.fa-2x.upper.show-panel
+                        nav.sidenav.clear
+                            include components/navigation-mobile
+                        ul.fl.clear.lang
+                            li.fl.language
+
+                                if (lang === 'en')
+                                    a en
+                                    ul.sl
+                                        li.sl
+                                            a(href="/politica-de-confidentialitate/ro") ro
+                                else
+                                    a ro
+                                    ul.sl
+                                        li.sl
+                                            a(href="/politica-de-confidentialitate/en") en
+
+                div#logo.text-center.flex-1.upspace-35
+                    div.sign(data-device="#{type}", style="background-image:url('/images/logo-flo-adventure.png');")
+                    if device.mobile
+                        h1.font-1
+                            a.dust-grey-color(href="#top", title="Politica de cookies") #{i18n.__("conf.t0")}
+                    else
+                        h1.font-2
+                            a.dust-grey-color(href="#top", title="Politica de cookies") #{i18n.__("conf.t0")}
+                    h3.dust-grey-color.font-1 Flo Adventure Tours
+
+    div.page-description.wrapper.dust-white.dark-grey-color
+        div.container.clear(data-device="#{type}", style="align-items: flex-start;")
+
+    div.page-description.terms-description.wrapper.dust-grey.dark-grey-color.font-1.font-open-sans
+        div.container.clear(data-device="#{type}", style="flex-direction: column; align-items: flex-start;")
+            div.page-box.flex-2-5
+                div.heading-sep.orange
+                p !{i18n.__("conf.t1")}
+                br
+                p.font-montserrat-bold !{i18n.__("conf.h1")}
+                span &there4; !{i18n.__("conf.t2")}
+                span &there4; !{i18n.__("conf.t3")}
+                span &there4; !{i18n.__("conf.t4")}
+                span &there4; !{i18n.__("conf.t5")}
+                span &there4; !{i18n.__("conf.t6")}
+                span &there4; !{i18n.__("conf.t7")}
+                br
+                p.font-montserrat-bold !{i18n.__("conf.h2")}
+                p !{i18n.__("conf.t8")}
+                span &there4; !{i18n.__("conf.t8")}
+                span &there4; !{i18n.__("conf.t9")}
+                span &there4; !{i18n.__("conf.t10")}
+                span &there4; !{i18n.__("conf.t11")}
+                br
+                p.highlight !{i18n.__("conf.t12")}
+                br
+                p.font-montserrat-bold !{i18n.__("conf.h3")}
+                span &there4; !{i18n.__("conf.t13")}
+                span &there4; !{i18n.__("conf.t14")}
+                span &there4; !{i18n.__("conf.t15")}
+                span &there4; !{i18n.__("conf.t16")}
+                br
+                p.highlight !{i18n.__("conf.t17")}
+                br
+                p !{i18n.__("conf.t18")}
+                br
+                p.font-montserrat-bold !{i18n.__("conf.h4")}
+                p !{i18n.__("conf.t19")}
+                br
+                p.font-montserrat-bold !{i18n.__("conf.h5")}
+                p !{i18n.__("conf.t20")}
+                p !{i18n.__("conf.t21")}
+                br
+                p.font-montserrat-bold !{i18n.__("conf.h6")}
+                span &there4; !{i18n.__("conf.t22")}
+                span &there4; !{i18n.__("conf.t23")}
+                br
+                p !{i18n.__("conf.t24")}
+                p !{i18n.__("conf.t25")}
+                p !{i18n.__("conf.t26")}
+                p !{i18n.__("conf.t27")}
+                p !{i18n.__("conf.t28")}
+                p !{i18n.__("conf.t29")}
+                p !{i18n.__("conf.t30")}
+                br
+                p.font-montserrat-bold !{i18n.__("conf.h7")}
+                p !{i18n.__("conf.t31")}
+
+            div.page-box.flex-0-5.upspace-40
+
+                p.font-montserrat-bold #{i18n.__("descriere.altelinkuri")}
+                p: a.highlight(href="/politica-cookie"): b #{i18n.__("cookies.title")}
+                p: a.highlight(href="/termeni-si-conditii"): b #{i18n.__("terms.t0")}
+

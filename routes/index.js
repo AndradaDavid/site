@@ -278,3 +278,38 @@ exports.family = function(req, res){
             'navigation':'cursuri'
         });
 };
+
+exports.cookie = function(req, res){
+    setLocale(req,res);
+    res.render('cookie',
+        {
+            i18n: res,
+            'lang': req.cookies.i18n,
+            'device': getDevice(req),
+            'type': getDeviceType(req),
+            'navigation':''
+        });
+};
+
+exports.terms = function(req, res){
+    setLocale(req,res);
+    res.render('terms',
+        {
+            i18n: res,
+            'lang': req.cookies.i18n,
+            'device': getDevice(req),
+            'type': getDeviceType(req),
+            'navigation':''
+        });
+};
+exports.conf = function(req, res){
+    setLocale(req,res);
+    res.render('conf',
+        {
+            i18n: res,
+            'lang': req.cookies.i18n,
+            'device': getDevice(req),
+            'type': getDeviceType(req),
+            'navigation':''
+        });
+};

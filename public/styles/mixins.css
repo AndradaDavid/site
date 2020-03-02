@@ -42,6 +42,9 @@
   font-family: 'Effra-Mid';
   src: url("fonts/Effra_Std_Md.ttf");
 }
+.font-07 {
+  font-size: 0.7em !important;
+}
 .font-1 {
   font-size: 1em !important;
 }

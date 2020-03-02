@@ -21,65 +21,57 @@ $(function() {
     }
 
 
-    // if (getCookie('CookieShow') == null) {
-    //     $('body').addClass('fixed');
-    //
-    //     $('body').bsgdprcookies({
-    //
-    //         id: 'cookie-modal',
-    //         class: '',
-    //         title: "Flo Adventure foloseste cookie-uri",
-    //         backdrop: 'static',
-    //         message: 'Acest site folosește cookie-uri. Continuarea navigării reprezintă acceptul dvs. pentru această folosință. Pentru mai multe detalii privind gestionarea preferințelor privind cookie-uri, vedeți Politica de utillizare cookie-uri',
-    //         messageMaxHeightPercent: 25,
-    //         delay: 1500,
-    //         expireDays: 30,
-    //         moreLinkActive: true,
-    //         moreLinkLabel: 'More informations..',
-    //         moreLinkNewTab: true,
-    //         moreLink: 'privacy-policy.php',
-    //         acceptButtonLabel: 'Accept',
-    //         allowAdvancedOptions: true,
-    //         advancedTitle: 'Select which cookies you want to accept',
-    //         advancedAutoOpenDelay: 1000,
-    //         advancedButtonLabel: 'Customize',
-    //         advancedCookiesToSelect: [
-    //             {
-    //                 name: 'necessary',
-    //                 title: 'Necessary',
-    //                 description: 'Required for the site to work properly',
-    //                 isFixed: true
-    //             },
-    //             {
-    //                 name: 'preferences',
-    //                 title: 'Site Preferences',
-    //                 description: 'Required for saving your site preferences, e.g. remembering your username etc.',
-    //                 isFixed: false
-    //             },
-    //             {
-    //                 name: 'analytics',
-    //                 title: 'Analytics',
-    //                 description: 'Required to collect site visits, browser types, etc.',
-    //                 isFixed: false
-    //             },
-    //             {
-    //                 name: 'marketing',
-    //                 title: 'Marketing',
-    //                 description: 'Required to marketing, e.g. newsletters, social media, etc',
-    //                 isFixed: false
-    //             }
-    //         ],
-    //         OnAccept: function () {
-    //             $('body').removeClass('fixed');
-    //         }
-    //     });
-    // } else {
-    //     $('body').removeClass('fixed');
-    // }
+    if (getCookie('CookieShow') == null) {
+        $('body').addClass('fixed');
 
+        $('body').bsgdprcookies({
 
+            id: 'cookie-modal',
+            class: '',
+            title: title,
+            backdrop: 'static',
+            message: description,
+            messageMaxHeightPercent: 25,
+            delay: 500,
+            expireDays: 30,
+            moreLinkActive: true,
+            moreLinkLabel: morelink,
+            moreLinkNewTab: true,
+            moreLink: 'privacy-policy.php',
+            acceptButtonLabel: 'Accept',
+            allowAdvancedOptions: true,
+            advancedTitle: select,
+            advancedAutoOpenDelay: 1000,
+            advancedButtonLabel: preference,
+            extrahtml: explanation,
 
-
+            advancedCookiesToSelect: [
+                {
+                    name: 'necessary',
+                    title: necesar,
+                    description: 'Required for the site to work properly',
+                    isFixed: true
+                },
+                {
+                    name: 'analytics',
+                    title: analytics,
+                    description: 'Required to collect site visits, browser types, etc.',
+                    isFixed: false
+                },
+                {
+                    name: 'marketing',
+                    title: marketing,
+                    description: 'Required to marketing, e.g. newsletters, social media, etc',
+                    isFixed: false
+                }
+            ],
+            OnAccept: function () {
+                $('body').removeClass('fixed');
+            }
+        });
+    } else {
+        $('body').removeClass('fixed');
+    }
 
 
     if  ($("#demo-grid").length) {

@@ -87,6 +87,10 @@ app.get('/romania', routes.romania);
 app.get('/expeditii', routes.expeditii);
 
 app.get('/tabara-family-survival', routes.family);
+app.get('/politica-cookie', routes.cookie);
+app.get('/termeni-si-conditii', routes.terms);
+app.get('/politica-de-confidentialitate', routes.conf);
+
 
 
 //languages
@@ -311,6 +315,38 @@ app.get('/tabara-family-survival/ro', function (req, res)
     res.cookie('i18n', 'ro');
     res.redirect('/tabara-family-survival/')
 });
+
+app.get('/politica-cookie/ro', function (req, res)
+{
+    res.cookie('i18n', 'ro');
+    res.redirect('/politica-cookie/')
+});
+app.get('/politica-cookie/en', function (req, res)
+{
+    res.cookie('i18n', 'en');
+    res.redirect('/politica-cookie/')
+});
+app.get('/termeni-si-conditii/ro', function (req, res)
+{
+    res.cookie('i18n', 'ro');
+    res.redirect('/termeni-si-conditii/')
+});
+app.get('/termeni-si-conditii/en', function (req, res)
+{
+    res.cookie('i18n', 'en');
+    res.redirect('/termeni-si-conditii/')
+});
+app.get('/politica-de-confidentialitate/ro', function (req, res)
+{
+    res.cookie('i18n', 'ro');
+    res.redirect('/politica-de-confidentialitate/')
+});
+app.get('/politica-de-confidentialitate/en', function (req, res)
+{
+    res.cookie('i18n', 'en');
+    res.redirect('/politica-de-confidentialitate/')
+});
+
 
 
 

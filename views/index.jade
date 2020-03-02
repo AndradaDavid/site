@@ -43,7 +43,15 @@ html
 
     body#top.dark-grey-normal(data-device="#{type}")
         script(type='text/javascript').
-            var acasa = !{JSON.stringify(i18n.__("navigation.acasa"))};
+             var title = !{JSON.stringify(i18n.__("cookie.title"))};
+             var description = !{JSON.stringify(i18n.__("cookie.description"))};
+             var morelink = !{JSON.stringify(i18n.__("cookie.morelink"))};
+             var preference = !{JSON.stringify(i18n.__("cookie.preferinte"))};
+             var necesar = !{JSON.stringify(i18n.__("cookie.necesar"))};
+             var analytics = !{JSON.stringify(i18n.__("cookie.analytics"))};
+             var marketing = !{JSON.stringify(i18n.__("cookie.marketing"))};
+             var select = !{JSON.stringify(i18n.__("cookie.select"))};
+             var explanation = !{JSON.stringify(i18n.__("cookie.explanation"))};
 
         //div#loader-wrapper
             //div#loader
