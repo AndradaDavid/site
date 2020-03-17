@@ -1,11 +1,11 @@
 extends ./index.jade
 
 block vars
-    - var title='Politica de confidentialitate - Flo Aventure Tours'
-    - var description = 'www.floadventure.ro foloseste cookie-uri'
+    - var title='Termeni si conditii - Flo Aventure Tours'
+    - var description = 'www.floadventure.ro - termeni si conditii '
     - var ogtitle= title
     - var ogDescription= description
-    - var ogurl = 'http://www.floadventure.ro/politica-cookie/'
+    - var ogurl = 'http://www.floadventure.ro/termeni-si-conditii'
     - var ogimage = "http://www.floadventure.ro/images/elbrus.png"
 
 block content
@@ -91,11 +91,11 @@ block content
                 p.font-09 &otimes; #{i18n.__("terms.t15")}
                 p.font-09 &otimes; #{i18n.__("terms.t16")}
                 br
-                p #{i18n.__("terms.t17")} <a class="highlight"> #{i18n.__("terms.t18")} </a>
+                p #{i18n.__("terms.t17")} <a href="/politica-de-confidentialitate" class="highlight"> !{i18n.__("terms.t18")} </a>
                 br
                 p.font-montserrat-bold #{i18n.__("terms.h5")}
                 p #{i18n.__("terms.t19")}
-                p #{i18n.__("terms.t20")} <a class="highlight"> #{i18n.__("terms.t18")} </a>
+                p #{i18n.__("terms.t20")} <a href="/politica-cookie" class="highlight"> #{i18n.__("terms.t18")} </a>
                 br
                 p.font-montserrat-bold #{i18n.__("terms.h6")}
                 p #{i18n.__("terms.t21")}
