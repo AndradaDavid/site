@@ -59,6 +59,7 @@
 	"descriere.echipament": "ÎMBRĂCĂMINTE ȘI ÎNCĂLȚĂMINTE",
 	"descriere.altelinkuri": "Alte link-uri",
 	"data.aprilie": "Aprilie",
+	"data.august": "August",
 	"data.noiembrie": "Noiembrie",
 	"data.octombrie": "Octombrie",
 	"data.oct": "oct",
@@ -259,7 +260,6 @@
 	"footer.abonare": "Abonare",
 	"footer.trimite": "trimite",
 	"navigation.home": "navigation.home",
-
 	"cookie.title": "floadventure.ro foloseste cookie-uri <div class=\"heading-sep orange\"></div>",
 	"cookie.description": "Folosim cookie-uri pentru a personaliza conținutul și anunțurile, pentru a oferi funcții de rețele sociale și pentru a analiza traficul. De asemenea, le oferim partenerilor de rețele sociale, de publicitate și de analize informații cu privire la modul în care folosiți site-ul nostru. Aceștia le pot combina cu alte informații oferite de dvs. sau culese în urma folosirii serviciilor lor. ",
 	"cookie.morelink": "<p class=\"orange-color\" style=\"display:block;\"><a class=\"orange-link\" href=\"/politica-cookie\">Politica de cookie</a> </p><p class=\"orange-color\" style=\"display:block;\"><a class=\"orange-link\" href=\"/politica-de-confidentialitate\">Politica de confidențialitate a datelor</a></p><p class=\"orange-color\" style=\"display:block;\"><a class=\"orange-link\" href=\"/termeni-si-conditii\">Termeni si conditii</a> </p>",
@@ -270,7 +270,7 @@
 	"cookie.marketing": "Marketing",
 	"cookie.explanation": "<p class=\"font-07\">NECESAR - Ajută la a face un site utilizabil prin activarea funcţiilor de bază, precum setarea de limba.</p><p class=\"font-07 list\"><em>i18n</em>-<em>expira per sesiune</em>-<em>http</em></p><p class=\"font-07 list\"><em>connect.sid</em>-<em>expira 1 ora</em>-<em>http</em></p><p class=\"font-07\">STATISTICA - Cookie-urile de statistică îi ajută pe proprietarii unui site să înţeleagă modul în care vizitatorii interacţionează cu site-urile prin colectarea şi raportarea informaţiilor în mod anonim.<p><p class=\"font-07 list\"><em>__cfduid</em>-<em>expira 2 saptamani</em>-<em>http</em></p><p class=\"font-07\">MARKETING - sunt utilizate pentru a livra continut de publicitate(oferte promotionale, evenimente etc.)<p>",
 	"cookies.title": "Politica de cookie-uri",
-	"terms.t0":"Termeni si conditii",
+	"terms.t0": "Termeni si conditii",
 	"terms.t1": "Site-ul <b>www.floadventure.ro</b> (denumit in continuare site-ul) este detinut – <b>SC FLO ADVENTURE SRL</b>, strada Principala numar 15, Casele Micesti, judet Cluj, inregistrata la ONRC sub numarul J12/551/2017 cu cod unic de identificare CUI 37077399, denumita in continuare SC FLO ADVENTURE SRL.",
 	"terms.h1": "Proprietate intelectuala",
 	"terms.t2": "Materialele integrate in acest site sunt proprietatea intelectuala a SC FLO ADVENTURE SRL sau a partenerilor sai. Copierea sau reproducerea acestor materiale este strict interzisa. Tiparirea sau salvarea electronica a paginilor siteului este permisa atat timp cat scopul este strict pentru uz personal. Aceste materiale descarcate cad sub incidenta Termenilor si Conditiilor www.floadventure.ro.",
@@ -278,13 +278,12 @@
 	"terms.t3": "Toate drepturile sunt rezervate. Textul, imaginile, grafica, animaţiile, clipurile video şi aranjarea acestora pe site-ul www.floadventure.ro sunt subiect pentru drepturi de autor şi de protecţie a proprietăţii intelectuale. Aceste obiecte nu pot fi copiate pentru utilizare comercială sau distribuţie şi nici nu pot fi modificate sau postate pe alte site-uri.",
 	"terms.h3": "Acuratetea informatiilor",
 	"terms.t4": "Acest site contine informatii cu scop informativ si care sunt adresate vizitatorilor, clienti  si potentialilor clienti ai SC FLO ADVENTURE SRL. SC FLO ADVENTURE SRL nu isi asuma responsabilitatea pentru acuratetea acestora. SC FLO ADVENTURE SRL face tot posibilul pentru ca datele continute in acest site sa fie corecte si actualizate.",
-	"terms.t5":"SC FLO ADVENTURE SRL isi rezerva dreptul de a modifica informatia continuta in acest site in orice moment, fara nicio notificare prealabila.",
+	"terms.t5": "SC FLO ADVENTURE SRL isi rezerva dreptul de a modifica informatia continuta in acest site in orice moment, fara nicio notificare prealabila.",
 	"terms.h4": "Protectia datelor personale",
 	"terms.t6": "SC FLO ADVENTURE SRL va procesa datele furnizate voluntar de dumneavoastra cu maxima confidentialitate, in conformitate cu legile aflate in vigoare. Colectarea, stocarea, procesarea, arhivarea si distrugerea datelor dumneavoastra se va face in conformitate cu Regulamentul (UE) 2016/679 privind protecţia persoanelor fizice în ceea ce priveşte prelucrarea datelor cu caracter personal.",
 	"terms.t7": "Scopul colectarii datelor dumneavoastra este imbunatatirea produselor si serviciilor noastre astfel incat sa venim in intampinarea nevoilor dumneavoastra cu produse si servicii personalizate. Informatiile furnizate pot fi folosite doar de catre SC FLO ADVENTURE SRL, partenerii si imputernicitii acesteia.",
 	"terms.t8": "Conform cu Regulamentul (UE) 2016/679 privind protectia datelor personale, aveti urmatoarele drepturi:",
 	"terms.t9": "Dreptul de a fi informat (art. 12-13): Informarea persoanei vizate cu privire la categoriile de date colectate, scop, destinatari, transfer.",
-
 	"terms.t10": "Dreptul de acces la date (art.15): Persoana vizata poate solicita acces la datele sale pentru a verifica daca prelucrarea este intemeiata.",
 	"terms.t11": "Dreptul de a rectifica Datele( art.16): Persoana vizata poate solicita rectificarea datelor in cazul in care acestea sunt procesate gresit.",
 	"terms.t12": "Dreptul de a fi uitat (art.17): Cand procesarea nu mai este justificata sau cand persoana vizata si-a retras consimtamantul.",
@@ -292,10 +291,8 @@
 	"terms.t14": "Portabilitatea datelor (art. 20): Persoana vizata are dreptul de a solicita portarea datelor intre Operatori.",
 	"terms.t15": "Dreptul de a face opozitie (art.21): Dreptul persoanei vizate de a face obiectii sau de a se opune anumitor tipuri de prelucrari",
 	"terms.t16": "Dreptul de a se opune la profilari (art. 21) Persoana vizata are dreptul de a nu face obiectul unei decizii de profilare atunci cand aceasta se bazeaza pe prelucrarea automata.",
-
 	"terms.t17": "Pentru detalii privind modalitatea in care va prelucram datele cu caracter personal, cititi mai multe",
 	"terms.t18": "aici",
-
 	"terms.h5": "Politica de cookies",
 	"terms.t19": "Este posibil sa colectam informatii despre dumneavoastra in mod automat folosind cookie-urile din site. Aceasta informatie va fi stocata sub forma unui “Cookie”. Cookie-urile sunt fisiere de mici dimensiuni, formate din litere si cifre care se trimit dinspre site catre dispozitivul de pe care este accesat site-ul. Cookie-urile sunt stocate temporar la dv pe dispozitiv.  Cookie-urile nu contin virusi sau alt continut daunator pentru dispozitivul dumneavoastra. Unele cookie-uri sunt necesare functionarii site-ului. Daca doriti sa nu primiti cookie-uri, puteti opta de la inceput pentru asta sau puteti modifica/dezactiva din browser-ul de internet setarile de cookie-uri. Cookie-urile care sunt necesare functionarii site-ului nu se pot dezactiva total, ele asigurand printre altele securitatea site-ului si a sesiunii dumneavoastra.",
 	"terms.t20": "Va rugam sa consultati politica privind cookie-urile folosite de acest site ",
@@ -343,9 +340,8 @@
 	"conf.t30": "Vom lua în considerare orice solicitări sau plângeri pe care le primim și vă vom transmite un răspuns în timp util. Dacă nu sunteți mulțumit de răspunsul nostru, puteți înainta plângerea către Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal – cu sediul în Bd. Gheorghe Magheru nr. 28-30, București, România.",
 	"conf.h7": "Actualizari ale acesti politici de confidentialitate",
 	"conf.t31": "Cea mai recentă actualizare a acestei Politici de Confidențialitate a fost realizată în luna Februarie 2020. Ne rezervăm dreptul de a actualiza și modifica periodic această Politică de Confidențialitate, pentru a reflecta orice modificări ale modului în care prelucrăm datele dumneavoastră cu caracter personal sau orice modificări ale cerințelor legale. În cazul oricărei astfel de modificări, vom afișa pe website-urile companiei, versiunea modificată a Politicii de Confidențialitate.",
-	"cookies.t1":"Ultima modificare 20 februarie, 2020",
-	"cookies.t2":"Ne bucuram de interesul dumneavoastra pentru politica noastra de cookie-uri. Protejarea datelor dumneavoastra in timpul utilizarii site-ului nostru web reprezinta pentru noi un aspect extrem de important. De aceea, va prezentam in continuare, in detaliu,  modul in care prelucram datele dumneavoastra. La utilizarea și prelucrarea datelor cu caracter personal SC FLO ADVENTURE SRL respecta cu strictețe prevederile legale in vigoare privind protecția datelor. Dreptul de utilizare a datelor cu caracter personal și a datelor cu caracter anonim revine societații SC FLO ADVENTURE SRL  in limitele prevazute de lege, cu respectarea drepturilor persoanelor vizate descrise in continuare. Pentru detalii privind modalitatea in care va prelucram datele cu caracter personal, cititi mai multe aici. Termenii si conditiile de utilizare a acestui web site pot fi consultate <a class='highlight' href='/termeni-si-conditii'>aici</a>",
-
+	"cookies.t1": "Ultima modificare 20 februarie, 2020",
+	"cookies.t2": "Ne bucuram de interesul dumneavoastra pentru politica noastra de cookie-uri. Protejarea datelor dumneavoastra in timpul utilizarii site-ului nostru web reprezinta pentru noi un aspect extrem de important. De aceea, va prezentam in continuare, in detaliu,  modul in care prelucram datele dumneavoastra. La utilizarea și prelucrarea datelor cu caracter personal SC FLO ADVENTURE SRL respecta cu strictețe prevederile legale in vigoare privind protecția datelor. Dreptul de utilizare a datelor cu caracter personal și a datelor cu caracter anonim revine societații SC FLO ADVENTURE SRL  in limitele prevazute de lege, cu respectarea drepturilor persoanelor vizate descrise in continuare. Pentru detalii privind modalitatea in care va prelucram datele cu caracter personal, cititi mai multe aici. Termenii si conditiile de utilizare a acestui web site pot fi consultate <a class='highlight' href='/termeni-si-conditii'>aici</a>",
 	"cookies.h1": "Politica de cookie-uri",
 	"cookies.t3": "Acest document are ca subiect cookie-urile folosite in paginile web ale web site-ului www.floadventure.ro detinut de SC FLO ADVENTURE SRL, strada Principala, numar 15, Casele Micesti, judet Cluj, inregistrata la ONRC sub numarul J12/551/2017  cu cod unic de identificare CUI 37077399, denumita in continuare SC FLO ADVENTURE SRL.",
 	"cookies.h2": "Importanta cookie-urilor pentru dumneavoastra",
@@ -395,5 +391,4 @@
 	"cookies.t43": "Atentie ! dezactivarea si refuzul de a primi cookie-uri pot face anumite site-uri impracticabile sau dificil de vizitat si folosit. De asemenea, refuzul de a accepta cookie-uri nu inseamna ca nu veti mai primi/vedea publicitate online.",
 	"cookies.t44": "Toate browserele moderne ofera posibilitatea de a schimba setarile cookie-urilor. Aceste setari se gasesc de regula in “optiuni” sau in meniul de “preferinte” al browserului dumneavoastra.",
 	"inscriere.promotional": "Sunt de acord sa primesc materiale promotionale pe e-mail. Vezi <a class='highlight' href='/politica-de-confidentialitate'> Politica de confidentialitate</a>"
-
 }
