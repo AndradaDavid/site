@@ -153,13 +153,13 @@ block content
 						input.btmspace-30(type="text", name="occupation", placeholder="Ocupatia")
 
 						p.font-open-sans Inscriere pentru:
-						div.group(data-device="#{type}").max-width-40
+						div.group(data-device="#{type}", style=("#{type}" === 'phone') ? "width: 100%;" : "width: 80%;")
 							span.font-open-sans
 								input#casca.checkbox(type='checkbox', name='seria1', value= 'da')
-								label(for='seria1') Seria 1
+								label(for='seria1') 28-30 august 2020 Locuri ocupate!
 							span.font-open-sans
 								input#piolet.checkbox(type='checkbox', name='seria2', value= 'da')
-								label(for='seria2') Seria 2
+								label(for='seria2') 25-27 septembrie 2020
 
 						input(type="text", name="car", placeholder="Detii o masina si vrei sa vii cu ea? Daca da, spune-ne ce model e.", required)
 

@@ -1209,7 +1209,7 @@ html .page-description .container .page-box-tiny form .group[data-device='phone'
 }
 html .page-description .container .page-box form .group span,
 html .page-description .container .page-box-tiny form .group span {
-  width: 140px;
+  width: 100%;
   flex: 1;
   height: 35px;
 }
@@ -2422,4 +2422,3 @@ html #copyright .border-line {
     height: 75vh !important;
   }
 }
-/*# sourceMappingURL=main.css.map */
