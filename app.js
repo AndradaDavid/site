@@ -86,7 +86,7 @@ app.get('/inscriere/:name', routes.inscriere);
 app.get('/romania', routes.romania);
 app.get('/expeditii', routes.expeditii);
 
-app.get('/tabara-family-survival', routes.family);
+app.get('/family-survival', routes.family);
 app.get('/politica-cookie', routes.cookie);
 app.get('/termeni-si-conditii', routes.terms);
 app.get('/politica-de-confidentialitate', routes.conf);
@@ -304,16 +304,16 @@ app.get('/expeditii/ro', function (req, res)
     res.cookie('i18n', 'ro');
     res.redirect('/expeditii/')
 });
-app.get('/tabara-family-survival/en', function (req, res)
+app.get('/family-survival/en', function (req, res)
 {
     res.cookie('i18n', 'en');
-    res.redirect('/tabara-family-survival/')
+    res.redirect('/family-survival/')
 });
 
-app.get('/tabara-family-survival/ro', function (req, res)
+app.get('/family-survival/ro', function (req, res)
 {
     res.cookie('i18n', 'ro');
-    res.redirect('/tabara-family-survival/')
+    res.redirect('/family-survival/')
 });
 
 app.get('/politica-cookie/ro', function (req, res)
