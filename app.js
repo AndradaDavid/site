@@ -85,7 +85,9 @@ app.get('/inscriere/:name', routes.inscriere);
 
 app.get('/romania', routes.romania);
 app.get('/expeditii', routes.expeditii);
-
+app.get('/tabara-family-survival', function (req,res) {
+    res.redirect('/family-survival');
+});
 app.get('/family-survival', routes.family);
 app.get('/politica-cookie', routes.cookie);
 app.get('/termeni-si-conditii', routes.terms);
