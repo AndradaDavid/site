@@ -49,14 +49,16 @@ block content
                                             a(href="/4x4-3-zile/en") en
 
                 div#logo.text-center.flex-1.upspace-35
-                    div.sign(data-device="#{type}", style="background-image:url('/images/logo-flo-adventure.png');")
+                    div.list-sign
+                        div(data-device="#{type}", style="background-image:url('/images/logo-flo-adventure.png');")
+                        div.sign4(data-device="#{type}", style="background-image:url('/images/logo-4x4.png');")
                     if device.mobile
                         h1.font-3
-                            a.dust-grey-color(href="#top", title="Aventura 4x4 in 3 zile") #{i18n.__("patru3.titlu")}
+                            a.white-color(href="#top", title="Aventura 4x4 in 3 zile") #{i18n.__("patru3.titlu")}
                     else
                         h1.font-4
-                            a.dust-grey-color(href="#top", title="Aventura 4x4 in 3 zile") #{i18n.__("patru3.titlu")}
-                    h3.dust-grey-color.font-2 Flo Adventure Tours
+                            a.white-color(href="#top", title="Aventura 4x4 in 3 zile") #{i18n.__("patru3.titlu")}
+                    h3.white-color.font-2 Flo Adventure Tours
 
     div.scroll-down
         div.chevron
