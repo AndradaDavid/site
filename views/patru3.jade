@@ -9,12 +9,12 @@ block vars
     - var ogimage = "http://www.floadventure.ro/images/patrol.png"
 
 block content
-    div.bgded.bgded-top(style="background-image:url('/images/patrol.png');")
+    div.bgded.bgded-top(style="background-image:url('/images/aventura-3-cover.jpg');")
         div.wrapper.dust-white-color
             header#header.clear
 
                 if device.desktop
-                    div.main-nav.downspace-40.olive-color.flex-1.clear
+                    div.main-nav.downspace-40.dark-grey-color.flex-1.clear
                         include components/navigation
                         //ul.fl.clear
                         //    li.fl.language
@@ -31,7 +31,7 @@ block content
                         //                    a(href="/4x4-3-zile/en") en
                 else
                     div.mobile-nav
-                        i.fa.fa-bars.fa-2x.upper.show-panel
+                        i.fa.fa-bars.fa-2x.dark-grey-color.upper.show-panel
                         nav.sidenav.clear
                             include components/navigation-mobile
                         //ul.fl.clear.lang
@@ -48,7 +48,7 @@ block content
                         //                li.sl
                         //                    a(href="/4x4-3-zile/en") en
 
-                div#logo.text-center.flex-1.upspace-35
+                div#logo.text-center.flex-2.upspace-35
                     div.list-sign
                         div(data-device="#{type}", style="background-image:url('/images/logo-flo-adventure.png');")
                         div.sign4(data-device="#{type}", style="background-image:url('/images/logo-4x4.png');")
@@ -99,7 +99,7 @@ block content
 
 
 
-    div.little-about(style="background-image:url('/images/platou-apuseni.png');background-size:cover;background-position: center center;")
+    div.little-about(style="background-image:url('/images/patrol.png');background-size:cover;background-position: center center;")
 
     //detalii si itinerariu
     div.page-description.wrapper.dust-grey.dark-grey-color
