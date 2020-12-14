@@ -107,7 +107,7 @@ app.get('/ro', function (req, res) {
 });
 app.get('/4x4-3-zile/en', function (req, res)
 {
-    res.cookie('i18n', 'en');
+    res.cookie('i18n', 'ro');
     res.redirect('/4x4-3-zile/')
 });
 
