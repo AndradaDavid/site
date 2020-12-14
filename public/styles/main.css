@@ -2377,7 +2377,7 @@ html #copyright .border-line {
 .cbp-spmenu-open {
   left: 0px;
 }
-@media screen and (max-width: 900px) {
+@media only screen and (max-width: 900px) {
   .about h4 {
     font-family: 'Montserrat-Regular';
     color: #F8B007;
@@ -2429,6 +2429,10 @@ html #copyright .border-line {
   }
   .little-about .container .button {
     box-shadow: 1px 1px 17px 3px #2e2e2e45;
+  }
+  html .page-description .container .page-box form input,
+  html .page-description .container .page-box form textarea {
+    font-size: 12px;
   }
 }
 @media screen and (max-width: 650px) {

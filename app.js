@@ -448,6 +448,8 @@ app.post('/inscriere/:id', function (req, res) {
             "<b>SERIA 1: </b>" + ((req.body.seria1 === 'da')?"da":"nu") + "<br>" +
             "<b>SERIA 2: </b>" + ((req.body.seria2 === 'da')?"da":"nu") + "<br>" +
             "<b>MASINA: </b>" + req.body.car + "<br>" +
+            "<b>MODEL: </b>" + req.body.modelcar + "<br>" +
+            "<b>DOTARI: </b>" + req.body.settingscar + "<br>" +
             "<b>EXPERIENTA: </b>" + req.body.experience + "<br>" +
             "<b>CORT: </b>" + req.body.tent + "<br>" +
             "<b>FAMILIE: </b>" + req.body.family + "<br>" +
@@ -492,7 +494,7 @@ app.post('/inscriere/:id', function (req, res) {
             "<b>MAIL PROMOTIONAL:</b>" + ((req.body.promotional === 'da')?"da":"nu");
     }
 
-
+    debugger;
     var mailOptions = {
         from: req.body.email,
         to: "officefloadventure@gmail.com",

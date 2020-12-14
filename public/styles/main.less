@@ -2576,7 +2576,7 @@ html {
             left: 0px;
         }
 
-@media screen and (max-width: 900px) {
+@media only screen and (max-width: 900px) {
   //------------------ Little About -------------------
   .about {
     h4 {
@@ -2640,7 +2640,18 @@ html {
         box-shadow: 1px 1px 17px 3px @darker-grey;
       }
     }
+  }
 
+  html {
+    .page-description {
+      .container {
+        .page-box form input,
+        .page-box form textarea {
+          font-size: 12px;
+        }
+
+      }
+    }
   }
 }
 
