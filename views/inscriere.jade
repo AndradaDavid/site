@@ -79,14 +79,15 @@ block content
 						nav.sidenav.clear
 							include components/navigation-mobile
 
-				div#logo.text-center.flex-1.upspace-200
+				div#logo.text-center.flex-1.upspace-90
 
 					h3.dust-grey-color.font-1-2 Flo Adventure Tours
 					h1.font-3
 						a.dust-grey-color(href="#top", title="Inscriere") Inscriere
 					case name
 						when 'patru3'
-							h3.dust-grey-color.font-2 4x4 in 3 zile
+							h3.dust-grey-color.font-1-5 Overlanding 4x4 in 3 zile
+							h4.dust-grey-color.font-2 Apuseni
 						when 'patru5'
 							h3.dust-grey-color.font-2 4x4 in 5 zile
 						when 'apuseni3'
@@ -136,7 +137,7 @@ block content
 
 					form.dark-grey-color(action="/inscriere/#{name}", method="post")
 						if (name == 'patru3')
-							input(type="hidden", name="formular", value="Pentru 4x4 in 3 zile")
+							input(type="hidden", name="formular", value="Pentru 4x4 in 3 zile - Apuseni")
 						if (name == 'patru5')
 							input(type="hidden", name="formular", value="Pentru 4x4 in 5 zile")
 
@@ -316,14 +317,14 @@ block content
 			div.container.width-full.max-width-full.padding-0.clear.dark-grey(data-device="#{type}", style="align-items:normal;")
 
 				div#full-grid.width-90(data-device="#{type}", style="height: 2000px;")
-					a(href="/inscriere/patru3", title="Inscriere program 4x4 in 3 zile").full-grid-item.third.planning
+					a(href="/inscriere/patru3", title="Inscriere program 4x4 in 3 zile - Apuseni").full-grid-item.third.planning
 						div.flex-1(style="background-image:url('/images/aventura-grid-2.png'); background-size: cover; background-position: bottom center;")
 						div.upper-details.orange-color
 							div.date.font-1-3 25-27 iunie 2021
 						div.ribbon-small(style="background-image:url('/images/logo-form.png'); background-size: 30px 30px;")
 						div.details.dust-white-color
 							div.separator.orange.btmspace-10
-							div.title.font-1-5 Aventura 4x4 in 3 zile
+							div.title.font-1-5 Overlanding 4x4 in 3 zile - Apuseni
 							div.price.font-1-2 de la 375 Ron
 
 					a(href="/inscriere/apuseni3", title="Inscriere program Apuseni in 3 zile").full-grid-item.third.planning
