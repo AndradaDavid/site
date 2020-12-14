@@ -2422,6 +2422,7 @@ html #copyright .border-line {
     color: #ffffff;
     display: block;
     font-size: 1.5em;
+    top: 8px;
     flex: 1;
   }
   .little-about .container p {
