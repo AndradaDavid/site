@@ -16,37 +16,37 @@ block content
                 if device.desktop
                     div.main-nav.downspace-40.dark-grey-color.flex-1.clear
                         include components/navigation
-                        //ul.fl.clear
-                        //    li.fl.language
-                        //
-                        //        if (lang === 'en')
-                        //            a(href="/4x4-3-zile/en") en
-                        //            ul.sl
-                        //                li.sl
-                        //                    a(href="/4x4-3-zile/ro") ro
-                        //        else
-                        //            a(href="/4x4-3-zile/ro") ro
-                        //            ul.sl
-                        //                li.sl
-                        //                    a(href="/4x4-3-zile/en") en
+                        ul.fl.clear
+                            li.fl.language
+
+                                if (lang === 'en')
+                                    a(href="/4x4-3-zile/en") en
+                                    ul.sl
+                                        li.sl
+                                            a(href="/4x4-3-zile/ro") ro
+                                else
+                                    a(href="/4x4-3-zile/ro") ro
+                                    ul.sl
+                                        li.sl
+                                            a(href="/4x4-3-zile/en") en
                 else
                     div.mobile-nav
                         i.fa.fa-bars.fa-2x.dark-grey-color.upper.show-panel
                         nav.sidenav.clear
                             include components/navigation-mobile
-                        //ul.fl.clear.lang
-                        //    li.fl.language
-                        //
-                        //        if (lang === 'en')
-                        //            a en
-                        //            ul.sl
-                        //                li.sl
-                        //                    a(href="/4x4-3-zile/ro") ro
-                        //        else
-                        //            a ro
-                        //            ul.sl
-                        //                li.sl
-                        //                    a(href="/4x4-3-zile/en") en
+                        ul.fl.clear.lang
+                            li.fl.language
+
+                                if (lang === 'en')
+                                    a en
+                                    ul.sl
+                                        li.sl
+                                            a(href="/4x4-3-zile/ro") ro
+                                else
+                                    a ro
+                                    ul.sl
+                                        li.sl
+                                            a(href="/4x4-3-zile/en") en
 
                 div#logo.text-center.flex-2.upspace-35
                     div.list-sign
@@ -75,7 +75,7 @@ block content
                 div.btmspace-50.font-open-sans.dark-grey-color
                     p.justify #{i18n.__("patru3.descriere")}
                     p.justify #{i18n.__("patru3.descriere-1")}
-                    p Partener oficial - Metabond Romania
+                    p #{i18n.__("patru3.partener")} - Metabond Romania
 
             div.page-box.flex-1-5
                 div.map(style="background-image:url('/images/harta-apuseni-3.png')")
@@ -87,13 +87,13 @@ block content
                 i.fa.fa-calendar.font-2
                 span.item-header #{i18n.__("descriere.perioada")}
                 span.item-text(style="display:flex; flex-direction: column;")
-                    span.flex-1 25-27 iunie 2021
-                    span.flex-1 20-22 august 2021
+                    span.flex-1 25-27 #{i18n.__("data.iunie")} 2021
+                    span.flex-1 20-22 #{i18n.__("data.august")} 2021
 
             div.desc-item
                 i.fa.fa-male.fa-3x.font-2
                 span.item-header #{i18n.__("descriere.persoane")}
-                span.item-text #{i18n.__("descriere.minim")} 2 participanti / curs
+                span.item-text #{i18n.__("descriere.minim")} 2 #{i18n.__("descriere.participants")} / #{i18n.__("descriere.course")}
             div.desc-item
                 i.fa.fa-map-marker.fa-3x.font-2
                 span.item-header #{i18n.__("descriere.regiune")}
@@ -115,7 +115,7 @@ block content
                 div.heading-sep.light-grey
                 p.font-effra-regular.btmspace-30 #{i18n.__("patru3.descriere2")}
 
-                h4.font-montserrat-bold recomandari
+                h4.font-montserrat-bold #{i18n.__("patru3.recomandarititlu")}
                 div.heading-sep.light-grey
                 p.font-effra-regular #{i18n.__("patru3.recomandari")}
                 li.font-effra-regular #{i18n.__("patru3.recomandarilista1")}

@@ -88,7 +88,7 @@ exports.patru3 = function(req, res){
     res.render('patru3',
         {
             i18n: res,
-            'lang': 'ro',
+            'lang': req.cookies.i18n,
             'device': getDevice(req),
             'type': getDeviceType(req),
             'navigation':'romania'
