@@ -7,7 +7,8 @@
 	"navigation.contact": "Contact",
 	"navigation.apuseni3": "3 zile în Apuseni",
 	"navigation.apuseni5": "5 zile în Apuseni",
-	"navigation.patru3": "Overlanding 4x4 în 3 zile",
+	"navigation.patru3": "Overlanding 4x4 - 3 zile - Apuseni",
+	"navigation.patru3rodnei": "Overlanding 4x4 - 3 zile - Rodnei",
 	"navigation.patru5": "4x4 în 5 zile",
 	"navigation.alpi": "Alpi",
 	"navigation.maroc": "Maroc",
@@ -408,5 +409,29 @@
 	"cookies.t42": "Asigurati-va ca aveti browserul mereu updatat.Multe dintre atacurile bazate pe cookies se realizeaza exploatand punctele slabe ale versiunilor vechi ale browserelor.",
 	"cookies.t43": "Atentie ! dezactivarea si refuzul de a primi cookie-uri pot face anumite site-uri impracticabile sau dificil de vizitat si folosit. De asemenea, refuzul de a accepta cookie-uri nu inseamna ca nu veti mai primi/vedea publicitate online.",
 	"cookies.t44": "Toate browserele moderne ofera posibilitatea de a schimba setarile cookie-urilor. Aceste setari se gasesc de regula in “optiuni” sau in meniul de “preferinte” al browserului dumneavoastra.",
-	"inscriere.promotional": "Sunt de acord sa primesc materiale promotionale pe e-mail. Vezi <a class='highlight' href='/politica-de-confidentialitate'> Politica de confidentialitate</a>"
+	"inscriere.promotional": "Sunt de acord sa primesc materiale promotionale pe e-mail. Vezi <a class='highlight' href='/politica-de-confidentialitate'> Politica de confidentialitate</a>",
+
+
+	"patru3rodnei.titlu": "Overlanding 4x4 in 3 zile",
+	"patru3rodnei.adrenalina": "Adrenalina pe patru roti in Muntii Rodnei",
+	"patru3rodnei.descriere": "Acest raid-trip numit Survival 4x4 – Overlanding vă oferă o întoarcere în timp într-o zona autentică și foarte sălbatică: zona rurală îndepărtată a munților Bârgău-Rodnei-Maramureșului. Aici viața parcă s-a oprit  în secolul al XIX-lea, unde asezările vechi sunt completate de floră și faună, generoase și neatinse.",
+	"patru3rodnei.descriere-1": "Cursul Survival 4x4-Overlanding este condus de Florin Pop-Vancea (Flo), un experimentat ghid montan-național și instructor-formator  în supraviețuire. El este cel care vă va însoți pe toată durata cursului.",
+	"patru3rodnei.descriere2": "Cu ocazia acestui curs, grupa nordică a Carpaților Orientali te vor delecta cu specificul lor aparte. Munții Bârgău, Munții Rodnei și Munții Maramureșului vor fi vedetele principale. Altitudinile lor au valori mijlocii, insa compenseaza prin frumusețea lor. Înălțimea maximă depășește 2000 m și o întâlnim în cel mai înalt punct în Munții Rodnei, respectiv vârful Pietrosul Rodnei – 2303 m altitudine. Nici Munții Bârgăului nu se lasă mai prejos, cu vârful Heniul Mare, de 1611 m.",
+	"patru3rodnei.recomandari": "Este necesar un vehicul 4x4. Acesta poate fi și un SUV, dar trebuie să respecte urmatoarele condiții:",
+	"patru3rodnei.recomandarilista1": "este obligatorie roata de rezerva, care să aibă aceeași dimensiune ca și celelalte anvelope cu care mașina este echipată",
+	"patru3rodnei.recomandarilista2": "anvelopele recomandate sunt de tip A/T (All Terrain) sau M/T (Mud Terrain)",
+	"patru3rodnei.recomandarilista3": "participarea nu este interzisa cu anvelope standard pentru asfalt, dar in caz de ploaie, teren umed sau pietre acestea nu vor face fata",
+	"patru3rodnei.recomandarilista4": "recomandam scut metalic, cel putin pentru motor",
+	"patru3rodnei.recomandarilista5": "recomandam statie radio de emisie –receptie (cel putin statii portabile walkie talkie) pentru accesul la toate informatiile transmise si in timpul deplasarii",
+	"patru3rodnei.recomandariatentie": "Detinerea unei roti de rezerva dupa criteriile mentionate mai sus este o cerinta obligatorie, lipsa acesteia sau dimensiuni gresite ale acesteia vor duce la interzicerea participarii la curs.",
+	"patru3rodnei.itinerariuinceput1": "Toate rutele de pe acest traseu au fost identificate și testate în prealabil.",
+	"patru3rodnei.itinerariuinceput2": "Traseul ales de Flo Adventure pentru acest curs alternează în niveluri de dificultate, dar este gândit în așa fel să poată fi parcurs de orice cursant care deține o mașină 4x4, conformă cu cerințele noastre (vezi RECOMANDARI). ",
+	"patru3rodnei.itinerariuinceput3": "Acest traseu necesită o ușoară cunoștință în condusul off-road. Bineinteles, varianta ideală este existența unei experiențe anterioare, dar nu este o cerință obligatorie.",
+	"patru3rodnei.itinerariu1": "Intâlnirea are loc în Bistrița, de unde vom pleca spre Pasul Tihuța pe un drum de asfalt, apoi pe  drum comunal de pietriș combinat cu pământ. Se vor traversa locuri frumoase în care peisajul te va lăsa fără cuvinte. Vom trece Munții Bârgăului spre Munții Rodnei, vom urca pe drumuri de țară și vom intra în povestea Munților Rodnei, trecând pe lângă locașuri vechi. Vom ajunge la Pasul Rotunda numit și Pasul Rodna. Acest pas este trecătoarea din Carpații Orientali situată la 1271 m altitudine. Aici vom merge la Cimitirul Eroilor unde vom așeza o coroană de flori. Cimitirul Eroilor din Pasul Rotunda este amenajat simbolic, pe locul unde a fost o groapă comună, în care își dorm somnul veșnic 685 de soldați (români, ruși si germani) căzuți pe câmpul de luptă, în anul 1942.",
+	"patru3rodnei.itinerariu2": "Va urma un curs cu mai multe aplicații: cum se folosește masina și obiectele din mașină în caz de supraviețuire, folosirea scripeților, șufelor, ocheților, modele de cricuri pentru mașini de teren și folosirea lor în teren cu mult noroi, nisip sau iarbă, cum să pregătiți mașina și ce trebuie să aveti în ea când mergeți într-o tură la munte, noduri importante în supraviețuire, folosirea corzilor.Vom înnopta în Pasul Rotunda.",
+	"patru3rodnei.itinerariu3": "După micul dejun, vom pleca în plimbare până la Șaua Gajei 1766 m, atingând în această zi cea mai înaltă altitudine din tura noastră de 3 zile.",
+	"patru3rodnei.itinerariu4": "De acolo avem privilegiul să ne bucurăm de o frumoasă panoramă spre Vârful Ineu (2.278 m) -al doilea vârf ca altitudine din Carpații Orientali, Varful Ineuț (2.278 m)- al treilea vârf ca altitudine din Carpații Orientali si Lacul Lala Mare (1815 m)– cel mai extins lac glaciar din Munții Rodnei, având suprafața de 5637,5 m².",
+	"patru3rodnei.itinerariu5": "După întoarcerea în Pasul Rotunda, vom pleca spre Munții Maramureșului și vom trece prin Pasul Prislop (din Maramureș) la altitudinea de 1416 m, apoi stațiunea Borșa. Vom vizita Cascada Cailor, apoi ne vom opri în Vișeul de Sus pentru cazarea la o pensiune tradițional Maramureșana.Seara vom cina împreună, bucurându-ne de o masă tradițională și discutând despre ziua precedentă.",
+	"patru3rodnei.itinerariu6": "După micul dejun ne vom deplasa în gara din Vișeu de unde vom pleca pe Valea Vaserului cu Mocănița. Numită adesea „Mocăniţa de pe Valea Vaserului“, Calea Ferată Forestieră din Vişeu de Sus se află chiar în nordul României, la graniţa cu Ucraina şi reprezintă o bogăţie atât din punct de vedere tehnic, cât şi cultural. Acest Raid de 3 zile se încheie în gara din Vișeu. De acolo fiecare participant se întoarce acasă."
+
 }

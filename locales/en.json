@@ -8,6 +8,7 @@
 	"navigation.apuseni3": "3 days in Apuseni",
 	"navigation.apuseni5": "5 days in Apuseni",
 	"navigation.patru3": "4x4 Overlanding in 3 days",
+	"navigation.patru3rodnei": "4x4 Overlanding in 3 days",
 	"navigation.patru5": "4x4 in 5 days",
 	"navigation.alpi": "Alps",
 	"navigation.maroc": "Marroco",
@@ -87,7 +88,7 @@
 	"data.ziua17": "Day 17",
 	"data.zile": "days",
 	"patru3.titlu": "Overlanding 4x4 in 3 days",
-	"patru3.adrenalina": "Four wheel drive adrenaline",
+	"patru3.adrenalina": "Four wheel drive adrenaline in Apuseni Mountains",
 	"patru3.descriere": "This raid-trip called Survival 4x4 - Overlanding offers you a return in time to an authentic and very wild area: the remote rural area of the Apuseni mountains. In this place, life seems to have stopped at some point in the nineteenth century, where old houses will alternate with flora and fauna, generous and untouched.",
 	"patru3.descriere-1": "The 4x4-Overlanding survival course is led by Florin Pop-Vancea (Flo), an experienced mountain guide - national instructor and survival instructor. He will accompany you throughout the course.",
 	"patru3.partener": "Official partner",
@@ -404,6 +405,29 @@
 	"cookies.t42": "Make sure your browser is always up to date. Many of the cookie-based attacks are performed by exploiting the weaknesses of \tolder versions of browsers.",
 	"cookies.t43": "Attention! disabling and refusing to receive cookies can make certain sites impractical or difficult to visit and use. Also, refusing to accept cookies does not mean that you will no longer receive / see online advertising.",
 	"cookies.t44": "All modern browsers offer the possibility to change the cookie settings. These settings are usually found in the \"options\" or in the \"preferences\" menu of your browser.",
-	"inscriere.promotional": "I agree to receive newsletter and promotional emails. See <a class='highlight' href='/politica-de-confidentialitate'> Confidential Policy</a>"
+	"inscriere.promotional": "I agree to receive newsletter and promotional emails. See <a class='highlight' href='/politica-de-confidentialitate'> Confidential Policy</a>",
+
+	"patru3rodnei.titlu": "Overlanding 4x4 in 3 days",
+	"patru3rodnei.adrenalina": "Four wheel drive adrenaline in Rodnei Mountains",
+	"patru3rodnei.descriere": "The Survival 4x4-Overlanding course is led by Florin Pop-Vancea (Flo), an experienced mountain guide and national instructor-trainer in survival. He is the one who will accompany you throughout the course.",
+	"patru3rodnei.descriere-1": "This raid-trip called Survival 4x4 - Overlanding offers you a return in time in an authentic and very wild area: the remote rural area of the Bârgău-Rodnei-Maramureș mountains. Here life seems to have stopped in the nineteenth century, where the old settlements are complemented by flora and fauna, generous and untouched.",
+	"patru3rodnei.descriere2": "On the occasion of this course, the northern group of the Eastern Carpathians will delight you with their special specificity. The Bârgău Mountains, the Rodna Mountains and the Maramureș Mountains will be the main stars. Their altitudes have medium values, but they compensate by their beauty. The maximum height exceeds 2000 m and we find it in the highest point in the Rodna Mountains, with Pietrosul Rodna peak - 2303 m altitude. The Bârgăului Mountains are not inferior either, with the Heniul Mare peak, of 1611 m.",
+	"patru3rodnei.recomandari": "A 4x4 vehicle is required. It can also be an SUV, but it must meet the following conditions:",
+	"patru3rodnei.recomandarilista1": "the spare wheel with the same size as the other tires with which the car is equipped is mandatory",
+	"patru3rodnei.recomandarilista2": "the recommended tires are A/T (All Terrain) or M/T (Mud Terrain)",
+	"patru3rodnei.recomandarilista3": "participation is not forbidden with standard asphalt tires, but in case of rain, wet ground or stones they will not cope",
+	"patru3rodnei.recomandarilista4": "we recommend metal shield, at least for the engine",
+	"patru3rodnei.recomandarilista5": "we recommend a radio station for reception (at least portable walkie talkies) for access to all transmitted information and while traveling",
+	"patru3rodnei.recomandariatentie": "Having a spare wheel according to the criteria mentioned above is a mandatory requirement, its lack or wrong dimensions will lead to a ban on participating on the course.",
+
+	"patru3rodnei.itinerariuinceput1": "All routes on this route have been identified and tested in advance.",
+	"patru3rodnei.itinerariuinceput2": "The route chosen by Flo Adventure for this course alternates in difficulty levels, but it is designed in such a way that it can be covered by any student who owns a 4x4 car, in accordance with our requirements (see MINIMUM REQUIREMENTS).",
+	"patru3rodnei.itinerariuinceput3": "This route requires a slight knowledge of off-road driving. Of course, the ideal option is the existence of a previous experience, but it is not a mandatory requirement.",
+	"patru3rodnei.itinerariu1": "The meeting takes place in Bistrița, from where we will leave for Tihuța Pass on an asphalt road, then on a communal gravel road combined with earth. You will cross beautiful places where the landscape will leave you speechless. We will pass the Bârgăului Mountains to the Rodna Mountains, we will climb on country roads and we will enter the story of the Rodna Mountains, passing by old places. We will reach the Rotunda Pass also called Rodna Pass. This step is the pass in the Eastern Carpathians located at 1271 m altitude. Here we will go to the Heroes' Cemetery where we will place a wreath. The Cemetery of the Heroes from Pasul Rotunda is symbolically situated, on the place where there was a common grave, where 685 soldiers (Romanians, Russians and Germans) who fell on the battlefield, in 1942, sleep their eternal sleep.",
+	"patru3rodnei.itinerariu2": "There will be a course with several applications: how to use the car and objects in the car in case of survival, the use of pulleys, shovels, eyelets, models of jackets for off-road machines and their use in the field with a lot of mud, sand or grass to prepare the car and what you need to have in it when you go on a mountain tour, important knots in survival, the use of ropes.We will spend the night in the Rotunda Pass.",
+	"patru3rodnei.itinerariu3": "After breakfast, we will walk to the Gajei Saddle 1766 m, reaching on this day the highest altitude of our 3-day tour.",
+	"patru3rodnei.itinerariu4": "From there we have the privilege to enjoy a beautiful panorama to Ineu Peak (2,278 m) - the second highest peak in the Eastern Carpathians, Ineuț Peak (2,278 m) - the third highest peak in the Eastern Carpathians and Lala Mare Lake (1815 m ) - the largest glacial lake in the Rodna Mountains, with an area of 5637.5 m².After returning to the Rotunda Pass, we will leave for the Maramureș Mountains and we will pass through the Prislop Pass (from Maramureș) at an altitude of 1416 m, then the Borșa resort. We will visit the Cascada Cailor, then we will stop in Vişeul de Sus for accommodation at a traditional Maramureșana pension.",
+	"patru3rodnei.itinerariu5": "In the evening we will have dinner together, enjoying a traditional meal and talking about the previous day.",
+	"patru3rodnei.itinerariu6": "After breakfast we will go to the train station in Vişeu from where we will leave on Vaserului Valley with Mocănița. Often called the Mocăniţa de pe Valea Vaserului, the Forest Railway from Vişeu de Sus is located right in the north of Romania, on the border with Ukraine and represents a treasure both technically and culturally. This 3-day Raid ends at the train station in Vişeu. From there each participant returns home."
 
 }

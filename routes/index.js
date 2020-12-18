@@ -94,6 +94,17 @@ exports.patru3 = function(req, res){
             'navigation':'romania'
         });
 };
+exports.patru3rodnei = function(req, res){
+    setLocale(req,res);
+    res.render('patru3rodnei',
+        {
+            i18n: res,
+            'lang': req.cookies.i18n,
+            'device': getDevice(req),
+            'type': getDeviceType(req),
+            'navigation':'romania'
+        });
+};
 exports.patru5 = function(req, res){
     setLocale(req,res);
     res.render('patru5',

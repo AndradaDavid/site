@@ -69,6 +69,7 @@ app.get('/apuseni-3-zile', routes.apuseni3);
 app.get('/apuseni-5-zile', routes.apuseni5);
 
 app.get('/4x4-3-zile', routes.patru3);
+app.get('/4x4-3-zile-rodnei', routes.patru3rodnei);
 app.get('/4x4-5-zile', routes.patru5);
 app.get('/montblanc', routes.montblanc);
 app.get('/grossglockner', routes.grossglockner);
@@ -116,6 +117,20 @@ app.get('/4x4-3-zile/ro', function (req, res)
     res.cookie('i18n', 'ro');
     res.redirect('/4x4-3-zile/')
 });
+
+app.get('/4x4-3-zile-rodnei/en', function (req, res)
+{
+    res.cookie('i18n', 'en');
+    res.redirect('/4x4-3-zile-rodnei/')
+});
+
+app.get('/4x4-3-zile-rodnei/ro', function (req, res)
+{
+    res.cookie('i18n', 'ro');
+    res.redirect('/4x4-3-zile-rodnei/')
+});
+
+
 app.get('/4x4-5-zile/en', function (req, res)
 {
     res.cookie('i18n', 'en');

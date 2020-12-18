@@ -827,7 +827,7 @@ html #header .main-nav ul.fl li.fl ul.sl {
   left: -2px;
   top: 38px;
   margin: 0;
-  width: 225px;
+  width: 276px;
 }
 html #header .main-nav ul.fl li.fl ul.sl a {
   color: #333;
@@ -903,10 +903,12 @@ html #header div#logo h1 {
   letter-spacing: 1px;
   word-wrap: normal;
   padding: 0 10px;
+  text-shadow: 1px 1px 4px black;
 }
 html #header div#logo h3 {
   font-family: 'Montserrat-Light';
   font-size: 1.5em;
+  text-shadow: 1px 1px 4px black;
 }
 html #header div#logo a:hover {
   color: inherit;
@@ -1260,7 +1262,7 @@ html .page-description .container #august .full-grid-item {
   top: 0;
   visibility: hidden;
   width: 25%;
-  height: 350px;
+  height: 420px;
   padding: 3px;
   display: flex;
   flex-flow: column;
@@ -2335,7 +2337,7 @@ html #copyright .border-line {
     left: 0px;
   }
   #header .mobile-nav .sidenav ul.fl {
-    width: 75%;
+    width: 87%;
     background-color: #333;
     padding: 73px 20px 0 20px;
     margin-bottom: 0;

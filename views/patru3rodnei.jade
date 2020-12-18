@@ -1,0 +1,226 @@
+extends ./index.jade
+
+block vars
+    - var title='Aventura 4x4 in 3 zile Rodnei - Flo Aventure Tours'
+    - var description = 'Curs in tehnici de supravietuire pe durata a 3 zile folosind masina de teren. Admiram frumusetile Apusenilor si invatam sa folosim masina 4x4 pe teren accidentat.'
+    - var ogtitle= title
+    - var ogDescription= description
+    - var ogurl = 'http://www.floadventure.ro/4x4-3-zile-rodnei/'
+    - var ogimage = "http://www.floadventure.ro/images/patrol.png"
+
+block content
+    div.bgded.bgded-top(style="background-image:url('/images/rodnei1.jpg');")
+        div.wrapper.dust-white-color
+            header#header.clear
+
+                if device.desktop
+                    div.main-nav.downspace-40.white-color.flex-1.clear
+                        include components/navigation
+                        ul.fl.clear
+                            li.fl.language
+
+                                if (lang === 'en')
+                                    a(href="/4x4-3-zile-rodnei/en") en
+                                    ul.sl
+                                        li.sl
+                                            a(href="/4x4-3-zile-rodnei/ro") ro
+                                else
+                                    a(href="/4x4-3-zile-rodnei/ro") ro
+                                    ul.sl
+                                        li.sl
+                                            a(href="/4x4-3-zile-rodnei/en") en
+                else
+                    div.mobile-nav
+                        i.fa.fa-bars.fa-2x.white-color.upper.show-panel
+                        nav.sidenav.clear
+                            include components/navigation-mobile
+                        ul.fl.clear.lang.white-color
+                            li.fl.language
+
+                                if (lang === 'en')
+                                    a en
+                                    ul.sl
+                                        li.sl
+                                            a(href="/4x4-3-zile-rodnei/ro") ro
+                                else
+                                    a ro
+                                    ul.sl
+                                        li.sl
+                                            a(href="/4x4-3-zile-rodnei/en") en
+
+                div#logo.text-center.flex-2.upspace-35
+                    div.list-sign
+                        //div(data-device="#{type}", style="background-image:url('/images/logo-flo-adventure.png');")
+                        //div.sign4(data-device="#{type}", style="background-image:url('/images/logo-4x4.png');")
+                        img(src="/images/logo-flo-adventure.png", height="80px")
+                        img(src="/images/logo-4x4.png", height="80px")
+                    if device.mobile
+                        h1.font-2
+                            a.white-color(href="#top", title="Aventura 4x4 in 3 zile Rodnei") #{i18n.__("patru3rodnei.titlu")}
+                    else
+                        h1.font-4
+                            a.white-color(href="#top", title="Aventura 4x4 in 3 zile Rodnei") #{i18n.__("patru3rodnei.titlu")}
+                    h3.white-color.font-2 Rodnei
+
+    div.scroll-down
+        div.chevron
+        div.chevron
+        div.chevron
+
+    div.page-description.wrapper.dust-grey.light-grey-color
+        div.container.clear(data-device="#{type}")
+            div.page-box.flex-1
+                h4.subtile-grey-color.font-montserrat-bold #{i18n.__("patru3rodnei.adrenalina")}
+                div.heading-sep.orange
+                div.btmspace-50.font-open-sans.dark-grey-color
+                    p.justify #{i18n.__("patru3rodnei.descriere")}
+                    p.justify #{i18n.__("patru3rodnei.descriere-1")}
+                    p #{i18n.__("patru3.partener")} - Metabond Romania
+
+            div.page-box.flex-1-5
+                div.map(style="background-image:url('/images/harta-apuseni-3.png')")
+
+    hr.cloudy
+    div.image.dust-grey.dark-grey-color
+        div.hoc.clear.center.upspace-35.btmspace-30(data-device="#{type}")
+            div.desc-item
+                i.fa.fa-calendar.font-2
+                span.item-header #{i18n.__("descriere.perioada")}
+                span.item-text(style="display:flex; flex-direction: column;")
+                    span.flex-1 ???
+                    span.flex-1 ???
+
+            div.desc-item
+                i.fa.fa-male.fa-3x.font-2
+                span.item-header #{i18n.__("descriere.persoane")}
+                span.item-text #{i18n.__("descriere.minim")} 2 #{i18n.__("descriere.participants")} / #{i18n.__("descriere.course")}
+            div.desc-item
+                i.fa.fa-map-marker.fa-3x.font-2
+                span.item-header #{i18n.__("descriere.regiune")}
+                span.item-text Apuseni
+            div.desc-item
+                i.fa.fa-car.fa-3x.font-2
+                span.item-header #{i18n.__("descriere.transport")}
+                span.item-text #{i18n.__("patru3.masina")}
+
+
+
+    div.little-about(style="background-image:url('/images/rodnei-lung.jpg');background-size:cover;background-position: center center;")
+
+    //detalii si itinerariu
+    div.page-description.wrapper.dust-grey.dark-grey-color
+        div.container.clear(data-device="#{type}", style="align-items: flex-start;")
+            div.page-box.flex-1(style=("#{type}" === 'phone') ? "" : "padding-right: 70px;")
+                h4.font-montserrat-bold #{i18n.__("descriere.detalii")}
+                div.heading-sep.light-grey
+                p.font-effra-regular.btmspace-30 #{i18n.__("patru3rodnei.descriere2")}
+
+                h4.font-montserrat-bold #{i18n.__("patru3.recomandarititlu")}
+                div.heading-sep.light-grey
+                p.font-effra-regular #{i18n.__("patru3rodnei.recomandari")}
+                li.font-effra-regular #{i18n.__("patru3rodnei.recomandarilista1")}
+                li.font-effra-regular #{i18n.__("patru3rodnei.recomandarilista2")}
+                li.font-effra-regular #{i18n.__("patru3rodnei.recomandarilista3")}
+                li.font-effra-regular #{i18n.__("patru3rodnei.recomandarilista4")}
+                li.font-effra-regular.btmspace-15 #{i18n.__("patru3rodnei.recomandarilista5")}
+                p.font-effra-regular.olive-color #{i18n.__("patru3rodnei.recomandariatentie")}
+
+
+            div.page-box.flex-1-6
+                h4.font-montserrat-bold #{i18n.__("descriere.itinerariu")}
+                div.heading-sep.light-grey
+                span.olive-color.font-effra-regular #{i18n.__("patru3rodnei.itinerariuinceput1")}
+                span.olive-color.font-effra-regular #{i18n.__("patru3rodnei.itinerariuinceput2")}
+                span.olive-color.font-effra-regular #{i18n.__("patru3rodnei.itinerariuinceput3")}
+                p #{i18n.__("descriere.itinerariu2")}
+
+                h5.left.upspace-15 #{i18n.__("data.ziua1")}
+                p #{i18n.__("patru3rodnei.itinerariu1")}
+                p #{i18n.__("patru3rodnei.itinerariu2")}
+
+                h5.left.upspace-15 #{i18n.__("data.ziua2")}
+                p #{i18n.__("patru3rodnei.itinerariu3")}
+                p #{i18n.__("patru3rodnei.itinerariu4")}
+                p #{i18n.__("patru3rodnei.itinerariu5")}
+
+                h5.left.upspace-15 #{i18n.__("data.ziua3")}
+                p #{i18n.__("patru3rodnei.itinerariu6")}
+
+
+    //grid de imagini
+    div.page-description.wrapper
+        div.container.width-full.max-width-full.padding-0.clear(data-device="#{type}")
+            div#full-grid.width-full.dark-grey(data-device="#{type}")
+                a.full-grid-item.big
+                    div.flex-1(style="background-image:url('/images/rodnei-grid-1.jpg'); background-size: cover; background-position: center 65%;")
+                a.full-grid-item
+                    div.flex-1(style="background-image:url('/images/rodnei-grid-3.jpg'); background-size: cover; background-position:top;")
+                a.full-grid-item
+                    div.flex-1(style="background-image:url('/images/rodnei-grid-5.jpg'); background-size: cover; background-position: center center;")
+                a.full-grid-item
+                    div.flex-1(style="background-image:url('/images/rodnei-grid-7.jpg'); background-size: cover; background-position: center;")
+                a.full-grid-item.half
+                    div.flex-1(style="background-image:url('/images/rodnei-grid-6.jpg'); background-size: cover; background-position: center;")
+                a.full-grid-item.big
+                    div.flex-1(style="background-image:url('/images/rodnei-grid-8.jpg'); background-size: cover; background-position: center;")
+                a.full-grid-item
+                    div.flex-1(style="background-image:url('/images/rodnei-grid-2.jpg'); background-size: cover; background-position: center;")
+
+    hr.cloudy
+
+
+    //detalii si itinerariu
+    div.page-description.wrapper.dark-grey.cloudy-color
+        div.container.clear(data-device="#{type}", style="align-items: flex-start;")
+
+            div.page-box.flex-1.font-montserrat-thin(style=("#{type}" === 'phone') ? "" : "padding-right: 20px;")
+                h3.font-montserrat-regular #{i18n.__("patru3.q1")}
+                div.heading-sep.light-grey
+                p.orange-color(style="font-weight: bold;") #{i18n.__("patru3.include")}
+                p #{i18n.__("patru3.include1")}
+
+                p.orange-color(style="font-weight: bold;") #{i18n.__("patru3.nuinclude")}
+                p #{i18n.__("patru3.nuinclude1")}
+
+                h3.font-montserrat-regular Extra
+                div.heading-sep.light-grey
+                p #{i18n.__("patru3.extra1")}
+
+
+            div.page-box.flex-1.font-montserrat-thin
+                h3.font-montserrat-regular #{i18n.__("patru3.q2")}
+                div.heading-sep.light-grey
+                p.orange-color(style="font-weight: bold;") #{i18n.__("patru3.include")}
+                p #{i18n.__("patru3.include2")}
+
+                p.orange-color(style="font-weight: bold;") #{i18n.__("patru3.nuinclude")}
+                p #{i18n.__("patru3.nuinclude2")}
+
+    //rezervati locul sau contacteaza-ne
+    div.little-about.height-500.cloudy(style="background-image:url('/images/price-background.jpg');background-size:cover;background-position: center center;")
+        div.hoc.container.clear.font-1-2
+            a.button(href="/inscriere/patru3rodnei", title="Inscriere") #{i18n.__("descriere.rezerva")}
+            a.button(href="/contact", title="Contact") #{i18n.__("descriere.q")}
+
+
+    hr.cloudy
+    div.price-about.height-300.wrapper.dark-grey.light-grey-color.btmspace-50
+
+        p.font-1-2.dust-white-color #{i18n.__("patru3.price1")}
+        div.overlay-text.flex-1.font-2.orange-color
+
+            p.font-1-2 375&nbsp;
+            p ron
+            p.down /#{i18n.__("descriere.persoana")}
+
+        p.font-1-2.dust-white-color #{i18n.__("patru3.price2")}
+        div.overlay-text.flex-1.font-2.orange-color
+
+            p.font-1-2 700&nbsp;
+            p ron
+            p.down /#{i18n.__("descriere.persoana")}
+        div(data-href="https://developers.facebook.com/docs/plugins/", data-layout="button-count", data-size="small" data-mobile-iframe="true").fa.fa-2x.fa-share-alt-square.inline.dust-white-color
+            a.dust-white-color.font-open-sans.share-button.fb-xfbml-parse-ignore.inline(target="_blank", href="https://www.facebook.com/sharer/sharer.php?u=#{encodeURIComponent(ogurl)}&amp;src=sdkpreparse", title="Share") Share
+
+    div.repeat-ribbon.wrapper.coloured
+        div.repeat.dark-grey(style="background-image: url('/images/repeat.png');height: 50px;background-size: contain;")
