@@ -452,7 +452,7 @@ app.post('/inscriere/:id', function (req, res) {
             "<b>MAIL PROMOTIONAL:</b>" + ((req.body.promotional === 'da')?"da":"nu");
     }
 
-    if (req.params.id == 'patru3' || req.params.id == 'patru5') {
+    if (req.params.id == 'patru3' || req.params.id == 'patru5' || req.params.id == 'patru3rodnei') {
 
         messageBody = "<b>NUME: </b>" + req.body.firstname + " " + req.body.secondname + "<br>" +
             "<b>EMAIL: </b>" + req.body.email + "<br>" + "" +
@@ -489,6 +489,8 @@ app.post('/inscriere/:id', function (req, res) {
             "<b>ADRESA COMPLETA: </b>" + req.body.p_address + "<br>" +
             "<b>VARSTA: </b>" + req.body.age + "<br>" +
             "<b>OCUPATIA: </b>" + req.body.occupation + "<br>" +
+            "<b>SERIA 1: </b>" + ((req.body.seria1 === 'da')?"da":"nu") + "<br>" +
+            "<b>SERIA 2: </b>" + ((req.body.seria2 === 'da')?"da":"nu") + "<br>" +
             "<b>STAREA DE SANATATE: </b>" + req.body.health + "<br>" + "<b>Piolet: </b>" + req.body.piolet + "<br>" +
             "<b>CASCA: </b>" + req.body.casca + "<br>" +
             "<b>COLTARI: </b>" + req.body.coltari + "<br>" +
