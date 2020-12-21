@@ -9,6 +9,8 @@ block vars
 	case name
 		when 'patru3'
 			- ogimage = "http://www.floadventure.ro/images/patrol.png"
+		when 'patru3rodnei'
+			- ogimage = "http://www.floadventure.ro/images/patrol.png"
 		when 'patru5'
 			- ogimage = "http://www.floadventure.ro/images/aventura-5.png"
 		when 'apuseni3'
@@ -38,6 +40,8 @@ block content
 
 	case name
 		when 'patru3'
+			- image = "background-image:url('/images/patrol.png'); "
+		when 'patru3rodnei'
 			- image = "background-image:url('/images/patrol.png'); "
 		when 'patru5'
 			- image = "background-image:url('/images/aventura-5.png'); "
@@ -88,6 +92,9 @@ block content
 						when 'patru3'
 							h3.dust-grey-color.font-1-5 Overlanding 4x4 in 3 zile
 							h4.dust-grey-color.font-2 Apuseni
+						when 'patru3rodnei'
+							h3.dust-grey-color.font-1-5 Overlanding 4x4 in 3 zile
+							h4.dust-grey-color.font-2 Rodnei
 						when 'patru5'
 							h3.dust-grey-color.font-2 4x4 in 5 zile
 						when 'apuseni3'
@@ -120,11 +127,11 @@ block content
 	if (name !== undefined)
 		div.page-description.wrapper.dust-white.dark-grey-color
 			div.container.clear(data-device="#{type}", style="align-items: flex-start;")
-				h3.hide-me.orange-color(style=("#{sent}" === 'yes') ? "display: block;" : "display: none;") Mesajul tau a fost trimis. Iti vom raspunde in cel mai scurt timp posibil!
-				h3.hide-me.orange-color(style=("#{bla}" === 'yes') ? "display: block;" : "display: none;") Ne pare rau, dar mesajul nu a fost trimit. Reincercati!
+				h3.hide-me.orange-color(style=("#{sent}" === 'yes') ? "display: block;": "display: none;") Mesajul tau a fost trimis. Iti vom raspunde in cel mai scurt timp posibil!
+				h3.hide-me.orange-color(style=("#{bla}" === 'yes') ? "display: block;": "display: none;") Ne pare rau, dar mesajul nu a fost trimit. Reincercati!
 
 	//formular 4 x 4 in 3 zile
-	if (name == 'patru3' || name == 'patru5')
+	if (name == 'patru3' || name == 'patru5' || name == 'patru3rodnei')
 		div.page-description.wrapper.dust-grey.dark-grey-color
 			div.container.clear(data-device="#{type}", style="align-items: flex-start;")
 				div.page-box.flex-2
@@ -138,6 +145,8 @@ block content
 					form.dark-grey-color(action="/inscriere/#{name}", method="post")
 						if (name == 'patru3')
 							input(type="hidden", name="formular", value="Pentru 4x4 in 3 zile - Apuseni")
+						if (name == 'patru3rodnei')
+							input(type="hidden", name="formular", value="Pentru 4x4 in 3 zile - Rodnei")
 						if (name == 'patru5')
 							input(type="hidden", name="formular", value="Pentru 4x4 in 5 zile")
 
@@ -154,13 +163,28 @@ block content
 						input.btmspace-30(type="text", name="occupation", placeholder="Ocupatia")
 
 						p.font-open-sans Inscriere pentru:
-						div.group(data-device="#{type}", style=("#{type}" === 'phone') ? "width: 100%;" : "width: 80%;")
-							span.font-open-sans
-								input#casca.checkbox(type='checkbox', name='seria1', value= 'da')
-								label(for='seria1') 25-27 iunie 2021
-							span.font-open-sans
-								input#piolet.checkbox(type='checkbox', name='seria2', value= 'da')
-								label(for='seria2') 20-22 august 2021
+						if (name == 'patru3')
+							div.group(data-device="#{type}", style=("#{type}" === 'phone') ? "width: 100%;": "width: 80%;")
+								span.font-open-sans
+									input#casca.checkbox(type='checkbox', name='seria1', value= 'da')
+									label(for='seria1') 25-27 iunie 2021
+								span.font-open-sans
+									input#piolet.checkbox(type='checkbox', name='seria2', value= 'da')
+									label(for='seria2') 20-22 august 2021
+						if (name == 'patru3rodnei')
+							div.group(data-device="#{type}", style=("#{type}" === 'phone') ? "width: 100%;": "width: 80%;")
+								span.font-open-sans
+									input#casca.checkbox(type='checkbox', name='seria1', value= 'da')
+									label(for='seria1') 27-29 august 2021
+
+						if (name == 'patru5')
+							div.group(data-device="#{type}", style=("#{type}" === 'phone') ? "width: 100%;" : "width: 80%;")
+								span.font-open-sans
+									input#casca.checkbox(type='checkbox', name='seria1', value= 'da')
+									label(for='seria1') 2021
+								span.font-open-sans
+									input#piolet.checkbox(type='checkbox', name='seria2', value= 'da')
+									label(for='seria2') ..
 
 						input(type="text", name="car", placeholder="Participi cu o masina 4x4 si vrei sa vii cu ea?", required)
 						input(type="text", name="modelcar", placeholder="Modelul masinii")
@@ -281,6 +305,15 @@ block content
 
 						p.font-open-sans Te rugam sa completezi formularul cat mai exact posibil. Este foarte important sa stim ce echipament detii si care este starea ta de sanatate pentru a te bucura din plin de expeditia aleasa.
 
+						if (name == 'island')
+							div.group(data-device="#{type}", style=("#{type}" === 'phone') ? "width: 100%;" : "width: 80%;")
+								span.font-open-sans
+									input#casca.checkbox(type='checkbox', name='seria1', value= 'da')
+									label(for='seria1') 30 aprilie - 16 mai 2021
+								span.font-open-sans
+									input#piolet.checkbox(type='checkbox', name='seria2', value= 'da')
+									label(for='seria2') 16 octombrie - 2 noiembrie 2021
+
 						input(type="text", name="age", placeholder="Varsta")
 						input(type="text", name="occupation", placeholder="Ocupatia")
 						textarea.btmspace-80(type="text", name="health", placeholder="Probleme de sanatate relevante.")
@@ -324,7 +357,7 @@ block content
 						div.ribbon-small(style="background-image:url('/images/logo-form.png'); background-size: 30px 30px;")
 						div.details.dust-white-color
 							div.separator.orange.btmspace-10
-							div.title.font-1-5 Overlanding 4x4 in 3 zile - Apuseni
+							div.title.font-1-5 Overlanding 4x4 in 3 zile - Muntii Apuseni
 							div.price.font-1-2 de la 375 Ron
 
 					a(href="/inscriere/apuseni3", title="Inscriere program Apuseni in 3 zile").full-grid-item.third.planning
@@ -368,11 +401,21 @@ block content
 							div.title.font-1-5 Curs supravietuire
 							div.price.font-1-2 850 ron
 
+					a(href="/inscriere/patru3rodnei", title="Inscriere program 4x4 in Rodnei").full-grid-item.half.planning
+						div.flex-1(style="background-image:url('/images/rodnei1.jpg'); background-size: cover; background-position: bottom center;")
+						div.upper-details.orange-color
+							div.date.font-1-3 27-29 august 2021
+						div.ribbon-small(style="background-image:url('/images/logo-form.png'); background-size: 30px 30px;")
+						div.details.dust-white-color
+							div.separator.orange.btmspace-10
+							div.title.font-1-5 Overlanding 4x4 in 3 zile - Muntii Rodnei
+							div.price.font-1-2 de la 375 ron
 
-					a(href="/inscriere/grossglockner", title="Inscriere expeditie Grossglockner").full-grid-item.full.planning
+
+					a(href="/inscriere/grossglockner", title="Inscriere expeditie Grossglockner").full-grid-item.half.planning
 						div.flex-1(style="background-image:url('/images/grossglokner-grid-1.png'); background-size: cover; background-position: top center;")
 						div.upper-details.orange-color
-							div.date.font-1-3 27 iulie - 1 august 2021
+							div.date.font-1-3 26-31 iulie 2021
 						div.ribbon-small(style="background-image:url('/images/logo-form.png'); background-size: 30px 30px;")
 						div.details.dust-white-color
 							div.separator.orange.btmspace-10
@@ -420,7 +463,7 @@ block content
 					a(href="/inscriere/maroc", title="Inscriere expeditie Maroc Jebel Toubkhal").full-grid-item.half.planning
 						div.flex-1(style="background-image:url('/images/maroc-grid-5.png'); background-size: cover; background-position: top center;")
 						div.upper-details.orange-color
-							div.date.font-1-3 2021
+							div.date.font-1-3 14-21 septembrie 2021
 						div.ribbon-small(style="background-image:url('/images/logo-form.png'); background-size: 30px 30px;")
 						div.details.dust-white-color
 							div.separator.orange.btmspace-10
@@ -432,7 +475,7 @@ block content
 					a(href="/inscriere/everestbc", title="Inscriere expeditie Everest Base camp").full-grid-item.two-third.planning
 						div.flex-1(style="background-image:url('/images/everestbc.png'); background-size: cover; background-position: top center;")
 						div.upper-details.orange-color
-							div.date.font-1-3 noiembrie
+							div.date.font-1-3
 						div.ribbon-small(style="background-image:url('/images/logo-form.png'); background-size: 30px 30px;")
 						div.details.dust-white-color
 							div.separator.orange.btmspace-10
@@ -450,7 +493,7 @@ block content
 					a(href="/inscriere/everesteli", title="Inscriere expeditie Everest BC si intoarcerea cu elicopterul ").full-grid-item.half.planning
 						div.flex-1(style="background-image:url('/images/everesteli-grid-4.png'); background-size: cover; background-position: top center;")
 						div.upper-details.orange-color
-							div.date.font-1-3 30 aprilie - 12 mai
+							div.date.font-1-3 30 aprilie - 12 mai 2021
 						div.ribbon-small(style="background-image:url('/images/logo-form.png'); background-size: 30px 30px;")
 						div.details.dust-white-color
 							div.separator.orange.btmspace-10
@@ -460,7 +503,7 @@ block content
 					a(href="/inscriere/island", title="Inscriere expeditie Island Peak").full-grid-item.half.planning.btmspace-50
 						div.flex-1(style="background-image:url('/images/island-grid-1.png'); background-size: cover; background-position: top center;")
 						div.upper-details.orange-color
-							div.date.font-1-3 30 aprilie - 16 mai
+							div.date.font-1-3 30 aprilie - 16 mai 2021
 						div.ribbon-small(style="background-image:url('/images/logo-form.png'); background-size: 30px 30px;")
 						div.details.dust-white-color
 							div.separator.orange.btmspace-10
