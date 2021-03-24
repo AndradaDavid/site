@@ -259,6 +259,16 @@ block content
 						input(type="text", name="phone", placeholder="Telefon", required)
 						input.btmspace-80(type="text", name="p_address", placeholder="Adresa completa", required)
 
+						p.font-open-sans Inscriere pentru:
+							div.group(data-device="#{type}", style=("#{type}" === 'phone') ? "width: 100%;" : "width: 80%;")
+								span.font-open-sans
+									input#casca.checkbox(type='checkbox', name='seria1', value= 'da' disabled)
+									label(for='seria1') iulie 2021 (Locuri ocupate)
+								span.font-open-sans
+									input#piolet.checkbox(type='checkbox', name='seria2', value= 'da')
+									label(for='seria2') 4-8 august 2021
+
+
 						p.font-open-sans Te rugam sa completezi formularul cat mai exact posibil. Este foarte important sa stim numarul de copii participanti la curs.
 
 						input(type="text", name="age", placeholder="Varsta fiecarui copil, separata prin virgula")
@@ -384,7 +394,7 @@ block content
 					a(href="/inscriere/family", title="Inscriere family survival").full-grid-item.two-third.planning
 						div.flex-1(style="background-image:url('/images/family-grid-5.jpg'); background-size: cover; background-position: top center;")
 						div.upper-details.orange-color
-							div.date.font-1-3 21 - 25 iulie 2021
+							div.date.font-1-3 4-8 august 2021
 						div.ribbon-small(style="background-image:url('/images/logo-form.png'); background-size: 30px 30px;")
 						div.details.dust-white-color
 							div.separator.orange.btmspace-10

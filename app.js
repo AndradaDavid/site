@@ -476,8 +476,10 @@ app.post('/inscriere/:id', function (req, res) {
             "<br>" + "<b>EMAIL: </b>" + req.body.email + "<br>" +
             "<b>TELEFON: </b>" + req.body.phone + "<br>" +
             "<b>ADRESA COMPLETA: </b>" + req.body.p_address + "<br>" +
-            "<b>VARSTA: </b>" + req.body.age + "<br>" +
-            "<b>NUMAR DE COPII: </b>" + req.body.copii + "<br>" +
+            "<b>SERIA 1: </b>" + ((req.body.seria1 === 'da')?"da":"nu") + "<br>" +
+            "<b>SERIA 2: </b>" + ((req.body.seria2 === 'da')?"da":"nu") + "<br>" +
+            "<b>VARSTA COPII: </b>" + req.body.age + "<br>" +
+            "<b>NUME COPII: </b>" + req.body.copii + "<br>" +
             "<b>MAIL PROMOTIONAL:</b>" + ((req.body.promotional === 'da')?"da":"nu");
     }
 
