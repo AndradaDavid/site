@@ -462,6 +462,7 @@ app.post('/inscriere/:id', function (req, res) {
             "<b>OCUPATIA: </b>" + req.body.occupation + "<br>" +
             "<b>SERIA 1: </b>" + ((req.body.seria1 === 'da')?"da":"nu") + "<br>" +
             "<b>SERIA 2: </b>" + ((req.body.seria2 === 'da')?"da":"nu") + "<br>" +
+            "<b>SERIA 3: </b>" + ((req.body.seria3 === 'da')?"da":"nu") + "<br>" +
             "<b>MASINA: </b>" + req.body.car + "<br>" +
             "<b>MODEL: </b>" + req.body.modelcar + "<br>" +
             "<b>DOTARI: </b>" + req.body.settingscar + "<br>" +
